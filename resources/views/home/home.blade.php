@@ -27,11 +27,11 @@
                                                 <i class="fa fa-play"></i>
                                             </a>
                                         </div>
-                                        <h5 class="slide-title animated">
-                                            Let us help you Find an apartment or property</h5>
-                                        <div class="slide-brief animated">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                                        </div>
+                                        <h1 class="animated mt-40">
+                                            Let us help you Find an apartment or property</h1>
+{{--                                        <div class="slide-brief animated">--}}
+{{--                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>--}}
+{{--                                        </div>--}}
                                         <div class="btn-wrapper animated">
                                             <a href="{{ url('contact') }}"
                                                class="theme-btn-1 btn btn-effect-1 border-radius-8">Make An Enquiry</a>
@@ -99,7 +99,7 @@
     </div>
     <!-- SLIDER AREA END -->
 
-    <div class="ltn__slide-item-inner text-center" style="margin-top: -135px;">
+    <div class="ltn__slide-item-inner text-center" style="margin-top: -120px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 align-self-center">
