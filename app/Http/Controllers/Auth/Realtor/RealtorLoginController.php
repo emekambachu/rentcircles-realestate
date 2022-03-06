@@ -36,7 +36,7 @@ class RealtorLoginController extends Controller
 
     public function showLoginForm()
     {
-        return view('auth.realtor.login', ['url' => 'realtor/login']);
+        return view('auth.realtors.login', ['url' => 'realtor/login']);
     }
 
     public function login(Request $request)

@@ -163,10 +163,10 @@
                                         <li><a href="{{ url('contact') }}">Contact</a></li>
 
                                         <li class="special-link">
-                                            <a class="border-radius-8" href="">Realtor</a>
+                                            <a class="border-radius-8" href="{{ route('realtor.login') }}">Realtor</a>
                                         </li>
                                         <li class="special-link">
-                                            <a class="border-radius-8" href="">Customer</a>
+                                            <a class="border-radius-8" href="{{ route('login') }}">Customer</a>
                                         </li>
                                     </ul>
                                 </div>

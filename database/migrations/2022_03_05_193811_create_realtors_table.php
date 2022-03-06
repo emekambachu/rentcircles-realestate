@@ -17,11 +17,12 @@ class CreateRealtorsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('mobile')->unique()->nullable();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('mobile')->nullable();
             $table->string('country');
             $table->string('state')->nullable();
             $table->string('password');
+            $table->string('verification_token')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

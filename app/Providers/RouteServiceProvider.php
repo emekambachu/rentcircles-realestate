@@ -18,6 +18,8 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     public const ACCOUNT = '/user/account';
+    public const REALTOR_LOGIN = '/realtor/login';
+    public const REALTOR_ACCOUNT = '/realtor/account';
 
     /**
      * The controller namespace for the application.

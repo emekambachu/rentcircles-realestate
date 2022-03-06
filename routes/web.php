@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\Admin\AdminLoginController;
 use App\Http\Controllers\Auth\Realtor\RealtorLoginController;
+use App\Http\Controllers\Auth\Realtor\RealtorRegisterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Properties\PropertyController;
 use Illuminate\Support\Facades\Auth;
@@ -60,6 +61,17 @@ Route::post('realtor/login/submit', [RealtorLoginController::class, 'login'])
     ->name('realtor.login.submit');
 Route::post('realtor/logout', [RealtorLoginController::class, 'logout'])
     ->name('realtor.logout');
+Route::get('realtor/register', [RealtorRegisterController::class, 'showRegistrationForm'])
+    ->name('realtor.register');
+Route::post('realtor/register/submit', [RealtorRegisterController::class, 'createRealtor'])
+    ->name('realtor.register.submit');
+
+Route::get('email-test', static function(){
+    $data['email'] = 'your_email@gmail.com';
+    $data['name'] = 'Dex';
+    dispatch(new App\Jobs\RealtorVerificationEmailJob($data));
+    dd('done');
+});
 
 // Home properties
 Route::get('properties', [PropertyController::class, 'index'])
