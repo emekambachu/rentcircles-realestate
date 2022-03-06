@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\Admin\AdminLoginController;
 use App\Http\Controllers\Auth\Realtor\RealtorLoginController;
 use App\Http\Controllers\Auth\Realtor\RealtorRegisterController;
+use App\Http\Controllers\GithubDeploymentController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Properties\PropertyController;
 use Illuminate\Support\Facades\Auth;
@@ -88,3 +89,5 @@ Route::get('properties/buy/search', [PropertyController::class, 'searchBuy'])
 Route::get('/', [HomeController::class, 'index'])
     ->name('home');
 
+//Github Deployment
+Route::post('github/deploy', [GithubDeploymentController::class, 'deploy']);
