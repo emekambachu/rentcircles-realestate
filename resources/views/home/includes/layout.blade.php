@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+
     <title>@yield('title') - RentCircles</title>
+
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="RentCircles | Property, realtors, real estates, rent">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,12 +21,10 @@
     <link rel="stylesheet" href="{{ asset('main-assets/css/style.css') }}">
     <!-- Responsive css -->
     <link rel="stylesheet" href="{{ asset('main-assets/css/responsive.css') }}">
-
     <!--Custom-->
     <link rel="stylesheet" href="{{ asset('main-assets/custom/styles.css') }}">
 
     @yield('top-assets')
-
 </head>
 
 <body>
@@ -35,7 +35,7 @@
 <!-- Add your site or application content here -->
 
 <!-- Body main wrapper start -->
-<div class="body-wrapper">
+<div id="app" class="body-wrapper">
 
     <!-- HEADER AREA START (header-5) -->
     <header class="ltn__header-area ltn__header-5 ltn__header-logo-and-mobile-menu-in-mobile ltn__header-logo-and-mobile-menu ltn__header-transparent gradient-color-4---">
@@ -85,7 +85,6 @@
                                                 <li><a href="#" title="Twitter">
                                                         <i class="fab fa-twitter"></i></a>
                                                 </li>
-
                                                 <li><a href="#" title="Instagram">
                                                         <i class="fab fa-instagram"></i></a>
                                                 </li>
@@ -578,6 +577,8 @@
 </div>
 <!-- preloader area end -->
 
+<!-- Vue.js -->
+<script src="{{ asset('js/app.js') }}" defer></script>
 <!-- All JS Plugins -->
 <script src="{{ asset('main-assets/js/plugins.js') }}"></script>
 <!-- Main JS -->

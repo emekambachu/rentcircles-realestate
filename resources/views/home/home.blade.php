@@ -13,7 +13,7 @@
         <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1">
 
             <!-- ltn__slide-item -->
-            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60" data-bs-bg="{{ asset('main-assets/img/slider/11.jpg') }}">
+            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60" data-bs-bg="{{ asset('main-assets/img/slider/3.jpg') }}">
                 <div class="ltn__slide-item-inner text-center">
                     <div class="container">
                         <div class="row">
@@ -313,10 +313,10 @@
             <div class="row">
                 <div class="col-lg-8 col-md-6">
                     <div class="ltn__banner-item ltn__banner-style-4 text-color-white bg-image"
-                         data-bs-bg="{{ asset('main-assets/img/gallery/2.jpg') }}"
-                         style="background-image: url(&quot;{{ asset('main-assets/img/gallery/2.jpg') }}&quot;);">
+                         data-bs-bg="{{ asset('main-assets/img/location/1.jpg') }}"
+                         style="background-image: url(&quot;{{ asset('main-assets/img/location/1.jpg') }}&quot;);">
                         <div class="ltn__banner-info">
-                            <h3 class="animated fadeIn"><a href=""> Apartments </a></h3>
+                            <h3 class="animated fadeIn"><a href=""> Lagos </a></h3>
                             <p> Great Deals Available</p>
                             <mark> 13 Listings</mark>
                         </div>
@@ -324,10 +324,10 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="ltn__banner-item ltn__banner-style-4 text-color-white bg-image"
-                         data-bs-bg="{{ asset('main-assets/img/gallery/3.jpg') }}"
-                         style="background-image: url(&quot;{{ asset('main-assets/img/gallery/3.jpg') }}&quot;);">
+                         data-bs-bg="{{ asset('main-assets/img/location/2.jpg') }}"
+                         style="background-image: url(&quot;{{ asset('main-assets/img/location/2.jpg') }}&quot;);">
                         <div class="ltn__banner-info">
-                            <h3 class="animated fadeIn"><a href="">Condos</a></h3>
+                            <h3 class="animated fadeIn"><a href="">Abuja</a></h3>
                             <p> Great Deals Available</p>
                             <mark> 13 Listings</mark>
                         </div>
@@ -335,10 +335,10 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="ltn__banner-item ltn__banner-style-4 text-color-white bg-image"
-                         data-bs-bg="{{ asset('main-assets/img/gallery/7.jpg') }}"
-                         style="background-image: url(&quot;{{ asset('main-assets/img/gallery/7.jpg') }}&quot;);">
+                         data-bs-bg="{{ asset('main-assets/img/location/3.jpg') }}"
+                         style="background-image: url(&quot;{{ asset('main-assets/img/location/3.jpg') }}&quot;);">
                         <div class="ltn__banner-info">
-                            <h3 class="animated fadeIn"><a href="">Houses</a></h3>
+                            <h3 class="animated fadeIn"><a href="">Port hacourt</a></h3>
                             <p> Great Deals Available</p>
                             <mark> 13 Listings</mark>
                         </div>
@@ -346,10 +346,10 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="ltn__banner-item ltn__banner-style-4 text-color-white bg-image"
-                         data-bs-bg="{{ asset('main-assets/img/gallery/8.jpg') }}"
-                         style="background-image: url(&quot;{{ asset('main-assets/img/gallery/8.jpg') }}&quot;);">
+                         data-bs-bg="{{ asset('main-assets/img/location/4.jpg') }}"
+                         style="background-image: url(&quot;{{ asset('main-assets/img/location/4.jpg') }}&quot;);">
                         <div class="ltn__banner-info">
-                            <h3 class="animated fadeIn"><a href="">Retail</a></h3>
+                            <h3 class="animated fadeIn"><a href="">Kaduna</a></h3>
                             <p> Great Deals Available</p>
                             <mark> 13 Listings</mark>
                         </div>
@@ -357,10 +357,10 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="ltn__banner-item ltn__banner-style-4 text-color-white bg-image"
-                         data-bs-bg="{{ asset('main-assets/img/gallery/9.jpg') }}"
+                         data-bs-bg="{{ asset('main-assets/img/location/5.jpg') }}"
                          style="background-image: url(&quot;{{ asset('main-assets/img/gallery/9.jpg') }}&quot;);">
                         <div class="ltn__banner-info">
-                            <h3 class="animated fadeIn"><a href="">Villas</a></h3>
+                            <h3 class="animated fadeIn"><a href="">Ibadan</a></h3>
                             <p> Great Deals Available</p>
                             <mark> 13 Listings</mark>
                         </div>
@@ -369,7 +369,7 @@
 
                 <div class="col-12 d-flex justify-content-center">
                     <a href="{{ url('contact') }}"
-                       class="theme-btn-1 btn border-radius-8">Explore</a>
+                       class="theme-btn-1 btn border-radius-8">Explore Locations</a>
                 </div>
             </div>
 
@@ -820,12 +820,7 @@
     <!-- VIDEO AREA START -->
     <div class="ltn__video-popup-area ltn__video-popup-margin---">
         <div class="ltn__video-bg-img ltn__video-popup-height-600--- bg-overlay-black-30 bg-image bg-fixed ltn__animation-pulse1"
-             data-bs-bg="{{ asset('main-assets/img/bg/19.jpg') }}">
-            <a class="ltn__video-icon-2 ltn__video-icon-2-border---"
-               href="https://www.youtube.com/embed/X7R-q9rsrtU?autoplay=1&amp;showinfo=0"
-               data-rel="lightcase:myCollection">
-                <i class="fa fa-play"></i>
-            </a>
+             data-bs-bg="{{ asset('main-assets/img/bg/1.jpg') }}">
         </div>
     </div>
     <!-- VIDEO AREA END -->
