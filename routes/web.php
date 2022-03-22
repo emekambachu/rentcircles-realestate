@@ -53,7 +53,7 @@ Route::post('admin/login/submit', [AdminLoginController::class, 'login'])
 Route::post('admin/logout', [AdminLoginController::class, 'logout'])
     ->name('admin.logout');
 
-// Realtor Auth
+// Realtor Login/Logout
 Route::get('realtor/login', [RealtorLoginController::class, 'showLoginForm'])
     ->name('realtor.login');
 Route::get('realtor', [RealtorLoginController::class, 'showLoginForm'])
@@ -62,10 +62,16 @@ Route::post('realtor/login/submit', [RealtorLoginController::class, 'login'])
     ->name('realtor.login.submit');
 Route::post('realtor/logout', [RealtorLoginController::class, 'logout'])
     ->name('realtor.logout');
+
+// Realtor Register
 Route::get('realtor/register', [RealtorRegisterController::class, 'showRegistrationForm'])
     ->name('realtor.register');
 Route::post('realtor/register/submit', [RealtorRegisterController::class, 'createRealtor'])
     ->name('realtor.register.submit');
+Route::get('realtor/{token}/verify/email', [RealtorRegisterController::class, 'verifyEmail'])
+    ->name('realtor.verify.email');
+Route::get('realtor/{token}/verify/email-complete', [RealtorRegisterController::class, 'verifyEmailComplete'])
+    ->name('realtor.verify.email-complete');
 
 Route::get('email-test', static function(){
     $data['email'] = 'your_email@gmail.com';

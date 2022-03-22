@@ -11,6 +11,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 use App\Jobs\RealtorVerificationEmailJob as realtorEmailJob;
@@ -35,8 +36,7 @@ class RealtorRegisterController extends Controller
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function showRegistrationForm()
-    {
+    public function showRegistrationForm(){
         return view('auth.realtors.register');
     }
 
@@ -74,9 +74,35 @@ class RealtorRegisterController extends Controller
         ]);
     }
 
-    protected function createRealtor(Request $request)
-    {
-        $this->validator($request->all())->validate();
+    protected function createRealtor(Request $request){
+
+        //Generate email verification token
+        function verificationToken($length = 11){
+            $characters = '0123456789ABCDEFG';
+            $charactersLength = strlen($characters);
+            $randomString = '';
+            for ($i = 0; $i < $length; $i++) {
+                $randomString .= $characters[random_int(0, $charactersLength - 1)];
+            }
+            return $randomString;
+        }
+
+        $rules = array(
+            'name' => 'required',
+            'email' => 'required|unique:realtors',
+            'mobile' => 'nullable|unique:realtors',
+            'password' => 'required|confirmed|min:6',
+            'country' => 'required',
+            'state' => 'nullable',
+        );
+
+        $validator = Validator::make($request->all(), $rules);
+
+        if($validator->fails()){
+            return response()->json([
+                "errors" => $validator->getMessageBag()->toArray()
+            ]);
+        }
 
         $realtor = Realtor::create([
             'name' => $request['name'],
@@ -85,12 +111,35 @@ class RealtorRegisterController extends Controller
             'password' => Hash::make($request['password']),
             'country' => $request['country'],
             'state' => $request['state'],
+            'verification_token' => verificationToken(),
         ]);
 
         $data['email'] = $realtor->email;
         $data['name'] = $realtor->name;
         dispatch(new realtorEmailJob($data));
 
-        return redirect()->intended('realtor/login');
+        return response()->json([
+            'success' => true,
+            'message' => 'Registration is successful'
+        ]);
+    }
+
+    public function verifyEmail($token){
+
+        $realtor = new Realtor();
+        $verify = $realtor->where('verification_token', $token)->first();
+
+        if($verify){
+            $verify->verify_email = 1;
+            $verify->save();
+            Session::flash('success', "Email verified, please login");
+        }else{
+            Session::flash('warning', "Incorrect token");
+        }
+        return view('auth.realtors.login');
+    }
+
+    public function verifyEmailComplete(){
+
     }
 }

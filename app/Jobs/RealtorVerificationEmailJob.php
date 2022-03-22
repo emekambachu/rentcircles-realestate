@@ -35,8 +35,7 @@ class RealtorVerificationEmailJob implements ShouldQueue
     public function handle()
     {
         $data = $this->data;
-//        $email = new RealtorVerificationEmail();
-//        Mail::to($this->details['email'])->send($email);
+
         Mail::send('emails.realtors.verification', $data, static function ($message) use ($data) {
             $message->from('info@rentcircles.com', 'RentCircles');
             $message->to($data['email'], $data['name']);

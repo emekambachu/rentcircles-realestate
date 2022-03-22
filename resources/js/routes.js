@@ -1,5 +1,4 @@
 import { createWebHistory, createRouter } from "vue-router";
-
 // import NotFound from './components/NotFoundComponent';
 // import Home from './components/HomeComponent';
 // import About from './components/AboutComponent';
@@ -60,4 +59,3 @@ const router = createRouter({
 });
 
 export default router;
-

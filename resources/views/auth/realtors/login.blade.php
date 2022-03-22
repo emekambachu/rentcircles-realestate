@@ -37,11 +37,14 @@
     <!-- SLIDER AREA END -->
 
     <div class="ltn__login-area pb-65 mt-50">
-        <div class="container">
+        <div id="login" class="container">
+           <p></p>
             <div class="row">
                 <div class="col-lg-8">
-                    <div class="account-login-inner">
 
+                    @include('includes.alerts')
+
+                    <div class="account-login-inner">
                         <form method="post" action="{{ route('realtor.login.submit') }}"
                               class="ltn__form-box contact-form-box">
                             @csrf
@@ -102,4 +105,7 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('bottom-assets')
 @endsection

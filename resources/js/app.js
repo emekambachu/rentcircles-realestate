@@ -4,14 +4,9 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+// Default
 require('./bootstrap');
-
-// window.Vue = require('vue').default;
-// window.axios = require("axios");
-
-import {
-    createApp
-} from 'vue';
+import { createApp } from 'vue';
 import router from './routes';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
@@ -26,9 +21,13 @@ import VueAxios from 'vue-axios';
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+
+// Global Components
 import ExampleComponent from './components/ExampleComponent.vue';
 
-// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+// Local Components
+import RealtorLoginComponent from './components/realtors/RealtorLoginComponent';
+import RealtorRegisterComponent from './components/realtors/RealtorRegisterComponent';
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -38,6 +37,8 @@ import ExampleComponent from './components/ExampleComponent.vue';
 
 createApp({
     components: {
-        ExampleComponent
+        RealtorRegisterComponent,
+        RealtorLoginComponent
     }
 }).use(router, axios, VueAxios).mount('#app');
+

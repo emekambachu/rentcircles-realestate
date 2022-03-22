@@ -10,6 +10,8 @@
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="RentCircles | Property, realtors, real estates, rent">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{{--    <meta name="csrf-token" content="{{ csrf_token() }}">--}}
+    <script>window.Laravel = {csrfToken: '{{ csrf_token() }}'}</script>
 
     <!-- Place favicon.png in the root directory -->
     <link rel="shortcut icon" href="{{ asset('main-assets/img/favicon.png') }}" type="image/x-icon" />
@@ -24,10 +26,15 @@
     <!--Custom-->
     <link rel="stylesheet" href="{{ asset('main-assets/custom/styles.css') }}">
 
+    <!-- Vue.js -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
     @yield('top-assets')
+
 </head>
 
 <body>
+
 <!--[if lte IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
@@ -35,7 +42,7 @@
 <!-- Add your site or application content here -->
 
 <!-- Body main wrapper start -->
-<div id="app" class="body-wrapper">
+<div id="" class="body-wrapper">
 
     <!-- HEADER AREA START (header-5) -->
     <header class="ltn__header-area ltn__header-5 ltn__header-logo-and-mobile-menu-in-mobile ltn__header-logo-and-mobile-menu ltn__header-transparent gradient-color-4---">
@@ -247,7 +254,9 @@
 
     <div class="ltn__utilize-overlay"></div>
 
-    @yield('content')
+    <div id="app">
+        @yield('content')
+    </div>
 
     <!-- FOOTER AREA START -->
     <footer class="ltn__footer-area  ">
@@ -577,8 +586,9 @@
 </div>
 <!-- preloader area end -->
 
-<!-- Vue.js -->
-<script src="{{ asset('js/app.js') }}" defer></script>
+
+@yield('bottom-assets')
+
 <!-- All JS Plugins -->
 <script src="{{ asset('main-assets/js/plugins.js') }}"></script>
 <!-- Main JS -->
