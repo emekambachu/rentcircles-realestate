@@ -32,7 +32,7 @@
                             <div class="row">
                                 <div class="col-md-8 offset-md-2 py-4">
                                     <div class="edit-profile-photo text-center">
-                                        <img src="/images/clients/reviewer-4.png" alt="">
+                                        <img src="admin-assets/images/clients/reviewer-4.png" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-12">

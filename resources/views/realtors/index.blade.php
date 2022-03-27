@@ -114,8 +114,7 @@
                                                     <router-link
                                                         class="nav-link"
                                                         exact
-                                                        to="/realtor/account">
-                                                        <i class="ion-ios-gear-outline"></i>Dashboard
+                                                        to="/realtor/account">Dashboard
                                                     </router-link>
                                                 </li>
 
@@ -123,8 +122,7 @@
                                                     <router-link
                                                         class="nav-link"
                                                         exact
-                                                        to="/realtor/account/my-properties">
-                                                        <i class="ion-ios-gear-outline"></i>My Properties
+                                                        to="/realtor/account/my-properties">My Properties
                                                     </router-link>
                                                 </li>
 
@@ -132,8 +130,7 @@
                                                     <router-link
                                                         class="nav-link"
                                                         exact
-                                                        to="/realtor/account/properties/add">
-                                                        <i class="ion-ios-gear-outline"></i>Add Property
+                                                        to="/realtor/account/properties/add">Add Property
                                                     </router-link>
                                                 </li>
 
@@ -141,8 +138,7 @@
                                                     <router-link
                                                         class="nav-link"
                                                         exact
-                                                        to="/realtor/account/profile">
-                                                        <i class="ion-ios-gear-outline"></i>Profile
+                                                        to="/realtor/account/profile">Profile
                                                     </router-link>
                                                 </li>
 

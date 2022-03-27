@@ -34,7 +34,7 @@
                                 <div class="col-md-4 offset-md-4">
                                     <!-- Avatar -->
                                     <div class="edit-profile-photo">
-                                        <img src="/images/clients/reviewer-1.png" alt="">
+                                        <img src="admin-assets/images/clients/reviewer-1.png" alt="">
                                         <div class="change-photo-btn">
                                             <div class="contact-form__upload-btn xs-left">
                                                 <input class="contact-form__input-file" type="file" name="photo-upload" id="photo-upload">
