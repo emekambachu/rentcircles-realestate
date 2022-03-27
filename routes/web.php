@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\Realtor\RealtorRegisterController;
 use App\Http\Controllers\GithubDeploymentController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Properties\PropertyController;
+use App\Http\Controllers\Realtor\RealtorAccountController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -73,6 +74,11 @@ Route::get('realtor/{token}/verify/email', [RealtorRegisterController::class, 'v
 Route::get('realtor/{token}/verify/email-complete', [RealtorRegisterController::class, 'verifyEmailComplete'])
     ->name('realtor.verify.email-complete');
 
+// Realtor Account
+Route::get('realtor/account', [RealtorAccountController::class, 'dashboard'])
+    ->name('realtor.account');
+
+
 Route::get('email-test', static function(){
     $data['email'] = 'your_email@gmail.com';
     $data['name'] = 'Dex';
@@ -92,8 +98,20 @@ Route::get('properties/buy', [PropertyController::class, 'buy'])
 Route::get('properties/buy/search', [PropertyController::class, 'searchBuy'])
     ->name('properties.buy.search');
 
-Route::get('/', [HomeController::class, 'index'])
-    ->name('home');
+// Realtors SPA
+Route::get('/realtor/account/{any}', static function () {
+    return view('realtors.index');
+})->where('any', '.*');
+
+// Users SPA
+Route::get('/users/account/{any}', static function () {
+    return view('users.index');
+})->where('any', '.*');
+
+// Realtors SPA
+Route::get('/admin/account/{any}', static function () {
+    return view('admin.index');
+})->where('any', '.*');
 
 //Github Deployment
 Route::post('github/deploy', [GithubDeploymentController::class, 'deploy']);

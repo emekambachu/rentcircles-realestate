@@ -100,6 +100,7 @@ class RealtorRegisterController extends Controller
 
         if($validator->fails()){
             return response()->json([
+                "success" => false,
                 "errors" => $validator->getMessageBag()->toArray()
             ]);
         }

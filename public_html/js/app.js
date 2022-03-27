@@ -22714,10 +22714,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js":
-/*!**********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js ***!
-  \**********************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/NotFoundComponent.vue?vue&type=script&lang=js":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/NotFoundComponent.vue?vue&type=script&lang=js ***!
+  \***********************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -22726,9 +22726,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  mounted: function mounted() {
-    console.log('Component mounted.');
-  }
+  name: "NotFoundComponent"
 });
 
 /***/ }),
@@ -22745,7 +22743,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "LoginComponent"
+  data: function data() {
+    return {
+      form: {
+        email: '',
+        password: ''
+      },
+      errors: [],
+      errorMessage: ''
+    };
+  },
+  methods: {
+    login: function login() {
+      var _this = this;
+
+      console.log(this.form);
+      axios.post('/api/realtor/login/submit', this.form).then(function (response) {
+        response.data.success === true ? window.location.href = '/realtor/account' : false;
+        console.log(response.data);
+        response.data.success === false ? _this.errors = response.data.errors : _this.errors = [];
+      })["catch"](function (error) {
+        // this.errors = error.response.data.errors;
+        console.log(error);
+      });
+    }
+  },
+  computed: function computed() {},
+  watch: function watch() {},
+  mounted: function mounted() {},
+  created: function created() {}
 });
 
 /***/ }),
@@ -22772,7 +22798,8 @@ __webpack_require__.r(__webpack_exports__);
         password: '',
         password_confirmation: ''
       },
-      errors: []
+      errors: [],
+      countries: []
     };
   },
   methods: {
@@ -22781,26 +22808,122 @@ __webpack_require__.r(__webpack_exports__);
 
       console.log(this.form);
       axios.post('/api/realtor/register/submit', this.form).then(function (response) {
-        if (response.data.success) {
-          console.log(response.data);
-        } else {
-          console.log(response.data.errors);
-          _this.errors = response.data.errors;
-        }
+        response.data.success === true ? window.location.href = '/realtor/login' : false;
+        console.log(response.data);
+        response.data.success === false ? _this.errors = response.data.errors : _this.errors = [];
+        console.log(response.data.errors);
       })["catch"](function (error) {
         // this.errors = error.response.data.errors;
         console.log(error);
       });
     }
+  },
+  computed: function computed() {},
+  watch: function watch() {},
+  created: function created() {// axios.get('/api/property/countries')
+    //     .then((response) => {
+    //         this.countries = response.data;
+    //         console.log(this.countries);
+    //         response.data.forEach((item, index)=>{
+    //             this.countries.push(item);
+    //             console.log(item);
+    //
+    //         })
+    //     }).catch((error) => {
+    //     console.log(error);
+    // }).finally(() => {
+    // });
+  },
+  mounted: function mounted() {
+    var _this2 = this;
+
+    axios.get('/api/property/countries').then(function (response) {
+      _this2.countries = response.data; // response.data.forEach((item, index)=>{
+      //     this.countries.push(item);
+      //     console.log(item);
+      // });
+
+      console.log(_this2.countries);
+    })["catch"](function (error) {
+      console.log(error);
+    })["finally"](function () {});
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e":
-/*!**************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorAddPropertiesComponent.vue?vue&type=script&lang=js":
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorAddPropertiesComponent.vue?vue&type=script&lang=js ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "RealtorAddProperties"
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorDashboardComponent.vue?vue&type=script&lang=js":
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorDashboardComponent.vue?vue&type=script&lang=js ***!
+  \************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "RealtorDashboardComponent"
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue?vue&type=script&lang=js":
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue?vue&type=script&lang=js ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "RealtorMyProperties"
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorProfileComponent.vue?vue&type=script&lang=js":
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorProfileComponent.vue?vue&type=script&lang=js ***!
+  \**********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "RealtorProfileComponent"
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/NotFoundComponent.vue?vue&type=template&id=2b13f773":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/NotFoundComponent.vue?vue&type=template&id=2b13f773 ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -22808,17 +22931,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "render": () => (/* binding */ render)
 /* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
-
-var _hoisted_1 = {
-  "class": "container"
-};
-
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"row justify-content-center\"><div class=\"col-md-8\"><div class=\"card\"><div class=\"card-header\">Example Component</div><div class=\"card-body\"> I&#39;m an example component. </div></div></div></div>", 1);
-
-var _hoisted_3 = [_hoisted_2];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, _hoisted_3);
+  return null;
 }
 
 /***/ }),
@@ -22834,8 +22948,91 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "render": () => (/* binding */ render)
 /* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  id: "login",
+  "class": "container"
+};
+var _hoisted_2 = {
+  "class": "row"
+};
+var _hoisted_3 = {
+  "class": "col-lg-8"
+};
+var _hoisted_4 = {
+  "class": "account-login-inner"
+};
+
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "bg-danger text-white"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  "class": "text-center"
+})], -1
+/* HOISTED */
+);
+
+var _hoisted_6 = {
+  "class": "input-item"
+};
+var _hoisted_7 = {
+  key: 0,
+  "class": "text-danger text-center m-0"
+};
+var _hoisted_8 = {
+  "class": "input-item"
+};
+var _hoisted_9 = {
+  key: 0,
+  "class": "text-danger text-center m-0"
+};
+
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "btn-wrapper mt-0"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  "class": "theme-btn-1 btn btn-block",
+  type: "submit"
+}, "LOGIN")], -1
+/* HOISTED */
+);
+
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-lg-4\"><aside class=\"sidebar-area ltn__right-sidebar\"><!-- Menu Widget --><div class=\"widget-2 ltn__menu-widget ltn__menu-widget-2 text-uppercase\"><ul><li><a href=\"realtor/register\">No account? Sign up <span><i class=\"fas fa-arrow-right\"></i></span></a></li><li><a href=\"user/register\">Sign up as a user <span><i class=\"fas fa-arrow-right\"></i></span></a></li></ul></div><!-- Newsletter Widget --><div class=\"widget ltn__search-widget ltn__newsletter-widget\"><h6 class=\"ltn__widget-sub-title\">// subscribe</h6><h4 class=\"ltn__widget-title\">Get Newsletter</h4><form action=\"#\"><input type=\"text\" name=\"search\" placeholder=\"\"><button type=\"submit\"><i class=\"fas fa-search\"></i></button></form><div class=\"ltn__newsletter-bg-icon\"><i class=\"fas fa-envelope-open-text\"></i></div></div></aside></div>", 1);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return null;
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+    "class": "ltn__form-box contact-form-box",
+    onSubmit: _cache[2] || (_cache[2] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+      return $options.login && $options.login.apply($options, arguments);
+    }, ["prevent"]))
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [$data.errors.email ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.email.toString()), 1
+  /* TEXT */
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    name: "email",
+    "class": "form-control",
+    placeholder: "Email*",
+    required: "",
+    "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
+      return $data.form.email = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.email]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [$data.errors.password ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.password.toString()), 1
+  /* TEXT */
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "password",
+    name: "password",
+    "class": "form-control",
+    placeholder: "Password*",
+    required: "",
+    "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
+      return $data.form.password = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.password]])]), _hoisted_10], 32
+  /* HYDRATE_EVENTS */
+  )])]), _hoisted_11])]);
 }
 
 /***/ }),
@@ -22890,24 +23087,21 @@ var _hoisted_11 = {
 var _hoisted_12 = {
   "class": "input-item"
 };
-
-var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<option value=\"Niger\">Niger</option><option value=\"Nigeria\">Nigeria</option><option value=\"Paraguay\">Paraguay</option><option value=\"Peru\">Peru</option><option value=\"Phillipines\">Philippines</option><option value=\"Pitcairn Island\">Pitcairn Island</option><option value=\"Poland\">Poland</option><option value=\"South Africa\">South Africa</option><option value=\"Spain\">Spain</option><option value=\"Swaziland\">Swaziland</option><option value=\"Sweden\">Sweden</option><option value=\"Switzerland\">Switzerland</option><option value=\"Syria\">Syria</option><option value=\"United Kingdom\">United Kingdom</option><option value=\"Ukraine\">Ukraine</option><option value=\"United Arab Erimates\">United Arab Emirates</option>", 16);
-
-var _hoisted_29 = [_hoisted_13];
-var _hoisted_30 = {
-  key: 0
+var _hoisted_13 = ["value"];
+var _hoisted_14 = {
+  key: 1
 };
-var _hoisted_31 = {
+var _hoisted_15 = {
   "class": "input-item"
 };
-var _hoisted_32 = {
+var _hoisted_16 = {
   key: 0
 };
-var _hoisted_33 = {
+var _hoisted_17 = {
   "class": "input-item"
 };
 
-var _hoisted_34 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "btn-wrapper mt-0"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   "class": "theme-btn-1 btn btn-block",
@@ -22916,7 +23110,7 @@ var _hoisted_34 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_35 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-lg-4\"><aside class=\"sidebar-area ltn__right-sidebar\"><!-- Menu Widget --><div class=\"widget-2 ltn__menu-widget ltn__menu-widget-2 text-uppercase\"><ul><li><a href=\"\">Have an account? Log in <span><i class=\"fas fa-arrow-right\"></i></span></a></li><li><a href=\"\">Sign up as a user <span><i class=\"fas fa-arrow-right\"></i></span></a></li></ul></div><!-- Newsletter Widget --><div class=\"widget ltn__search-widget ltn__newsletter-widget\"><h6 class=\"ltn__widget-sub-title\">// subscribe</h6><h4 class=\"ltn__widget-title\">Get Newsletter</h4><form action=\"#\"><input type=\"text\" name=\"search\" placeholder=\"Search\"><button type=\"submit\"><i class=\"fas fa-search\"></i></button></form><div class=\"ltn__newsletter-bg-icon\"><i class=\"fas fa-envelope-open-text\"></i></div></div></aside></div>", 1);
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-lg-4\"><aside class=\"sidebar-area ltn__right-sidebar\"><!-- Menu Widget --><div class=\"widget-2 ltn__menu-widget ltn__menu-widget-2 text-uppercase\"><ul><li><a href=\"\">Have an account? Log in <span><i class=\"fas fa-arrow-right\"></i></span></a></li><li><a href=\"\">Sign up as a user <span><i class=\"fas fa-arrow-right\"></i></span></a></li></ul></div><!-- Newsletter Widget --><div class=\"widget ltn__search-widget ltn__newsletter-widget\"><h6 class=\"ltn__widget-sub-title\">// subscribe</h6><h4 class=\"ltn__widget-title\">Get Newsletter</h4><form action=\"#\"><input type=\"text\" name=\"search\" placeholder=\"Search\"><button type=\"submit\"><i class=\"fas fa-search\"></i></button></form><div class=\"ltn__newsletter-bg-icon\"><i class=\"fas fa-envelope-open-text\"></i></div></div></aside></div>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
@@ -22970,17 +23164,27 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* NEED_PATCH */
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.mobile]]), $data.errors.mobile ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("strong", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.mobile.toString()), 1
   /* TEXT */
-  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [$data.countries.length > 0 ? (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)(((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("select", {
+    key: 0,
     "class": "nice-select",
     name: "country",
     "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
       return $data.form.country = $event;
     })
-  }, _hoisted_29, 512
+  }, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.countries, function (country) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
+      key: country.id,
+      value: country.country_name
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(country.country_name), 9
+    /* TEXT, PROPS */
+    , _hoisted_13);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))], 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.form.country]]), $data.errors.country ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("strong", _hoisted_30, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.country.toString()), 1
+  )), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.form.country]]) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.errors.country ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("strong", _hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.country.toString()), 1
   /* TEXT */
-  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "password",
     name: "password",
     "class": "form-control",
@@ -22991,9 +23195,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.password]]), $data.errors.password ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("strong", _hoisted_32, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.password.toString()), 1
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.password]]), $data.errors.password ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("strong", _hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.password.toString()), 1
   /* TEXT */
-  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "password",
     name: "password_confirmation",
     placeholder: "Confirm Password*",
@@ -23003,9 +23207,144 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.password_confirmation]])]), _hoisted_34], 32
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.password_confirmation]])]), _hoisted_18], 32
   /* HYDRATE_EVENTS */
-  )])]), _hoisted_35])]);
+  )])]), _hoisted_19])]);
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorAddPropertiesComponent.vue?vue&type=template&id=08f40856":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorAddPropertiesComponent.vue?vue&type=template&id=08f40856 ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"dash-breadcrumb\"><div class=\"container-fluid\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"dash-breadcrumb-content\"><div class=\"dash-breadcrumb-left\"><div class=\"breadcrumb-menu text-right sm-left\"><ul><li class=\"active\"><a href=\"#\">Home</a></li><li><a href=\"#\">Dashboard</a></li><li>Add Listing</li></ul></div></div><a class=\"btn v3\" href=\"add-listing.html\"><i class=\"ion-plus-round\"></i>Add Listing </a></div></div></div></div></div><div class=\"dash-content\"><div class=\"container-fluid\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"db-add-list-wrap\"><div class=\"act-title\"><h5><i class=\"ion-ios-location\"></i> Location/Contacts :</h5></div><div class=\"db-add-listing\"><div class=\"row\"><div class=\"col-md-6\"><div class=\"form-group\"><label>Select City</label><div class=\"nice-select filter-input\" tabindex=\"0\"><span class=\"current\">Select City</span><ul class=\"list\"><li class=\"option selected focus\">New York</li><li class=\"option\">Chicago</li><li class=\"option\">Las Vegas</li><li class=\"option\">Los Angeles</li><li class=\"option\">Austin</li><li class=\"option\">Downturn</li><li class=\"option\">DownturnSan Diago</li></ul></div></div></div><div class=\"col-md-6\"><div class=\"form-group\"><label>Address</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"ex. 250, Fifth Avenue...\"></div></div><div class=\"col-md-6\"><div class=\"form-group\"><label>State</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"ex. New York\"></div></div><div class=\"col-md-6\"><div class=\"form-group\"><label>Zip Code</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"ex. 5858\"></div></div><div class=\"col-md-6\"><div class=\"form-group\"><label> Longitude (Drag marker on the map)</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"Map Longitude\"></div></div><div class=\"col-md-6\"><div class=\"form-group\"><label> Latitude (Drag marker on the map) </label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"Map Latitude\"></div></div><div class=\"col-md-12 no-padding\"><div id=\"map\"></div></div><div class=\"col-md-6\"><div class=\"form-group mar-top-15\"><label>Website </label><input type=\"text\" class=\"form-control filter-input\"></div></div><div class=\"col-md-6\"><div class=\"form-group mar-top-15\"><label>Phone </label><input type=\"text\" class=\"form-control filter-input\"></div></div></div></div></div><div class=\"db-add-list-wrap\"><div class=\"act-title\"><h5><i class=\"ion-ios-location\"></i> Rooms/Pricing :</h5></div><div class=\"db-add-listing\"><div class=\"row\"><div class=\"col-md-6\"><div class=\"form-group\"><label>Room Title</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"Standard family Room\"></div></div><div class=\"col-md-6\"><div class=\"form-group\"><label>Capacity</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"2 persons\"></div></div><div class=\"col-md-6\"><div class=\"form-group\"><label>Price</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"$180\"></div></div><div class=\"col-md-6\"><div class=\"form-group\"><label>Room Details</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"Total for 1 room, 2 nights\"></div></div><div class=\"col-md-12\"><div class=\"form-group\"><form class=\"photo-upload\"><div class=\"form-group\"><div class=\"add-listing__input-file-box\"><input class=\"add-listing__input-file\" type=\"file\" name=\"file\" id=\"file\"><div class=\"add-listing__input-file-wrap\"><i class=\"ion-ios-cloud-upload\"></i><p>Click here to upload your images</p></div></div></div><a href=\"#\" class=\"btn v8 mar-top-15\">Add Images</a></form></div></div><div class=\"col-md-12\"><div class=\"form-group\"><label>Features</label><div class=\"filter-checkbox\"><input id=\"check-m\" type=\"checkbox\" name=\"check\"><label for=\"check-m\">Tv inside</label><input id=\"check-n\" type=\"checkbox\" name=\"check\"><label for=\"check-n\">Air Conditioned</label><input id=\"check-o\" type=\"checkbox\" name=\"check\"><label for=\"check-o\">Free Wi Fi</label><input id=\"check-p\" type=\"checkbox\" name=\"check\"><label for=\"check-p\">Breakfast</label></div></div><div class=\"row\"><div class=\"col-md-4\"><label>Title</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"Title\"></div><div class=\"col-md-4\"><label>Number</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"Number\"></div><div class=\"col-md-4\"><label>Icon</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"Icon\"></div><div class=\"col-md-4\"><a href=\"#\" class=\"btn v8 mar-top-20\">Add Facts</a></div></div></div></div></div></div><div class=\"db-add-list-wrap\"><div class=\"act-title\"><h5><i class=\"ion-clock\"></i> Opening/Business Hours :</h5></div><div class=\"db-add-listing\"><div class=\"row mar-bot-30\"><div class=\"col-md-2\"><label class=\"fix_spacing\">Monday</label></div><div class=\"col-md-5\"><div class=\"nice-select filter-input\" tabindex=\"0\"><span class=\"current\">Opening Time</span><ul class=\"list\"><li class=\"option selected focus\">7.00 am</li><li class=\"option\">8.00 am</li><li class=\"option\">9.00 am</li><li class=\"option\">10.00 am</li><li class=\"option\">11.00 am</li><li class=\"option\">12.00 am</li><li class=\"option\">1.00 pm</li><li class=\"option\">2.00 pm</li><li class=\"option\">3.00 pm</li><li class=\"option\">4.00 pm</li><li class=\"option\">5.00 pm</li><li class=\"option\">6.00 pm</li><li class=\"option\">7.00 pm</li><li class=\"option\">8.00 pm</li><li class=\"option\">9.00 pm</li><li class=\"option\">10.00 pm</li><li class=\"option\">11.00 pm</li><li class=\"option\">12.00 pm</li><li class=\"option\">00.00 am</li></ul></div></div><div class=\"col-md-5\"><div class=\"nice-select filter-input\" tabindex=\"0\"><span class=\"current\">Closing Time</span><ul class=\"list\"><li class=\"option selected focus\">7.00 am</li><li class=\"option\">8.00 am</li><li class=\"option\">9.00 am</li><li class=\"option\">10.00 am</li><li class=\"option\">11.00 am</li><li class=\"option\">12.00 am</li><li class=\"option\">1.00 pm</li><li class=\"option\">2.00 pm</li><li class=\"option\">3.00 pm</li><li class=\"option\">4.00 pm</li><li class=\"option\">5.00 pm</li><li class=\"option\">6.00 pm</li><li class=\"option\">7.00 pm</li><li class=\"option\">8.00 pm</li><li class=\"option\">9.00 pm</li><li class=\"option\">10.00 pm</li><li class=\"option\">11.00 pm</li><li class=\"option\">12.00 pm</li><li class=\"option\">00.00 am</li></ul></div></div></div><div class=\"row mar-bot-30\"><div class=\"col-md-2\"><label class=\"fix_spacing\">Tuesday</label></div><div class=\"col-md-5\"><div class=\"nice-select filter-input\" tabindex=\"0\"><span class=\"current\">Opening Time</span><ul class=\"list\"><li class=\"option selected focus\">7.00 am</li><li class=\"option\">8.00 am</li><li class=\"option\">9.00 am</li><li class=\"option\">10.00 am</li><li class=\"option\">11.00 am</li><li class=\"option\">12.00 am</li><li class=\"option\">1.00 pm</li><li class=\"option\">2.00 pm</li><li class=\"option\">3.00 pm</li><li class=\"option\">4.00 pm</li><li class=\"option\">5.00 pm</li><li class=\"option\">6.00 pm</li><li class=\"option\">7.00 pm</li><li class=\"option\">8.00 pm</li><li class=\"option\">9.00 pm</li><li class=\"option\">10.00 pm</li><li class=\"option\">11.00 pm</li><li class=\"option\">12.00 pm</li><li class=\"option\">00.00 am</li></ul></div></div><div class=\"col-md-5\"><div class=\"nice-select filter-input\" tabindex=\"0\"><span class=\"current\">Closing Time</span><ul class=\"list\"><li class=\"option selected focus\">7.00 am</li><li class=\"option\">8.00 am</li><li class=\"option\">9.00 am</li><li class=\"option\">10.00 am</li><li class=\"option\">11.00 am</li><li class=\"option\">12.00 am</li><li class=\"option\">1.00 pm</li><li class=\"option\">2.00 pm</li><li class=\"option\">3.00 pm</li><li class=\"option\">4.00 pm</li><li class=\"option\">5.00 pm</li><li class=\"option\">6.00 pm</li><li class=\"option\">7.00 pm</li><li class=\"option\">8.00 pm</li><li class=\"option\">9.00 pm</li><li class=\"option\">10.00 pm</li><li class=\"option\">11.00 pm</li><li class=\"option\">12.00 pm</li><li class=\"option\">00.00 am</li></ul></div></div></div><div class=\"row mar-bot-30\"><div class=\"col-md-2\"><label class=\"fix_spacing\">Wednesday</label></div><div class=\"col-md-5\"><div class=\"nice-select filter-input\" tabindex=\"0\"><span class=\"current\">Opening Time</span><ul class=\"list\"><li class=\"option selected focus\">7.00 am</li><li class=\"option\">8.00 am</li><li class=\"option\">9.00 am</li><li class=\"option\">10.00 am</li><li class=\"option\">11.00 am</li><li class=\"option\">12.00 am</li><li class=\"option\">1.00 pm</li><li class=\"option\">2.00 pm</li><li class=\"option\">3.00 pm</li><li class=\"option\">4.00 pm</li><li class=\"option\">5.00 pm</li><li class=\"option\">6.00 pm</li><li class=\"option\">7.00 pm</li><li class=\"option\">8.00 pm</li><li class=\"option\">9.00 pm</li><li class=\"option\">10.00 pm</li><li class=\"option\">11.00 pm</li><li class=\"option\">12.00 pm</li><li class=\"option\">00.00 am</li></ul></div></div><div class=\"col-md-5\"><div class=\"nice-select filter-input\" tabindex=\"0\"><span class=\"current\">Closing Time</span><ul class=\"list\"><li class=\"option selected focus\">7.00 am</li><li class=\"option\">8.00 am</li><li class=\"option\">9.00 am</li><li class=\"option\">10.00 am</li><li class=\"option\">11.00 am</li><li class=\"option\">12.00 am</li><li class=\"option\">1.00 pm</li><li class=\"option\">2.00 pm</li><li class=\"option\">3.00 pm</li><li class=\"option\">4.00 pm</li><li class=\"option\">5.00 pm</li><li class=\"option\">6.00 pm</li><li class=\"option\">7.00 pm</li><li class=\"option\">8.00 pm</li><li class=\"option\">9.00 pm</li><li class=\"option\">10.00 pm</li><li class=\"option\">11.00 pm</li><li class=\"option\">12.00 pm</li><li class=\"option\">00.00 am</li></ul></div></div></div><div class=\"row mar-bot-30\"><div class=\"col-md-2\"><label class=\"fix_spacing\">Thursday</label></div><div class=\"col-md-5\"><div class=\"nice-select filter-input\" tabindex=\"0\"><span class=\"current\">Opening Time</span><ul class=\"list\"><li class=\"option selected focus\">7.00 am</li><li class=\"option\">8.00 am</li><li class=\"option\">9.00 am</li><li class=\"option\">10.00 am</li><li class=\"option\">11.00 am</li><li class=\"option\">12.00 am</li><li class=\"option\">1.00 pm</li><li class=\"option\">2.00 pm</li><li class=\"option\">3.00 pm</li><li class=\"option\">4.00 pm</li><li class=\"option\">5.00 pm</li><li class=\"option\">6.00 pm</li><li class=\"option\">7.00 pm</li><li class=\"option\">8.00 pm</li><li class=\"option\">9.00 pm</li><li class=\"option\">10.00 pm</li><li class=\"option\">11.00 pm</li><li class=\"option\">12.00 pm</li><li class=\"option\">00.00 am</li></ul></div></div><div class=\"col-md-5\"><div class=\"nice-select filter-input\" tabindex=\"0\"><span class=\"current\">Closing Time</span><ul class=\"list\"><li class=\"option selected focus\">7.00 am</li><li class=\"option\">8.00 am</li><li class=\"option\">9.00 am</li><li class=\"option\">10.00 am</li><li class=\"option\">11.00 am</li><li class=\"option\">12.00 am</li><li class=\"option\">1.00 pm</li><li class=\"option\">2.00 pm</li><li class=\"option\">3.00 pm</li><li class=\"option\">4.00 pm</li><li class=\"option\">5.00 pm</li><li class=\"option\">6.00 pm</li><li class=\"option\">7.00 pm</li><li class=\"option\">8.00 pm</li><li class=\"option\">9.00 pm</li><li class=\"option\">10.00 pm</li><li class=\"option\">11.00 pm</li><li class=\"option\">12.00 pm</li><li class=\"option\">00.00 am</li></ul></div></div></div><div class=\"row mar-bot-30\"><div class=\"col-md-2\"><label class=\"fix_spacing\">Friday</label></div><div class=\"col-md-5\"><div class=\"nice-select filter-input\" tabindex=\"0\"><span class=\"current\">Opening Time</span><ul class=\"list\"><li class=\"option selected focus\">7.00 am</li><li class=\"option\">8.00 am</li><li class=\"option\">9.00 am</li><li class=\"option\">10.00 am</li><li class=\"option\">11.00 am</li><li class=\"option\">12.00 am</li><li class=\"option\">1.00 pm</li><li class=\"option\">2.00 pm</li><li class=\"option\">3.00 pm</li><li class=\"option\">4.00 pm</li><li class=\"option\">5.00 pm</li><li class=\"option\">6.00 pm</li><li class=\"option\">7.00 pm</li><li class=\"option\">8.00 pm</li><li class=\"option\">9.00 pm</li><li class=\"option\">10.00 pm</li><li class=\"option\">11.00 pm</li><li class=\"option\">12.00 pm</li><li class=\"option\">00.00 am</li></ul></div></div><div class=\"col-md-5\"><div class=\"nice-select filter-input\" tabindex=\"0\"><span class=\"current\">Closing Time</span><ul class=\"list\"><li class=\"option selected focus\">7.00 am</li><li class=\"option\">8.00 am</li><li class=\"option\">9.00 am</li><li class=\"option\">10.00 am</li><li class=\"option\">11.00 am</li><li class=\"option\">12.00 am</li><li class=\"option\">1.00 pm</li><li class=\"option\">2.00 pm</li><li class=\"option\">3.00 pm</li><li class=\"option\">4.00 pm</li><li class=\"option\">5.00 pm</li><li class=\"option\">6.00 pm</li><li class=\"option\">7.00 pm</li><li class=\"option\">8.00 pm</li><li class=\"option\">9.00 pm</li><li class=\"option\">10.00 pm</li><li class=\"option\">11.00 pm</li><li class=\"option\">12.00 pm</li><li class=\"option\">00.00 am</li></ul></div></div></div><div class=\"row mar-bot-30\"><div class=\"col-md-2\"><label class=\"fix_spacing\">Saturday</label></div><div class=\"col-md-5\"><div class=\"nice-select filter-input\" tabindex=\"0\"><span class=\"current\">Opening Time</span><ul class=\"list\"><li class=\"option selected focus\">7.00 am</li><li class=\"option\">8.00 am</li><li class=\"option\">9.00 am</li><li class=\"option\">10.00 am</li><li class=\"option\">11.00 am</li><li class=\"option\">12.00 am</li><li class=\"option\">1.00 pm</li><li class=\"option\">2.00 pm</li><li class=\"option\">3.00 pm</li><li class=\"option\">4.00 pm</li><li class=\"option\">5.00 pm</li><li class=\"option\">6.00 pm</li><li class=\"option\">7.00 pm</li><li class=\"option\">8.00 pm</li><li class=\"option\">9.00 pm</li><li class=\"option\">10.00 pm</li><li class=\"option\">11.00 pm</li><li class=\"option\">12.00 pm</li><li class=\"option\">00.00 am</li></ul></div></div><div class=\"col-md-5\"><div class=\"nice-select filter-input\" tabindex=\"0\"><span class=\"current\">Closing Time</span><ul class=\"list\"><li class=\"option selected focus\">7.00 am</li><li class=\"option\">8.00 am</li><li class=\"option\">9.00 am</li><li class=\"option\">10.00 am</li><li class=\"option\">11.00 am</li><li class=\"option\">12.00 am</li><li class=\"option\">1.00 pm</li><li class=\"option\">2.00 pm</li><li class=\"option\">3.00 pm</li><li class=\"option\">4.00 pm</li><li class=\"option\">5.00 pm</li><li class=\"option\">6.00 pm</li><li class=\"option\">7.00 pm</li><li class=\"option\">8.00 pm</li><li class=\"option\">9.00 pm</li><li class=\"option\">10.00 pm</li><li class=\"option\">11.00 pm</li><li class=\"option\">12.00 pm</li><li class=\"option\">00.00 am</li></ul></div></div></div><div class=\"row mar-bot-30\"><div class=\"col-md-2\"><label class=\"fix_spacing\">Sunday</label></div><div class=\"col-md-5\"><div class=\"nice-select filter-input\" tabindex=\"0\"><span class=\"current\">Opening Time</span><ul class=\"list\"><li class=\"option selected focus\">7.00 am</li><li class=\"option\">8.00 am</li><li class=\"option\">9.00 am</li><li class=\"option\">10.00 am</li><li class=\"option\">11.00 am</li><li class=\"option\">12.00 am</li><li class=\"option\">1.00 pm</li><li class=\"option\">2.00 pm</li><li class=\"option\">3.00 pm</li><li class=\"option\">4.00 pm</li><li class=\"option\">5.00 pm</li><li class=\"option\">6.00 pm</li><li class=\"option\">7.00 pm</li><li class=\"option\">8.00 pm</li><li class=\"option\">9.00 pm</li><li class=\"option\">10.00 pm</li><li class=\"option\">11.00 pm</li><li class=\"option\">12.00 pm</li><li class=\"option\">00.00 am</li></ul></div></div><div class=\"col-md-5\"><div class=\"nice-select filter-input\" tabindex=\"0\"><span class=\"current\">Closing Time</span><ul class=\"list\"><li class=\"option selected focus\">7.00 am</li><li class=\"option\">8.00 am</li><li class=\"option\">9.00 am</li><li class=\"option\">10.00 am</li><li class=\"option\">11.00 am</li><li class=\"option\">12.00 am</li><li class=\"option\">1.00 pm</li><li class=\"option\">2.00 pm</li><li class=\"option\">3.00 pm</li><li class=\"option\">4.00 pm</li><li class=\"option\">5.00 pm</li><li class=\"option\">6.00 pm</li><li class=\"option\">7.00 pm</li><li class=\"option\">8.00 pm</li><li class=\"option\">9.00 pm</li><li class=\"option\">10.00 pm</li><li class=\"option\">11.00 pm</li><li class=\"option\">12.00 pm</li><li class=\"option\">00.00 am</li></ul></div></div></div><div class=\"row\"><div class=\"col-md-12\"><h4><i class=\"ion-clock\"></i> Event Date :</h4></div></div><div class=\"row mar-bot-30\"><div class=\"col-sm-4 col-12\"><div id=\"datepicker-from\" class=\"input-group date\" data-date-format=\"dd-mm-yyyy\"><input class=\"form-control\" type=\"text\" placeholder=\"Select date\"><span class=\"input-group-addon\"><i class=\"icofont-ui-calendar\"></i></span></div></div><div class=\"col-sm-4 col-12\"><div class=\"nice-select filter-input mt-0\" tabindex=\"0\"><span class=\"current\">Opening Time</span><ul class=\"list\"><li class=\"option selected focus\">7.00 am</li><li class=\"option\">8.00 am</li><li class=\"option\">9.00 am</li><li class=\"option\">10.00 am</li><li class=\"option\">11.00 am</li><li class=\"option\">12.00 am</li><li class=\"option\">1.00 pm</li><li class=\"option\">2.00 pm</li><li class=\"option\">3.00 pm</li><li class=\"option\">4.00 pm</li><li class=\"option\">5.00 pm</li><li class=\"option\">6.00 pm</li><li class=\"option\">7.00 pm</li><li class=\"option\">8.00 pm</li><li class=\"option\">9.00 pm</li><li class=\"option\">10.00 pm</li><li class=\"option\">11.00 pm</li><li class=\"option\">12.00 pm</li><li class=\"option\">00.00 am</li></ul></div></div><div class=\"col-sm-4 col-12\"><div class=\"nice-select filter-input mt-0\" tabindex=\"0\"><span class=\"current\">Closing Time</span><ul class=\"list\"><li class=\"option selected focus\">7.00 am</li><li class=\"option\">8.00 am</li><li class=\"option\">9.00 am</li><li class=\"option\">10.00 am</li><li class=\"option\">11.00 am</li><li class=\"option\">12.00 am</li><li class=\"option\">1.00 pm</li><li class=\"option\">2.00 pm</li><li class=\"option\">3.00 pm</li><li class=\"option\">4.00 pm</li><li class=\"option\">5.00 pm</li><li class=\"option\">6.00 pm</li><li class=\"option\">7.00 pm</li><li class=\"option\">8.00 pm</li><li class=\"option\">9.00 pm</li><li class=\"option\">10.00 pm</li><li class=\"option\">11.00 pm</li><li class=\"option\">12.00 pm</li><li class=\"option\">00.00 am</li></ul></div></div></div></div></div></div></div></div></div>", 2);
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return _hoisted_1;
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorDashboardComponent.vue?vue&type=template&id=6345ee14":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorDashboardComponent.vue?vue&type=template&id=6345ee14 ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  "class": "dash-breadcrumb"
+};
+var _hoisted_2 = {
+  "class": "container-fluid"
+};
+var _hoisted_3 = {
+  "class": "row"
+};
+var _hoisted_4 = {
+  "class": "col-md-12"
+};
+var _hoisted_5 = {
+  "class": "dash-breadcrumb-content"
+};
+
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "dash-breadcrumb-left"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "breadcrumb-menu text-right sm-left"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+  "class": "active"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "#"
+}, "Home")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, "Dashboard")])])], -1
+/* HOISTED */
+);
+
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-plus-round"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Add Listing ");
+
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"statistic-wrap\"><div class=\"container-fluid\"><div class=\"row\"><div class=\"col-xl-3 col-md-6 col-12\"><div class=\"statistic__item item--green\"><h2 class=\"counter-value\">18</h2><span class=\"desc\">Published Properties</span><div class=\"icon\"><img src=\"/admin-assets/images/dashboard/map-of-roads.png\" alt=\"...\"></div></div></div><div class=\"col-xl-3 col-md-6 col-12\"><div class=\"statistic__item item--orange\"><h2 class=\"counter-value\">115</h2><span class=\"desc\">Submitted Properties</span><div class=\"icon\"><img src=\"/admin-assets/images/dashboard/review.png\" alt=\"...\"></div></div></div><div class=\"col-xl-3 col-md-6 col-12\"><div class=\"statistic__item item--blue\"><h2 class=\"counter-value\">800</h2><span class=\"desc\">Total Views</span><div class=\"icon\"><img src=\"/admin-assets/images/dashboard/bar-chart.png\" alt=\"...\"></div></div></div><div class=\"col-xl-3 col-md-6 col-12\"><div class=\"statistic__item item--red\"><h2 class=\"counter-value\">15</h2><span class=\"desc\">Messages sent</span><div class=\"icon\"><img src=\"/admin-assets/images/dashboard/like.png\" alt=\"...\"></div></div></div></div></div></div>", 1);
+
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"dash-content\"><div class=\"container-fluid\"><div class=\"row\"><div class=\"col-xl-6 col-md-12\"><div class=\"popular-listing\"><div class=\"act-title\"><h5><i class=\"icofont-eye-alt\"></i>Recently Added</h5></div><div class=\"viewd-item-wrap\"><div class=\"most-viewed-item\"><div class=\"most-viewed-img\"><a href=\"#\"><img src=\"admin-assets/images/single-listing/gallery-6.jpg\" alt=\"...\"></a></div><div class=\"most-viewed-detail\"><a class=\"category\" href=\"#\"><span class=\"list-bg aqua\"><i class=\"icofont-hotel\"></i></span>Hotel</a><h3><a href=\"#\">Four Seasons Resort</a></h3><div class=\"ratings\"><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star-half\"></i></div><div class=\"views\">Views : <span>325</span></div><p class=\"date\">Posted on Mar 25, 2019</p></div></div><div class=\"most-viewed-item\"><div class=\"most-viewed-img\"><a href=\"#\"><img src=\"/admin-assets/images/single-listing/restaurant-6.jpg\" alt=\"...\"></a></div><div class=\"most-viewed-detail\"><a class=\"category\" href=\"#\"><span class=\"list-bg red\"><i class=\"icofont-restaurant\"></i></span> Restaurent</a><h3><a href=\"#\">La Quo Vadis</a></h3><div class=\"ratings\"><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star-half\"></i></div><div class=\"views\">Views : <span>287</span></div><p class=\"date\">Posted on Feb 27, 2019</p></div></div><div class=\"most-viewed-item\"><div class=\"most-viewed-img\"><a href=\"#\"><img src=\"admin-assets/images/single-listing/single-list-2.jpg\" alt=\"...\"></a></div><div class=\"most-viewed-detail\"><a class=\"category\" href=\"#\"><span class=\"list-bg aqua\"><i class=\"icofont-music-alt\"></i></span>Music</a><h3><a href=\"#\">Bolton Music fair</a></h3><div class=\"ratings\"><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star-half\"></i></div><div class=\"views\">Views : <span>194</span></div><p class=\"date\">Posted on Dec 17, 2018</p></div></div></div></div></div><div class=\"col-xl-6 col-md-12\"><div class=\"popular-listing\"><div class=\"act-title\"><h5><i class=\"icofont-eye-alt\"></i>Recently Added</h5></div><div class=\"viewd-item-wrap\"><div class=\"most-viewed-item\"><div class=\"most-viewed-img\"><a href=\"#\"><img src=\"admin-assets/images/single-listing/gallery-6.jpg\" alt=\"...\"></a></div><div class=\"most-viewed-detail\"><a class=\"category\" href=\"#\"><span class=\"list-bg aqua\"><i class=\"icofont-hotel\"></i></span>Hotel</a><h3><a href=\"#\">Four Seasons Resort</a></h3><div class=\"ratings\"><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star-half\"></i></div><div class=\"views\">Views : <span>325</span></div><p class=\"date\">Posted on Mar 25, 2019</p></div></div><div class=\"most-viewed-item\"><div class=\"most-viewed-img\"><a href=\"#\"><img src=\"/admin-assets/images/single-listing/restaurant-6.jpg\" alt=\"...\"></a></div><div class=\"most-viewed-detail\"><a class=\"category\" href=\"#\"><span class=\"list-bg red\"><i class=\"icofont-restaurant\"></i></span> Restaurent</a><h3><a href=\"#\">La Quo Vadis</a></h3><div class=\"ratings\"><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star-half\"></i></div><div class=\"views\">Views : <span>287</span></div><p class=\"date\">Posted on Feb 27, 2019</p></div></div><div class=\"most-viewed-item\"><div class=\"most-viewed-img\"><a href=\"#\"><img src=\"admin-assets/images/single-listing/single-list-2.jpg\" alt=\"...\"></a></div><div class=\"most-viewed-detail\"><a class=\"category\" href=\"#\"><span class=\"list-bg aqua\"><i class=\"icofont-music-alt\"></i></span>Music</a><h3><a href=\"#\">Bolton Music fair</a></h3><div class=\"ratings\"><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star-half\"></i></div><div class=\"views\">Views : <span>194</span></div><p class=\"date\">Posted on Dec 17, 2018</p></div></div></div></div></div></div></div></div>", 1);
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Dashboard breadcrumb starts"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [_hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    "class": "btn v3",
+    exact: "",
+    to: "/realtor/account/properties/add"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_7, _hoisted_8];
+    }),
+    _: 1
+    /* STABLE */
+
+  })])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Dashboard breadcrumb ends"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Dashboard Statistics starts"), _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Dashboard Statistics ends"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Dashboard content starts"), _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Dashboard content ends")], 64
+  /* STABLE_FRAGMENT */
+  );
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue?vue&type=template&id=bc90fdbe":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue?vue&type=template&id=bc90fdbe ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"dash-breadcrumb\"><div class=\"container-fluid\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"dash-breadcrumb-content\"><div class=\"dash-breadcrumb-left\"><div class=\"breadcrumb-menu text-right sm-left\"><ul><li class=\"active\"><a href=\"#\">Home</a></li><li class=\"active\"><a href=\"#\">Listings</a></li><li>My Listings</li></ul></div></div><a class=\"btn v3\" href=\"add-listing.html\"><i class=\"ion-plus-round\"></i>Add Listing </a></div></div></div></div></div><div class=\"dash-content\"><div class=\"container-fluid\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"recent-activity my-listing\"><div class=\"act-title\"><h5><i class=\"ion-social-buffer-outline\"></i> My Listings</h5></div><div class=\"viewd-item-wrap\"><div class=\"most-viewed-item\"><div class=\"most-viewed-img\"><a href=\"#\"><img src=\"images/single-listing/gallery-6.jpg\" alt=\"...\"></a></div><div class=\"most-viewed-detail\"><a class=\"category\" href=\"#\"><span class=\"list-bg aqua\"><i class=\"icofont-hotel\"></i></span>Hotel</a><h3><a href=\"single-listing-one.html\">Hilton Moorea</a></h3><p class=\"list-address\"><i class=\"icofont-google-map\"></i>4210 Khale Street, Florence, USA</p><div class=\"ratings\"><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star-half\"></i></div><div class=\"views\">Views : <span>325</span></div></div><div class=\"listing-button\"><a href=\"#\" class=\"btn v2\"><i class=\"ion-edit\"></i> Edit</a><a href=\"#\" class=\"btn v5\"><i class=\"ion-android-delete\"></i> Delete</a></div></div><div class=\"most-viewed-item\"><div class=\"most-viewed-img\"><a href=\"#\"><img src=\"images/single-listing/restaurant-2.jpg\" alt=\"...\"></a></div><div class=\"most-viewed-detail\"><a class=\"category\" href=\"#\"><span class=\"list-bg red\"><i class=\"icofont-restaurant\"></i></span>Restaurent</a><h3><a href=\"single-listing-two.html\">La Quo Vadis</a></h3><p class=\"list-address\"><i class=\"icofont-google-map\"></i>42 Albemarle st. Mayfair,London</p><div class=\"ratings\"><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star-half\"></i></div><div class=\"views\">Views : <span>280</span></div></div><div class=\"listing-button\"><a href=\"#\" class=\"btn v2\"><i class=\"ion-edit\"></i> Edit</a><a href=\"#\" class=\"btn v5\"><i class=\"ion-android-delete\"></i> Delete</a></div></div><div class=\"most-viewed-item\"><div class=\"most-viewed-img\"><a href=\"#\"><img src=\"images/category/event/muay.jpg\" alt=\"...\"></a></div><div class=\"most-viewed-detail\"><a class=\"category\" href=\"#\"><span class=\"list-bg violate\"><i class=\"icofont-movie\"></i></span>Movie</a><h3><a href=\"single-listing-three.html\">Muay Thai Live Show</a></h3><p class=\"list-address\"><i class=\"icofont-google-map\"></i>1690 Brown Avenue,Barline</p><div class=\"ratings\"><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star-half\"></i></div><div class=\"views\">Views : <span>200</span></div></div><div class=\"listing-button\"><a href=\"#\" class=\"btn v2\"><i class=\"ion-edit\"></i> Edit</a><a href=\"#\" class=\"btn v5\"><i class=\"ion-android-delete\"></i> Delete</a></div></div><div class=\"most-viewed-item\"><div class=\"most-viewed-img\"><a href=\"#\"><img src=\"images/category/event/3.jpg\" alt=\"...\"></a></div><div class=\"most-viewed-detail\"><a class=\"category\" href=\"#\"><span class=\"list-bg aqua\"><i class=\"icofont-music-alt\"></i></span>Music</a><h3><a href=\"single-listing-five.html\">Bolton music fair </a></h3><p class=\"list-address\"><i class=\"icofont-google-map\"></i>20 Hogh Street, Bolton, France</p><div class=\"ratings\"><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star-half\"></i></div><div class=\"views\">Views : <span>180</span></div></div><div class=\"listing-button\"><a href=\"#\" class=\"btn v2\"><i class=\"ion-edit\"></i> Edit</a><a href=\"#\" class=\"btn v5\"><i class=\"ion-android-delete\"></i> Delete</a></div></div></div></div></div></div></div></div>", 2);
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return _hoisted_1;
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorProfileComponent.vue?vue&type=template&id=2fda557e":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorProfileComponent.vue?vue&type=template&id=2fda557e ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return null;
 }
 
 /***/ }),
@@ -23023,9 +23362,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var vue_axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-axios */ "./node_modules/vue-axios/dist/vue-axios.esm.min.js");
-/* harmony import */ var _components_ExampleComponent_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue");
-/* harmony import */ var _components_realtors_RealtorLoginComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/realtors/RealtorLoginComponent */ "./resources/js/components/realtors/RealtorLoginComponent.vue");
-/* harmony import */ var _components_realtors_RealtorRegisterComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/realtors/RealtorRegisterComponent */ "./resources/js/components/realtors/RealtorRegisterComponent.vue");
+/* harmony import */ var _components_realtors_RealtorLoginComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/realtors/RealtorLoginComponent */ "./resources/js/components/realtors/RealtorLoginComponent.vue");
+/* harmony import */ var _components_realtors_RealtorRegisterComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/realtors/RealtorRegisterComponent */ "./resources/js/components/realtors/RealtorRegisterComponent.vue");
+/* harmony import */ var _components_realtors_account_RealtorDashboardComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/realtors/account/RealtorDashboardComponent */ "./resources/js/components/realtors/account/RealtorDashboardComponent.vue");
+/* harmony import */ var _components_realtors_account_RealtorMyPropertiesComponent__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/realtors/account/RealtorMyPropertiesComponent */ "./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue");
+/* harmony import */ var _components_realtors_account_RealtorAddPropertiesComponent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/realtors/account/RealtorAddPropertiesComponent */ "./resources/js/components/realtors/account/RealtorAddPropertiesComponent.vue");
+/* harmony import */ var _components_realtors_account_RealtorProfileComponent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/realtors/account/RealtorProfileComponent */ "./resources/js/components/realtors/account/RealtorProfileComponent.vue");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -23047,9 +23389,11 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
  */
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-// Global Components
+// Local Components
 
- // Local Components
+
+
+
 
 
 
@@ -23061,8 +23405,12 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)({
   components: {
-    RealtorRegisterComponent: _components_realtors_RealtorRegisterComponent__WEBPACK_IMPORTED_MODULE_6__["default"],
-    RealtorLoginComponent: _components_realtors_RealtorLoginComponent__WEBPACK_IMPORTED_MODULE_5__["default"]
+    RealtorRegisterComponent: _components_realtors_RealtorRegisterComponent__WEBPACK_IMPORTED_MODULE_5__["default"],
+    RealtorLoginComponent: _components_realtors_RealtorLoginComponent__WEBPACK_IMPORTED_MODULE_4__["default"],
+    RealtorDashboardComponent: _components_realtors_account_RealtorDashboardComponent__WEBPACK_IMPORTED_MODULE_6__["default"],
+    RealtorMyPropertiesComponent: _components_realtors_account_RealtorMyPropertiesComponent__WEBPACK_IMPORTED_MODULE_7__["default"],
+    RealtorProfileComponent: _components_realtors_account_RealtorProfileComponent__WEBPACK_IMPORTED_MODULE_9__["default"],
+    RealtorAddPropertiesComponent: _components_realtors_account_RealtorAddPropertiesComponent__WEBPACK_IMPORTED_MODULE_8__["default"]
   }
 }).use(_routes__WEBPACK_IMPORTED_MODULE_1__["default"], (axios__WEBPACK_IMPORTED_MODULE_2___default()), vue_axios__WEBPACK_IMPORTED_MODULE_3__["default"]).mount('#app');
 
@@ -23117,61 +23465,86 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm-bundler.js");
- // import NotFound from './components/NotFoundComponent';
-// import Home from './components/HomeComponent';
-// import About from './components/AboutComponent';
-//
-// import Register from './components/RegisterComponent';
-// import Login from './components/LoginComponent';
-//
-// import Dashboard from './components/account/DashboardComponent';
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm-bundler.js");
+/* harmony import */ var _components_NotFoundComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/NotFoundComponent */ "./resources/js/components/NotFoundComponent.vue");
+/* harmony import */ var _components_realtors_account_RealtorDashboardComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/realtors/account/RealtorDashboardComponent */ "./resources/js/components/realtors/account/RealtorDashboardComponent.vue");
+/* harmony import */ var _components_realtors_account_RealtorMyPropertiesComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/realtors/account/RealtorMyPropertiesComponent */ "./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue");
+/* harmony import */ var _components_realtors_account_RealtorAddPropertiesComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/realtors/account/RealtorAddPropertiesComponent */ "./resources/js/components/realtors/account/RealtorAddPropertiesComponent.vue");
+/* harmony import */ var _components_realtors_account_RealtorProfileComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/realtors/account/RealtorProfileComponent */ "./resources/js/components/realtors/account/RealtorProfileComponent.vue");
 
-var routes = [// {
-  //     // for urls that don't exist
-  //     path: "/:catchAll(.*)",
-  //     name: "NotFound",
-  //     component: NotFound,
-  //     meta: {
-  //         requiresAuth: false
-  //     }
-  // },
-  // {
-  //     path: '/',
-  //     name: "Home",
-  //     component: Home,
-  // },
-  // {
-  //     path: '/about',
-  //     name: "About",
-  //     component: About,
-  // },
-  // {
-  //     path: '/register',
-  //     name: "Register",
-  //     component: Register,
-  // },
-  // {
-  //     path: '/login',
-  //     name: "Login",
-  //     component: Login,
-  // },
-  // {
-  //     path: '/account/dashboard',
-  //     name: "AccountDashboard",
-  //     component: Dashboard,
-  //     beforeEnter: (to, from, next) => {
-  //         axios.get('/api/authenticated').then(() => {
-  //             next()
-  //         }).catch(() => {
-  //             return next({ name: 'Login' })
-  //         });
-  //     }
-  // },
+
+
+
+
+
+var routes = [{
+  // for urls that don't exist
+  path: "/:catchAll(.*)",
+  name: "NotFound",
+  component: _components_NotFoundComponent__WEBPACK_IMPORTED_MODULE_0__["default"],
+  meta: {
+    requiresAuth: false
+  }
+}, {
+  path: '/realtor/account',
+  name: "RealtorDashboard",
+  component: _components_realtors_account_RealtorDashboardComponent__WEBPACK_IMPORTED_MODULE_1__["default"],
+  beforeEnter: function beforeEnter(to, from, next) {
+    axios.get('/api/authenticated').then(function () {
+      next();
+    })["catch"](function () {
+      window.location.href = '/realtor/login';
+    });
+  }
+}, {
+  path: '/realtor/account/my-properties',
+  name: "RealtorMyProperties",
+  component: _components_realtors_account_RealtorMyPropertiesComponent__WEBPACK_IMPORTED_MODULE_2__["default"],
+  beforeEnter: function beforeEnter(to, from, next) {
+    axios.get('/api/authenticated').then(function () {
+      next();
+    })["catch"](function () {
+      window.location.href = '/realtor/login';
+    });
+  }
+}, {
+  path: '/realtor/account/properties/add',
+  name: "RealtorAddProperties",
+  component: _components_realtors_account_RealtorAddPropertiesComponent__WEBPACK_IMPORTED_MODULE_3__["default"],
+  beforeEnter: function beforeEnter(to, from, next) {
+    axios.get('/api/authenticated').then(function () {
+      next();
+    })["catch"](function () {
+      window.location.href = '/realtor/login';
+    });
+  }
+}, {
+  path: '/realtor/account/profile',
+  name: "RealtorProfile",
+  component: _components_realtors_account_RealtorProfileComponent__WEBPACK_IMPORTED_MODULE_4__["default"],
+  beforeEnter: function beforeEnter(to, from, next) {
+    axios.get('/api/authenticated').then(function () {
+      next();
+    })["catch"](function () {
+      window.location.href = '/realtor/login';
+    });
+  }
+} // {
+//     path: '/account/dashboard',
+//     name: "AccountDashboard",
+//     component: Dashboard,
+//     beforeEnter: (to, from, next) => {
+//         axios.get('/api/authenticated').then(() => {
+//             next()
+//         }).catch(() => {
+//             return next({ name: 'Login' })
+//         });
+//     }
+// },
 ];
-var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createRouter)({
-  linkExactActiveClass: 'text-dark font-weight-bold',
-  history: (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createWebHistory)(),
+var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_5__.createRouter)({
+  linkExactActiveClass: 'active',
+  history: (0,vue_router__WEBPACK_IMPORTED_MODULE_5__.createWebHistory)(),
   routes: routes
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (router);
@@ -45662,10 +46035,10 @@ exports["default"] = (sfc, props) => {
 
 /***/ }),
 
-/***/ "./resources/js/components/ExampleComponent.vue":
-/*!******************************************************!*\
-  !*** ./resources/js/components/ExampleComponent.vue ***!
-  \******************************************************/
+/***/ "./resources/js/components/NotFoundComponent.vue":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/NotFoundComponent.vue ***!
+  \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -45673,15 +46046,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _ExampleComponent_vue_vue_type_template_id_299e239e__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ExampleComponent.vue?vue&type=template&id=299e239e */ "./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e");
-/* harmony import */ var _ExampleComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ExampleComponent.vue?vue&type=script&lang=js */ "./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js");
+/* harmony import */ var _NotFoundComponent_vue_vue_type_template_id_2b13f773__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NotFoundComponent.vue?vue&type=template&id=2b13f773 */ "./resources/js/components/NotFoundComponent.vue?vue&type=template&id=2b13f773");
+/* harmony import */ var _NotFoundComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NotFoundComponent.vue?vue&type=script&lang=js */ "./resources/js/components/NotFoundComponent.vue?vue&type=script&lang=js");
 /* harmony import */ var C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_ExampleComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_ExampleComponent_vue_vue_type_template_id_299e239e__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/ExampleComponent.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_NotFoundComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_NotFoundComponent_vue_vue_type_template_id_2b13f773__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/NotFoundComponent.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -45746,18 +46119,130 @@ if (false) {}
 
 /***/ }),
 
-/***/ "./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js":
+/***/ "./resources/js/components/realtors/account/RealtorAddPropertiesComponent.vue":
+/*!************************************************************************************!*\
+  !*** ./resources/js/components/realtors/account/RealtorAddPropertiesComponent.vue ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _RealtorAddPropertiesComponent_vue_vue_type_template_id_08f40856__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RealtorAddPropertiesComponent.vue?vue&type=template&id=08f40856 */ "./resources/js/components/realtors/account/RealtorAddPropertiesComponent.vue?vue&type=template&id=08f40856");
+/* harmony import */ var _RealtorAddPropertiesComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RealtorAddPropertiesComponent.vue?vue&type=script&lang=js */ "./resources/js/components/realtors/account/RealtorAddPropertiesComponent.vue?vue&type=script&lang=js");
+/* harmony import */ var C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_RealtorAddPropertiesComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_RealtorAddPropertiesComponent_vue_vue_type_template_id_08f40856__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/realtors/account/RealtorAddPropertiesComponent.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/components/realtors/account/RealtorDashboardComponent.vue":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/realtors/account/RealtorDashboardComponent.vue ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _RealtorDashboardComponent_vue_vue_type_template_id_6345ee14__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RealtorDashboardComponent.vue?vue&type=template&id=6345ee14 */ "./resources/js/components/realtors/account/RealtorDashboardComponent.vue?vue&type=template&id=6345ee14");
+/* harmony import */ var _RealtorDashboardComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RealtorDashboardComponent.vue?vue&type=script&lang=js */ "./resources/js/components/realtors/account/RealtorDashboardComponent.vue?vue&type=script&lang=js");
+/* harmony import */ var C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_RealtorDashboardComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_RealtorDashboardComponent_vue_vue_type_template_id_6345ee14__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/realtors/account/RealtorDashboardComponent.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue ***!
+  \***********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _RealtorMyPropertiesComponent_vue_vue_type_template_id_bc90fdbe__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RealtorMyPropertiesComponent.vue?vue&type=template&id=bc90fdbe */ "./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue?vue&type=template&id=bc90fdbe");
+/* harmony import */ var _RealtorMyPropertiesComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RealtorMyPropertiesComponent.vue?vue&type=script&lang=js */ "./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue?vue&type=script&lang=js");
+/* harmony import */ var C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_RealtorMyPropertiesComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_RealtorMyPropertiesComponent_vue_vue_type_template_id_bc90fdbe__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/components/realtors/account/RealtorProfileComponent.vue":
 /*!******************************************************************************!*\
-  !*** ./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js ***!
+  !*** ./resources/js/components/realtors/account/RealtorProfileComponent.vue ***!
   \******************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ExampleComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ExampleComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./ExampleComponent.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js");
+/* harmony import */ var _RealtorProfileComponent_vue_vue_type_template_id_2fda557e__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RealtorProfileComponent.vue?vue&type=template&id=2fda557e */ "./resources/js/components/realtors/account/RealtorProfileComponent.vue?vue&type=template&id=2fda557e");
+/* harmony import */ var _RealtorProfileComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RealtorProfileComponent.vue?vue&type=script&lang=js */ "./resources/js/components/realtors/account/RealtorProfileComponent.vue?vue&type=script&lang=js");
+/* harmony import */ var C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_RealtorProfileComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_RealtorProfileComponent_vue_vue_type_template_id_2fda557e__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/realtors/account/RealtorProfileComponent.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/components/NotFoundComponent.vue?vue&type=script&lang=js":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/NotFoundComponent.vue?vue&type=script&lang=js ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NotFoundComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NotFoundComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./NotFoundComponent.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/NotFoundComponent.vue?vue&type=script&lang=js");
  
 
 /***/ }),
@@ -45794,18 +46279,82 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e":
-/*!************************************************************************************!*\
-  !*** ./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e ***!
-  \************************************************************************************/
+/***/ "./resources/js/components/realtors/account/RealtorAddPropertiesComponent.vue?vue&type=script&lang=js":
+/*!************************************************************************************************************!*\
+  !*** ./resources/js/components/realtors/account/RealtorAddPropertiesComponent.vue?vue&type=script&lang=js ***!
+  \************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ExampleComponent_vue_vue_type_template_id_299e239e__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorAddPropertiesComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ExampleComponent_vue_vue_type_template_id_299e239e__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./ExampleComponent.vue?vue&type=template&id=299e239e */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorAddPropertiesComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./RealtorAddPropertiesComponent.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorAddPropertiesComponent.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/components/realtors/account/RealtorDashboardComponent.vue?vue&type=script&lang=js":
+/*!********************************************************************************************************!*\
+  !*** ./resources/js/components/realtors/account/RealtorDashboardComponent.vue?vue&type=script&lang=js ***!
+  \********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorDashboardComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorDashboardComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./RealtorDashboardComponent.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorDashboardComponent.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue?vue&type=script&lang=js":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue?vue&type=script&lang=js ***!
+  \***********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorMyPropertiesComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorMyPropertiesComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./RealtorMyPropertiesComponent.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/components/realtors/account/RealtorProfileComponent.vue?vue&type=script&lang=js":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/components/realtors/account/RealtorProfileComponent.vue?vue&type=script&lang=js ***!
+  \******************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorProfileComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorProfileComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./RealtorProfileComponent.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorProfileComponent.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/components/NotFoundComponent.vue?vue&type=template&id=2b13f773":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/NotFoundComponent.vue?vue&type=template&id=2b13f773 ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NotFoundComponent_vue_vue_type_template_id_2b13f773__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NotFoundComponent_vue_vue_type_template_id_2b13f773__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./NotFoundComponent.vue?vue&type=template&id=2b13f773 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/NotFoundComponent.vue?vue&type=template&id=2b13f773");
 
 
 /***/ }),
@@ -45838,6 +46387,70 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorRegisterComponent_vue_vue_type_template_id_161a77db__WEBPACK_IMPORTED_MODULE_0__.render)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorRegisterComponent_vue_vue_type_template_id_161a77db__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./RealtorRegisterComponent.vue?vue&type=template&id=161a77db */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/RealtorRegisterComponent.vue?vue&type=template&id=161a77db");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/realtors/account/RealtorAddPropertiesComponent.vue?vue&type=template&id=08f40856":
+/*!******************************************************************************************************************!*\
+  !*** ./resources/js/components/realtors/account/RealtorAddPropertiesComponent.vue?vue&type=template&id=08f40856 ***!
+  \******************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorAddPropertiesComponent_vue_vue_type_template_id_08f40856__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorAddPropertiesComponent_vue_vue_type_template_id_08f40856__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./RealtorAddPropertiesComponent.vue?vue&type=template&id=08f40856 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorAddPropertiesComponent.vue?vue&type=template&id=08f40856");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/realtors/account/RealtorDashboardComponent.vue?vue&type=template&id=6345ee14":
+/*!**************************************************************************************************************!*\
+  !*** ./resources/js/components/realtors/account/RealtorDashboardComponent.vue?vue&type=template&id=6345ee14 ***!
+  \**************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorDashboardComponent_vue_vue_type_template_id_6345ee14__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorDashboardComponent_vue_vue_type_template_id_6345ee14__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./RealtorDashboardComponent.vue?vue&type=template&id=6345ee14 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorDashboardComponent.vue?vue&type=template&id=6345ee14");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue?vue&type=template&id=bc90fdbe":
+/*!*****************************************************************************************************************!*\
+  !*** ./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue?vue&type=template&id=bc90fdbe ***!
+  \*****************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorMyPropertiesComponent_vue_vue_type_template_id_bc90fdbe__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorMyPropertiesComponent_vue_vue_type_template_id_bc90fdbe__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./RealtorMyPropertiesComponent.vue?vue&type=template&id=bc90fdbe */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue?vue&type=template&id=bc90fdbe");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/realtors/account/RealtorProfileComponent.vue?vue&type=template&id=2fda557e":
+/*!************************************************************************************************************!*\
+  !*** ./resources/js/components/realtors/account/RealtorProfileComponent.vue?vue&type=template&id=2fda557e ***!
+  \************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorProfileComponent_vue_vue_type_template_id_2fda557e__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorProfileComponent_vue_vue_type_template_id_2fda557e__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./RealtorProfileComponent.vue?vue&type=template&id=2fda557e */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorProfileComponent.vue?vue&type=template&id=2fda557e");
 
 
 /***/ }),

@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 
 class RealtorLoginController extends Controller
 {
@@ -29,32 +30,47 @@ class RealtorLoginController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('guest:realtor')->except('logout');
-    }
+//    public function __construct()
+//    {
+//        $this->middleware('guest:realtor')->except('logout');
+//    }
 
-    public function showLoginForm()
-    {
+    public function showLoginForm(){
         return view('auth.realtors.login', ['url' => 'realtor/login']);
     }
 
-    public function login(Request $request)
-    {
-        $this->validate($request, [
-            'email'   => 'required|email',
-            'password' => 'required|min:6'
-        ]);
+    public function login(Request $request){
 
-        if (Auth::guard('realtor')->attempt([
-            'email' => $request->email,
-            'password' => $request->password],
-            $request->get('remember'))) {
+        $rules = array(
+            'email' => 'required|exists:realtors,email',
+            'password' => 'required|min:6',
+        );
 
-            return redirect()->intended('/realtor/dashboard');
+        $validator = Validator::make($request->all(), $rules);
+
+        if($validator->fails()){
+            return response()->json([
+                "success" => false,
+                "errors" => $validator->getMessageBag()->toArray()
+            ]);
         }
+
+        if(Auth::guard('realtor')->attempt([
+            'email' => $request->email,
+            'password' => $request->password
+        ],
+
+            $request->get('remember'))) {
+            return response()->json([
+                'success' => true,
+            ]);
+        }
+
         Session::flash('warning', 'Incorrect Login Details');
-        return back()->withInput($request->only('email', 'remember'));
+        return response()->json([
+            'success' => false,
+            "message" => "Incorrect login details"
+        ]);
     }
 
     //add for logout function to work

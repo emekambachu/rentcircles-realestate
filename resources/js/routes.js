@@ -1,43 +1,71 @@
 import { createWebHistory, createRouter } from "vue-router";
-// import NotFound from './components/NotFoundComponent';
-// import Home from './components/HomeComponent';
-// import About from './components/AboutComponent';
-//
-// import Register from './components/RegisterComponent';
-// import Login from './components/LoginComponent';
-//
-// import Dashboard from './components/account/DashboardComponent';
+import NotFound from './components/NotFoundComponent';
+import RealtorDashboard from './components/realtors/account/RealtorDashboardComponent';
+import RealtorMyProperties from "./components/realtors/account/RealtorMyPropertiesComponent";
+import RealtorAddProperties from "./components/realtors/account/RealtorAddPropertiesComponent";
+import RealtorProfile from "./components/realtors/account/RealtorProfileComponent";
 
 const routes = [
-    // {
-    //     // for urls that don't exist
-    //     path: "/:catchAll(.*)",
-    //     name: "NotFound",
-    //     component: NotFound,
-    //     meta: {
-    //         requiresAuth: false
-    //     }
-    // },
-    // {
-    //     path: '/',
-    //     name: "Home",
-    //     component: Home,
-    // },
-    // {
-    //     path: '/about',
-    //     name: "About",
-    //     component: About,
-    // },
-    // {
-    //     path: '/register',
-    //     name: "Register",
-    //     component: Register,
-    // },
-    // {
-    //     path: '/login',
-    //     name: "Login",
-    //     component: Login,
-    // },
+    {
+        // for urls that don't exist
+        path: "/:catchAll(.*)",
+        name: "NotFound",
+        component: NotFound,
+        meta: {
+            requiresAuth: false
+        }
+    },
+
+    {
+        path: '/realtor/account',
+        name: "RealtorDashboard",
+        component: RealtorDashboard,
+        beforeEnter: (to, from, next) => {
+            axios.get('/api/authenticated').then(() => {
+                next()
+            }).catch(() => {
+                window.location.href = '/realtor/login';
+            });
+        }
+    },
+    {
+        path: '/realtor/account/my-properties',
+        name: "RealtorMyProperties",
+        component: RealtorMyProperties,
+        beforeEnter: (to, from, next) => {
+            axios.get('/api/authenticated').then(() => {
+                next()
+            }).catch(() => {
+                window.location.href = '/realtor/login';
+            });
+        }
+    },
+    {
+        path: '/realtor/account/properties/add',
+        name: "RealtorAddProperties",
+        component: RealtorAddProperties,
+        beforeEnter: (to, from, next) => {
+            axios.get('/api/authenticated').then(() => {
+                next()
+            }).catch(() => {
+                window.location.href = '/realtor/login';
+            });
+        }
+    },
+    {
+        path: '/realtor/account/profile',
+        name: "RealtorProfile",
+        component: RealtorProfile,
+        beforeEnter: (to, from, next) => {
+            axios.get('/api/authenticated').then(() => {
+                next()
+            }).catch(() => {
+                window.location.href = '/realtor/login';
+            });
+        }
+    },
+
+
     // {
     //     path: '/account/dashboard',
     //     name: "AccountDashboard",
@@ -53,7 +81,7 @@ const routes = [
 ];
 
 const router = createRouter({
-    linkExactActiveClass: 'text-dark font-weight-bold',
+    linkExactActiveClass: 'active',
     history: createWebHistory(),
     routes,
 });

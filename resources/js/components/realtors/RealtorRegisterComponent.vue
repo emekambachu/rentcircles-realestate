@@ -35,24 +35,13 @@
                         </div>
 
                         <div class="input-item">
-                            <select class="nice-select" name="country"
-                                    v-model="form.country">
-                                <option value="Niger">Niger</option>
-                                <option value="Nigeria">Nigeria</option>
-                                <option value="Paraguay">Paraguay</option>
-                                <option value="Peru">Peru</option>
-                                <option value="Phillipines">Philippines</option>
-                                <option value="Pitcairn Island">Pitcairn Island</option>
-                                <option value="Poland">Poland</option>
-                                <option value="South Africa">South Africa</option>
-                                <option value="Spain">Spain</option>
-                                <option value="Swaziland">Swaziland</option>
-                                <option value="Sweden">Sweden</option>
-                                <option value="Switzerland">Switzerland</option>
-                                <option value="Syria">Syria</option>
-                                <option value="United Kingdom">United Kingdom</option>
-                                <option value="Ukraine">Ukraine</option>
-                                <option value="United Arab Erimates">United Arab Emirates</option>
+                            <select v-if="countries.length > 0" class="nice-select"
+                                    name="country" v-model="form.country">
+                                    <option v-for="country in countries"
+                                            :key="country.id"
+                                            :value="country.country_name">
+                                        {{ country.country_name }}
+                                    </option>
                             </select>
                             <strong v-if="errors.country">{{ errors.country.toString() }}</strong>
                         </div>
@@ -122,25 +111,63 @@
                     password_confirmation: '',
                 },
                 errors: [],
+                countries: []
             }
         },
         methods:{
             register(){
-                console.log(this.form)
+                console.log(this.form);
                 axios.post('/api/realtor/register/submit', this.form)
                     .then((response) => {
-                        if(response.data.success){
-                            console.log(response.data);
-                        }else{
-                            console.log(response.data.errors);
-                            this.errors = response.data.errors;
-                        }
+                        response.data.success === true ? window.location.href = '/realtor/login' : false;
+                        console.log(response.data);
+                        response.data.success === false ? this.errors = response.data.errors : this.errors = [];
+                        console.log(response.data.errors);
                 }).catch((error) => {
                     // this.errors = error.response.data.errors;
                     console.log(error);
-                })
+                });
             },
+        },
+
+        computed() {
+
+        },
+
+        watch() {
+
+        },
+
+        created(){
+            // axios.get('/api/property/countries')
+            //     .then((response) => {
+            //         this.countries = response.data;
+            //         console.log(this.countries);
+            //         response.data.forEach((item, index)=>{
+            //             this.countries.push(item);
+            //             console.log(item);
+            //
+            //         })
+            //     }).catch((error) => {
+            //     console.log(error);
+            // }).finally(() => {
+            // });
+        },
+        mounted(){
+            axios.get('/api/property/countries')
+                .then((response) => {
+                    this.countries = response.data;
+                    // response.data.forEach((item, index)=>{
+                    //     this.countries.push(item);
+                    //     console.log(item);
+                    // });
+                    console.log(this.countries);
+                }).catch((error) => {
+                console.log(error);
+            }).finally(() => {
+            });
         }
+
     }
 </script>
 

@@ -22,12 +22,14 @@ import VueAxios from 'vue-axios';
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-// Global Components
-import ExampleComponent from './components/ExampleComponent.vue';
-
 // Local Components
 import RealtorLoginComponent from './components/realtors/RealtorLoginComponent';
 import RealtorRegisterComponent from './components/realtors/RealtorRegisterComponent';
+
+import RealtorDashboardComponent from './components/realtors/account/RealtorDashboardComponent';
+import RealtorMyPropertiesComponent from './components/realtors/account/RealtorMyPropertiesComponent';
+import RealtorAddPropertiesComponent from './components/realtors/account/RealtorAddPropertiesComponent';
+import RealtorProfileComponent from './components/realtors/account/RealtorProfileComponent';
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -38,7 +40,12 @@ import RealtorRegisterComponent from './components/realtors/RealtorRegisterCompo
 createApp({
     components: {
         RealtorRegisterComponent,
-        RealtorLoginComponent
+        RealtorLoginComponent,
+
+        RealtorDashboardComponent,
+        RealtorMyPropertiesComponent,
+        RealtorProfileComponent,
+        RealtorAddPropertiesComponent,
     }
 }).use(router, axios, VueAxios).mount('#app');
 

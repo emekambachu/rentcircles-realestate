@@ -13,8 +13,13 @@ class CreatePropertyCountriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('property_countries', function (Blueprint $table) {
+        Schema::create('property_countries', static function (Blueprint $table) {
             $table->id();
+            $table->integer('phone_code');
+            $table->string('country_code');
+            $table->string('country_name');
+            $table->string('continent_code')->nullable();
+            $table->string('continent_name')->nullable();
             $table->timestamps();
         });
     }
