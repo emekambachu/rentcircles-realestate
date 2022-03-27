@@ -20,6 +20,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', static function () {
+    return view('home.home');
+});
 
 Route::get('about', static function () {
     return view('home.about');
