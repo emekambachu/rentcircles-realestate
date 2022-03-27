@@ -30,6 +30,7 @@ import RealtorDashboardComponent from './components/realtors/account/RealtorDash
 import RealtorMyPropertiesComponent from './components/realtors/account/RealtorMyPropertiesComponent';
 import RealtorAddPropertiesComponent from './components/realtors/account/RealtorAddPropertiesComponent';
 import RealtorProfileComponent from './components/realtors/account/RealtorProfileComponent';
+import RealtorProfileEditComponent from './components/realtors/account/RealtorProfileEditComponent';
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -46,6 +47,7 @@ createApp({
         RealtorMyPropertiesComponent,
         RealtorProfileComponent,
         RealtorAddPropertiesComponent,
+        RealtorProfileEditComponent,
     }
 }).use(router, axios, VueAxios).mount('#app');
 

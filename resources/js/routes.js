@@ -4,6 +4,7 @@ import RealtorDashboard from './components/realtors/account/RealtorDashboardComp
 import RealtorMyProperties from "./components/realtors/account/RealtorMyPropertiesComponent";
 import RealtorAddProperties from "./components/realtors/account/RealtorAddPropertiesComponent";
 import RealtorProfile from "./components/realtors/account/RealtorProfileComponent";
+import RealtorProfileEdit from "./components/realtors/account/RealtorProfileEditComponent";
 
 const routes = [
     {
@@ -56,6 +57,18 @@ const routes = [
         path: '/realtor/account/profile',
         name: "RealtorProfile",
         component: RealtorProfile,
+        beforeEnter: (to, from, next) => {
+            axios.get('/api/authenticated').then(() => {
+                next()
+            }).catch(() => {
+                window.location.href = '/realtor/login';
+            });
+        }
+    },
+    {
+        path: '/realtor/account/profile/edit',
+        name: "RealtorProfileEdit",
+        component: RealtorProfileEdit,
         beforeEnter: (to, from, next) => {
             axios.get('/api/authenticated').then(() => {
                 next()
