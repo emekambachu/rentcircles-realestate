@@ -13,8 +13,13 @@ class CreatePropertyReviewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('property_reviews', function (Blueprint $table) {
+        Schema::create('property_reviews', static function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('property_detail_id');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->string('name')->nullable();
+            $table->string('email')->nullable();
+            $table->text('description');
             $table->timestamps();
         });
     }

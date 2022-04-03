@@ -8,8 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Country extends Model
 {
     protected $fillable = [
-
-
-
+        'phone_code',
+        'country_name',
+        'country_code',
+        'continent_code',
+        'continent_name'
     ];
 }

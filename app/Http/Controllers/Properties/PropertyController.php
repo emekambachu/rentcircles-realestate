@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Properties;
 
 use App\Http\Controllers\Controller;
-use App\Models\Properties\Country;
+use App\Models\Properties\PropertyType;
+use App\Models\State;
 use Illuminate\Http\Request;
 
 class PropertyController extends Controller
@@ -31,8 +32,19 @@ class PropertyController extends Controller
         return view('home.properties.show');
     }
 
-    public function propertyCountries(){
-        $countries = Country::orderBy('country_name', 'asc')->limit(20)->get();
-        return response()->json($countries, 200);
+    public function getPropertyTypes(){
+        $types = PropertyType::orderBy('name')->get();
+        return response()->json([
+            'success' => true,
+            'property_types' => $types
+        ], 200);
+    }
+
+    public function getStates(){
+        $states = State::orderBy('name')->get();
+        return response()->json([
+            'success' => true,
+            'states' => $states
+        ], 200);
     }
 }

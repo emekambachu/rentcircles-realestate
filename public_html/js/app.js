@@ -22864,7 +22864,205 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "RealtorAddProperties"
+  data: function data() {
+    return {
+      form: {
+        title: '',
+        property_type_id: '',
+        state_id: '',
+        address: '',
+        description: '',
+        bedrooms: '',
+        bathrooms: '',
+        living_rooms: '',
+        cost: '',
+        features: [],
+        image1: null,
+        image1preview: null,
+        image2: null,
+        image2preview: null,
+        image3: null,
+        image3preview: null,
+        image4: null,
+        image4preview: null,
+        image5: null,
+        image5preview: null
+      },
+      states: [],
+      propertyTypes: [],
+      errors: [],
+      formLoading: false,
+      successAlert: false,
+      errorAlert: false,
+      messageAlert: ''
+    };
+  },
+  methods: {
+    submitProperty: function submitProperty() {
+      var _this = this;
+
+      this.formLoading = true;
+      var formData = new FormData();
+      formData.append("title", this.form.title);
+      formData.append("property_type_id", this.form.property_type_id);
+      formData.append("state_id", this.form.state_id);
+      formData.append("address", this.form.address);
+      formData.append("description", this.form.description);
+      formData.append("bedrooms", this.form.bedrooms);
+      formData.append("bathrooms", this.form.bathrooms);
+      formData.append("living_rooms", this.form.living_rooms);
+      formData.append("cost", this.form.cost);
+      formData.append("features", this.form.features);
+      formData.append("image1", this.form.image1);
+      formData.append("image2", this.form.image2);
+
+      if (this.form.image3) {
+        formData.append("image3", this.form.image3);
+      }
+
+      if (this.form.image4) {
+        formData.append("image4", this.form.image4);
+      }
+
+      if (this.form.image5) {
+        formData.append("image5", this.form.image5);
+      }
+
+      var config = {
+        headers: {
+          'content-type': 'multipart/form-data'
+        }
+      };
+      axios.post('/api/realtor/property/submit', formData, config).then(function (response) {
+        response.data.success === true ? _this.formSuccess(response) : _this.formError(response);
+        _this.messageAlert = response.data.message;
+        console.log(response.data.message);
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"](function () {
+        _this.formLoading = false;
+      });
+    },
+    // upload and preview image
+    uploadImage1: function uploadImage1(event) {
+      //Assign image and path to this variable
+      this.form.image1 = event.target.files[0]; // assign variable to the event image upload
+
+      var file = event.target.files[0]; // validate image
+
+      this.validateImage(this.form.image1, file); // assign variable to the image preview
+
+      this.form.image1preview = URL.createObjectURL(file);
+    },
+    uploadImage2: function uploadImage2(event) {
+      //Assign image and path to this variable
+      this.form.image2 = event.target.files[0]; // assign variable to the event image upload
+
+      var file = event.target.files[0]; // validate image
+
+      this.validateImage(this.form.image2, file); // assign variable to the image preview
+
+      this.form.image2preview = URL.createObjectURL(file);
+    },
+    uploadImage3: function uploadImage3(event) {
+      //Assign image and path to this variable
+      this.form.image3 = event.target.files[0]; // assign variable to the event image upload
+
+      var file = event.target.files[0]; // validate image
+
+      this.validateImage(this.form.image3, file); // assign variable to the image preview
+
+      this.form.image3preview = URL.createObjectURL(file);
+    },
+    uploadImage4: function uploadImage4(event) {
+      //Assign image and path to this variable
+      this.form.image4 = event.target.files[0]; // assign variable to the event image upload
+
+      var file = event.target.files[0]; // validate image
+
+      this.validateImage(this.form.image4, file); // assign variable to the image preview
+
+      this.form.image4preview = URL.createObjectURL(file);
+    },
+    uploadImage5: function uploadImage5(event) {
+      //Assign image and path to this variable
+      this.form.image5 = event.target.files[0]; // assign variable to the event image upload
+
+      var file = event.target.files[0]; // validate image
+
+      this.validateImage(this.form.image5, file); // assign variable to the image preview
+
+      this.form.image5preview = URL.createObjectURL(file);
+    },
+    // Validate image
+    validateImage: function validateImage(img, file) {
+      console.log(img.type + ' - ' + img.size);
+      var fileType = ['image/png', 'image/jpg', 'image/jpeg'];
+
+      if (fileType.includes(file.type) === false) {
+        img = null;
+        this.errorAlert = true;
+        this.messageAlert = "Incorrect format for " + file.name;
+        return false;
+      } else {
+        this.errorAlert = false;
+        this.messageAlert = '';
+      }
+
+      if (img.size > 3000000) {
+        this.errorAlert = true;
+        this.messageAlert = "Image can't be greater than 3mb for" + file.name;
+        return false;
+      } else {
+        this.errorAlert = false;
+        this.messageAlert = '';
+      }
+    },
+    formSuccess: function formSuccess(response) {
+      console.log('Reset the form');
+      this.successAlert = true;
+      var self = this; //you need this because *this* will refer to Object.keys below`
+      //Iterate through each object field, key is name of the object field`
+
+      Object.keys(this.form).forEach(function (key, index) {
+        self.form[key] = '';
+      });
+      this.image1preview = null;
+      this.image2preview = null;
+      this.image3preview = null;
+      this.image4preview = null;
+      this.image5preview = null;
+    },
+    formError: function formError(response) {
+      this.errorAlert = true;
+      this.errors = response.data.errors;
+    },
+    getStates: function getStates() {
+      var _this2 = this;
+
+      axios.get('/api/states').then(function (response) {
+        response.data.success ? _this2.states = response.data.states : false;
+        console.log(response.data);
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    },
+    getPropertyTypes: function getPropertyTypes() {
+      var _this3 = this;
+
+      axios.get('/api/property/types').then(function (response) {
+        response.data.success ? _this3.propertyTypes = response.data.property_types : false;
+        console.log(response.data);
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getStates();
+    this.getPropertyTypes();
+  },
+  created: function created() {}
 });
 
 /***/ }),
@@ -23305,7 +23503,306 @@ var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 
 var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("My Properties ");
 
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"dash-content\"><div class=\"container-fluid\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"db-add-list-wrap\"><div class=\"act-title\"><h5><i class=\"ion-ios-location\"></i> Add property</h5></div><div class=\"db-add-listing\"><div class=\"row\"><div class=\"col-md-6\"><div class=\"form-group\"><label>Select City</label><div class=\"nice-select filter-input\" tabindex=\"0\"><span class=\"current\">Select City</span><ul class=\"list\"><li class=\"option selected focus\">New York</li><li class=\"option\">Chicago</li><li class=\"option\">Las Vegas</li><li class=\"option\">Los Angeles</li><li class=\"option\">Austin</li><li class=\"option\">Downturn</li><li class=\"option\">DownturnSan Diago</li></ul></div></div></div><div class=\"col-md-6\"><div class=\"form-group\"><label>Address</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"ex. 250, Fifth Avenue...\"></div></div><div class=\"col-md-6\"><div class=\"form-group\"><label>State</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"ex. New York\"></div></div><div class=\"col-md-6\"><div class=\"form-group\"><label>Zip Code</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"ex. 5858\"></div></div><div class=\"col-md-6\"><div class=\"form-group\"><label> Longitude (Drag marker on the map)</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"Map Longitude\"></div></div><div class=\"col-md-6\"><div class=\"form-group\"><label> Latitude (Drag marker on the map) </label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"Map Latitude\"></div></div><div class=\"col-md-12 no-padding\"><div id=\"map\"></div></div><div class=\"col-md-6\"><div class=\"form-group mar-top-15\"><label>Website </label><input type=\"text\" class=\"form-control filter-input\"></div></div><div class=\"col-md-6\"><div class=\"form-group mar-top-15\"><label>Phone </label><input type=\"text\" class=\"form-control filter-input\"></div></div></div></div></div><div class=\"db-add-list-wrap\"><div class=\"act-title\"><h5><i class=\"ion-ios-location\"></i> Rooms/Pricing :</h5></div><div class=\"db-add-listing\"><div class=\"row\"><div class=\"col-md-6\"><div class=\"form-group\"><label>Room Title</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"Standard family Room\"></div></div><div class=\"col-md-6\"><div class=\"form-group\"><label>Capacity</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"2 persons\"></div></div><div class=\"col-md-6\"><div class=\"form-group\"><label>Price</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"$180\"></div></div><div class=\"col-md-6\"><div class=\"form-group\"><label>Room Details</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"Total for 1 room, 2 nights\"></div></div><div class=\"col-md-12\"><div class=\"form-group\"><form class=\"photo-upload\"><div class=\"form-group\"><div class=\"add-listing__input-file-box\"><input class=\"add-listing__input-file\" type=\"file\" name=\"file\" id=\"file\"><div class=\"add-listing__input-file-wrap\"><i class=\"ion-ios-cloud-upload\"></i><p>Click here to upload your images</p></div></div></div><a href=\"#\" class=\"btn v8 mar-top-15\">Add Images</a></form></div></div><div class=\"col-md-12\"><div class=\"form-group\"><label>Features</label><div class=\"filter-checkbox\"><input id=\"check-m\" type=\"checkbox\" name=\"check\"><label for=\"check-m\">Tv inside</label><input id=\"check-n\" type=\"checkbox\" name=\"check\"><label for=\"check-n\">Air Conditioned</label><input id=\"check-o\" type=\"checkbox\" name=\"check\"><label for=\"check-o\">Free Wi Fi</label><input id=\"check-p\" type=\"checkbox\" name=\"check\"><label for=\"check-p\">Breakfast</label></div></div><div class=\"row\"><div class=\"col-md-4\"><label>Title</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"Title\"></div><div class=\"col-md-4\"><label>Number</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"Number\"></div><div class=\"col-md-4\"><label>Icon</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"Icon\"></div><div class=\"col-md-4\"><a href=\"#\" class=\"btn v8 mar-top-20\">Add Facts</a></div></div></div></div></div></div></div></div></div></div>", 1);
+var _hoisted_9 = {
+  "class": "dash-content"
+};
+var _hoisted_10 = {
+  "class": "container-fluid"
+};
+var _hoisted_11 = {
+  "class": "row"
+};
+var _hoisted_12 = {
+  "class": "col-md-12"
+};
+var _hoisted_13 = {
+  "class": "db-add-list-wrap"
+};
+
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "act-title"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-ios-location"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Add property")])], -1
+/* HOISTED */
+);
+
+var _hoisted_15 = {
+  "class": "db-add-listing"
+};
+var _hoisted_16 = {
+  key: 0,
+  "class": "bg-danger text-white text-center p-2"
+};
+var _hoisted_17 = {
+  key: 1,
+  "class": "bg-success text-white text-center p-2"
+};
+var _hoisted_18 = {
+  "class": "text-center p-2"
+};
+
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  src: "/images/loader-gradient.gif",
+  width: "200"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_20 = [_hoisted_19];
+var _hoisted_21 = {
+  "class": "row"
+};
+var _hoisted_22 = {
+  "class": "col-md-6"
+};
+var _hoisted_23 = {
+  "class": "form-group"
+};
+
+var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Room Title", -1
+/* HOISTED */
+);
+
+var _hoisted_25 = {
+  "class": "col-md-3"
+};
+var _hoisted_26 = {
+  "class": "form-group"
+};
+
+var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Type", -1
+/* HOISTED */
+);
+
+var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+  selected: ""
+}, "Select", -1
+/* HOISTED */
+);
+
+var _hoisted_29 = ["value"];
+var _hoisted_30 = {
+  "class": "col-md-3"
+};
+var _hoisted_31 = {
+  "class": "form-group"
+};
+
+var _hoisted_32 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Price", -1
+/* HOISTED */
+);
+
+var _hoisted_33 = {
+  "class": "col-md-6"
+};
+var _hoisted_34 = {
+  "class": "form-group"
+};
+
+var _hoisted_35 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Select Location", -1
+/* HOISTED */
+);
+
+var _hoisted_36 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+  selected: ""
+}, "Select", -1
+/* HOISTED */
+);
+
+var _hoisted_37 = ["value"];
+var _hoisted_38 = {
+  "class": "col-md-6"
+};
+var _hoisted_39 = {
+  "class": "form-group"
+};
+
+var _hoisted_40 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Address", -1
+/* HOISTED */
+);
+
+var _hoisted_41 = {
+  "class": "col-md-12"
+};
+var _hoisted_42 = {
+  "class": "form-group"
+};
+
+var _hoisted_43 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Room Description", -1
+/* HOISTED */
+);
+
+var _hoisted_44 = {
+  "class": "col-md-4"
+};
+var _hoisted_45 = {
+  "class": "form-group"
+};
+
+var _hoisted_46 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Bedrooms", -1
+/* HOISTED */
+);
+
+var _hoisted_47 = {
+  "class": "col-md-4"
+};
+var _hoisted_48 = {
+  "class": "form-group"
+};
+
+var _hoisted_49 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Bathrooms", -1
+/* HOISTED */
+);
+
+var _hoisted_50 = {
+  "class": "col-md-4"
+};
+var _hoisted_51 = {
+  "class": "form-group"
+};
+
+var _hoisted_52 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Living Rooms", -1
+/* HOISTED */
+);
+
+var _hoisted_53 = {
+  "class": "col-md-12"
+};
+var _hoisted_54 = {
+  "class": "form-group"
+};
+
+var _hoisted_55 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Features", -1
+/* HOISTED */
+);
+
+var _hoisted_56 = {
+  "class": "filter-checkbox"
+};
+
+var _hoisted_57 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "check-ac"
+}, "Air condition", -1
+/* HOISTED */
+);
+
+var _hoisted_58 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "check-wf"
+}, "Wi Fi", -1
+/* HOISTED */
+);
+
+var _hoisted_59 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "check-g"
+}, "Gym", -1
+/* HOISTED */
+);
+
+var _hoisted_60 = {
+  "class": "col-md-2"
+};
+var _hoisted_61 = {
+  "class": "form-group"
+};
+var _hoisted_62 = {
+  "class": "add-listing__input-file-box"
+};
+
+var _hoisted_63 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "add-listing__input-file-wrap"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-ios-cloud-upload"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Click here to upload your images")], -1
+/* HOISTED */
+);
+
+var _hoisted_64 = ["src"];
+var _hoisted_65 = {
+  "class": "col-md-2"
+};
+var _hoisted_66 = {
+  "class": "form-group"
+};
+var _hoisted_67 = {
+  "class": "add-listing__input-file-box"
+};
+
+var _hoisted_68 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "add-listing__input-file-wrap"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-ios-cloud-upload"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Click here to upload image")], -1
+/* HOISTED */
+);
+
+var _hoisted_69 = ["src"];
+var _hoisted_70 = {
+  "class": "col-md-2"
+};
+var _hoisted_71 = {
+  "class": "form-group"
+};
+var _hoisted_72 = {
+  "class": "add-listing__input-file-box"
+};
+
+var _hoisted_73 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "add-listing__input-file-wrap"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-ios-cloud-upload"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Click here to upload your images")], -1
+/* HOISTED */
+);
+
+var _hoisted_74 = ["src"];
+var _hoisted_75 = {
+  "class": "col-md-2"
+};
+var _hoisted_76 = {
+  "class": "form-group"
+};
+var _hoisted_77 = {
+  "class": "add-listing__input-file-box"
+};
+
+var _hoisted_78 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "add-listing__input-file-wrap"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-ios-cloud-upload"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Click here to upload your images")], -1
+/* HOISTED */
+);
+
+var _hoisted_79 = ["src"];
+var _hoisted_80 = {
+  "class": "col-md-2"
+};
+var _hoisted_81 = {
+  "class": "form-group"
+};
+var _hoisted_82 = {
+  "class": "add-listing__input-file-box"
+};
+
+var _hoisted_83 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "add-listing__input-file-wrap"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-ios-cloud-upload"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Click here to upload your images")], -1
+/* HOISTED */
+);
+
+var _hoisted_84 = ["src"];
+
+var _hoisted_85 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-12"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  type: "submit",
+  "class": "btn v8 mar-top-15"
+}, "Submit Property")], -1
+/* HOISTED */
+);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
@@ -23321,7 +23818,229 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })])])])])]), _hoisted_9], 64
+  })])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [_hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [$data.errorAlert ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.messageAlert), 1
+  /* TEXT */
+  ), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors, function (error, key) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", {
+      key: key
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(error.toString()), 1
+    /* TEXT */
+    );
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.successAlert ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.messageAlert), 1
+  /* TEXT */
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_18, _hoisted_20, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, $data.formLoading]]), !$data.formLoading ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("form", {
+    key: 2,
+    enctype: "multipart/form-data",
+    onSubmit: _cache[17] || (_cache[17] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+      return $options.submitProperty && $options.submitProperty.apply($options, arguments);
+    }, ["prevent"]))
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [_hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    name: "title",
+    "class": "form-control filter-input",
+    "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
+      return $data.form.title = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.title]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [_hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+    "class": "nice-select filter-input",
+    name: "property_type_id",
+    "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
+      return $data.form.property_type_id = $event;
+    })
+  }, [_hoisted_28, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.propertyTypes, function (type) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
+      "class": "option",
+      key: type.id,
+      value: type.id
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(type.name), 9
+    /* TEXT, PROPS */
+    , _hoisted_29);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))], 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.form.property_type_id]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_30, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [_hoisted_32, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "number",
+    name: "cost",
+    "class": "form-control filter-input",
+    "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
+      return $data.form.cost = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.cost]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [_hoisted_35, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+    "class": "nice-select filter-input",
+    name: "property_type_id",
+    "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
+      return $data.form.state_id = $event;
+    })
+  }, [_hoisted_36, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.states, function (state) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
+      "class": "option",
+      key: state.id,
+      value: state.id
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(state.name), 9
+    /* TEXT, PROPS */
+    , _hoisted_37);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))], 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.form.state_id]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [_hoisted_40, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    name: "address",
+    "class": "form-control filter-input",
+    "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
+      return $data.form.address = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.address]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_41, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_42, [_hoisted_43, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
+    type: "text",
+    name: "description",
+    "class": "form-control filter-input",
+    "onUpdate:modelValue": _cache[5] || (_cache[5] = function ($event) {
+      return $data.form.description = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.description]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_44, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_45, [_hoisted_46, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    name: "bedroom",
+    required: "",
+    "class": "form-control filter-input",
+    "onUpdate:modelValue": _cache[6] || (_cache[6] = function ($event) {
+      return $data.form.bedrooms = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.bedrooms]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_47, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_48, [_hoisted_49, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "number",
+    name: "bathroom",
+    required: "",
+    "class": "form-control filter-input",
+    "onUpdate:modelValue": _cache[7] || (_cache[7] = function ($event) {
+      return $data.form.bathrooms = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.bathrooms]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_50, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_51, [_hoisted_52, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    name: "living_room",
+    required: "",
+    "class": "form-control filter-input",
+    "onUpdate:modelValue": _cache[8] || (_cache[8] = function ($event) {
+      return $data.form.living_rooms = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.living_rooms]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_53, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_54, [_hoisted_55, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_56, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    id: "check-ac",
+    type: "checkbox",
+    value: "air condition",
+    "onUpdate:modelValue": _cache[9] || (_cache[9] = function ($event) {
+      return $data.form.features = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, $data.form.features]]), _hoisted_57, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    id: "check-wf",
+    type: "checkbox",
+    value: "wifi",
+    "onUpdate:modelValue": _cache[10] || (_cache[10] = function ($event) {
+      return $data.form.features = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, $data.form.features]]), _hoisted_58, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    id: "check-g",
+    type: "checkbox",
+    value: "gym",
+    "onUpdate:modelValue": _cache[11] || (_cache[11] = function ($event) {
+      return $data.form.features = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, $data.form.features]]), _hoisted_59])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_60, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_61, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_62, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "class": "add-listing__input-file",
+    type: "file",
+    name: "file",
+    id: "file",
+    onChange: _cache[12] || (_cache[12] = function () {
+      return $options.uploadImage1 && $options.uploadImage1.apply($options, arguments);
+    })
+  }, null, 32
+  /* HYDRATE_EVENTS */
+  ), _hoisted_63]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: $data.form.image1preview,
+    width: "100"
+  }, null, 8
+  /* PROPS */
+  , _hoisted_64)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_65, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_66, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_67, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "class": "add-listing__input-file",
+    type: "file",
+    name: "file",
+    id: "file",
+    onChange: _cache[13] || (_cache[13] = function () {
+      return $options.uploadImage2 && $options.uploadImage2.apply($options, arguments);
+    })
+  }, null, 32
+  /* HYDRATE_EVENTS */
+  ), _hoisted_68]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: $data.form.image2preview
+  }, null, 8
+  /* PROPS */
+  , _hoisted_69)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_70, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_71, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_72, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "class": "add-listing__input-file",
+    type: "file",
+    name: "file",
+    id: "file",
+    onChange: _cache[14] || (_cache[14] = function () {
+      return $options.uploadImage3 && $options.uploadImage3.apply($options, arguments);
+    })
+  }, null, 32
+  /* HYDRATE_EVENTS */
+  ), _hoisted_73]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: $data.form.image3preview
+  }, null, 8
+  /* PROPS */
+  , _hoisted_74)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_75, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_76, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_77, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "class": "add-listing__input-file",
+    type: "file",
+    name: "file",
+    id: "file",
+    onChange: _cache[15] || (_cache[15] = function () {
+      return $options.uploadImage4 && $options.uploadImage4.apply($options, arguments);
+    })
+  }, null, 32
+  /* HYDRATE_EVENTS */
+  ), _hoisted_78]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: $data.form.image4preview
+  }, null, 8
+  /* PROPS */
+  , _hoisted_79)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_80, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_81, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_82, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "class": "add-listing__input-file",
+    type: "file",
+    name: "file",
+    id: "file",
+    onChange: _cache[16] || (_cache[16] = function () {
+      return $options.uploadImage5 && $options.uploadImage5.apply($options, arguments);
+    })
+  }, null, 32
+  /* HYDRATE_EVENTS */
+  ), _hoisted_83]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: $data.form.image5preview
+  }, null, 8
+  /* PROPS */
+  , _hoisted_84)])]), _hoisted_85])], 32
+  /* HYDRATE_EVENTS */
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])])])])])], 64
   /* STABLE_FRAGMENT */
   );
 }
