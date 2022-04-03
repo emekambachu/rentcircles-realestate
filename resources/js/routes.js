@@ -1,8 +1,11 @@
 import { createWebHistory, createRouter } from "vue-router";
+
 import NotFound from './components/NotFoundComponent';
 import RealtorDashboard from './components/realtors/account/RealtorDashboardComponent';
+
 import RealtorMyProperties from "./components/realtors/account/RealtorMyPropertiesComponent";
 import RealtorAddProperties from "./components/realtors/account/RealtorAddPropertiesComponent";
+
 import RealtorProfile from "./components/realtors/account/RealtorProfileComponent";
 import RealtorProfileEdit from "./components/realtors/account/RealtorProfileEditComponent";
 

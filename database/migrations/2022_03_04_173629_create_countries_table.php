@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePropertyCountriesTable extends Migration
+class CreateCountriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePropertyCountriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('property_countries', static function (Blueprint $table) {
+        Schema::create('countries', static function (Blueprint $table) {
             $table->id();
             $table->integer('phone_code');
             $table->string('country_code');
@@ -31,6 +31,6 @@ class CreatePropertyCountriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('property_countries');
+        Schema::dropIfExists('countries');
     }
 }

@@ -1,11 +1,15 @@
 <?php
 
-namespace App\Models\Properties;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class PropertyCountry extends Model
+class Country extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+
+
+
+    ];
 }

@@ -40,14 +40,13 @@
     <aside class="menu-sidebar js-right-sidebar d-block d-lg-none">
         <div class="logo">
             <a href="#">
-                <img src="{{ asset('admin-assets/images/logo-black.png') }}" alt="Listagram" />
+                <img src="{{ asset('admin-assets/images/logo-black.png') }}" alt="" />
             </a>
         </div>
         <div class="menu-sidebar__content js-scrollbar2">
-            <div class="account-img">
-                <img src="{{ asset('admin-assets/images/clients/reviewer-4.png') }}" alt="Steve Austin" />
-            </div>
-            <h4 class="name">Howdy, {{ Auth::user()->name }}!</h4>
+
+            <realtor-bio-component></realtor-bio-component>
+
             <nav class="navbar-sidebar2">
                 <ul class="list-unstyled navbar__list">
                     <li>
@@ -55,7 +54,7 @@
                             class="nav-link"
                             exact
                             to="/realtor/account">
-                            <i class="ion-ios-gear-outline"></i>Dashboard
+                            <i class="ion-ios-monitor"></i>Dashboard
                         </router-link>
                     </li>
 
@@ -64,7 +63,7 @@
                             class="nav-link"
                             exact
                             to="/realtor/account/my-properties">
-                            <i class="ion-ios-gear-outline"></i>My Properties
+                            <i class="ion-ios-home"></i>My Properties
                         </router-link>
                     </li>
 
@@ -73,7 +72,7 @@
                             class="nav-link"
                             exact
                             to="/realtor/account/properties/add">
-                            <i class="ion-ios-gear-outline"></i>Add Property
+                            <i class="ion-ios-plus"></i>Add Property
                         </router-link>
                     </li>
 
@@ -82,13 +81,13 @@
                             class="nav-link"
                             exact
                             to="/realtor/account/profile">
-                            <i class="ion-ios-gear-outline"></i>Profile
+                            <i class="ion-ios-person"></i>Profile
                         </router-link>
                     </li>
 
                     <li>
                         <a href="{{ route('realtor.logout') }}">
-                            <i class="ion-ios-upload-outline"></i>Logout</a>
+                            <i class="ion-ios-locked"></i>Logout</a>
                     </li>
                 </ul>
             </nav>
@@ -268,3 +267,9 @@
 </body>
 
 </html>
+<script>
+    import RealtorBioComponent from "../../js/components/realtors/account/RealtorBioComponent";
+    export default {
+        components: {RealtorBioComponent}
+    }
+</script>

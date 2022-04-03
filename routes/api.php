@@ -10,7 +10,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Properties\PropertyController;
 use App\Http\Controllers\Realtor\RealtorAccountController;
 use App\Http\Controllers\User\UserAccountController;
-use App\Models\Properties\PropertyCountry;
+use App\Models\Properties\Country;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 

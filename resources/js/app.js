@@ -27,8 +27,11 @@ import RealtorLoginComponent from './components/realtors/RealtorLoginComponent';
 import RealtorRegisterComponent from './components/realtors/RealtorRegisterComponent';
 
 import RealtorDashboardComponent from './components/realtors/account/RealtorDashboardComponent';
+
 import RealtorMyPropertiesComponent from './components/realtors/account/RealtorMyPropertiesComponent';
 import RealtorAddPropertiesComponent from './components/realtors/account/RealtorAddPropertiesComponent';
+import RealtorBioComponent from './components/realtors/account/RealtorBioComponent';
+
 import RealtorProfileComponent from './components/realtors/account/RealtorProfileComponent';
 import RealtorProfileEditComponent from './components/realtors/account/RealtorProfileEditComponent';
 
@@ -44,10 +47,14 @@ createApp({
         RealtorLoginComponent,
 
         RealtorDashboardComponent,
-        RealtorMyPropertiesComponent,
+        RealtorBioComponent,
+
         RealtorProfileComponent,
-        RealtorAddPropertiesComponent,
         RealtorProfileEditComponent,
+
+        RealtorMyPropertiesComponent,
+        RealtorAddPropertiesComponent,
+
     }
 }).use(router, axios, VueAxios).mount('#app');
 
