@@ -12,7 +12,6 @@ class PropertyReview extends Model
         'property_detail_id',
         'user_id',
         'name',
-        'email',
         'description'
     ];
 

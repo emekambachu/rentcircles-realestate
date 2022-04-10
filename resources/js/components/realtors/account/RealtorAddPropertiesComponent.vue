@@ -173,7 +173,7 @@
                                                        @change="uploadImage1">
                                                 <div class="add-listing__input-file-wrap">
                                                     <i class="ion-ios-cloud-upload"></i>
-                                                    <p>Click here to upload your images</p>
+                                                    <p>Click to upload your images</p>
                                                 </div>
                                             </div>
                                             <img :src="form.image1preview" width="100"/>
@@ -188,7 +188,7 @@
                                                        @change="uploadImage2">
                                                 <div class="add-listing__input-file-wrap">
                                                     <i class="ion-ios-cloud-upload"></i>
-                                                    <p>Click here to upload image</p>
+                                                    <p>Click to upload image</p>
                                                 </div>
                                             </div>
                                             <img :src="form.image2preview"/>
@@ -203,7 +203,7 @@
                                                        @change="uploadImage3">
                                                 <div class="add-listing__input-file-wrap">
                                                     <i class="ion-ios-cloud-upload"></i>
-                                                    <p>Click here to upload your images</p>
+                                                    <p>Click to upload your images</p>
                                                 </div>
                                             </div>
                                             <img :src="form.image3preview"/>
@@ -218,7 +218,7 @@
                                                        @change="uploadImage4">
                                                 <div class="add-listing__input-file-wrap">
                                                     <i class="ion-ios-cloud-upload"></i>
-                                                    <p>Click here to upload your images</p>
+                                                    <p>Click to upload your images</p>
                                                 </div>
                                             </div>
                                             <img :src="form.image4preview"/>

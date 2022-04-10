@@ -86,8 +86,7 @@
                     </li>
 
                     <li>
-                        <a href="{{ route('realtor.logout') }}">
-                            <i class="ion-ios-locked"></i>Logout</a>
+                        <realtor-logout-component></realtor-logout-component>
                     </li>
                 </ul>
             </nav>
@@ -223,7 +222,7 @@
                                             <i class="ion-ios-person-outline"></i>Profile</a>
                                     </div>
                                     <div class="account-dropdown__item">
-                                        <a href="#">
+                                        <a href="">
                                             <i class="ion-ios-upload-outline"></i>Logout</a>
                                     </div>
                                 </div>
@@ -256,6 +255,7 @@
     <!--Dashboard content Wrapper ends-->
 
 </div>
+
 <!-- Plugin JS-->
 <script src="{{ asset('admin-assets/js/plugin.js') }}"></script>
 <!--Perfect Scrollbar JS-->
@@ -267,9 +267,3 @@
 </body>
 
 </html>
-<script>
-    import RealtorBioComponent from "../../js/components/realtors/account/RealtorBioComponent";
-    export default {
-        components: {RealtorBioComponent}
-    }
-</script>

@@ -8,13 +8,15 @@
                         <div class="dash-breadcrumb-left">
                             <div class="breadcrumb-menu text-right sm-left">
                                 <ul>
-                                    <li class="active"><a href="#">Home</a></li>
-                                    <li class="active"><a href="#">Listings</a></li>
+                                    <li class="active">
+                                        <a href="/realtor/account">Home</a>
+                                    </li>
                                     <li>My Listings</li>
                                 </ul>
                             </div>
                         </div>
-                        <a class="btn v3" href=""><i class="ion-plus-round"></i>Add Listing </a>
+                        <a class="btn v3" href="">
+                            <i class="ion-plus-round"></i>Add Listing </a>
                     </div>
                 </div>
             </div>
@@ -31,98 +33,26 @@
                         </div>
 
                         <div class="viewd-item-wrap">
-                            <div class="most-viewed-item">
-                                <div class="most-viewed-img">
-                                    <a href="#"><img src="images/single-listing/gallery-6.jpg" alt="..."></a>
-                                </div>
-                                <div class="most-viewed-detail">
-                                    <a class="category" href="#"><span class="list-bg aqua"><i class="icofont-hotel"></i></span>Hotel</a>
-                                    <h3><a href="single-listing-one.html">Hilton Moorea</a></h3>
-                                    <p class="list-address"><i class="icofont-google-map"></i>4210 Khale Street, Florence, USA</p>
-
-                                    <div class="ratings">
-                                        <i class="ion-ios-star"></i>
-                                        <i class="ion-ios-star"></i>
-                                        <i class="ion-ios-star"></i>
-                                        <i class="ion-ios-star"></i>
-                                        <i class="ion-ios-star-half"></i>
-                                    </div>
-                                    <div class="views">Views : <span>325</span></div>
-                                </div>
-                                <div class="listing-button">
-                                    <a href="#" class="btn v2"><i class="ion-edit"></i> Edit</a>
-                                    <a href="#" class="btn v5"><i class="ion-android-delete"></i> Delete</a>
-                                </div>
-                            </div>
-                            <div class="most-viewed-item">
-                                <div class="most-viewed-img">
-                                    <a href="#"><img src="images/single-listing/restaurant-2.jpg" alt="..."></a>
-                                </div>
-                                <div class="most-viewed-detail">
-                                    <a class="category" href="#"><span class="list-bg red"><i class="icofont-restaurant"></i></span>Restaurent</a>
-                                    <h3><a href="single-listing-two.html">La Quo Vadis</a></h3>
-                                    <p class="list-address"><i class="icofont-google-map"></i>42 Albemarle st. Mayfair,London</p>
-
-                                    <div class="ratings">
-                                        <i class="ion-ios-star"></i>
-                                        <i class="ion-ios-star"></i>
-                                        <i class="ion-ios-star"></i>
-                                        <i class="ion-ios-star"></i>
-                                        <i class="ion-ios-star-half"></i>
-                                    </div>
-                                    <div class="views">Views : <span>280</span></div>
-                                </div>
-                                <div class="listing-button">
-                                    <a href="#" class="btn v2"><i class="ion-edit"></i> Edit</a>
-                                    <a href="#" class="btn v5"><i class="ion-android-delete"></i> Delete</a>
-                                </div>
-                            </div>
-                            <div class="most-viewed-item">
-                                <div class="most-viewed-img">
-                                    <a href="#"><img src="images/category/event/muay.jpg" alt="..."></a>
-                                </div>
-                                <div class="most-viewed-detail">
-                                    <a class="category" href="#"><span class="list-bg violate"><i class="icofont-movie"></i></span>Movie</a>
-                                    <h3><a href="single-listing-three.html">Muay Thai Live Show</a></h3>
-                                    <p class="list-address"><i class="icofont-google-map"></i>1690 Brown Avenue,Barline</p>
-
-                                    <div class="ratings">
-                                        <i class="ion-ios-star"></i>
-                                        <i class="ion-ios-star"></i>
-                                        <i class="ion-ios-star"></i>
-                                        <i class="ion-ios-star"></i>
-                                        <i class="ion-ios-star-half"></i>
-                                    </div>
-                                    <div class="views">Views : <span>200</span></div>
-                                </div>
-                                <div class="listing-button">
-                                    <a href="#" class="btn v2"><i class="ion-edit"></i> Edit</a>
-                                    <a href="#" class="btn v5"><i class="ion-android-delete"></i> Delete</a>
-                                </div>
-                            </div>
-                            <div class="most-viewed-item">
-                                <div class="most-viewed-img">
-                                    <a href="#"><img src="images/category/event/3.jpg" alt="..."></a>
-                                </div>
-                                <div class="most-viewed-detail">
-                                    <a class="category" href="#"><span class="list-bg aqua"><i class="icofont-music-alt"></i></span>Music</a>
-                                    <h3><a href="single-listing-five.html">Bolton music fair </a></h3>
-                                    <p class="list-address"><i class="icofont-google-map"></i>20 Hogh Street, Bolton, France</p>
-
-                                    <div class="ratings">
-                                        <i class="ion-ios-star"></i>
-                                        <i class="ion-ios-star"></i>
-                                        <i class="ion-ios-star"></i>
-                                        <i class="ion-ios-star"></i>
-                                        <i class="ion-ios-star-half"></i>
-                                    </div>
-                                    <div class="views">Views : <span>180</span></div>
-                                </div>
-                                <div class="listing-button">
-                                    <a href="#" class="btn v2"><i class="ion-edit"></i> Edit</a>
-                                    <a href="#" class="btn v5"><i class="ion-android-delete"></i> Delete</a>
-                                </div>
-                            </div>
+                            <realtor-single-property-component
+                                v-for="property in properties" :key="property.id"
+                                :property_id="property.id"
+                                :property_type="property.property_type"
+                                :state="property.state"
+                                :title="property.title"
+                                :address="property.address"
+                                :description="property.description"
+                                :bedrooms="property.bedrooms"
+                                :bathrooms="property.bathrooms"
+                                :living_rooms="property.living_rooms"
+                                :cost="property.cost"
+                                :image1="property.image1"
+                                :image2="property.image2"
+                                :image3="property.image3"
+                                :image4="property.image4"
+                                :image5="property.image5"
+                                :features="property.features"
+                                :status="property.status"
+                            ></realtor-single-property-component>
                         </div>
 
                     </div>
@@ -135,8 +65,43 @@
 </template>
 
 <script>
+    import RealtorSinglePropertyComponent from "./RealtorSinglePropertyComponent";
     export default {
-        name: "RealtorMyProperties"
+        components: {
+            RealtorSinglePropertyComponent
+        },
+        data(){
+            return{
+                properties: [],
+            }
+        },
+        methods: {
+            getProperties: function(){
+                axios.get('/api/realtor/properties')
+                    .then((response) => {
+                        response.data.success === true ? this.properties = response.data.properties : false;
+                        console.log(response.data.properties);
+                    }).catch((error) => {
+                    console.log(error);
+                });
+            },
+        },
+
+        mounted() {
+            this.getProperties();
+        },
+
+        computed() {
+
+        },
+
+        watch() {
+
+        },
+
+        created() {
+
+        }
     }
 </script>
 

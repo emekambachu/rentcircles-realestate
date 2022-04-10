@@ -38,6 +38,10 @@ Route::middleware('auth:sanctum')->group(function () {
     });
     Route::get('/realtor/account', [RealtorAccountController::class, 'getProfile']);
     Route::post('/realtor/property/submit', [RealtorAccountController::class, 'submitProperty']);
+    Route::get('/realtor/properties', [RealtorAccountController::class, 'myProperties']);
+    Route::get('/realtor/property/{id}/edit', [RealtorAccountController::class, 'myPropertyEdit']);
+    Route::put('/realtor/property/{id}/update', [RealtorAccountController::class, 'myPropertyUpdate']);
+    Route::delete('/realtor/properties/{id}/delete', [RealtorAccountController::class, 'myPropertyDelete']);
 
     // User Account
     Route::get('/user/authenticate', static function (Request $request) {
@@ -51,7 +55,6 @@ Route::middleware('auth:sanctum')->group(function () {
     });
     Route::get('/admin/account', [AdminAccountController::class, 'getProfile']);
 
-
 });
 
 // Properties
@@ -62,6 +65,7 @@ Route::get('property/types', [PropertyController::class, 'getPropertyTypes']);
 Route::post('realtor/register/submit', [RealtorRegisterController::class, 'createRealtor']);
 Route::get('property/countries', [PropertyController::class, 'propertyCountries']);
 Route::post('realtor/login/submit', [RealtorLoginController::class, 'login']);
+Route::get('/realtor/account/logout', [RealtorLoginController::class, 'logout']);
 
 // User Register/Login
 Route::post('register', [RegisterController::class, 'register']);

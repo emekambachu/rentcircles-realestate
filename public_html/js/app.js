@@ -22731,6 +22731,91 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/ContactUsComponent.vue?vue&type=script&lang=js":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/ContactUsComponent.vue?vue&type=script&lang=js ***!
+  \*****************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "ContactUsComponent"
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/FaqComponent.vue?vue&type=script&lang=js":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/FaqComponent.vue?vue&type=script&lang=js ***!
+  \***********************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "FaqComponent"
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/HomeComponent.vue?vue&type=script&lang=js":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/HomeComponent.vue?vue&type=script&lang=js ***!
+  \************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "HomeComponent"
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/PrivacyPolicyComponent.vue?vue&type=script&lang=js":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/PrivacyPolicyComponent.vue?vue&type=script&lang=js ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "PrivacyPolicyComponent"
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/TermsComponent.vue?vue&type=script&lang=js":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/TermsComponent.vue?vue&type=script&lang=js ***!
+  \*************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "TermsComponent"
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/RealtorLoginComponent.vue?vue&type=script&lang=js":
 /*!************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/RealtorLoginComponent.vue?vue&type=script&lang=js ***!
@@ -23119,6 +23204,30 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorLogoutComponent.vue?vue&type=script&lang=js":
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorLogoutComponent.vue?vue&type=script&lang=js ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  methods: {
+    logout: function logout() {
+      console.log('logout');
+      axios.get('api/realtor/account/logout').then(function (response) {
+        window.location.href = '/realtor/login';
+      });
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue?vue&type=script&lang=js":
 /*!***************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue?vue&type=script&lang=js ***!
@@ -23130,8 +23239,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _RealtorSinglePropertyComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RealtorSinglePropertyComponent */ "./resources/js/components/realtors/account/RealtorSinglePropertyComponent.vue");
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "RealtorMyProperties"
+  components: {
+    RealtorSinglePropertyComponent: _RealtorSinglePropertyComponent__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  data: function data() {
+    return {
+      properties: []
+    };
+  },
+  methods: {
+    getProperties: function getProperties() {
+      var _this = this;
+
+      axios.get('/api/realtor/properties').then(function (response) {
+        response.data.success === true ? _this.properties = response.data.properties : false;
+        console.log(response.data.properties);
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getProperties();
+  },
+  computed: function computed() {},
+  watch: function watch() {},
+  created: function created() {}
 });
 
 /***/ }),
@@ -23170,6 +23306,262 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorPropertyEditComponent.vue?vue&type=script&lang=js":
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorPropertyEditComponent.vue?vue&type=script&lang=js ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      form: {
+        title: '',
+        property_type_id: '',
+        state_id: '',
+        address: '',
+        description: '',
+        bedrooms: '',
+        bathrooms: '',
+        living_rooms: '',
+        cost: '',
+        features: [],
+        image1: null,
+        image1preview: null,
+        image2: null,
+        image2preview: null,
+        image3: null,
+        image3preview: null,
+        image4: null,
+        image4preview: null,
+        image5: null,
+        image5preview: null
+      },
+      states: [],
+      propertyTypes: [],
+      errors: [],
+      formLoading: false,
+      successAlert: false,
+      errorAlert: false,
+      messageAlert: ''
+    };
+  },
+  methods: {
+    getCurrentProperty: function getCurrentProperty() {
+      var _this = this;
+
+      axios.get('/api/realtor/property/' + this.$route.params.id + '/edit').then(function (response) {
+        response.data.success === true ? _this.form = response.data.property : false;
+        console.log(response.data.property);
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    },
+    updateProperty: function updateProperty() {
+      var _this2 = this;
+
+      this.formLoading = true;
+      var formData = new FormData();
+      formData.append("title", this.form.title);
+      formData.append("property_type_id", this.form.property_type_id);
+      formData.append("state_id", this.form.state_id);
+      formData.append("address", this.form.address);
+      formData.append("description", this.form.description);
+      formData.append("bedrooms", this.form.bedrooms);
+      formData.append("bathrooms", this.form.bathrooms);
+      formData.append("living_rooms", this.form.living_rooms);
+      formData.append("cost", this.form.cost);
+      formData.append("features", this.form.features);
+      formData.append("image1", this.form.image1);
+      formData.append("image2", this.form.image2);
+
+      if (this.form.image3) {
+        formData.append("image3", this.form.image3);
+      }
+
+      if (this.form.image4) {
+        formData.append("image4", this.form.image4);
+      }
+
+      if (this.form.image5) {
+        formData.append("image5", this.form.image5);
+      }
+
+      var config = {
+        headers: {
+          'content-type': 'multipart/form-data'
+        }
+      };
+      axios.post('/api/realtor/property/' + this.$route.params.id + '/update', formData, config).then(function (response) {
+        response.data.success === true ? _this2.formSuccess(response) : _this2.formError(response);
+        _this2.messageAlert = response.data.message;
+        console.log(response.data.message);
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"](function () {
+        _this2.formLoading = false;
+      });
+    },
+    // upload and preview image
+    uploadImage1: function uploadImage1(event) {
+      //Assign image and path to this variable
+      this.form.image1 = event.target.files[0]; // assign variable to the event image upload
+
+      var file = event.target.files[0]; // validate image
+
+      this.validateImage(this.form.image1, file); // assign variable to the image preview
+
+      this.form.image1preview = URL.createObjectURL(file);
+    },
+    uploadImage2: function uploadImage2(event) {
+      //Assign image and path to this variable
+      this.form.image2 = event.target.files[0]; // assign variable to the event image upload
+
+      var file = event.target.files[0]; // validate image
+
+      this.validateImage(this.form.image2, file); // assign variable to the image preview
+
+      this.form.image2preview = URL.createObjectURL(file);
+    },
+    uploadImage3: function uploadImage3(event) {
+      //Assign image and path to this variable
+      this.form.image3 = event.target.files[0]; // assign variable to the event image upload
+
+      var file = event.target.files[0]; // validate image
+
+      this.validateImage(this.form.image3, file); // assign variable to the image preview
+
+      this.form.image3preview = URL.createObjectURL(file);
+    },
+    uploadImage4: function uploadImage4(event) {
+      //Assign image and path to this variable
+      this.form.image4 = event.target.files[0]; // assign variable to the event image upload
+
+      var file = event.target.files[0]; // validate image
+
+      this.validateImage(this.form.image4, file); // assign variable to the image preview
+
+      this.form.image4preview = URL.createObjectURL(file);
+    },
+    uploadImage5: function uploadImage5(event) {
+      //Assign image and path to this variable
+      this.form.image5 = event.target.files[0]; // assign variable to the event image upload
+
+      var file = event.target.files[0]; // validate image
+
+      this.validateImage(this.form.image5, file); // assign variable to the image preview
+
+      this.form.image5preview = URL.createObjectURL(file);
+    },
+    // Validate image
+    validateImage: function validateImage(img, file) {
+      console.log(img.type + ' - ' + img.size);
+      var fileType = ['image/png', 'image/jpg', 'image/jpeg'];
+
+      if (fileType.includes(file.type) === false) {
+        img = null;
+        this.errorAlert = true;
+        this.messageAlert = "Incorrect format for " + file.name;
+        return false;
+      } else {
+        this.errorAlert = false;
+        this.messageAlert = '';
+      }
+
+      if (img.size > 3000000) {
+        this.errorAlert = true;
+        this.messageAlert = "Image can't be greater than 3mb for" + file.name;
+        return false;
+      } else {
+        this.errorAlert = false;
+        this.messageAlert = '';
+      }
+    },
+    formSuccess: function formSuccess(response) {
+      console.log('Reset the form');
+      this.successAlert = true;
+      var self = this; //you need this because *this* will refer to Object.keys below`
+      //Iterate through each object field, key is name of the object field`
+
+      Object.keys(this.form).forEach(function (key, index) {
+        self.form[key] = '';
+      });
+      this.image1preview = null;
+      this.image2preview = null;
+      this.image3preview = null;
+      this.image4preview = null;
+      this.image5preview = null;
+    },
+    formError: function formError(response) {
+      this.errorAlert = true;
+      this.errors = response.data.errors;
+    },
+    getStates: function getStates() {
+      var _this3 = this;
+
+      axios.get('/api/states').then(function (response) {
+        response.data.success ? _this3.states = response.data.states : false;
+        console.log(response.data);
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    },
+    getPropertyTypes: function getPropertyTypes() {
+      var _this4 = this;
+
+      axios.get('/api/property/types').then(function (response) {
+        response.data.success ? _this4.propertyTypes = response.data.property_types : false;
+        console.log(response.data);
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    }
+  },
+  mounted: function mounted() {
+    console.log('The id is: ' + this.$route.params.id);
+    this.getStates();
+    this.getPropertyTypes();
+    this.getCurrentProperty();
+  },
+  created: function created() {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorSinglePropertyComponent.vue?vue&type=script&lang=js":
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorSinglePropertyComponent.vue?vue&type=script&lang=js ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['property_id', 'property_type', 'state', 'title', 'address', 'description', 'bedrooms', 'living_rooms', 'bathrooms', 'cost', 'image1', 'image2', 'image3', 'image4', 'image5', 'features', 'status'],
+  data: function data() {
+    return {
+      deleted: false
+    };
+  },
+  methods: {
+    deleteProperty: function deleteProperty() {}
+  },
+  mounted: function mounted() {},
+  computed: function computed() {},
+  watch: function watch() {},
+  created: function created() {}
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/NotFoundComponent.vue?vue&type=template&id=2b13f773":
 /*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/NotFoundComponent.vue?vue&type=template&id=2b13f773 ***!
@@ -23183,6 +23575,393 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return null;
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/AboutComponent.vue?vue&type=template&id=2e6ccd45&scoped=true":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/AboutComponent.vue?vue&type=template&id=2e6ccd45&scoped=true ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+
+var _withScopeId = function _withScopeId(n) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-2e6ccd45"), n = n(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)(), n;
+};
+
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__slider-area ltn__slider-3 section-bg-2\" data-v-2e6ccd45><div class=\"ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1\" data-v-2e6ccd45><!-- ltn__slide-item --><div class=\"ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-overlay-theme-black-60\" style=\"background-image:url(&#39;/main-assets/img/slider/12.jpg&#39;);background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:fixed;\" data-v-2e6ccd45><div class=\"ltn__slide-item-inner text-center pt-100 pb-100\" data-v-2e6ccd45><div class=\"container\" data-v-2e6ccd45><div class=\"row\" data-v-2e6ccd45><div class=\"col-lg-12 align-self-center\" data-v-2e6ccd45><div class=\"ltn__breadcrumb-inner\" data-v-2e6ccd45><h1 class=\"page-title\" data-v-2e6ccd45>About Us</h1></div></div></div></div></div></div></div></div>", 1);
+
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__about-us-area pt-120 pb-90\" data-v-2e6ccd45><div class=\"container\" data-v-2e6ccd45><div class=\"row\" data-v-2e6ccd45><div class=\"col-lg-6 align-self-center\" data-v-2e6ccd45><div class=\"about-us-img-wrap about-img-left\" data-v-2e6ccd45><img src=\"/main-assets/img/others/7.png\" alt=\"About Us Image\" data-v-2e6ccd45><div class=\"about-us-img-info about-us-img-info-2 about-us-img-info-3\" data-v-2e6ccd45><div class=\"ltn__video-img ltn__animation-pulse1\" data-v-2e6ccd45><img src=\"/main-assets/img/others/8.png\" alt=\"video popup bg image\" data-v-2e6ccd45><a class=\"ltn__video-icon-2 ltn__video-icon-2-border---\" href=\"https://www.youtube.com/embed/X7R-q9rsrtU?autoplay=1&amp;showinfo=0\" data-rel=\"lightcase:myCollection\" data-v-2e6ccd45><i class=\"fa fa-play\" data-v-2e6ccd45></i></a></div></div></div></div><div class=\"col-lg-6 align-self-center\" data-v-2e6ccd45><div class=\"about-us-info-wrap\" data-v-2e6ccd45><div class=\"section-title-area ltn__section-title-2--- mb-20\" data-v-2e6ccd45><h6 class=\"section-subtitle section-subtitle-2 ltn__secondary-color\" data-v-2e6ccd45>About Us</h6><h1 class=\"section-title\" data-v-2e6ccd45>The Leading Real Estate Rental Marketplace<span data-v-2e6ccd45>.</span></h1><p data-v-2e6ccd45>Over 39,000 people work for us in more than 70 countries all over the This breadth of global coverage, combined with specialist services</p></div><ul class=\"ltn__list-item-half clearfix\" data-v-2e6ccd45><li data-v-2e6ccd45><i class=\"flaticon-home-2\" data-v-2e6ccd45></i> Smart Home Design </li><li data-v-2e6ccd45><i class=\"flaticon-mountain\" data-v-2e6ccd45></i> Beautiful Scene Around </li><li data-v-2e6ccd45><i class=\"flaticon-heart\" data-v-2e6ccd45></i> Exceptional Lifestyle </li><li data-v-2e6ccd45><i class=\"flaticon-secure\" data-v-2e6ccd45></i> Complete 24/7 Security </li></ul><div class=\"ltn__callout bg-overlay-theme-05 mt-30\" data-v-2e6ccd45><p data-v-2e6ccd45>&quot;Enimad minim veniam quis nostrud exercitation <br data-v-2e6ccd45> llamco laboris. Lorem ipsum dolor sit amet&quot; </p></div><div class=\"btn-wrapper animated\" data-v-2e6ccd45><a href=\"\" class=\"theme-btn-1 btn btn-effect-1\" data-v-2e6ccd45>OUR SERVICES</a></div></div></div></div></div></div>", 1);
+
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__feature-area section-bg-1--- pt-115 pb-90 mb-120---\" data-v-2e6ccd45><div class=\"container\" data-v-2e6ccd45><div class=\"row\" data-v-2e6ccd45><div class=\"col-lg-12\" data-v-2e6ccd45><div class=\"section-title-area ltn__section-title-2--- text-center\" data-v-2e6ccd45><h4 class=\"section-subtitle section-subtitle-2 ltn__secondary-color\" data-v-2e6ccd45>Our Services</h4></div></div></div><div class=\"row ltn__custom-gutter--- justify-content-center\" data-v-2e6ccd45><div class=\"col-lg-6 col-sm-6 col-12\" data-v-2e6ccd45><div class=\"ltn__feature-item ltn__feature-item-6 text-center bg-white box-shadow-1\" data-v-2e6ccd45><div class=\"ltn__feature-icon\" data-v-2e6ccd45><img src=\"/main-assets/img/icons/icon-img/21.png\" alt=\"#\" data-v-2e6ccd45></div><div class=\"ltn__feature-info\" data-v-2e6ccd45><h3 data-v-2e6ccd45><a href=\"\" data-v-2e6ccd45>Buy/Sell a Properties</a></h3><p data-v-2e6ccd45>over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.</p><a class=\"ltn__service-btn\" href=\"\" data-v-2e6ccd45>Learn more <i class=\"flaticon-right-arrow\" data-v-2e6ccd45></i></a></div></div></div><div class=\"col-lg-6 col-sm-6 col-12\" data-v-2e6ccd45><div class=\"ltn__feature-item ltn__feature-item-6 text-center bg-white box-shadow-1 active\" data-v-2e6ccd45><div class=\"ltn__feature-icon\" data-v-2e6ccd45><img src=\"/main-assets/img/icons/icon-img/22.png\" alt=\"#\" data-v-2e6ccd45></div><div class=\"ltn__feature-info\" data-v-2e6ccd45><h3 data-v-2e6ccd45><a href=\"\" data-v-2e6ccd45>Rent an apartment</a></h3><p data-v-2e6ccd45>over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.</p><a class=\"ltn__service-btn\" href=\"\" data-v-2e6ccd45> Find more <i class=\"flaticon-right-arrow\" data-v-2e6ccd45></i></a></div></div></div></div></div></div>", 1);
+
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__counterup-area section-bg-1 pt-120 pb-70\" data-v-2e6ccd45><div class=\"container\" data-v-2e6ccd45><div class=\"row\" data-v-2e6ccd45><div class=\"col-md-3 col-sm-6 align-self-center\" data-v-2e6ccd45><div class=\"ltn__counterup-item text-color-white---\" data-v-2e6ccd45><div class=\"counter-icon\" data-v-2e6ccd45><i class=\"flaticon-select\" data-v-2e6ccd45></i></div><h1 data-v-2e6ccd45><span class=\"counter animated fadeInDownBig\" data-v-2e6ccd45>560</span><span class=\"counterUp-icon\" data-v-2e6ccd45>+</span></h1><h6 data-v-2e6ccd45>Total Area Sq</h6></div></div><div class=\"col-md-3 col-sm-6 align-self-center\" data-v-2e6ccd45><div class=\"ltn__counterup-item text-color-white---\" data-v-2e6ccd45><div class=\"counter-icon\" data-v-2e6ccd45><i class=\"flaticon-office\" data-v-2e6ccd45></i></div><h1 data-v-2e6ccd45><span class=\"counter animated fadeInDownBig\" data-v-2e6ccd45>197</span><span class=\"counterUp-letter\" data-v-2e6ccd45>K</span><span class=\"counterUp-icon\" data-v-2e6ccd45>+</span></h1><h6 data-v-2e6ccd45>Apartments Rented</h6></div></div><div class=\"col-md-3 col-sm-6 align-self-center\" data-v-2e6ccd45><div class=\"ltn__counterup-item text-color-white---\" data-v-2e6ccd45><div class=\"counter-icon\" data-v-2e6ccd45><i class=\"flaticon-excavator\" data-v-2e6ccd45></i></div><h1 data-v-2e6ccd45><span class=\"counter animated fadeInDownBig\" data-v-2e6ccd45>268</span><span class=\"counterUp-icon\" data-v-2e6ccd45>+</span></h1><h6 data-v-2e6ccd45>Property sold</h6></div></div><div class=\"col-md-3 col-sm-6 align-self-center\" data-v-2e6ccd45><div class=\"ltn__counterup-item text-color-white---\" data-v-2e6ccd45><div class=\"counter-icon\" data-v-2e6ccd45><i class=\"flaticon-armchair\" data-v-2e6ccd45></i></div><h1 data-v-2e6ccd45><span class=\"counter animated fadeInDownBig\" data-v-2e6ccd45>340</span><span class=\"counterUp-icon\" data-v-2e6ccd45>+</span></h1><h6 data-v-2e6ccd45>Properties available</h6></div></div></div></div></div><div class=\"ltn__about-us-area section-bg-1 bg-image-right-before pt-120 pb-90\" data-v-2e6ccd45><div class=\"container\" data-v-2e6ccd45><div class=\"row\" data-v-2e6ccd45><div class=\"col-lg-6 align-self-center\" data-v-2e6ccd45><div class=\"about-us-info-wrap\" data-v-2e6ccd45><div class=\"section-title-area ltn__section-title-2--- mb-20\" data-v-2e6ccd45><h6 class=\"section-subtitle section-subtitle-2--- ltn__secondary-color\" data-v-2e6ccd45> Building Facilities</h6><h1 class=\"section-title\" data-v-2e6ccd45>Making living spaces More Beautiful</h1><p data-v-2e6ccd45>Over 39,000 people work for us in more than 70 countries all over the This breadth of global coverage, combined with specialist services</p></div><ul class=\"ltn__list-item-half ltn__list-item-half-2 clearfix\" data-v-2e6ccd45><li data-v-2e6ccd45><i class=\"icon-done\" data-v-2e6ccd45></i> Living rooms are pre-wired for Surround </li><li data-v-2e6ccd45><i class=\"icon-done\" data-v-2e6ccd45></i> Luxurious interior design and amenities </li><li data-v-2e6ccd45><i class=\"icon-done\" data-v-2e6ccd45></i> Nestled in the Buckhead Vinings communities </li><li data-v-2e6ccd45><i class=\"icon-done\" data-v-2e6ccd45></i> Private balconies with stunning views </li><li data-v-2e6ccd45><i class=\"icon-done\" data-v-2e6ccd45></i> A rare combination of inspired architecture </li><li data-v-2e6ccd45><i class=\"icon-done\" data-v-2e6ccd45></i> Outdoor grilling with dining court </li></ul><div class=\"ltn__animation-pulse2 text-center mt-30\" data-v-2e6ccd45><a class=\"ltn__video-play-btn bg-white--- ltn__secondary-bg\" href=\"https://www.youtube.com/embed/HnbMYzdjuBs?autoplay=1&amp;showinfo=0\" data-rel=\"lightcase\" data-v-2e6ccd45><i class=\"icon-play ltn__secondary-color--- white-color\" data-v-2e6ccd45></i></a></div></div></div><div class=\"col-lg-6 align-self-center\" data-v-2e6ccd45><div class=\"about-us-img-wrap about-img-left\" data-v-2e6ccd45></div></div></div></div></div><div class=\"ltn__feature-area pt-90 pb-90\" data-v-2e6ccd45><div class=\"container\" data-v-2e6ccd45><div class=\"row\" data-v-2e6ccd45><div class=\"col-lg-12\" data-v-2e6ccd45><div class=\"section-title-area ltn__section-title-2--- text-center\" data-v-2e6ccd45><h6 class=\"section-subtitle section-subtitle-2 ltn__secondary-color\" data-v-2e6ccd45>features</h6><h1 class=\"section-title\" data-v-2e6ccd45>Core Features</h1></div></div></div><div class=\"row ltn__custom-gutter\" data-v-2e6ccd45><div class=\"col-lg-3 col-sm-6 col-12\" data-v-2e6ccd45><div class=\"ltn__feature-item ltn__feature-item-6\" data-v-2e6ccd45><div class=\"ltn__feature-icon\" data-v-2e6ccd45><span data-v-2e6ccd45><i class=\"flaticon-apartment\" data-v-2e6ccd45></i></span></div><div class=\"ltn__feature-info\" data-v-2e6ccd45><h4 data-v-2e6ccd45><a href=\"\" data-v-2e6ccd45>Smart living</a></h4><p data-v-2e6ccd45>Lorem ipsum dolor sit ame it, consectetur adipisicing elit, sed do eiusmod te mp or incididunt ut labore.</p></div></div></div><div class=\"col-lg-3 col-sm-6 col-12\" data-v-2e6ccd45><div class=\"ltn__feature-item ltn__feature-item-6\" data-v-2e6ccd45><div class=\"ltn__feature-icon\" data-v-2e6ccd45><span data-v-2e6ccd45><i class=\"flaticon-park\" data-v-2e6ccd45></i></span></div><div class=\"ltn__feature-info\" data-v-2e6ccd45><h4 data-v-2e6ccd45><a href=\"\" data-v-2e6ccd45>ECO Construction</a></h4><p data-v-2e6ccd45>Lorem ipsum dolor sit ame it, consectetur adipisicing elit, sed do eiusmod te mp or incididunt ut labore.</p></div></div></div><div class=\"col-lg-3 col-sm-6 col-12\" data-v-2e6ccd45><div class=\"ltn__feature-item ltn__feature-item-6\" data-v-2e6ccd45><div class=\"ltn__feature-icon\" data-v-2e6ccd45><span data-v-2e6ccd45><i class=\"flaticon-maps-and-location\" data-v-2e6ccd45></i></span></div><div class=\"ltn__feature-info\" data-v-2e6ccd45><h4 data-v-2e6ccd45><a href=\"\" data-v-2e6ccd45>Atractive Location</a></h4><p data-v-2e6ccd45>Lorem ipsum dolor sit ame it, consectetur adipisicing elit, sed do eiusmod te mp or incididunt ut labore.</p></div></div></div><div class=\"col-lg-3 col-sm-6 col-12\" data-v-2e6ccd45><div class=\"ltn__feature-item ltn__feature-item-6 active\" data-v-2e6ccd45><div class=\"ltn__feature-icon\" data-v-2e6ccd45><span data-v-2e6ccd45><i class=\"flaticon-excavator\" data-v-2e6ccd45></i></span></div><div class=\"ltn__feature-info\" data-v-2e6ccd45><h4 data-v-2e6ccd45><a href=\"\" data-v-2e6ccd45>Modern Technology</a></h4><p data-v-2e6ccd45>Lorem ipsum dolor sit ame it, consectetur adipisicing elit, sed do eiusmod te mp or incididunt ut labore.</p></div></div></div></div></div></div>", 3);
+
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__call-to-action-area call-to-action-6 before-bg-bottom\" data-bs-bg=\"/main-assets/img/1.jpg\" data-v-2e6ccd45><div class=\"container\" data-v-2e6ccd45><div class=\"row\" data-v-2e6ccd45><div class=\"col-lg-12\" data-v-2e6ccd45><div class=\"call-to-action-inner call-to-action-inner-6 ltn__secondary-bg position-relative text-center---\" data-v-2e6ccd45><div class=\"coll-to-info text-color-white\" data-v-2e6ccd45><h1 data-v-2e6ccd45>Looking to rent an apartment?</h1><p data-v-2e6ccd45>We can help you realize your new home</p></div><div class=\"btn-wrapper\" data-v-2e6ccd45><a class=\"btn btn-effect-3 btn-white\" href=\"\" data-v-2e6ccd45> Explore apartments <i class=\"icon-next\" data-v-2e6ccd45></i></a></div></div></div></div></div></div>", 1);
+
+function render(_ctx, _cache) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" SLIDER AREA START (slider-3) "), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" SLIDER AREA END "), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" FEATURE AREA START ( Feature - 6) "), _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" FEATURE AREA END "), _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" CALL TO ACTION START (call-to-action-6) "), _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" CALL TO ACTION END ")], 64
+  /* STABLE_FRAGMENT */
+  );
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/ContactUsComponent.vue?vue&type=template&id=c54161d8&scoped=true":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/ContactUsComponent.vue?vue&type=template&id=c54161d8&scoped=true ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+
+var _withScopeId = function _withScopeId(n) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-c54161d8"), n = n(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)(), n;
+};
+
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__slider-area ltn__slider-3 section-bg-2\" data-v-c54161d8><div class=\"ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1\" data-v-c54161d8><!-- ltn__slide-item --><div class=\"ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-overlay-theme-black-60\" style=\"background-image:url(&#39;/main-assets/img/slider/52.jpg&#39;);background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:fixed;\" data-v-c54161d8><div class=\"ltn__slide-item-inner text-center\" data-v-c54161d8><div class=\"container\" data-v-c54161d8><div class=\"row\" data-v-c54161d8><div class=\"col-lg-12 align-self-center\" data-v-c54161d8><div class=\"ltn__breadcrumb-inner\" data-v-c54161d8><h1 class=\"page-title\" data-v-c54161d8>Contact us</h1></div></div></div></div></div></div></div></div>", 1);
+
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__contact-address-area mb-90 mt-40\" data-v-c54161d8><div class=\"container\" data-v-c54161d8><div class=\"row\" data-v-c54161d8><div class=\"col-lg-4\" data-v-c54161d8><div class=\"ltn__contact-address-item ltn__contact-address-item-3 box-shadow\" data-v-c54161d8><div class=\"ltn__contact-address-icon\" data-v-c54161d8><img src=\"/main-assets/img/icons/10.png\" alt=\"Icon Image\" data-v-c54161d8></div><h3 class=\"animated fadeIn\" data-v-c54161d8>Email Address</h3><p data-v-c54161d8>info@rentcircles.com</p></div></div><div class=\"col-lg-4\" data-v-c54161d8><div class=\"ltn__contact-address-item ltn__contact-address-item-3 box-shadow\" data-v-c54161d8><div class=\"ltn__contact-address-icon\" data-v-c54161d8><img src=\"/main-assets/img/icons/11.png\" alt=\"Icon Image\" data-v-c54161d8></div><h3 class=\"animated fadeIn\" data-v-c54161d8>Phone Number</h3><p data-v-c54161d8>+0123-456789</p></div></div><div class=\"col-lg-4\" data-v-c54161d8><div class=\"ltn__contact-address-item ltn__contact-address-item-3 box-shadow\" data-v-c54161d8><div class=\"ltn__contact-address-icon\" data-v-c54161d8><img src=\"/main-assets/img/icons/12.png\" alt=\"Icon Image\" data-v-c54161d8></div><h3 class=\"animated fadeIn\" data-v-c54161d8>Office Address</h3><p data-v-c54161d8>18/A, New Born Town Hall New York, US</p></div></div></div></div></div>", 1);
+
+var _hoisted_3 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "ltn__contact-message-area mb-120 mb--100"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "container"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "row"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "col-lg-12"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "ltn__form-box contact-form-box box-shadow white-bg"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", {
+    "class": "title-2"
+  }, "Contact us"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+    id: "contact-form",
+    action: "",
+    method: "post"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "row"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "col-md-6"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "input-item input-item-name ltn__custom-icon"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    name: "name",
+    placeholder: "Enter your name"
+  })])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "col-md-6"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "input-item input-item-email ltn__custom-icon"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "email",
+    name: "email",
+    placeholder: "Enter email address"
+  })])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "col-md-6"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "input-item"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+    "class": "nice-select",
+    style: {
+      "display": "none"
+    }
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", null, "Select Service Type"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", null, "Property Management "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", null, "Mortgage Service "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", null, "Consulting Service"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", null, "Home Buying"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", null, "Home Selling"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", null, "Escrow Services")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "nice-select",
+    tabindex: "0"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+    "class": "current"
+  }, "Select Service Type"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", {
+    "class": "list"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+    "data-value": "Select Service Type",
+    "class": "option selected"
+  }, "Select Service Type"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+    "data-value": "Property Management",
+    "class": "option"
+  }, "Property Management "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+    "data-value": "Mortgage Service",
+    "class": "option"
+  }, "Mortgage Service "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+    "data-value": "Consulting Service",
+    "class": "option"
+  }, "Consulting Service"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+    "data-value": "Home Buying",
+    "class": "option"
+  }, "Home Buying"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+    "data-value": "Home Selling",
+    "class": "option"
+  }, "Home Selling"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+    "data-value": "Escrow Services",
+    "class": "option"
+  }, "Escrow Services")])])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "col-md-6"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "input-item input-item-phone ltn__custom-icon"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    name: "phone",
+    placeholder: "Enter phone number"
+  })])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "input-item input-item-textarea ltn__custom-icon"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
+    name: "message",
+    placeholder: "Enter message"
+  })]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+    "class": "input-info-save mb-0"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "checkbox",
+    name: "agree"
+  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Save my name, email, and website in this browser for the next time I comment.")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "btn-wrapper mt-0"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    "class": "btn theme-btn-1 btn-effect-1 text-uppercase",
+    type: "submit"
+  }, "get a free service")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+    "class": "form-messege mb-0 mt-20"
+  })])])])])])], -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__call-to-action-area call-to-action-6 before-bg-bottom mt-100\" data-bs-bg=\"/main-assets/img/1.jpg\" data-v-c54161d8><div class=\"container\" data-v-c54161d8><div class=\"row\" data-v-c54161d8><div class=\"col-lg-12\" data-v-c54161d8><div class=\"call-to-action-inner call-to-action-inner-6 ltn__secondary-bg position-relative text-center---\" data-v-c54161d8><div class=\"coll-to-info text-color-white\" data-v-c54161d8><h1 data-v-c54161d8>Looking to rent an apartment?</h1><p data-v-c54161d8>We can help you realize your new home</p></div><div class=\"btn-wrapper\" data-v-c54161d8><a class=\"btn btn-effect-3 btn-white\" href=\"\" data-v-c54161d8> Explore apartments <i class=\"icon-next\" data-v-c54161d8></i></a></div></div></div></div></div></div>", 1);
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" SLIDER AREA START (slider-3) "), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" SLIDER AREA END "), _hoisted_2, _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" CALL TO ACTION START (call-to-action-6) "), _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" CALL TO ACTION END ")], 64
+  /* STABLE_FRAGMENT */
+  );
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/FaqComponent.vue?vue&type=template&id=170390c8&scoped=true":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/FaqComponent.vue?vue&type=template&id=170390c8&scoped=true ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+
+var _withScopeId = function _withScopeId(n) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-170390c8"), n = n(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)(), n;
+};
+
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__slider-area ltn__slider-3 section-bg-2\" data-v-170390c8><div class=\"ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1\" data-v-170390c8><!-- ltn__slide-item --><div class=\"ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-overlay-theme-black-60\" style=\"background-image:url(&#39;/main-assets/img/slider/14.jpg&#39;);background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:fixed;\" data-v-170390c8><div class=\"ltn__slide-item-inner text-center\" data-v-170390c8><div class=\"container\" data-v-170390c8><div class=\"row\" data-v-170390c8><div class=\"col-lg-12 align-self-center\" data-v-170390c8><div class=\"ltn__breadcrumb-inner\" data-v-170390c8><h1 class=\"page-title\" data-v-170390c8>FAQ</h1></div></div></div></div></div></div></div></div>", 1);
+
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__faq-area mb-100\" data-v-170390c8><div class=\"container\" data-v-170390c8><div class=\"row\" data-v-170390c8><div class=\"col-lg-8\" data-v-170390c8><div class=\"ltn__faq-inner ltn__faq-inner-2\" data-v-170390c8><div id=\"accordion_2\" data-v-170390c8><!-- card --><div class=\"card\" data-v-170390c8><h6 class=\"ltn__card-title collapsed\" data-bs-toggle=\"collapse\" data-bs-target=\"#faq-item-2-1\" aria-expanded=\"false\" data-v-170390c8> How to buy a product? </h6><div id=\"faq-item-2-1\" class=\"collapse\" data-bs-parent=\"#accordion_2\" style=\"\" data-v-170390c8><div class=\"card-body\" data-v-170390c8><p data-v-170390c8>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eleifend donec pretium vulputate sapien nec sagittis. Proin libero nunc consequat interdum. Condimentum lacinia quis vel eros donec ac. Mauris sit amet massa vitae tortor. Quisque id diam vel quam elementum pulvinar. Gravida in fermentum et sollicitudin ac orci phasellus. Facilisis gravida neque convallis a cras semper. Non arcu risus quis varius quam quisque id.</p></div></div></div><!-- card --><div class=\"card\" data-v-170390c8><h6 class=\"ltn__card-title collapsed\" data-bs-toggle=\"collapse\" data-bs-target=\"#faq-item-2-2\" aria-expanded=\"false\" data-v-170390c8> How can i make refund from your website? </h6><div id=\"faq-item-2-2\" class=\"collapse\" data-bs-parent=\"#accordion_2\" style=\"\" data-v-170390c8><div class=\"card-body\" data-v-170390c8><div class=\"ltn__video-img alignleft\" data-v-170390c8><img src=\"/main-assets/img/bg/17.jpg\" alt=\"video popup bg image\" data-v-170390c8><a class=\"ltn__video-icon-2 ltn__video-icon-2-small ltn__video-icon-2-border----\" href=\"https://www.youtube.com/embed/LjCzPp-MK48?autoplay=1&amp;showinfo=0\" data-rel=\"lightcase:myCollection\" data-v-170390c8><i class=\"fa fa-play\" data-v-170390c8></i></a></div><p data-v-170390c8>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eleifend donec pretium vulputate sapien nec sagittis. Proin libero nunc consequat interdum. Condimentum lacinia quis vel eros donec ac. Mauris sit amet massa vitae tortor. Quisque id diam vel quam elementum pulvinar. Gravida in fermentum et sollicitudin ac orci phasellus. Facilisis gravida neque convallis a cras semper. Non arcu risus quis varius quam quisque id.</p></div></div></div><!-- card --><div class=\"card\" data-v-170390c8><h6 class=\"collapsed ltn__card-title\" data-bs-toggle=\"collapse\" data-bs-target=\"#faq-item-2-3\" aria-expanded=\"false\" data-v-170390c8> I am a new user. How should I start? </h6><div id=\"faq-item-2-3\" class=\"collapse\" data-bs-parent=\"#accordion_2\" data-v-170390c8><div class=\"card-body\" data-v-170390c8><p data-v-170390c8>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eleifend donec pretium vulputate sapien nec sagittis. Proin libero nunc consequat interdum. Condimentum lacinia quis vel eros donec ac. Mauris sit amet massa vitae tortor. Quisque id diam vel quam elementum pulvinar. Gravida in fermentum et sollicitudin ac orci phasellus. Facilisis gravida neque convallis a cras semper. Non arcu risus quis varius quam quisque id.</p></div></div></div><!-- card --><div class=\"card\" data-v-170390c8><h6 class=\"collapsed ltn__card-title\" data-bs-toggle=\"collapse\" data-bs-target=\"#faq-item-2-4\" aria-expanded=\"false\" data-v-170390c8> Returns and refunds </h6><div id=\"faq-item-2-4\" class=\"collapse\" data-bs-parent=\"#accordion_2\" data-v-170390c8><div class=\"card-body\" data-v-170390c8><p data-v-170390c8>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eleifend donec pretium vulputate sapien nec sagittis. Proin libero nunc consequat interdum. Condimentum lacinia quis vel eros donec ac. Mauris sit amet massa vitae tortor. Quisque id diam vel quam elementum pulvinar. Gravida in fermentum et sollicitudin ac orci phasellus. Facilisis gravida neque convallis a cras semper. Non arcu risus quis varius quam quisque id.</p></div></div></div><!-- card --><div class=\"card\" data-v-170390c8><h6 class=\"collapsed ltn__card-title\" data-bs-toggle=\"collapse\" data-bs-target=\"#faq-item-2-5\" aria-expanded=\"false\" data-v-170390c8> Are my details secured? </h6><div id=\"faq-item-2-5\" class=\"collapse\" data-bs-parent=\"#accordion_2\" data-v-170390c8><div class=\"card-body\" data-v-170390c8><p data-v-170390c8>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eleifend donec pretium vulputate sapien nec sagittis. Proin libero nunc consequat interdum. Condimentum lacinia quis vel eros donec ac. Mauris sit amet massa vitae tortor. Quisque id diam vel quam elementum pulvinar. Gravida in fermentum et sollicitudin ac orci phasellus. Facilisis gravida neque convallis a cras semper. Non arcu risus quis varius quam quisque id.</p></div></div></div><!-- card --><div class=\"card\" data-v-170390c8><h6 class=\"collapsed ltn__card-title\" data-bs-toggle=\"collapse\" data-bs-target=\"#faq-item-2-6\" aria-expanded=\"false\" data-v-170390c8> Sale code is not working </h6><div id=\"faq-item-2-6\" class=\"collapse\" data-bs-parent=\"#accordion_2\" data-v-170390c8><div class=\"card-body\" data-v-170390c8><p data-v-170390c8>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eleifend donec pretium vulputate sapien nec sagittis. Proin libero nunc consequat interdum. Condimentum lacinia quis vel eros donec ac. Mauris sit amet massa vitae tortor. Quisque id diam vel quam elementum pulvinar. Gravida in fermentum et sollicitudin ac orci phasellus. Facilisis gravida neque convallis a cras semper. Non arcu risus quis varius quam quisque id.</p></div></div></div><!-- card --><div class=\"card\" data-v-170390c8><h6 class=\"collapsed ltn__card-title\" data-bs-toggle=\"collapse\" data-bs-target=\"#faq-item-2-7\" aria-expanded=\"false\" data-v-170390c8> How do I make payment by my credit card </h6><div id=\"faq-item-2-7\" class=\"collapse\" data-bs-parent=\"#accordion_2\" data-v-170390c8><div class=\"card-body\" data-v-170390c8><p data-v-170390c8>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eleifend donec pretium vulputate sapien nec sagittis. Proin libero nunc consequat interdum. Condimentum lacinia quis vel eros donec ac. Mauris sit amet massa vitae tortor. Quisque id diam vel quam elementum pulvinar. Gravida in fermentum et sollicitudin ac orci phasellus. Facilisis gravida neque convallis a cras semper. Non arcu risus quis varius quam quisque id.</p></div></div></div></div><div class=\"need-support text-center mt-100\" data-v-170390c8><h2 data-v-170390c8>Still need help? Reach out to support 24/7:</h2><div class=\"btn-wrapper mb-30\" data-v-170390c8><a href=\"\" class=\"theme-btn-1 btn\" data-v-170390c8>Contact Us</a></div><h3 class=\"animated fadeIn\" data-v-170390c8><i class=\"fas fa-phone\" data-v-170390c8></i> +0123-456-789</h3></div></div></div><div class=\"col-lg-4\" data-v-170390c8><aside class=\"sidebar-area ltn__right-sidebar\" data-v-170390c8><!-- Newsletter Widget --><div class=\"widget ltn__search-widget ltn__newsletter-widget\" data-v-170390c8><h6 class=\"ltn__widget-sub-title\" data-v-170390c8>// subscribe</h6><h4 class=\"ltn__widget-title\" data-v-170390c8>Get Newsletter</h4><form action=\"#\" data-v-170390c8><input type=\"text\" name=\"search\" placeholder=\"Search\" data-v-170390c8><button type=\"submit\" data-v-170390c8><i class=\"fas fa-search\" data-v-170390c8></i></button></form><div class=\"ltn__newsletter-bg-icon\" data-v-170390c8><i class=\"fas fa-envelope-open-text\" data-v-170390c8></i></div></div></aside></div></div></div></div>", 1);
+
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__call-to-action-area call-to-action-6 before-bg-bottom\" data-bs-bg=\"/main-assets/img/1.jpg\" data-v-170390c8><div class=\"container\" data-v-170390c8><div class=\"row\" data-v-170390c8><div class=\"col-lg-12\" data-v-170390c8><div class=\"call-to-action-inner call-to-action-inner-6 ltn__secondary-bg position-relative text-center---\" data-v-170390c8><div class=\"coll-to-info text-color-white\" data-v-170390c8><h1 data-v-170390c8>Looking to rent an apartment?</h1><p data-v-170390c8>We can help you realize your new home</p></div><div class=\"btn-wrapper\" data-v-170390c8><a class=\"btn btn-effect-3 btn-white\" href=\"\" data-v-170390c8> Explore apartments <i class=\"icon-next\" data-v-170390c8></i></a></div></div></div></div></div></div>", 1);
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" SLIDER AREA START (slider-3) "), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" SLIDER AREA END "), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" CALL TO ACTION START (call-to-action-6) "), _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" CALL TO ACTION END ")], 64
+  /* STABLE_FRAGMENT */
+  );
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/HomeComponent.vue?vue&type=template&id=6caa5fce":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/HomeComponent.vue?vue&type=template&id=6caa5fce ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__slider-area ltn__slider-3 section-bg-2\"><div class=\"ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1\"><!-- ltn__slide-item --><div class=\"ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-overlay-theme-black-60\" style=\"background-image:url(&#39;/main-assets/img/slider/3.jpg&#39;);background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:fixed;\"><div class=\"ltn__slide-item-inner text-center\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-12 align-self-center\"><div class=\"slide-item-info\"><div class=\"slide-item-info-inner ltn__slide-animation\"><div class=\"slide-video mb-50 d-none\"><a class=\"ltn__video-icon-2 ltn__video-icon-2-border\" href=\"https://www.youtube.com/embed/tlThdr3O5Qo\" data-rel=\"lightcase:myCollection\"><i class=\"fa fa-play\"></i></a></div><h1 class=\"animated mt-40\"> Let us help you Find an apartment or property</h1><div class=\"btn-wrapper animated\"><a href=\"\" class=\"theme-btn-1 btn btn-effect-1 border-radius-8\">Make An Enquiry</a></div></div></div></div></div></div></div></div><!-- ltn__slide-item --><div class=\"ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-overlay-theme-black-60\" style=\"background-image:url(&#39;/main-assets/img/slider/12.jpg&#39;);background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:fixed;\"><div class=\"ltn__slide-item-inner text-right text-end\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-12 align-self-center\"><div class=\"slide-item-info\"><div class=\"slide-item-info-inner ltn__slide-animation\"><h2 class=\"slide-sub-title white-color--- animated\"><span><i class=\"fas fa-home\"></i></span> Rent an apartment with ease</h2><div class=\"slide-brief animated\"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p></div><div class=\"btn-wrapper animated\"><a href=\"\" class=\"theme-btn-1 btn btn-effect-1\"> Make An Enquiry</a></div></div></div></div></div></div></div></div><!-- ltn__slide-item --><div class=\"ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-overlay-theme-black-60\" style=\"background-image:url(&#39;/main-assets/img/slider/13.jpg&#39;);background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:fixed;\"><div class=\"ltn__slide-item-inner text-left\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-12 align-self-center\"><div class=\"slide-item-info\"><div class=\"slide-item-info-inner ltn__slide-animation\"><h3 class=\"slide-sub-title white-color--- animated\"><span><i class=\"fas fa-home\"></i></span> Looking for a property to buy?</h3><h3 class=\"slide-title animated\">Let us guide you</h3><div class=\"slide-brief animated\"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p></div><div class=\"btn-wrapper animated\"><a href=\"\" class=\"theme-btn-1 btn btn-effect-1\">Make An Enquiry</a></div></div></div></div></div></div></div></div><!--  --></div></div>", 1);
+
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__slide-item-inner text-center\" style=\"margin-top:-120px;\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-12 align-self-center\"><div class=\"slide-item-car-dealer-form\"><div class=\"ltn__car-dealer-form-tab\"><!--                            &lt;div class=&quot;ltn__tab-menu  text-uppercase text-center&quot;&gt;--><!--                                &lt;div class=&quot;nav&quot;&gt;--><!--                                    &lt;a class=&quot;active show&quot; data-bs-toggle=&quot;tab&quot; href=&quot;#ltn__form_tab_1_1&quot;&gt;--><!--                                        &lt;i class=&quot;fas fa-home&quot;&gt;&lt;/i&gt;Rent&lt;/a&gt;--><!--                                    &lt;a data-bs-toggle=&quot;tab&quot; href=&quot;#ltn__form_tab_1_2&quot; class=&quot;&quot;&gt;--><!--                                        &lt;i class=&quot;fas fa-home&quot;&gt;&lt;/i&gt;Buy&lt;/a&gt;--><!--                                &lt;/div&gt;--><!--                            &lt;/div&gt;--><div class=\"tab-content pb-10 mt-20\"><div class=\"tab-pane fade active show\" id=\"ltn__form_tab_1_1\"><div class=\"car-dealer-form-inner\"><form action=\"#\" class=\"ltn__car-dealer-form-box row\"><div class=\"ltn__car-dealer-form-item ltn__custom-icon ltn__icon-car col-lg-3 col-md-6\"><select class=\"nice-select\"><option>Property Type</option><option>Apartment</option><option>Co-op</option><option>Condo</option><option>Single Family Home</option></select></div><div class=\"ltn__car-dealer-form-item ltn__custom-icon ltn__icon-meter col-lg-3 col-md-6\"><select class=\"nice-select\"><option>Location</option><option>chicago</option><option>London</option><option>Los Angeles</option><option>New York</option><option>New Jersey</option></select></div><div class=\"ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-3 col-md-6\"><select class=\"nice-select\"><option>Sub Location</option><option>Bayonne</option><option>Greenville</option><option>Manhattan</option><option>Queens</option><option>The Heights</option><option>Upper East Side</option><option>West Side</option></select></div><div class=\"ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-3 col-md-6\"><div class=\"btn-wrapper text-center mt-0\"><a href=\"\" class=\"btn theme-btn-1 btn-effect-1 text-uppercase\">Search</a></div></div></form></div></div><!--                                &lt;div class=&quot;tab-pane fade&quot; id=&quot;ltn__form_tab_1_2&quot;&gt;--><!--                                    &lt;div class=&quot;car-dealer-form-inner&quot;&gt;--><!--                                        &lt;form action=&quot;#&quot; class=&quot;ltn__car-dealer-form-box row&quot;&gt;--><!--                                            &lt;div class=&quot;ltn__car-dealer-form-item ltn__custom-icon ltn__icon-car col-lg-3 col-md-6&quot;&gt;--><!--                                                &lt;select class=&quot;nice-select&quot;&gt;--><!--                                                    &lt;option&gt;Property Type&lt;/option&gt;--><!--                                                    &lt;option&gt;Apartment&lt;/option&gt;--><!--                                                    &lt;option&gt;Co-op&lt;/option&gt;--><!--                                                    &lt;option&gt;Condo&lt;/option&gt;--><!--                                                    &lt;option&gt;Single Family Home&lt;/option&gt;--><!--                                                &lt;/select&gt;--><!--                                            &lt;/div&gt;--><!--                                            &lt;div class=&quot;ltn__car-dealer-form-item ltn__custom-icon ltn__icon-meter col-lg-3 col-md-6&quot;&gt;--><!--                                                &lt;select class=&quot;nice-select&quot;&gt;--><!--                                                    &lt;option&gt;Location&lt;/option&gt;--><!--                                                    &lt;option&gt;chicago&lt;/option&gt;--><!--                                                    &lt;option&gt;London&lt;/option&gt;--><!--                                                    &lt;option&gt;Los Angeles&lt;/option&gt;--><!--                                                    &lt;option&gt;New York&lt;/option&gt;--><!--                                                    &lt;option&gt;New Jersey&lt;/option&gt;--><!--                                                &lt;/select&gt;--><!--                                            &lt;/div&gt;--><!--                                            &lt;div class=&quot;ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-3 col-md-6&quot;&gt;--><!--                                                &lt;select class=&quot;nice-select&quot;&gt;--><!--                                                    &lt;option&gt;Sub Location&lt;/option&gt;--><!--                                                    &lt;option&gt;Bayonne&lt;/option&gt;--><!--                                                    &lt;option&gt;Greenville&lt;/option&gt;--><!--                                                    &lt;option&gt;Manhattan&lt;/option&gt;--><!--                                                    &lt;option&gt;Queens&lt;/option&gt;--><!--                                                    &lt;option&gt;The Heights&lt;/option&gt;--><!--                                                    &lt;option&gt;Upper East Side&lt;/option&gt;--><!--                                                    &lt;option&gt;West Side&lt;/option&gt;--><!--                                                &lt;/select&gt;--><!--                                            &lt;/div&gt;--><!--                                            &lt;div class=&quot;ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-3 col-md-6&quot;&gt;--><!--                                                &lt;div class=&quot;btn-wrapper text-center mt-0&quot;&gt;--><!--                                                    &lt;a href=&quot;&quot;--><!--                                                       class=&quot;btn theme-btn-1 btn-effect-1 text-uppercase&quot;&gt;Search&lt;/a&gt;--><!--                                                &lt;/div&gt;--><!--                                            &lt;/div&gt;--><!--                                        &lt;/form&gt;--><!--                                    &lt;/div&gt;--><!--                                &lt;/div&gt;--></div></div></div></div></div></div></div>", 1);
+
+var _hoisted_3 = {
+  "class": "ltn__feature-area section-bg-1--- pt-115 pb-90 mb-120---"
+};
+var _hoisted_4 = {
+  "class": "container"
+};
+
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "row"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-lg-12"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "section-title-area ltn__section-title-2--- text-center"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", {
+  "class": "section-subtitle section-subtitle-2 ltn__secondary-color"
+}, "Our Services")])])], -1
+/* HOISTED */
+);
+
+var _hoisted_6 = {
+  "class": "row ltn__custom-gutter--- justify-content-center"
+};
+
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-lg-6 col-sm-6 col-12\"><div class=\"ltn__feature-item ltn__feature-item-6 text-center bg-white box-shadow-1 active\"><div class=\"ltn__feature-icon\"><img src=\"/main-assets/img/icons/icon-img/22.png\" alt=\"#\"></div><div class=\"ltn__feature-info\"><h3><a href=\"\">Rent an apartment</a></h3><p>Find your desired apartment</p><a class=\"ltn__service-btn\" href=\"\"> Find more <i class=\"flaticon-right-arrow\"></i></a></div></div></div>", 1);
+
+var _hoisted_8 = {
+  "class": "col-lg-6 col-sm-6 col-12"
+};
+var _hoisted_9 = {
+  "class": "ltn__feature-item ltn__feature-item-6 text-center bg-white box-shadow-1"
+};
+
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "ltn__feature-icon"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  src: "/main-assets/img/icons/icon-img/21.png",
+  alt: "#"
+})], -1
+/* HOISTED */
+);
+
+var _hoisted_11 = {
+  "class": "ltn__feature-info"
+};
+
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: ""
+}, "Lease a Properties")], -1
+/* HOISTED */
+);
+
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Lease a property by signing up as a realtor", -1
+/* HOISTED */
+);
+
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Learn more ");
+
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "flaticon-right-arrow"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__counterup-area section-bg-1 pt-120 pb-70\"><div class=\"container\"><div class=\"row\"><div class=\"col-md-3 col-sm-6 align-self-center\"><div class=\"ltn__counterup-item text-color-white---\"><div class=\"counter-icon\"><i class=\"flaticon-select\"></i></div><h1><span class=\"counter animated fadeInDownBig\">560</span><span class=\"counterUp-icon\">+</span></h1><h6>Total Area Sq</h6></div></div><div class=\"col-md-3 col-sm-6 align-self-center\"><div class=\"ltn__counterup-item text-color-white---\"><div class=\"counter-icon\"><i class=\"flaticon-office\"></i></div><h1><span class=\"counter animated fadeInDownBig\">197</span><span class=\"counterUp-letter\">K</span><span class=\"counterUp-icon\">+</span></h1><h6>Apartments Rented</h6></div></div><div class=\"col-md-3 col-sm-6 align-self-center\"><div class=\"ltn__counterup-item text-color-white---\"><div class=\"counter-icon\"><i class=\"flaticon-excavator\"></i></div><h1><span class=\"counter animated fadeInDownBig\">268</span><span class=\"counterUp-icon\">+</span></h1><h6>Property sold</h6></div></div><div class=\"col-md-3 col-sm-6 align-self-center\"><div class=\"ltn__counterup-item text-color-white---\"><div class=\"counter-icon\"><i class=\"flaticon-armchair\"></i></div><h1><span class=\"counter animated fadeInDownBig\">340</span><span class=\"counterUp-icon\">+</span></h1><h6>Properties available</h6></div></div></div></div></div>", 1);
+
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__search-by-place-area section-bg-1 before-bg-top--- bg-image-top--- pt-115 pb-70\" data-bs-bg=\"/main/assets/img/bg/20.jpg\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-12\"><div class=\"section-title-area ltn__section-title-2--- text-center\"><h3 class=\"section-subtitle section-subtitle-2 ltn__secondary-color\">Property locations</h3></div></div></div><div class=\"row\"><div class=\"col-lg-8 col-md-6\"><div class=\"ltn__banner-item ltn__banner-style-4 text-color-white bg-image\" data-bs-bg=\"/main-assets/img/location/1.jpg\" style=\"background-image:url(&quot;/main-assets/img/location/1.jpg&quot;);\"><div class=\"ltn__banner-info\"><h3 class=\"animated fadeIn\"><a href=\"\"> Lagos </a></h3><p> Great Deals Available</p><mark> 13 Listings</mark></div></div></div><div class=\"col-lg-4 col-md-6\"><div class=\"ltn__banner-item ltn__banner-style-4 text-color-white bg-image\" data-bs-bg=\"/main-assets/img/location/2.jpg\" style=\"background-image:url(&quot;/main-assets/img/location/2.jpg&quot;);\"><div class=\"ltn__banner-info\"><h3 class=\"animated fadeIn\"><a href=\"\">Abuja</a></h3><p> Great Deals Available</p><mark> 13 Listings</mark></div></div></div><div class=\"col-lg-4 col-md-6\"><div class=\"ltn__banner-item ltn__banner-style-4 text-color-white bg-image\" data-bs-bg=\"/main-assets/img/location/3.jpg\" style=\"background-image:url(&quot;/main-assets/img/location/3.jpg&quot;);\"><div class=\"ltn__banner-info\"><h3 class=\"animated fadeIn\"><a href=\"\">Port hacourt</a></h3><p> Great Deals Available</p><mark> 13 Listings</mark></div></div></div><div class=\"col-lg-4 col-md-6\"><div class=\"ltn__banner-item ltn__banner-style-4 text-color-white bg-image\" data-bs-bg=\"/main-assets/img/location/4.jpg\" style=\"background-image:url(&quot;{{ asset(&#39;main-assets/img/location/4.jpg&#39;) }}&quot;);\"><div class=\"ltn__banner-info\"><h3 class=\"animated fadeIn\"><a href=\"\">Kaduna</a></h3><p> Great Deals Available</p><mark> 13 Listings</mark></div></div></div><div class=\"col-lg-4 col-md-6\"><div class=\"ltn__banner-item ltn__banner-style-4 text-color-white bg-image\" data-bs-bg=\"/main-assets/img/location/5.jpg\" style=\"background-image:url(&quot;{{ asset(&#39;main-assets/img/gallery/9.jpg&#39;) }}&quot;);\"><div class=\"ltn__banner-info\"><h3 class=\"animated fadeIn\"><a href=\"\">Ibadan</a></h3><p> Great Deals Available</p><mark> 13 Listings</mark></div></div></div><div class=\"col-12 d-flex justify-content-center\"><a href=\"\" class=\"theme-btn-1 btn border-radius-8\">Explore Locations</a></div></div></div></div>", 1);
+
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__product-slider-area ltn__product-gutter pt-115 pb-90\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-12\"><div class=\"section-title-area ltn__section-title-2--- text-center\"><h3 class=\"section-subtitle section-subtitle-2 ltn__secondary-color\">Properties</h3></div></div></div><div class=\"row ltn__product-slider-item-three-active slick-arrow-1\"><!-- ltn__product-item --><div class=\"col-lg-12\"><div class=\"ltn__product-item ltn__product-item-4 text-center---\"><div class=\"product-img\"><a href=\"\"><img src=\"/main-assets/img/product-3/1.jpg\" alt=\"#\"></a><div class=\"product-badge\"><ul><li class=\"sale-badge bg-green\">For Rent</li></ul></div><div class=\"product-img-location-gallery\"><div class=\"product-img-location\"><ul><li><a href=\"\"><i class=\"flaticon-pin\"></i> Belmont Gardens, Chicago</a></li></ul></div><div class=\"product-img-gallery\"><ul><li><a href=\"\"><i class=\"fas fa-camera\"></i> 4</a></li><li><a href=\"\"><i class=\"fas fa-film\"></i> 2</a></li></ul></div></div></div><div class=\"product-info\"><div class=\"product-price\"><span>$34,900<label>/Month</label></span></div><h2 class=\"product-title\"><a href=\"\">New Apartment Nice View</a></h2><div class=\"product-description\"><p>Beautiful Huge 1 Family House In Heart Of <br> Westbury. Newly Renovated With New Wood</p></div><ul class=\"ltn__list-item-2 ltn__list-item-2-before\"><li><span>3 <i class=\"flaticon-bed\"></i></span> Bedrooms </li><li><span>2 <i class=\"flaticon-clean\"></i></span> Bathrooms </li><li><span>3450 <i class=\"flaticon-square-shape-design-interface-tool-symbol\"></i></span> square Ft </li></ul></div><div class=\"product-info-bottom\"><div class=\"real-estate-agent\"><div class=\"agent-img\"><a href=\"\"><img src=\"/main-assets/img/blog/author.jpg\" alt=\"#\"></a></div><div class=\"agent-brief\"><h6><a href=\"\">William Seklo</a></h6><small>Estate Agents</small></div></div><div class=\"product-hover-action\"><ul><li><a href=\"#\" title=\"Quick View\" data-bs-toggle=\"modal\" data-bs-target=\"#quick_view_modal\"><i class=\"flaticon-expand\"></i></a></li><li><a href=\"#\" title=\"Wishlist\" data-bs-toggle=\"modal\" data-bs-target=\"#liton_wishlist_modal\"><i class=\"flaticon-heart-1\"></i></a></li><li><a href=\"\" title=\"Product Details\"><i class=\"flaticon-add\"></i></a></li></ul></div></div></div></div><!-- ltn__product-item --><div class=\"col-lg-12\"><div class=\"ltn__product-item ltn__product-item-4 text-center---\"><div class=\"product-img\"><a href=\"\"><img src=\"/main-assets/img/product-3/2.jpg\" alt=\"#\"></a><div class=\"product-badge\"><ul><li class=\"sale-badge bg-green---\">For Sale</li></ul></div><div class=\"product-img-location-gallery\"><div class=\"product-img-location\"><ul><li><a href=\"\"><i class=\"flaticon-pin\"></i> Belmont Gardens, Chicago</a></li></ul></div><div class=\"product-img-gallery\"><ul><li><a href=\"\"><i class=\"fas fa-camera\"></i> 4</a></li><li><a href=\"\"><i class=\"fas fa-film\"></i> 2</a></li></ul></div></div></div><div class=\"product-info\"><div class=\"product-price\"><span>$34,900<label>/Month</label></span></div><h2 class=\"product-title\"><a href=\"\">Modern Apartments</a></h2><div class=\"product-description\"><p>Beautiful Huge 1 Family House In Heart Of <br> Westbury. Newly Renovated With New Wood</p></div><ul class=\"ltn__list-item-2 ltn__list-item-2-before\"><li><span>3 <i class=\"flaticon-bed\"></i></span> Bedrooms </li><li><span>2 <i class=\"flaticon-clean\"></i></span> Bathrooms </li><li><span>3450 <i class=\"flaticon-square-shape-design-interface-tool-symbol\"></i></span> square Ft </li></ul></div><div class=\"product-info-bottom\"><div class=\"real-estate-agent\"><div class=\"agent-img\"><a href=\"\"><img src=\"/main-assets/img/blog/author.jpg\" alt=\"#\"></a></div><div class=\"agent-brief\"><h6><a href=\"\">William Seklo</a></h6><small>Estate Agents</small></div></div><div class=\"product-hover-action\"><ul><li><a href=\"#\" title=\"Quick View\" data-bs-toggle=\"modal\" data-bs-target=\"#quick_view_modal\"><i class=\"flaticon-expand\"></i></a></li><li><a href=\"#\" title=\"Wishlist\" data-bs-toggle=\"modal\" data-bs-target=\"#liton_wishlist_modal\"><i class=\"flaticon-heart-1\"></i></a></li><li><a href=\"\" title=\"Product Details\"><i class=\"flaticon-add\"></i></a></li></ul></div></div></div></div><!-- ltn__product-item --><div class=\"col-lg-12\"><div class=\"ltn__product-item ltn__product-item-4 text-center---\"><div class=\"product-img\"><a href=\"\"><img src=\"/main-assets/img/product-3/3.jpg\" alt=\"#\"></a><div class=\"product-badge\"><ul><li class=\"sale-badge bg-green\">For Rent</li></ul></div><div class=\"product-img-location-gallery\"><div class=\"product-img-location\"><ul><li><a href=\"\"><i class=\"flaticon-pin\"></i> Belmont Gardens, Chicago</a></li></ul></div><div class=\"product-img-gallery\"><ul><li><a href=\"\"><i class=\"fas fa-camera\"></i> 4</a></li><li><a href=\"\"><i class=\"fas fa-film\"></i> 2</a></li></ul></div></div></div><div class=\"product-info\"><div class=\"product-price\"><span>$34,900<label>/Month</label></span></div><h2 class=\"product-title\"><a href=\"\">Comfortable Apartment</a></h2><div class=\"product-description\"><p>Beautiful Huge 1 Family House In Heart Of <br> Westbury. Newly Renovated With New Wood</p></div><ul class=\"ltn__list-item-2 ltn__list-item-2-before\"><li><span>3 <i class=\"flaticon-bed\"></i></span> Bedrooms </li><li><span>2 <i class=\"flaticon-clean\"></i></span> Bathrooms </li><li><span>3450 <i class=\"flaticon-square-shape-design-interface-tool-symbol\"></i></span> square Ft </li></ul></div><div class=\"product-info-bottom\"><div class=\"real-estate-agent\"><div class=\"agent-img\"><a href=\"\"><img src=\"/main-assets/img/blog/author.jpg\" alt=\"#\"></a></div><div class=\"agent-brief\"><h6><a href=\"\">William Seklo</a></h6><small>Estate Agents</small></div></div><div class=\"product-hover-action\"><ul><li><a href=\"#\" title=\"Quick View\" data-bs-toggle=\"modal\" data-bs-target=\"#quick_view_modal\"><i class=\"flaticon-expand\"></i></a></li><li><a href=\"#\" title=\"Wishlist\" data-bs-toggle=\"modal\" data-bs-target=\"#liton_wishlist_modal\"><i class=\"flaticon-heart-1\"></i></a></li><li><a href=\"\" title=\"Product Details\"><i class=\"flaticon-add\"></i></a></li></ul></div></div></div></div><!-- ltn__product-item --><div class=\"col-lg-12\"><div class=\"ltn__product-item ltn__product-item-4 text-center---\"><div class=\"product-img\"><a href=\"\"><img src=\"/main-assets/img/product-3/4.jpg\" alt=\"#\"></a><div class=\"product-badge\"><ul><li class=\"sale-badge bg-green\">For Rent</li></ul></div><div class=\"product-img-location-gallery\"><div class=\"product-img-location\"><ul><li><a href=\"\"><i class=\"flaticon-pin\"></i> Belmont Gardens, Chicago</a></li></ul></div><div class=\"product-img-gallery\"><ul><li><a href=\"\"><i class=\"fas fa-camera\"></i> 4</a></li><li><a href=\"\"><i class=\"fas fa-film\"></i> 2</a></li></ul></div></div></div><div class=\"product-info\"><div class=\"product-price\"><span>$34,900<label>/Month</label></span></div><h2 class=\"product-title\"><a href=\"\">Luxury villa in Rego Park </a></h2><div class=\"product-description\"><p>Beautiful Huge 1 Family House In Heart Of <br> Westbury. Newly Renovated With New Wood</p></div><ul class=\"ltn__list-item-2 ltn__list-item-2-before\"><li><span>3 <i class=\"flaticon-bed\"></i></span> Bedrooms </li><li><span>2 <i class=\"flaticon-clean\"></i></span> Bathrooms </li><li><span>3450 <i class=\"flaticon-square-shape-design-interface-tool-symbol\"></i></span> square Ft </li></ul></div><div class=\"product-info-bottom\"><div class=\"real-estate-agent\"><div class=\"agent-img\"><a href=\"\"><img src=\"/main-assets/img/blog/author.jpg\" alt=\"#\"></a></div><div class=\"agent-brief\"><h6><a href=\"\">William Seklo</a></h6><small>Estate Agents</small></div></div><div class=\"product-hover-action\"><ul><li><a href=\"#\" title=\"Quick View\" data-bs-toggle=\"modal\" data-bs-target=\"#quick_view_modal\"><i class=\"flaticon-expand\"></i></a></li><li><a href=\"#\" title=\"Wishlist\" data-bs-toggle=\"modal\" data-bs-target=\"#liton_wishlist_modal\"><i class=\"flaticon-heart-1\"></i></a></li><li><a href=\"\" title=\"Product Details\"><i class=\"flaticon-add\"></i></a></li></ul></div></div></div></div><!-- ltn__product-item --><div class=\"col-lg-12\"><div class=\"ltn__product-item ltn__product-item-4 text-center---\"><div class=\"product-img\"><a href=\"\"><img src=\"/main-assets/img/product-3/5.jpg\" alt=\"#\"></a><div class=\"product-badge\"><ul><li class=\"sale-badge bg-green\">For Rent</li></ul></div><div class=\"product-img-location-gallery\"><div class=\"product-img-location\"><ul><li><a href=\"\"><i class=\"flaticon-pin\"></i> Belmont Gardens, Chicago</a></li></ul></div><div class=\"product-img-gallery\"><ul><li><a href=\"\"><i class=\"fas fa-camera\"></i> 4</a></li><li><a href=\"\"><i class=\"fas fa-film\"></i> 2</a></li></ul></div></div></div><div class=\"product-info\"><div class=\"product-price\"><span>$34,900<label>/Month</label></span></div><h2 class=\"product-title\"><a href=\"\">Beautiful Flat in Manhattan </a></h2><div class=\"product-description\"><p>Beautiful Huge 1 Family House In Heart Of <br> Westbury. Newly Renovated With New Wood</p></div><ul class=\"ltn__list-item-2 ltn__list-item-2-before\"><li><span>3 <i class=\"flaticon-bed\"></i></span> Bedrooms </li><li><span>2 <i class=\"flaticon-clean\"></i></span> Bathrooms </li><li><span>3450 <i class=\"flaticon-square-shape-design-interface-tool-symbol\"></i></span> square Ft </li></ul></div><div class=\"product-info-bottom\"><div class=\"real-estate-agent\"><div class=\"agent-img\"><a href=\"\"><img src=\"/main-assets/img/blog/author.jpg\" alt=\"#\"></a></div><div class=\"agent-brief\"><h6><a href=\"\">William Seklo</a></h6><small>Estate Agents</small></div></div><div class=\"product-hover-action\"><ul><li><a href=\"#\" title=\"Quick View\" data-bs-toggle=\"modal\" data-bs-target=\"#quick_view_modal\"><i class=\"flaticon-expand\"></i></a></li><li><a href=\"#\" title=\"Wishlist\" data-bs-toggle=\"modal\" data-bs-target=\"#liton_wishlist_modal\"><i class=\"flaticon-heart-1\"></i></a></li><li><a href=\"\" title=\"Product Details\"><i class=\"flaticon-add\"></i></a></li></ul></div></div></div></div><!--  --></div></div></div>", 1);
+
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "ltn__video-popup-area ltn__video-popup-margin---"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "ltn__video-bg-img ltn__video-popup-height-600--- bg-overlay-black-30 bg-image bg-fixed ltn__animation-pulse1",
+  "data-bs-bg": "/main-assets/img/bg/1.jpg"
+})], -1
+/* HOISTED */
+);
+
+var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__blog-area pt-120 pb-70\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-12\"><div class=\"section-title-area ltn__section-title-2--- text-center\"><h3 class=\"section-subtitle section-subtitle-2 ltn__secondary-color\">News &amp; Blogs</h3></div></div></div><div class=\"row ltn__blog-slider-one-active slick-arrow-1 ltn__blog-item-3-normal\"><!-- Blog Item --><div class=\"col-lg-12\"><div class=\"ltn__blog-item ltn__blog-item-3\"><div class=\"ltn__blog-img\"><a href=\"\"><img src=\"/main-assets/img/blog/1.jpg\" alt=\"#\"></a></div><div class=\"ltn__blog-brief\"><div class=\"ltn__blog-meta\"><ul><li class=\"ltn__blog-author\"><a href=\"#\"><i class=\"far fa-user\"></i>by: Admin</a></li><li class=\"ltn__blog-tags\"><a href=\"#\"><i class=\"fas fa-tags\"></i>Decorate</a></li></ul></div><h3 class=\"ltn__blog-title\"><a href=\"\">10 Brilliant Ways To Decorate Your Home</a></h3><div class=\"ltn__blog-meta-btn\"><div class=\"ltn__blog-meta\"><ul><li class=\"ltn__blog-date\"><i class=\"far fa-calendar-alt\"></i>June 24, 2021</li></ul></div><div class=\"ltn__blog-btn\"><a href=\"\">Read more</a></div></div></div></div></div><!-- Blog Item --><div class=\"col-lg-12\"><div class=\"ltn__blog-item ltn__blog-item-3\"><div class=\"ltn__blog-img\"><a href=\"\"><img src=\"/main-assets/img/blog/2.jpg\" alt=\"#\"></a></div><div class=\"ltn__blog-brief\"><div class=\"ltn__blog-meta\"><ul><li class=\"ltn__blog-author\"><a href=\"#\"><i class=\"far fa-user\"></i>by: Admin</a></li><li class=\"ltn__blog-tags\"><a href=\"#\"><i class=\"fas fa-tags\"></i>Interior</a></li></ul></div><h3 class=\"ltn__blog-title\"><a href=\"\">The Most Inspiring Interior Design Of 2021</a></h3><div class=\"ltn__blog-meta-btn\"><div class=\"ltn__blog-meta\"><ul><li class=\"ltn__blog-date\"><i class=\"far fa-calendar-alt\"></i>July 23, 2021</li></ul></div><div class=\"ltn__blog-btn\"><a href=\"\">Read more</a></div></div></div></div></div><!-- Blog Item --><div class=\"col-lg-12\"><div class=\"ltn__blog-item ltn__blog-item-3\"><div class=\"ltn__blog-img\"><a href=\"\"><img src=\"/main-assets/img/blog/3.jpg\" alt=\"#\"></a></div><div class=\"ltn__blog-brief\"><div class=\"ltn__blog-meta\"><ul><li class=\"ltn__blog-author\"><a href=\"#\"><i class=\"far fa-user\"></i>by: Admin</a></li><li class=\"ltn__blog-tags\"><a href=\"#\"><i class=\"fas fa-tags\"></i>Estate</a></li></ul></div><h3 class=\"ltn__blog-title\"><a href=\"\">Recent Commercial Real Estate Transactions</a></h3><div class=\"ltn__blog-meta-btn\"><div class=\"ltn__blog-meta\"><ul><li class=\"ltn__blog-date\"><i class=\"far fa-calendar-alt\"></i>May 22, 2021</li></ul></div><div class=\"ltn__blog-btn\"><a href=\"\">Read more</a></div></div></div></div></div><!-- Blog Item --><div class=\"col-lg-12\"><div class=\"ltn__blog-item ltn__blog-item-3\"><div class=\"ltn__blog-img\"><a href=\"\"><img src=\"/main-assets/img/blog/4.jpg\" alt=\"#\"></a></div><div class=\"ltn__blog-brief\"><div class=\"ltn__blog-meta\"><ul><li class=\"ltn__blog-author\"><a href=\"#\"><i class=\"far fa-user\"></i>by: Admin</a></li><li class=\"ltn__blog-tags\"><a href=\"#\"><i class=\"fas fa-tags\"></i>Room</a></li></ul></div><h3 class=\"ltn__blog-title\"><a href=\"\">Renovating a Living Room? Experts Share Their Secrets</a></h3><div class=\"ltn__blog-meta-btn\"><div class=\"ltn__blog-meta\"><ul><li class=\"ltn__blog-date\"><i class=\"far fa-calendar-alt\"></i>June 24, 2021</li></ul></div><div class=\"ltn__blog-btn\"><a href=\"\">Read more</a></div></div></div></div></div><!-- Blog Item --><div class=\"col-lg-12\"><div class=\"ltn__blog-item ltn__blog-item-3\"><div class=\"ltn__blog-img\"><a href=\"\"><img src=\"/img/blog/5.jpg\" alt=\"#\"></a></div><div class=\"ltn__blog-brief\"><div class=\"ltn__blog-meta\"><ul><li class=\"ltn__blog-author\"><a href=\"#\"><i class=\"far fa-user\"></i>by: Admin</a></li><li class=\"ltn__blog-tags\"><a href=\"#\"><i class=\"fas fa-tags\"></i>Trends</a></li></ul></div><h3 class=\"ltn__blog-title\"><a href=\"\">7 home trends that will shape your house in 2021</a></h3><div class=\"ltn__blog-meta-btn\"><div class=\"ltn__blog-meta\"><ul><li class=\"ltn__blog-date\"><i class=\"far fa-calendar-alt\"></i>June 24, 2021</li></ul></div><div class=\"ltn__blog-btn\"><a href=\"\">Read more</a></div></div></div></div></div><!--  --></div></div></div>", 1);
+
+var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__call-to-action-area call-to-action-6 before-bg-bottom\" data-bs-bg=\"/main-assets/img/1.jpg\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-12\"><div class=\"call-to-action-inner call-to-action-inner-6 ltn__secondary-bg position-relative text-center---\"><div class=\"coll-to-info text-color-white\"><h1>Looking to rent an apartment?</h1><p>We can help you realize your new home</p></div><div class=\"btn-wrapper\"><a class=\"btn btn-effect-3 btn-white\" href=\"\"> Explore apartments <i class=\"icon-next\"></i></a></div></div></div></div></div></div>", 1);
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" SLIDER AREA START (slider-3) "), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" SLIDER AREA END "), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" FEATURE AREA START ( Feature - 6) "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [_hoisted_12, _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    "class": "ltn__service-btn",
+    exact: "",
+    to: "/realtor/register"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_14, _hoisted_15];
+    }),
+    _: 1
+    /* STABLE */
+
+  })])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" FEATURE AREA END "), _hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" SEARCH BY PLACE AREA START (testimonial-7) "), _hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" SEARCH BY PLACE AREA END "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" PRODUCT SLIDER AREA START "), _hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" PRODUCT SLIDER AREA END "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" VIDEO AREA START "), _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" VIDEO AREA END "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" BLOG AREA START (blog-3) "), _hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" BLOG AREA END "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" CALL TO ACTION START (call-to-action-6) "), _hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" CALL TO ACTION END ")], 64
+  /* STABLE_FRAGMENT */
+  );
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/PrivacyPolicyComponent.vue?vue&type=template&id=1a487a18&scoped=true":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/PrivacyPolicyComponent.vue?vue&type=template&id=1a487a18&scoped=true ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+
+var _withScopeId = function _withScopeId(n) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-1a487a18"), n = n(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)(), n;
+};
+
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__slider-area ltn__slider-3 section-bg-2\" data-v-1a487a18><div class=\"ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1\" data-v-1a487a18><!-- ltn__slide-item --><div class=\"ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-overlay-theme-black-60\" style=\"background-image:url(&#39;/main-assets/img/slider/41.jpg&#39;);background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:fixed;\" data-v-1a487a18><div class=\"ltn__slide-item-inner text-center pt-100 pb-100\" data-v-1a487a18><div class=\"container\" data-v-1a487a18><div class=\"row\" data-v-1a487a18><div class=\"col-lg-12 align-self-center\" data-v-1a487a18><div class=\"ltn__breadcrumb-inner\" data-v-1a487a18><h1 class=\"page-title\" data-v-1a487a18>Terms of use</h1></div></div></div></div></div></div></div></div>", 1);
+
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__about-us-area pb-115 mt-50\" data-v-1a487a18><div class=\"container\" data-v-1a487a18><div class=\"row\" data-v-1a487a18><div class=\"col-lg-12 align-self-center\" data-v-1a487a18><div class=\"about-us-info-wrap\" data-v-1a487a18><h1 class=\"primary-color-text\" data-v-1a487a18>Privacy Policy</h1><p data-v-1a487a18>Last updated: March 05, 2022</p><p data-v-1a487a18>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p><p data-v-1a487a18>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.</p><h1 class=\"primary-color-text\" data-v-1a487a18>Interpretation and Definitions</h1><h2 class=\"primary-color-text\" data-v-1a487a18>Interpretation</h2><p data-v-1a487a18>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p><h2 class=\"primary-color-text\" data-v-1a487a18>Definitions</h2><p data-v-1a487a18>For the purposes of this Privacy Policy:</p><ul data-v-1a487a18><li data-v-1a487a18><p data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>Account</strong> means a unique account created for You to access our Service or parts of our Service.</p></li><li data-v-1a487a18><p data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers to Rentcircles Ltd, Lagos, Nigeria.</p></li><li data-v-1a487a18><p data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>Cookies</strong> are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.</p></li><li data-v-1a487a18><p data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>Country</strong> refers to: Nigeria</p></li><li data-v-1a487a18><p data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</p></li><li data-v-1a487a18><p data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>Personal Data</strong> is any information that relates to an identified or identifiable individual.</p></li><li data-v-1a487a18><p data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>Service</strong> refers to the Website.</p></li><li data-v-1a487a18><p data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.</p></li><li data-v-1a487a18><p data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</p></li><li data-v-1a487a18><p data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>Website</strong> refers to RentCircles, accessible from <a href=\"https://rentcircles.com\" rel=\"external nofollow noopener\" target=\"_blank\" data-v-1a487a18>https://rentcircles.com</a></p></li><li data-v-1a487a18><p data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p></li></ul><h1 class=\"primary-color-text\" data-v-1a487a18>Collecting and Using Your Personal Data</h1><h2 class=\"primary-color-text\" data-v-1a487a18>Types of Data Collected</h2><h3 class=\"primary-color-text\" data-v-1a487a18>Personal Data</h3><p data-v-1a487a18>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</p><ul data-v-1a487a18><li data-v-1a487a18><p data-v-1a487a18>Email address</p></li><li data-v-1a487a18><p data-v-1a487a18>First name and last name</p></li><li data-v-1a487a18><p data-v-1a487a18>Phone number</p></li><li data-v-1a487a18><p data-v-1a487a18>Address, State, Province, ZIP/Postal code, City</p></li><li data-v-1a487a18><p data-v-1a487a18>Usage Data</p></li></ul><h3 class=\"primary-color-text\" data-v-1a487a18>Usage Data</h3><p data-v-1a487a18>Usage Data is collected automatically when using the Service.</p><p data-v-1a487a18>Usage Data may include information such as Your Device&#39;s Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p><p data-v-1a487a18>When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.</p><p data-v-1a487a18>We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.</p><h3 class=\"primary-color-text\" data-v-1a487a18>Tracking Technologies and Cookies</h3><p data-v-1a487a18>We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies used are beacons, tags, and scripts to collect and track information and to improve and analyze Our Service. The technologies We use may include:</p><ul data-v-1a487a18><li data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>Cookies or Browser Cookies.</strong> A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.</li><li data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>Flash Cookies.</strong> Certain features of our Service may use local stored objects (or Flash Cookies) to collect and store information about Your preferences or Your activity on our Service. Flash Cookies are not managed by the same browser settings as those used for Browser Cookies. For more information on how You can delete Flash Cookies, please read &quot;Where can I change the settings for disabling, or deleting local shared objects?&quot; available at <a href=\"https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_\" rel=\"external nofollow noopener\" target=\"_blank\" data-v-1a487a18>https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_</a></li><li data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>Web Beacons.</strong> Certain sections of our Service and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of a certain section and verifying system and server integrity).</li></ul><p data-v-1a487a18>Cookies can be &quot;Persistent&quot; or &quot;Session&quot; Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser. Learn more about cookies: <a href=\"https://www.freeprivacypolicy.com/blog/sample-privacy-policy-template/#Use_Of_Cookies_And_Tracking\" target=\"_blank\" data-v-1a487a18>Use of Cookies by Free Privacy Policy</a>.</p><p data-v-1a487a18>We use both Session and Persistent Cookies for the purposes set out below:</p><ul data-v-1a487a18><li data-v-1a487a18><p data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>Necessary / Essential Cookies</strong></p><p data-v-1a487a18>Type: Session Cookies</p><p data-v-1a487a18>Administered by: Us</p><p data-v-1a487a18>Purpose: These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services.</p></li><li data-v-1a487a18><p data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>Cookies Policy / Notice Acceptance Cookies</strong></p><p data-v-1a487a18>Type: Persistent Cookies</p><p data-v-1a487a18>Administered by: Us</p><p data-v-1a487a18>Purpose: These Cookies identify if users have accepted the use of cookies on the Website.</p></li><li data-v-1a487a18><p data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>Functionality Cookies</strong></p><p data-v-1a487a18>Type: Persistent Cookies</p><p data-v-1a487a18>Administered by: Us</p><p data-v-1a487a18>Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.</p></li></ul><p data-v-1a487a18>For more information about the cookies we use and your choices regarding cookies, please visit our Cookies Policy or the Cookies section of our Privacy Policy.</p><h2 data-v-1a487a18>Use of Your Personal Data</h2><p data-v-1a487a18>The Company may use Personal Data for the following purposes:</p><ul data-v-1a487a18><li data-v-1a487a18><p data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>To provide and maintain our Service</strong>, including to monitor the usage of our Service.</p></li><li data-v-1a487a18><p data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>To manage Your Account:</strong> to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.</p></li><li data-v-1a487a18><p data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>For the performance of a contract:</strong> the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.</p></li><li data-v-1a487a18><p data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>To contact You:</strong> To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile application&#39;s push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.</p></li><li data-v-1a487a18><p data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>To provide You</strong> with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.</p></li><li data-v-1a487a18><p data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>To manage Your requests:</strong> To attend and manage Your requests to Us.</p></li><li data-v-1a487a18><p data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>For business transfers:</strong> We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about our Service users is among the assets transferred.</p></li><li data-v-1a487a18><p data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>For other purposes</strong>: We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.</p></li></ul><p data-v-1a487a18>We may share Your personal information in the following situations:</p><ul data-v-1a487a18><li data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>With Service Providers:</strong> We may share Your personal information with Service Providers to monitor and analyze the use of our Service, to contact You.</li><li data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>For business transfers:</strong> We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company.</li><li data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>With Affiliates:</strong> We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.</li><li data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>With business partners:</strong> We may share Your information with Our business partners to offer You certain products, services or promotions.</li><li data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>With other users:</strong> when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside.</li><li data-v-1a487a18><strong class=\"primary-color-text\" data-v-1a487a18>With Your consent</strong>: We may disclose Your personal information for any other purpose with Your consent.</li></ul><h2 class=\"primary-color-text\" data-v-1a487a18>Retention of Your Personal Data</h2><p data-v-1a487a18>The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.</p><p data-v-1a487a18>The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.</p><h2 data-v-1a487a18>Transfer of Your Personal Data</h2><p data-v-1a487a18>Your information, including Personal Data, is processed at the Company&#39;s operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.</p><p data-v-1a487a18>Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.</p><p data-v-1a487a18>The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.</p><h2 class=\"primary-color-text\" data-v-1a487a18>Disclosure of Your Personal Data</h2><h3 class=\"primary-color-text\" data-v-1a487a18>Business Transactions</h3><p data-v-1a487a18>If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.</p><h3 class=\"primary-color-text\" data-v-1a487a18>Law enforcement</h3><p data-v-1a487a18>Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).</p><h3 class=\"primary-color-text\" data-v-1a487a18>Other legal requirements</h3><p data-v-1a487a18>The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:</p><ul data-v-1a487a18><li data-v-1a487a18>Comply with a legal obligation</li><li data-v-1a487a18>Protect and defend the rights or property of the Company</li><li data-v-1a487a18>Prevent or investigate possible wrongdoing in connection with the Service</li><li data-v-1a487a18>Protect the personal safety of Users of the Service or the public</li><li data-v-1a487a18>Protect against legal liability</li></ul><h2 class=\"primary-color-text\" data-v-1a487a18>Security of Your Personal Data</h2><p data-v-1a487a18>The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.</p><h1 class=\"primary-color-text\" data-v-1a487a18>Children&#39;s Privacy</h1><p data-v-1a487a18>Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.</p><p data-v-1a487a18>If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent&#39;s consent before We collect and use that information.</p><h1 class=\"primary-color-text\" data-v-1a487a18>Links to Other Websites</h1><p data-v-1a487a18>Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party&#39;s site. We strongly advise You to review the Privacy Policy of every site You visit.</p><p data-v-1a487a18>We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p><h1 class=\"primary-color-text\" data-v-1a487a18>Changes to this Privacy Policy</h1><p data-v-1a487a18>We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.</p><p data-v-1a487a18>We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the &quot;Last updated&quot; date at the top of this Privacy Policy.</p><p data-v-1a487a18>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p><h1 class=\"primary-color-text\" data-v-1a487a18>Contact Us</h1><p data-v-1a487a18>If you have any questions about this Privacy Policy, You can contact us:</p><ul data-v-1a487a18><li data-v-1a487a18><p data-v-1a487a18>By email: info@rentcircles.com</p></li><li data-v-1a487a18><p data-v-1a487a18>By visiting this page on our website: <a href=\"https://rentcircles.com/contact\" rel=\"external nofollow noopener\" target=\"_blank\" data-v-1a487a18>https://rentcircles.com/contact</a></p></li></ul></div></div></div></div></div>", 1);
+
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__call-to-action-area call-to-action-6 before-bg-bottom\" data-bs-bg=\"/main-assets/img/1.jpg\" data-v-1a487a18><div class=\"container\" data-v-1a487a18><div class=\"row\" data-v-1a487a18><div class=\"col-lg-12\" data-v-1a487a18><div class=\"call-to-action-inner call-to-action-inner-6 ltn__secondary-bg position-relative text-center---\" data-v-1a487a18><div class=\"coll-to-info text-color-white\" data-v-1a487a18><h1 data-v-1a487a18>Looking to rent an apartment?</h1><p data-v-1a487a18>We can help you realize your new home</p></div><div class=\"btn-wrapper\" data-v-1a487a18><a class=\"btn btn-effect-3 btn-white\" href=\"\" data-v-1a487a18> Explore apartments <i class=\"icon-next\" data-v-1a487a18></i></a></div></div></div></div></div></div>", 1);
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" SLIDER AREA START (slider-3) "), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" SLIDER AREA END "), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" CALL TO ACTION START (call-to-action-6) "), _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" CALL TO ACTION END ")], 64
+  /* STABLE_FRAGMENT */
+  );
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/TermsComponent.vue?vue&type=template&id=a98aa4ea&scoped=true":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/TermsComponent.vue?vue&type=template&id=a98aa4ea&scoped=true ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+
+var _withScopeId = function _withScopeId(n) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-a98aa4ea"), n = n(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)(), n;
+};
+
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__slider-area ltn__slider-3 section-bg-2\" data-v-a98aa4ea><div class=\"ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1\" data-v-a98aa4ea><!-- ltn__slide-item --><div class=\"ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-overlay-theme-black-60\" style=\"background-image:url(&#39;/main-assets/img/slider/11.jpg&#39;);background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:fixed;\" data-v-a98aa4ea><div class=\"ltn__slide-item-inner text-center pt-100 pb-100\" data-v-a98aa4ea><div class=\"container\" data-v-a98aa4ea><div class=\"row\" data-v-a98aa4ea><div class=\"col-lg-12 align-self-center\" data-v-a98aa4ea><div class=\"ltn__breadcrumb-inner\" data-v-a98aa4ea><h1 class=\"page-title\" data-v-a98aa4ea>Terms of use</h1></div></div></div></div></div></div></div></div>", 1);
+
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__about-us-area pb-115 mt-50\" data-v-a98aa4ea><div class=\"container\" data-v-a98aa4ea><div class=\"row\" data-v-a98aa4ea><div class=\"col-lg-12 align-self-center\" data-v-a98aa4ea><div class=\"about-us-info-wrap\" data-v-a98aa4ea><p data-v-a98aa4ea>The rentcircles.com website located at https://rentcircles.com is a copyrighted work belonging to RentCircles. Certain features of the Site may be subject to additional guidelines, terms, or rules, which will be posted on the Site in connection with such features.</p><p data-v-a98aa4ea>All such additional terms, guidelines, and rules are incorporated by reference into these Terms.</p><p data-v-a98aa4ea>These Terms of Use described the legally binding terms and conditions that oversee your use of the Site. BY LOGGING INTO THE SITE, YOU ARE BEING COMPLIANT THAT THESE TERMS and you represent that you have the authority and capacity to enter into these Terms. YOU SHOULD BE AT LEAST 18 YEARS OF AGE TO ACCESS THE SITE. IF YOU DISAGREE WITH ALL OF THE PROVISION OF THESE TERMS, DO NOT LOG INTO AND/OR USE THE SITE.</p><p data-v-a98aa4ea>These terms require the use of arbitration Section 10.2 on an individual basis to resolve disputes and also limit the remedies available to you in the event of a dispute.</p><h2 class=\"primary-color-text\" data-v-a98aa4ea>Access to the Site</h2><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Subject to these Terms.</strong> Company grants you a non-transferable, non-exclusive, revocable, limited license to access the Site solely for your own personal, noncommercial use.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Certain Restrictions.</strong> The rights approved to you in these Terms are subject to the following restrictions: (a) you shall not sell, rent, lease, transfer, assign, distribute, host, or otherwise commercially exploit the Site; (b) you shall not change, make derivative works of, disassemble, reverse compile or reverse engineer any part of the Site; (c) you shall not access the Site in order to build a similar or competitive website; and (d) except as expressly stated herein, no part of the Site may be copied, reproduced, distributed, republished, downloaded, displayed, posted or transmitted in any form or by any means unless otherwise indicated, any future release, update, or other addition to functionality of the Site shall be subject to these Terms. All copyright and other proprietary notices on the Site must be retained on all copies thereof.</p><p data-v-a98aa4ea>Company reserves the right to change, suspend, or cease the Site with or without notice to you. You approved that Company will not be held liable to you or any third-party for any change, interruption, or termination of the Site or any part.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>No Support or Maintenance.</strong> You agree that Company will have no obligation to provide you with any support in connection with the Site.</p><p data-v-a98aa4ea>Excluding any User Content that you may provide, you are aware that all the intellectual property rights, including copyrights, patents, trademarks, and trade secrets, in the Site and its content are owned by Company or Company’s suppliers. Note that these Terms and access to the Site do not give you any rights, title or interest in or to any intellectual property rights, except for the limited access rights expressed in Section 2.1. Company and its suppliers reserve all rights not granted in these Terms.</p><h2 class=\"primary-color-text\" data-v-a98aa4ea>User Content</h2><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>User Content.</strong> &quot;User Content&quot; means any and all information and content that a user submits to the Site. You are exclusively responsible for your User Content. You bear all risks associated with use of your User Content. You hereby certify that your User Content does not violate our Acceptable Use Policy. You may not represent or imply to others that your User Content is in any way provided, sponsored or endorsed by Company. Because you alone are responsible for your User Content, you may expose yourself to liability. Company is not obliged to backup any User Content that you post; also, your User Content may be deleted at any time without prior notice to you. You are solely responsible for making your own backup copies of your User Content if you desire.</p><p data-v-a98aa4ea>You hereby grant to Company an irreversible, nonexclusive, royalty-free and fully paid, worldwide license to reproduce, distribute, publicly display and perform, prepare derivative works of, incorporate into other works, and otherwise use and exploit your User Content, and to grant sublicenses of the foregoing rights, solely for the purposes of including your User Content in the Site. You hereby irreversibly waive any claims and assertions of moral rights or attribution with respect to your User Content.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Acceptable Use Policy.</strong> The following terms constitute our &quot;Acceptable Use Policy&quot;: You agree not to use the Site to collect, upload, transmit, display, or distribute any User Content (i) that violates any third-party right or any intellectual property or proprietary right; (ii) that is unlawful, harassing, abusive, tortious, threatening, harmful, invasive of another’s privacy, vulgar, defamatory, false, intentionally misleading, trade libelous, pornographic, obscene, patently offensive, promotes racism, bigotry, hatred, or physical harm of any kind against any group or individual; (iii) that is harmful to minors in any way; or (iv) that is in violation of any law, regulation, or obligations or restrictions imposed by any third party.</p><p data-v-a98aa4ea>In addition, you agree not to: (i) upload, transmit, or distribute to or through the Site any software intended to damage or alter a computer system or data; (ii) send through the Site unsolicited or unauthorized advertising, promotional materials, junk mail, spam, chain letters, pyramid schemes, or any other form of duplicative or unsolicited messages; (iii) use the Site to harvest, collect, gather or assemble information or data regarding other users without their consent; (iv) interfere with, disrupt, or create an undue burden on servers or networks connected to the Site, or violate the regulations, policies or procedures of such networks; (v) attempt to gain unauthorized access to the Site, whether through password mining or any other means; (vi) harass or interfere with any other user’s use and enjoyment of the Site; or (vi) use software or automated agents or scripts to produce multiple accounts on the Site, or to generate automated searches, requests, or queries to the Site.</p><p data-v-a98aa4ea>We reserve the right to review any User Content, and to investigate and/or take appropriate action against you in our sole discretion if you violate the Acceptable Use Policy or any other provision of these Terms or otherwise create liability for us or any other person. Such action may include removing or modifying your User Content, terminating your Account in accordance with Section 8, and/or reporting you to law enforcement authorities.</p><p data-v-a98aa4ea>If you provide Company with any feedback or suggestions regarding the Site, you hereby assign to Company all rights in such Feedback and agree that Company shall have the right to use and fully exploit such Feedback and related information in any manner it believes appropriate. Company will treat any Feedback you provide to Company as non-confidential and non-proprietary.</p><p data-v-a98aa4ea>You agree to indemnify and hold Company and its officers, employees, and agents harmless, including costs and attorneys’ fees, from any claim or demand made by any third-party due to or arising out of (a) your use of the Site, (b) your violation of these Terms, (c) your violation of applicable laws or regulations or (d) your User Content. Company reserves the right to assume the exclusive defense and control of any matter for which you are required to indemnify us, and you agree to cooperate with our defense of these claims. You agree not to settle any matter without the prior written consent of Company. Company will use reasonable efforts to notify you of any such claim, action or proceeding upon becoming aware of it.</p><h2 class=\"primary-color-text\" data-v-a98aa4ea>Third-Party Links &amp; Ads; Other Users</h2><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Third-Party Links &amp; Ads.</strong> The Site may contain links to third-party websites and services, and/or display advertisements for third-parties. Such Third-Party Links &amp; Ads are not under the control of Company, and Company is not responsible for any Third-Party Links &amp; Ads. Company provides access to these Third-Party Links &amp; Ads only as a convenience to you, and does not review, approve, monitor, endorse, warrant, or make any representations with respect to Third-Party Links &amp; Ads. You use all Third-Party Links &amp; Ads at your own risk, and should apply a suitable level of caution and discretion in doing so. When you click on any of the Third-Party Links &amp; Ads, the applicable third party’s terms and policies apply, including the third party’s privacy and data gathering practices.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Other Users.</strong> Each Site user is solely responsible for any and all of its own User Content. Because we do not control User Content, you acknowledge and agree that we are not responsible for any User Content, whether provided by you or by others. You agree that Company will not be responsible for any loss or damage incurred as the result of any such interactions. If there is a dispute between you and any Site user, we are under no obligation to become involved.</p><p data-v-a98aa4ea>You hereby release and forever discharge the Company and our officers, employees, agents, successors, and assigns from, and hereby waive and relinquish, each and every past, present and future dispute, claim, controversy, demand, right, obligation, liability, action and cause of action of every kind and nature, that has arisen or arises directly or indirectly out of, or that relates directly or indirectly to, the Site. If you are a California resident, you hereby waive California civil code section 1542 in connection with the foregoing, which states: &quot;a general release does not extend to claims which the creditor does not know or suspect to exist in his or her favor at the time of executing the release, which if known by him or her must have materially affected his or her settlement with the debtor.&quot;</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Cookies and Web Beacons.</strong> Like any other website, rentcircles.com uses ‘cookies’. These cookies are used to store information including visitors’ preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users’ experience by customizing our web page content based on visitors’ browser type and/or other information.</p><h2 class=\"primary-color-text\" data-v-a98aa4ea>Disclaimers</h2><p data-v-a98aa4ea>The site is provided on an &quot;as-is&quot; and &quot;as available&quot; basis, and company and our suppliers expressly disclaim any and all warranties and conditions of any kind, whether express, implied, or statutory, including all warranties or conditions of merchantability, fitness for a particular purpose, title, quiet enjoyment, accuracy, or non-infringement. We and our suppliers make not guarantee that the site will meet your requirements, will be available on an uninterrupted, timely, secure, or error-free basis, or will be accurate, reliable, free of viruses or other harmful code, complete, legal, or safe. If applicable law requires any warranties with respect to the site, all such warranties are limited in duration to ninety (90) days from the date of first use.</p><p data-v-a98aa4ea>Some jurisdictions do not allow the exclusion of implied warranties, so the above exclusion may not apply to you. Some jurisdictions do not allow limitations on how long an implied warranty lasts, so the above limitation may not apply to you.</p><h2 class=\"primary-color-text\" data-v-a98aa4ea>Limitation on Liability</h2><p data-v-a98aa4ea>To the maximum extent permitted by law, in no event shall company or our suppliers be liable to you or any third-party for any lost profits, lost data, costs of procurement of substitute products, or any indirect, consequential, exemplary, incidental, special or punitive damages arising from or relating to these terms or your use of, or incapability to use the site even if company has been advised of the possibility of such damages. Access to and use of the site is at your own discretion and risk, and you will be solely responsible for any damage to your device or computer system, or loss of data resulting therefrom.</p><p data-v-a98aa4ea>To the maximum extent permitted by law, notwithstanding anything to the contrary contained herein, our liability to you for any damages arising from or related to this agreement, will at all times be limited to a maximum of fifty U.S. dollars (u.s. $50). The existence of more than one claim will not enlarge this limit. You agree that our suppliers will have no liability of any kind arising from or relating to this agreement.</p><p data-v-a98aa4ea>Some jurisdictions do not allow the limitation or exclusion of liability for incidental or consequential damages, so the above limitation or exclusion may not apply to you.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Term and Termination.</strong> Subject to this Section, these Terms will remain in full force and effect while you use the Site. We may suspend or terminate your rights to use the Site at any time for any reason at our sole discretion, including for any use of the Site in violation of these Terms. Upon termination of your rights under these Terms, your Account and right to access and use the Site will terminate immediately. You understand that any termination of your Account may involve deletion of your User Content associated with your Account from our live databases. Company will not have any liability whatsoever to you for any termination of your rights under these Terms. Even after your rights under these Terms are terminated, the following provisions of these Terms will remain in effect: Sections 2 through 2.5, Section 3 and Sections 4 through 10.</p><h2 class=\"primary-color-text\" data-v-a98aa4ea>Copyright Policy.</h2><p data-v-a98aa4ea>Company respects the intellectual property of others and asks that users of our Site do the same. In connection with our Site, we have adopted and implemented a policy respecting copyright law that provides for the removal of any infringing materials and for the termination of users of our online Site who are repeated infringers of intellectual property rights, including copyrights. If you believe that one of our users is, through the use of our Site, unlawfully infringing the copyright(s) in a work, and wish to have the allegedly infringing material removed, the following information in the form of a written notification (pursuant to 17 U.S.C. § 512(c)) must be provided to our designated Copyright Agent:</p><ul data-v-a98aa4ea><li data-v-a98aa4ea>your physical or electronic signature;</li><li data-v-a98aa4ea>identification of the copyrighted work(s) that you claim to have been infringed;</li><li data-v-a98aa4ea>identification of the material on our services that you claim is infringing and that you request us to remove;</li><li data-v-a98aa4ea>sufficient information to permit us to locate such material;</li><li data-v-a98aa4ea>your address, telephone number, and e-mail address;</li><li data-v-a98aa4ea>a statement that you have a good faith belief that use of the objectionable material is not authorized by the copyright owner, its agent, or under the law; and</li><li data-v-a98aa4ea>a statement that the information in the notification is accurate, and under penalty of perjury, that you are either the owner of the copyright that has allegedly been infringed or that you are authorized to act on behalf of the copyright owner.</li></ul><p data-v-a98aa4ea>Please note that, pursuant to 17 U.S.C. § 512(f), any misrepresentation of material fact in a written notification automatically subjects the complaining party to liability for any damages, costs and attorney’s fees incurred by us in connection with the written notification and allegation of copyright infringement.</p><h2 class=\"primary-color-text\" data-v-a98aa4ea>General</h2><p data-v-a98aa4ea>These Terms are subject to occasional revision, and if we make any substantial changes, we may notify you by sending you an e-mail to the last e-mail address you provided to us and/or by prominently posting notice of the changes on our Site. You are responsible for providing us with your most current e-mail address. In the event that the last e-mail address that you have provided us is not valid our dispatch of the e-mail containing such notice will nonetheless constitute effective notice of the changes described in the notice. Any changes to these Terms will be effective upon the earliest of thirty (30) calendar days following our dispatch of an e-mail notice to you or thirty (30) calendar days following our posting of notice of the changes on our Site. These changes will be effective immediately for new users of our Site. Continued use of our Site following notice of such changes shall indicate your acknowledgement of such changes and agreement to be bound by the terms and conditions of such changes. Dispute Resolution. Please read this Arbitration Agreement carefully. It is part of your contract with Company and affects your rights. It contains procedures for MANDATORY BINDING ARBITRATION AND A CLASS ACTION WAIVER.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Applicability of Arbitration Agreement.</strong> All claims and disputes in connection with the Terms or the use of any product or service provided by the Company that cannot be resolved informally or in small claims court shall be resolved by binding arbitration on an individual basis under the terms of this Arbitration Agreement. Unless otherwise agreed to, all arbitration proceedings shall be held in English. This Arbitration Agreement applies to you and the Company, and to any subsidiaries, affiliates, agents, employees, predecessors in interest, successors, and assigns, as well as all authorized or unauthorized users or beneficiaries of services or goods provided under the Terms.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Notice Requirement and Informal Dispute Resolution.</strong> Before either party may seek arbitration, the party must first send to the other party a written Notice of Dispute describing the nature and basis of the claim or dispute, and the requested relief. A Notice to the Company should be sent to: info@rentcircles.com. After the Notice is received, you and the Company may attempt to resolve the claim or dispute informally. If you and the Company do not resolve the claim or dispute within thirty (30) days after the Notice is received, either party may begin an arbitration proceeding. The amount of any settlement offer made by any party may not be disclosed to the arbitrator until after the arbitrator has determined the amount of the award to which either party is entitled.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Arbitration Rules.</strong> Arbitration shall be initiated through the American Arbitration Association, an established alternative dispute resolution provider that offers arbitration as set forth in this section. If AAA is not available to arbitrate, the parties shall agree to select an alternative ADR Provider. The rules of the ADR Provider shall govern all aspects of the arbitration except to the extent such rules are in conflict with the Terms. The AAA Consumer Arbitration Rules governing the arbitration are available online at adr.org or by calling the AAA at 1-800-778-7879. The arbitration shall be conducted by a single, neutral arbitrator. Any claims or disputes where the total amount of the award sought is less than Ten Thousand U.S. Dollars (US $10,000.00) may be resolved through binding non-appearance-based arbitration, at the option of the party seeking relief. For claims or disputes where the total amount of the award sought is Ten Thousand U.S. Dollars (US $10,000.00) or more, the right to a hearing will be determined by the Arbitration Rules. Any hearing will be held in a location within 100 miles of your residence, unless you reside outside of the United States, and unless the parties agree otherwise. If you reside outside of the U.S., the arbitrator shall give the parties reasonable notice of the date, time and place of any oral hearings. Any judgment on the award rendered by the arbitrator may be entered in any court of competent jurisdiction. If the arbitrator grants you an award that is greater than the last settlement offer that the Company made to you prior to the initiation of arbitration, the Company will pay you the greater of the award or $2,500.00. Each party shall bear its own costs and disbursements arising out of the arbitration and shall pay an equal share of the fees and costs of the ADR Provider.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Additional Rules for Non-Appearance Based Arbitration.</strong> If non-appearance based arbitration is elected, the arbitration shall be conducted by telephone, online and/or based solely on written submissions; the specific manner shall be chosen by the party initiating the arbitration. The arbitration shall not involve any personal appearance by the parties or witnesses unless otherwise agreed by the parties.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Time Limits.</strong> If you or the Company pursues arbitration, the arbitration action must be initiated and/or demanded within the statute of limitations and within any deadline imposed under the AAA Rules for the pertinent claim.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Authority of Arbitrator.</strong> If arbitration is initiated, the arbitrator will decide the rights and liabilities of you and the Company, and the dispute will not be consolidated with any other matters or joined with any other cases or parties. The arbitrator shall have the authority to grant motions dispositive of all or part of any claim. The arbitrator shall have the authority to award monetary damages, and to grant any non-monetary remedy or relief available to an individual under applicable law, the AAA Rules, and the Terms. The arbitrator shall issue a written award and statement of decision describing the essential findings and conclusions on which the award is based. The arbitrator has the same authority to award relief on an individual basis that a judge in a court of law would have. The award of the arbitrator is final and binding upon you and the Company.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Waiver of Jury Trial.</strong> THE PARTIES HEREBY WAIVE THEIR CONSTITUTIONAL AND STATUTORY RIGHTS TO GO TO COURT AND HAVE A TRIAL IN FRONT OF A JUDGE OR A JURY, instead electing that all claims and disputes shall be resolved by arbitration under this Arbitration Agreement. Arbitration procedures are typically more limited, more efficient and less expensive than rules applicable in a court and are subject to very limited review by a court. In the event any litigation should arise between you and the Company in any state or federal court in a suit to vacate or enforce an arbitration award or otherwise, YOU AND THE COMPANY WAIVE ALL RIGHTS TO A JURY TRIAL, instead electing that the dispute be resolved by a judge.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Waiver of Class or Consolidated Actions.</strong> All claims and disputes within the scope of this arbitration agreement must be arbitrated or litigated on an individual basis and not on a class basis, and claims of more than one customer or user cannot be arbitrated or litigated jointly or consolidated with those of any other customer or user.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Confidentiality.</strong> All aspects of the arbitration proceeding shall be strictly confidential. The parties agree to maintain confidentiality unless otherwise required by law. This paragraph shall not prevent a party from submitting to a court of law any information necessary to enforce this Agreement, to enforce an arbitration award, or to seek injunctive or equitable relief.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Severability.</strong> If any part or parts of this Arbitration Agreement are found under the law to be invalid or unenforceable by a court of competent jurisdiction, then such specific part or parts shall be of no force and effect and shall be severed and the remainder of the Agreement shall continue in full force and effect.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Right to Waive.</strong> Any or all of the rights and limitations set forth in this Arbitration Agreement may be waived by the party against whom the claim is asserted. Such waiver shall not waive or affect any other portion of this Arbitration Agreement.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Survival of Agreement.</strong> This Arbitration Agreement will survive the termination of your relationship with Company.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Small Claims Court.</strong> Nonetheless the foregoing, either you or the Company may bring an individual action in small claims court.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Emergency Equitable Relief.</strong> Anyhow the foregoing, either party may seek emergency equitable relief before a state or federal court in order to maintain the status quo pending arbitration. A request for interim measures shall not be deemed a waiver of any other rights or obligations under this Arbitration Agreement.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Claims Not Subject to Arbitration.</strong> Notwithstanding the foregoing, claims of defamation, violation of the Computer Fraud and Abuse Act, and infringement or misappropriation of the other party’s patent, copyright, trademark or trade secrets shall not be subject to this Arbitration Agreement.</p><p data-v-a98aa4ea>In any circumstances where the foregoing Arbitration Agreement permits the parties to litigate in court, the parties hereby agree to submit to the personal jurisdiction of the courts located within Netherlands County, California, for such purposes.</p><p data-v-a98aa4ea>The Site may be subject to U.S. export control laws and may be subject to export or import regulations in other countries. You agree not to export, re-export, or transfer, directly or indirectly, any U.S. technical data acquired from Company, or any products utilizing such data, in violation of the United States export laws or regulations.</p><p data-v-a98aa4ea>Company is located at the address in Section 10.8. If you are a California resident, you may report complaints to the Complaint Assistance Unit of the Division of Consumer Product of the California Department of Consumer Affairs by contacting them in writing at 400 R Street, Sacramento, CA 95814, or by telephone at (800) 952-5210.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Electronic Communications.</strong> The communications between you and Company use electronic means, whether you use the Site or send us emails, or whether Company posts notices on the Site or communicates with you via email. For contractual purposes, you (a) consent to receive communications from Company in an electronic form; and (b) agree that all terms and conditions, agreements, notices, disclosures, and other communications that Company provides to you electronically satisfy any legal obligation that such communications would satisfy if it were be in a hard copy writing.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Entire Terms.</strong> These Terms constitute the entire agreement between you and us regarding the use of the Site. Our failure to exercise or enforce any right or provision of these Terms shall not operate as a waiver of such right or provision. The section titles in these Terms are for convenience only and have no legal or contractual effect. The word &quot;including&quot; means &quot;including without limitation&quot;. If any provision of these Terms is held to be invalid or unenforceable, the other provisions of these Terms will be unimpaired and the invalid or unenforceable provision will be deemed modified so that it is valid and enforceable to the maximum extent permitted by law. Your relationship to Company is that of an independent contractor, and neither party is an agent or partner of the other. These Terms, and your rights and obligations herein, may not be assigned, subcontracted, delegated, or otherwise transferred by you without Company’s prior written consent, and any attempted assignment, subcontract, delegation, or transfer in violation of the foregoing will be null and void. Company may freely assign these Terms. The terms and conditions set forth in these Terms shall be binding upon assignees.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Your Privacy.</strong> Please read our Privacy Policy.</p><p data-v-a98aa4ea><strong class=\"primary-color-text\" data-v-a98aa4ea>Copyright/Trademark Information.</strong> Copyright ©. All rights reserved. All trademarks, logos and service marks displayed on the Site are our property or the property of other third-parties. You are not permitted to use these Marks without our prior written consent or the consent of such third party which may own the Marks.</p><h2 class=\"primary-color-text\" data-v-a98aa4ea>Contact Information</h2><p data-v-a98aa4ea>Address: info@rentcircles.com</p><p data-v-a98aa4ea>Email: rentcircles@gmail.com</p></div></div></div></div></div>", 1);
+
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__call-to-action-area call-to-action-6 before-bg-bottom\" data-bs-bg=\"/main-assets/img/1.jpg\" data-v-a98aa4ea><div class=\"container\" data-v-a98aa4ea><div class=\"row\" data-v-a98aa4ea><div class=\"col-lg-12\" data-v-a98aa4ea><div class=\"call-to-action-inner call-to-action-inner-6 ltn__secondary-bg position-relative text-center---\" data-v-a98aa4ea><div class=\"coll-to-info text-color-white\" data-v-a98aa4ea><h1 data-v-a98aa4ea>Looking to rent an apartment?</h1><p data-v-a98aa4ea>We can help you realize your new home</p></div><div class=\"btn-wrapper\" data-v-a98aa4ea><a class=\"btn btn-effect-3 btn-white\" href=\"\" data-v-a98aa4ea> Explore apartments <i class=\"icon-next\" data-v-a98aa4ea></i></a></div></div></div></div></div></div>", 1);
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" SLIDER AREA START (slider-3) "), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" SLIDER AREA END "), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" CALL TO ACTION START (call-to-action-6) "), _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" CALL TO ACTION END ")], 64
+  /* STABLE_FRAGMENT */
+  );
 }
 
 /***/ }),
@@ -23201,20 +23980,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
+  "class": "ltn__contact-address-area mb-90 mt-40"
+};
+var _hoisted_2 = {
   id: "login",
   "class": "container"
 };
-var _hoisted_2 = {
+var _hoisted_3 = {
   "class": "row"
 };
-var _hoisted_3 = {
+var _hoisted_4 = {
   "class": "col-lg-8"
 };
-var _hoisted_4 = {
+var _hoisted_5 = {
   "class": "account-login-inner"
 };
 
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "bg-danger text-white"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-center"
@@ -23222,22 +24004,22 @@ var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 /* HOISTED */
 );
 
-var _hoisted_6 = {
+var _hoisted_7 = {
   "class": "input-item"
 };
-var _hoisted_7 = {
+var _hoisted_8 = {
   key: 0,
   "class": "text-danger text-center m-0"
 };
-var _hoisted_8 = {
+var _hoisted_9 = {
   "class": "input-item"
 };
-var _hoisted_9 = {
+var _hoisted_10 = {
   key: 0,
   "class": "text-danger text-center m-0"
 };
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "btn-wrapper mt-0"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   "class": "theme-btn-1 btn btn-block",
@@ -23246,15 +24028,43 @@ var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-lg-4\"><aside class=\"sidebar-area ltn__right-sidebar\"><!-- Menu Widget --><div class=\"widget-2 ltn__menu-widget ltn__menu-widget-2 text-uppercase\"><ul><li><a href=\"realtor/register\">No account? Sign up <span><i class=\"fas fa-arrow-right\"></i></span></a></li><li><a href=\"user/register\">Sign up as a user <span><i class=\"fas fa-arrow-right\"></i></span></a></li></ul></div><!-- Newsletter Widget --><div class=\"widget ltn__search-widget ltn__newsletter-widget\"><h6 class=\"ltn__widget-sub-title\">// subscribe</h6><h4 class=\"ltn__widget-title\">Get Newsletter</h4><form action=\"#\"><input type=\"text\" name=\"search\" placeholder=\"\"><button type=\"submit\"><i class=\"fas fa-search\"></i></button></form><div class=\"ltn__newsletter-bg-icon\"><i class=\"fas fa-envelope-open-text\"></i></div></div></aside></div>", 1);
+var _hoisted_12 = {
+  "class": "col-lg-4"
+};
+var _hoisted_13 = {
+  "class": "sidebar-area ltn__right-sidebar"
+};
+var _hoisted_14 = {
+  "class": "widget-2 ltn__menu-widget ltn__menu-widget-2 text-uppercase"
+};
+
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("No account? Sign up ");
+
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "fas fa-arrow-right"
+})], -1
+/* HOISTED */
+);
+
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Sign up as a user ");
+
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "fas fa-arrow-right"
+})], -1
+/* HOISTED */
+);
+
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"widget ltn__search-widget ltn__newsletter-widget\"><h6 class=\"ltn__widget-sub-title\">// subscribe</h6><h4 class=\"ltn__widget-title\">Get Newsletter</h4><form action=\"#\"><input type=\"text\" name=\"search\" placeholder=\"\"><button type=\"submit\"><i class=\"fas fa-search\"></i></button></form><div class=\"ltn__newsletter-bg-icon\"><i class=\"fas fa-envelope-open-text\"></i></div></div>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+  var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("    &lt;!&ndash; SLIDER AREA START (slider-3) &ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("    <div class=\"ltn__slider-area ltn__slider-3 section-bg-2\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        <div class=\"ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            &lt;!&ndash; ltn__slide-item &ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            <div class=\"ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal-&#45;&#45; ltn__slide-item-3 bg-overlay-theme-black-60\" style=\"background-image: url('/main-assets/img/slider/12.jpg');  background-size: cover; background-repeat: no-repeat;  background-position: center; background-attachment: fixed;\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                <div class=\"ltn__slide-item-inner text-center\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <div class=\"container\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        <div class=\"row\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <div class=\"col-lg-12 align-self-center\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <div class=\"ltn__breadcrumb-inner\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <h1 class=\"page-title mt-5\">Realtor Login</h1>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("    &lt;!&ndash; SLIDER AREA END &ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [_hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     "class": "ltn__form-box contact-form-box",
     onSubmit: _cache[2] || (_cache[2] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $options.login && $options.login.apply($options, arguments);
     }, ["prevent"]))
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [$data.errors.email ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.email.toString()), 1
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [$data.errors.email ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.email.toString()), 1
   /* TEXT */
   )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
@@ -23267,7 +24077,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.email]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [$data.errors.password ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.password.toString()), 1
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.email]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [$data.errors.password ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.password.toString()), 1
   /* TEXT */
   )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "password",
@@ -23280,9 +24090,33 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.password]])]), _hoisted_10], 32
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.password]])]), _hoisted_11], 32
   /* HYDRATE_EVENTS */
-  )])]), _hoisted_11])]);
+  )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("aside", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Menu Widget "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    "class": "",
+    exact: "",
+    to: "/realtor/register"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_15, _hoisted_16];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    "class": "",
+    exact: "",
+    to: "/register"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_17, _hoisted_18];
+    }),
+    _: 1
+    /* STABLE */
+
+  })])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Newsletter Widget "), _hoisted_19])])])])])], 2112
+  /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
+  );
 }
 
 /***/ }),
@@ -23300,58 +24134,61 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
-var _hoisted_1 = {
+
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"ltn__slider-area ltn__slider-3 section-bg-2\"><div class=\"ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1\"><!-- ltn__slide-item --><div class=\"ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-overlay-theme-black-60\" style=\"background-image:url(&#39;/main-assets/img/slider/11.jpg&#39;);background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:fixed;\"><div class=\"ltn__slide-item-inner text-center\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-12 align-self-center\"><div class=\"ltn__breadcrumb-inner\"><h1 class=\"page-title mt-5\">Realtor Sign up</h1></div></div></div></div></div></div></div></div>", 1);
+
+var _hoisted_2 = {
   "class": "container"
 };
-var _hoisted_2 = {
+var _hoisted_3 = {
   "class": "row"
 };
-var _hoisted_3 = {
+var _hoisted_4 = {
   "class": "col-lg-8"
 };
-var _hoisted_4 = {
+var _hoisted_5 = {
   "class": "account-login-inner"
 };
-var _hoisted_5 = {
+var _hoisted_6 = {
   key: 0,
   "class": "bg-danger p-1 text-light"
 };
-var _hoisted_6 = {
-  "class": "input-item"
-};
 var _hoisted_7 = {
-  key: 0
+  "class": "input-item"
 };
 var _hoisted_8 = {
-  "class": "input-item"
+  key: 0
 };
 var _hoisted_9 = {
-  key: 0
+  "class": "input-item"
 };
 var _hoisted_10 = {
-  "class": "input-item"
+  key: 0
 };
 var _hoisted_11 = {
-  key: 0
+  "class": "input-item"
 };
 var _hoisted_12 = {
-  "class": "input-item"
-};
-var _hoisted_13 = ["value"];
-var _hoisted_14 = {
-  key: 1
-};
-var _hoisted_15 = {
-  "class": "input-item"
-};
-var _hoisted_16 = {
   key: 0
 };
+var _hoisted_13 = {
+  "class": "input-item"
+};
+var _hoisted_14 = ["value"];
+var _hoisted_15 = {
+  key: 1
+};
+var _hoisted_16 = {
+  "class": "input-item"
+};
 var _hoisted_17 = {
+  key: 0
+};
+var _hoisted_18 = {
   "class": "input-item"
 };
 
-var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "btn-wrapper mt-0"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   "class": "theme-btn-1 btn btn-block",
@@ -23360,22 +24197,50 @@ var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-lg-4\"><aside class=\"sidebar-area ltn__right-sidebar\"><!-- Menu Widget --><div class=\"widget-2 ltn__menu-widget ltn__menu-widget-2 text-uppercase\"><ul><li><a href=\"\">Have an account? Log in <span><i class=\"fas fa-arrow-right\"></i></span></a></li><li><a href=\"\">Sign up as a user <span><i class=\"fas fa-arrow-right\"></i></span></a></li></ul></div><!-- Newsletter Widget --><div class=\"widget ltn__search-widget ltn__newsletter-widget\"><h6 class=\"ltn__widget-sub-title\">// subscribe</h6><h4 class=\"ltn__widget-title\">Get Newsletter</h4><form action=\"#\"><input type=\"text\" name=\"search\" placeholder=\"Search\"><button type=\"submit\"><i class=\"fas fa-search\"></i></button></form><div class=\"ltn__newsletter-bg-icon\"><i class=\"fas fa-envelope-open-text\"></i></div></div></aside></div>", 1);
+var _hoisted_20 = {
+  "class": "col-lg-4"
+};
+var _hoisted_21 = {
+  "class": "sidebar-area ltn__right-sidebar"
+};
+var _hoisted_22 = {
+  "class": "widget-2 ltn__menu-widget ltn__menu-widget-2 text-uppercase"
+};
+
+var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Have an account? Login ");
+
+var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "fas fa-arrow-right"
+})], -1
+/* HOISTED */
+);
+
+var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Sign up as a user ");
+
+var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "fas fa-arrow-right"
+})], -1
+/* HOISTED */
+);
+
+var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"widget ltn__search-widget ltn__newsletter-widget\"><h6 class=\"ltn__widget-sub-title\">// subscribe</h6><h4 class=\"ltn__widget-title\">Get Newsletter</h4><form action=\"#\"><input type=\"text\" name=\"search\" placeholder=\"Search\"><button type=\"submit\"><i class=\"fas fa-search\"></i></button></form><div class=\"ltn__newsletter-bg-icon\"><i class=\"fas fa-envelope-open-text\"></i></div></div>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+  var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" SLIDER AREA START (slider-3) "), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" SLIDER AREA END "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     method: "post",
     "class": "ltn__form-box contact-form-box",
     onSubmit: _cache[6] || (_cache[6] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $options.register && $options.register.apply($options, arguments);
     }, ["prevent"]))
-  }, [$data.errors.length !== 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_5, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors, function (value, key) {
+  }, [$data.errors.length !== 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_6, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors, function (value, key) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(value.toString()), 1
     /* TEXT */
     );
   }), 256
   /* UNKEYED_FRAGMENT */
-  ))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
     name: "name",
     "class": "form-control",
@@ -23386,9 +24251,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.name]]), $data.errors.name ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("strong", _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.name.toString()), 1
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.name]]), $data.errors.name ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("strong", _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.name.toString()), 1
   /* TEXT */
-  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "email",
     name: "email",
     "class": "form-control",
@@ -23399,9 +24264,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.email]]), $data.errors.email ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("strong", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.email.toString()), 1
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.email]]), $data.errors.email ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("strong", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.email.toString()), 1
   /* TEXT */
-  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
     name: "mobile",
     "class": "form-control",
@@ -23412,9 +24277,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.mobile]]), $data.errors.mobile ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("strong", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.mobile.toString()), 1
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.mobile]]), $data.errors.mobile ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("strong", _hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.mobile.toString()), 1
   /* TEXT */
-  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [$data.countries.length > 0 ? (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)(((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("select", {
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [$data.countries.length > 0 ? (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)(((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("select", {
     key: 0,
     "class": "nice-select",
     name: "country",
@@ -23427,14 +24292,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       value: country.country_name
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(country.country_name), 9
     /* TEXT, PROPS */
-    , _hoisted_13);
+    , _hoisted_14);
   }), 128
   /* KEYED_FRAGMENT */
   ))], 512
   /* NEED_PATCH */
-  )), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.form.country]]) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.errors.country ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("strong", _hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.country.toString()), 1
+  )), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.form.country]]) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.errors.country ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("strong", _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.country.toString()), 1
   /* TEXT */
-  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "password",
     name: "password",
     "class": "form-control",
@@ -23445,9 +24310,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.password]]), $data.errors.password ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("strong", _hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.password.toString()), 1
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.password]]), $data.errors.password ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("strong", _hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.password.toString()), 1
   /* TEXT */
-  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "password",
     name: "password_confirmation",
     placeholder: "Confirm Password*",
@@ -23457,9 +24322,33 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.password_confirmation]])]), _hoisted_18], 32
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.password_confirmation]])]), _hoisted_19], 32
   /* HYDRATE_EVENTS */
-  )])]), _hoisted_19])]);
+  )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("aside", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Menu Widget "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    "class": "",
+    exact: "",
+    to: "/realtor/login"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_23, _hoisted_24];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    "class": "",
+    exact: "",
+    to: "/register"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_25, _hoisted_26];
+    }),
+    _: 1
+    /* STABLE */
+
+  })])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Newsletter Widget "), _hoisted_27])])])])], 64
+  /* STABLE_FRAGMENT */
+  );
 }
 
 /***/ }),
@@ -23713,7 +24602,7 @@ var _hoisted_63 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "add-listing__input-file-wrap"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "ion-ios-cloud-upload"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Click here to upload your images")], -1
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Click to upload your images")], -1
 /* HOISTED */
 );
 
@@ -23732,7 +24621,7 @@ var _hoisted_68 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "add-listing__input-file-wrap"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "ion-ios-cloud-upload"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Click here to upload image")], -1
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Click to upload image")], -1
 /* HOISTED */
 );
 
@@ -23751,7 +24640,7 @@ var _hoisted_73 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "add-listing__input-file-wrap"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "ion-ios-cloud-upload"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Click here to upload your images")], -1
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Click to upload your images")], -1
 /* HOISTED */
 );
 
@@ -23770,7 +24659,7 @@ var _hoisted_78 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "add-listing__input-file-wrap"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "ion-ios-cloud-upload"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Click here to upload your images")], -1
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Click to upload your images")], -1
 /* HOISTED */
 );
 
@@ -24157,6 +25046,40 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorLogoutComponent.vue?vue&type=template&id=134349b6":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorLogoutComponent.vue?vue&type=template&id=134349b6 ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-ios-person"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Logout");
+
+var _hoisted_3 = [_hoisted_1, _hoisted_2];
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("a", {
+    "class": "nav-link",
+    onClick: _cache[0] || (_cache[0] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+      return $options.logout && $options.logout.apply($options, arguments);
+    }, ["prevent"]))
+  }, _hoisted_3);
+}
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue?vue&type=template&id=bc90fdbe":
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue?vue&type=template&id=bc90fdbe ***!
@@ -24171,10 +25094,66 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"dash-breadcrumb\"><div class=\"container-fluid\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"dash-breadcrumb-content\"><div class=\"dash-breadcrumb-left\"><div class=\"breadcrumb-menu text-right sm-left\"><ul><li class=\"active\"><a href=\"#\">Home</a></li><li class=\"active\"><a href=\"#\">Listings</a></li><li>My Listings</li></ul></div></div><a class=\"btn v3\" href=\"\"><i class=\"ion-plus-round\"></i>Add Listing </a></div></div></div></div></div><div class=\"dash-content\"><div class=\"container-fluid\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"recent-activity my-listing\"><div class=\"act-title\"><h5><i class=\"ion-social-buffer-outline\"></i> My Listings</h5></div><div class=\"viewd-item-wrap\"><div class=\"most-viewed-item\"><div class=\"most-viewed-img\"><a href=\"#\"><img src=\"images/single-listing/gallery-6.jpg\" alt=\"...\"></a></div><div class=\"most-viewed-detail\"><a class=\"category\" href=\"#\"><span class=\"list-bg aqua\"><i class=\"icofont-hotel\"></i></span>Hotel</a><h3><a href=\"single-listing-one.html\">Hilton Moorea</a></h3><p class=\"list-address\"><i class=\"icofont-google-map\"></i>4210 Khale Street, Florence, USA</p><div class=\"ratings\"><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star-half\"></i></div><div class=\"views\">Views : <span>325</span></div></div><div class=\"listing-button\"><a href=\"#\" class=\"btn v2\"><i class=\"ion-edit\"></i> Edit</a><a href=\"#\" class=\"btn v5\"><i class=\"ion-android-delete\"></i> Delete</a></div></div><div class=\"most-viewed-item\"><div class=\"most-viewed-img\"><a href=\"#\"><img src=\"images/single-listing/restaurant-2.jpg\" alt=\"...\"></a></div><div class=\"most-viewed-detail\"><a class=\"category\" href=\"#\"><span class=\"list-bg red\"><i class=\"icofont-restaurant\"></i></span>Restaurent</a><h3><a href=\"single-listing-two.html\">La Quo Vadis</a></h3><p class=\"list-address\"><i class=\"icofont-google-map\"></i>42 Albemarle st. Mayfair,London</p><div class=\"ratings\"><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star-half\"></i></div><div class=\"views\">Views : <span>280</span></div></div><div class=\"listing-button\"><a href=\"#\" class=\"btn v2\"><i class=\"ion-edit\"></i> Edit</a><a href=\"#\" class=\"btn v5\"><i class=\"ion-android-delete\"></i> Delete</a></div></div><div class=\"most-viewed-item\"><div class=\"most-viewed-img\"><a href=\"#\"><img src=\"images/category/event/muay.jpg\" alt=\"...\"></a></div><div class=\"most-viewed-detail\"><a class=\"category\" href=\"#\"><span class=\"list-bg violate\"><i class=\"icofont-movie\"></i></span>Movie</a><h3><a href=\"single-listing-three.html\">Muay Thai Live Show</a></h3><p class=\"list-address\"><i class=\"icofont-google-map\"></i>1690 Brown Avenue,Barline</p><div class=\"ratings\"><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star-half\"></i></div><div class=\"views\">Views : <span>200</span></div></div><div class=\"listing-button\"><a href=\"#\" class=\"btn v2\"><i class=\"ion-edit\"></i> Edit</a><a href=\"#\" class=\"btn v5\"><i class=\"ion-android-delete\"></i> Delete</a></div></div><div class=\"most-viewed-item\"><div class=\"most-viewed-img\"><a href=\"#\"><img src=\"images/category/event/3.jpg\" alt=\"...\"></a></div><div class=\"most-viewed-detail\"><a class=\"category\" href=\"#\"><span class=\"list-bg aqua\"><i class=\"icofont-music-alt\"></i></span>Music</a><h3><a href=\"single-listing-five.html\">Bolton music fair </a></h3><p class=\"list-address\"><i class=\"icofont-google-map\"></i>20 Hogh Street, Bolton, France</p><div class=\"ratings\"><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star\"></i><i class=\"ion-ios-star-half\"></i></div><div class=\"views\">Views : <span>180</span></div></div><div class=\"listing-button\"><a href=\"#\" class=\"btn v2\"><i class=\"ion-edit\"></i> Edit</a><a href=\"#\" class=\"btn v5\"><i class=\"ion-android-delete\"></i> Delete</a></div></div></div></div></div></div></div></div>", 2);
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"dash-breadcrumb\"><div class=\"container-fluid\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"dash-breadcrumb-content\"><div class=\"dash-breadcrumb-left\"><div class=\"breadcrumb-menu text-right sm-left\"><ul><li class=\"active\"><a href=\"/realtor/account\">Home</a></li><li>My Listings</li></ul></div></div><a class=\"btn v3\" href=\"\"><i class=\"ion-plus-round\"></i>Add Listing </a></div></div></div></div></div>", 1);
 
+var _hoisted_2 = {
+  "class": "dash-content"
+};
+var _hoisted_3 = {
+  "class": "container-fluid"
+};
+var _hoisted_4 = {
+  "class": "row"
+};
+var _hoisted_5 = {
+  "class": "col-md-12"
+};
+var _hoisted_6 = {
+  "class": "recent-activity my-listing"
+};
+
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "act-title"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-social-buffer-outline"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" My Listings")])], -1
+/* HOISTED */
+);
+
+var _hoisted_8 = {
+  "class": "viewd-item-wrap"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return _hoisted_1;
+  var _component_realtor_single_property_component = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("realtor-single-property-component");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.properties, function (property) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_realtor_single_property_component, {
+      key: property.id,
+      property_id: property.id,
+      property_type: property.property_type,
+      state: property.state,
+      title: property.title,
+      address: property.address,
+      description: property.description,
+      bedrooms: property.bedrooms,
+      bathrooms: property.bathrooms,
+      living_rooms: property.living_rooms,
+      cost: property.cost,
+      image1: property.image1,
+      image2: property.image2,
+      image3: property.image3,
+      image4: property.image4,
+      image5: property.image5,
+      features: property.features,
+      status: property.status
+    }, null, 8
+    /* PROPS */
+    , ["property_id", "property_type", "state", "title", "address", "description", "bedrooms", "bathrooms", "living_rooms", "cost", "image1", "image2", "image3", "image4", "image5", "features", "status"]);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))])])])])])])], 64
+  /* STABLE_FRAGMENT */
+  );
 }
 
 /***/ }),
@@ -24297,6 +25276,705 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorPropertyEditComponent.vue?vue&type=template&id=09b8f3a1":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorPropertyEditComponent.vue?vue&type=template&id=09b8f3a1 ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  "class": "dash-breadcrumb"
+};
+var _hoisted_2 = {
+  "class": "container-fluid"
+};
+var _hoisted_3 = {
+  "class": "row"
+};
+var _hoisted_4 = {
+  "class": "col-md-12"
+};
+var _hoisted_5 = {
+  "class": "dash-breadcrumb-content"
+};
+
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"dash-breadcrumb-left\"><div class=\"breadcrumb-menu text-right sm-left\"><ul><li class=\"active\"><a href=\"#\">Home</a></li><li><a href=\"#\">Dashboard</a></li><li>Add Listing</li></ul></div></div>", 1);
+
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-ios-home"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("My Properties ");
+
+var _hoisted_9 = {
+  "class": "dash-content"
+};
+var _hoisted_10 = {
+  "class": "container-fluid"
+};
+var _hoisted_11 = {
+  "class": "row"
+};
+var _hoisted_12 = {
+  "class": "col-md-12"
+};
+var _hoisted_13 = {
+  "class": "db-add-list-wrap"
+};
+
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "act-title"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-ios-location"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Add property")])], -1
+/* HOISTED */
+);
+
+var _hoisted_15 = {
+  "class": "db-add-listing"
+};
+var _hoisted_16 = {
+  key: 0,
+  "class": "bg-danger text-white text-center p-2"
+};
+var _hoisted_17 = {
+  key: 1,
+  "class": "bg-success text-white text-center p-2"
+};
+var _hoisted_18 = {
+  "class": "text-center p-2"
+};
+
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  src: "/images/loader-gradient.gif",
+  width: "200"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_20 = [_hoisted_19];
+var _hoisted_21 = {
+  "class": "row"
+};
+var _hoisted_22 = {
+  "class": "col-md-6"
+};
+var _hoisted_23 = {
+  "class": "form-group"
+};
+
+var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Room Title", -1
+/* HOISTED */
+);
+
+var _hoisted_25 = {
+  "class": "col-md-3"
+};
+var _hoisted_26 = {
+  "class": "form-group"
+};
+
+var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Type", -1
+/* HOISTED */
+);
+
+var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+  selected: ""
+}, "Select", -1
+/* HOISTED */
+);
+
+var _hoisted_29 = ["value"];
+var _hoisted_30 = {
+  "class": "col-md-3"
+};
+var _hoisted_31 = {
+  "class": "form-group"
+};
+
+var _hoisted_32 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Price", -1
+/* HOISTED */
+);
+
+var _hoisted_33 = {
+  "class": "col-md-6"
+};
+var _hoisted_34 = {
+  "class": "form-group"
+};
+
+var _hoisted_35 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Select Location", -1
+/* HOISTED */
+);
+
+var _hoisted_36 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+  selected: ""
+}, "Select", -1
+/* HOISTED */
+);
+
+var _hoisted_37 = ["value"];
+var _hoisted_38 = {
+  "class": "col-md-6"
+};
+var _hoisted_39 = {
+  "class": "form-group"
+};
+
+var _hoisted_40 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Address", -1
+/* HOISTED */
+);
+
+var _hoisted_41 = {
+  "class": "col-md-12"
+};
+var _hoisted_42 = {
+  "class": "form-group"
+};
+
+var _hoisted_43 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Room Description", -1
+/* HOISTED */
+);
+
+var _hoisted_44 = {
+  "class": "col-md-4"
+};
+var _hoisted_45 = {
+  "class": "form-group"
+};
+
+var _hoisted_46 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Bedrooms", -1
+/* HOISTED */
+);
+
+var _hoisted_47 = {
+  "class": "col-md-4"
+};
+var _hoisted_48 = {
+  "class": "form-group"
+};
+
+var _hoisted_49 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Bathrooms", -1
+/* HOISTED */
+);
+
+var _hoisted_50 = {
+  "class": "col-md-4"
+};
+var _hoisted_51 = {
+  "class": "form-group"
+};
+
+var _hoisted_52 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Living Rooms", -1
+/* HOISTED */
+);
+
+var _hoisted_53 = {
+  "class": "col-md-12"
+};
+var _hoisted_54 = {
+  "class": "form-group"
+};
+
+var _hoisted_55 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Features", -1
+/* HOISTED */
+);
+
+var _hoisted_56 = {
+  "class": "filter-checkbox"
+};
+
+var _hoisted_57 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "check-ac"
+}, "Air condition", -1
+/* HOISTED */
+);
+
+var _hoisted_58 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "check-wf"
+}, "Wi Fi", -1
+/* HOISTED */
+);
+
+var _hoisted_59 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "check-g"
+}, "Gym", -1
+/* HOISTED */
+);
+
+var _hoisted_60 = {
+  "class": "col-md-2"
+};
+var _hoisted_61 = {
+  "class": "form-group"
+};
+var _hoisted_62 = {
+  "class": "add-listing__input-file-box"
+};
+
+var _hoisted_63 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "add-listing__input-file-wrap"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-ios-cloud-upload"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Click to upload your images")], -1
+/* HOISTED */
+);
+
+var _hoisted_64 = ["src"];
+var _hoisted_65 = {
+  "class": "col-md-2"
+};
+var _hoisted_66 = {
+  "class": "form-group"
+};
+var _hoisted_67 = {
+  "class": "add-listing__input-file-box"
+};
+
+var _hoisted_68 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "add-listing__input-file-wrap"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-ios-cloud-upload"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Click to upload image")], -1
+/* HOISTED */
+);
+
+var _hoisted_69 = ["src"];
+var _hoisted_70 = {
+  "class": "col-md-2"
+};
+var _hoisted_71 = {
+  "class": "form-group"
+};
+var _hoisted_72 = {
+  "class": "add-listing__input-file-box"
+};
+
+var _hoisted_73 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "add-listing__input-file-wrap"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-ios-cloud-upload"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Click to upload your images")], -1
+/* HOISTED */
+);
+
+var _hoisted_74 = ["src"];
+var _hoisted_75 = {
+  "class": "col-md-2"
+};
+var _hoisted_76 = {
+  "class": "form-group"
+};
+var _hoisted_77 = {
+  "class": "add-listing__input-file-box"
+};
+
+var _hoisted_78 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "add-listing__input-file-wrap"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-ios-cloud-upload"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Click to upload your images")], -1
+/* HOISTED */
+);
+
+var _hoisted_79 = ["src"];
+var _hoisted_80 = {
+  "class": "col-md-2"
+};
+var _hoisted_81 = {
+  "class": "form-group"
+};
+var _hoisted_82 = {
+  "class": "add-listing__input-file-box"
+};
+
+var _hoisted_83 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "add-listing__input-file-wrap"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-ios-cloud-upload"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Click here to upload your images")], -1
+/* HOISTED */
+);
+
+var _hoisted_84 = ["src"];
+
+var _hoisted_85 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-12"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  type: "submit",
+  "class": "btn v8 mar-top-15"
+}, "Submit Property")], -1
+/* HOISTED */
+);
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [_hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    "class": "btn v3",
+    exact: "",
+    to: "/realtor/account/my-properties"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_7, _hoisted_8];
+    }),
+    _: 1
+    /* STABLE */
+
+  })])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [_hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [$data.errorAlert ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.messageAlert), 1
+  /* TEXT */
+  ), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors, function (error, key) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", {
+      key: key
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(error.toString()), 1
+    /* TEXT */
+    );
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.successAlert ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.messageAlert), 1
+  /* TEXT */
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_18, _hoisted_20, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, $data.formLoading]]), !$data.formLoading ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("form", {
+    key: 2,
+    enctype: "multipart/form-data",
+    onSubmit: _cache[17] || (_cache[17] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+      return _ctx.submitProperty && _ctx.submitProperty.apply(_ctx, arguments);
+    }, ["prevent"]))
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [_hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    name: "title",
+    "class": "form-control filter-input",
+    "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
+      return $data.form.title = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.title]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [_hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+    "class": "nice-select filter-input",
+    name: "property_type_id",
+    "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
+      return $data.form.property_type_id = $event;
+    })
+  }, [_hoisted_28, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.propertyTypes, function (type) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
+      "class": "option",
+      key: type.id,
+      value: type.id
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(type.name), 9
+    /* TEXT, PROPS */
+    , _hoisted_29);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))], 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.form.property_type_id]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_30, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [_hoisted_32, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "number",
+    name: "cost",
+    "class": "form-control filter-input",
+    "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
+      return $data.form.cost = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.cost]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [_hoisted_35, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+    "class": "nice-select filter-input",
+    name: "property_type_id",
+    "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
+      return $data.form.state_id = $event;
+    })
+  }, [_hoisted_36, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.states, function (state) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
+      "class": "option",
+      key: state.id,
+      value: state.id
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(state.name), 9
+    /* TEXT, PROPS */
+    , _hoisted_37);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))], 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.form.state_id]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [_hoisted_40, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    name: "address",
+    "class": "form-control filter-input",
+    "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
+      return $data.form.address = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.address]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_41, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_42, [_hoisted_43, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
+    type: "text",
+    name: "description",
+    "class": "form-control filter-input",
+    "onUpdate:modelValue": _cache[5] || (_cache[5] = function ($event) {
+      return $data.form.description = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.description]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_44, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_45, [_hoisted_46, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    name: "bedroom",
+    required: "",
+    "class": "form-control filter-input",
+    "onUpdate:modelValue": _cache[6] || (_cache[6] = function ($event) {
+      return $data.form.bedrooms = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.bedrooms]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_47, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_48, [_hoisted_49, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "number",
+    name: "bathroom",
+    required: "",
+    "class": "form-control filter-input",
+    "onUpdate:modelValue": _cache[7] || (_cache[7] = function ($event) {
+      return $data.form.bathrooms = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.bathrooms]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_50, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_51, [_hoisted_52, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    name: "living_room",
+    required: "",
+    "class": "form-control filter-input",
+    "onUpdate:modelValue": _cache[8] || (_cache[8] = function ($event) {
+      return $data.form.living_rooms = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.living_rooms]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_53, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_54, [_hoisted_55, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_56, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    id: "check-ac",
+    type: "checkbox",
+    value: "air condition",
+    "onUpdate:modelValue": _cache[9] || (_cache[9] = function ($event) {
+      return $data.form.features = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, $data.form.features]]), _hoisted_57, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    id: "check-wf",
+    type: "checkbox",
+    value: "wifi",
+    "onUpdate:modelValue": _cache[10] || (_cache[10] = function ($event) {
+      return $data.form.features = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, $data.form.features]]), _hoisted_58, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    id: "check-g",
+    type: "checkbox",
+    value: "gym",
+    "onUpdate:modelValue": _cache[11] || (_cache[11] = function ($event) {
+      return $data.form.features = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, $data.form.features]]), _hoisted_59])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_60, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_61, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_62, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "class": "add-listing__input-file",
+    type: "file",
+    name: "file",
+    id: "file",
+    onChange: _cache[12] || (_cache[12] = function () {
+      return $options.uploadImage1 && $options.uploadImage1.apply($options, arguments);
+    })
+  }, null, 32
+  /* HYDRATE_EVENTS */
+  ), _hoisted_63]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: $data.form.image1preview,
+    width: "100"
+  }, null, 8
+  /* PROPS */
+  , _hoisted_64)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_65, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_66, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_67, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "class": "add-listing__input-file",
+    type: "file",
+    name: "file",
+    id: "file",
+    onChange: _cache[13] || (_cache[13] = function () {
+      return $options.uploadImage2 && $options.uploadImage2.apply($options, arguments);
+    })
+  }, null, 32
+  /* HYDRATE_EVENTS */
+  ), _hoisted_68]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: $data.form.image2preview
+  }, null, 8
+  /* PROPS */
+  , _hoisted_69)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_70, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_71, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_72, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "class": "add-listing__input-file",
+    type: "file",
+    name: "file",
+    id: "file",
+    onChange: _cache[14] || (_cache[14] = function () {
+      return $options.uploadImage3 && $options.uploadImage3.apply($options, arguments);
+    })
+  }, null, 32
+  /* HYDRATE_EVENTS */
+  ), _hoisted_73]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: $data.form.image3preview
+  }, null, 8
+  /* PROPS */
+  , _hoisted_74)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_75, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_76, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_77, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "class": "add-listing__input-file",
+    type: "file",
+    name: "file",
+    id: "file",
+    onChange: _cache[15] || (_cache[15] = function () {
+      return $options.uploadImage4 && $options.uploadImage4.apply($options, arguments);
+    })
+  }, null, 32
+  /* HYDRATE_EVENTS */
+  ), _hoisted_78]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: $data.form.image4preview
+  }, null, 8
+  /* PROPS */
+  , _hoisted_79)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_80, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_81, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_82, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "class": "add-listing__input-file",
+    type: "file",
+    name: "file",
+    id: "file",
+    onChange: _cache[16] || (_cache[16] = function () {
+      return $options.uploadImage5 && $options.uploadImage5.apply($options, arguments);
+    })
+  }, null, 32
+  /* HYDRATE_EVENTS */
+  ), _hoisted_83]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: $data.form.image5preview
+  }, null, 8
+  /* PROPS */
+  , _hoisted_84)])]), _hoisted_85])], 32
+  /* HYDRATE_EVENTS */
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])])])])])], 64
+  /* STABLE_FRAGMENT */
+  );
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorSinglePropertyComponent.vue?vue&type=template&id=7a6720e3":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorSinglePropertyComponent.vue?vue&type=template&id=7a6720e3 ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  key: 0,
+  "class": "most-viewed-item"
+};
+var _hoisted_2 = {
+  "class": "most-viewed-img"
+};
+var _hoisted_3 = {
+  href: "#"
+};
+var _hoisted_4 = ["src"];
+var _hoisted_5 = {
+  "class": "most-viewed-detail"
+};
+var _hoisted_6 = {
+  "class": "category",
+  href: "#"
+};
+
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "list-bg aqua"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "icofont-hotel"
+})], -1
+/* HOISTED */
+);
+
+var _hoisted_8 = {
+  href: ""
+};
+var _hoisted_9 = {
+  "class": "list-address"
+};
+
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "icofont-google-map"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_11 = {
+  "class": "listing-button"
+};
+
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-edit"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Edit ");
+
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-android-delete"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Delete");
+
+var _hoisted_16 = [_hoisted_14, _hoisted_15];
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
+
+  return !$data.deleted ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: '/photos/properties/' + $props.image1,
+    alt: "..."
+  }, null, 8
+  /* PROPS */
+  , _hoisted_4)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.property_type.name), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.title), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_9, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.address), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <div class=\"views\">Views : <span>325</span></div>")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    "class": "btn v2",
+    exact: "",
+    to: {
+      name: 'RealtorEditProperty',
+      params: {
+        id: $props.property_id
+      }
+    }
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_12, _hoisted_13];
+    }),
+    _: 1
+    /* STABLE */
+
+  }, 8
+  /* PROPS */
+  , ["to"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    onClick: _cache[0] || (_cache[0] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+      return $options.deleteProperty && $options.deleteProperty.apply($options, arguments);
+    }, ["prevent"])),
+    "class": "btn v5"
+  }, _hoisted_16)])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true);
+}
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -24310,14 +25988,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var vue_axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-axios */ "./node_modules/vue-axios/dist/vue-axios.esm.min.js");
-/* harmony import */ var _components_realtors_RealtorLoginComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/realtors/RealtorLoginComponent */ "./resources/js/components/realtors/RealtorLoginComponent.vue");
-/* harmony import */ var _components_realtors_RealtorRegisterComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/realtors/RealtorRegisterComponent */ "./resources/js/components/realtors/RealtorRegisterComponent.vue");
-/* harmony import */ var _components_realtors_account_RealtorDashboardComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/realtors/account/RealtorDashboardComponent */ "./resources/js/components/realtors/account/RealtorDashboardComponent.vue");
-/* harmony import */ var _components_realtors_account_RealtorMyPropertiesComponent__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/realtors/account/RealtorMyPropertiesComponent */ "./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue");
-/* harmony import */ var _components_realtors_account_RealtorAddPropertiesComponent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/realtors/account/RealtorAddPropertiesComponent */ "./resources/js/components/realtors/account/RealtorAddPropertiesComponent.vue");
-/* harmony import */ var _components_realtors_account_RealtorBioComponent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/realtors/account/RealtorBioComponent */ "./resources/js/components/realtors/account/RealtorBioComponent.vue");
-/* harmony import */ var _components_realtors_account_RealtorProfileComponent__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/realtors/account/RealtorProfileComponent */ "./resources/js/components/realtors/account/RealtorProfileComponent.vue");
-/* harmony import */ var _components_realtors_account_RealtorProfileEditComponent__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/realtors/account/RealtorProfileEditComponent */ "./resources/js/components/realtors/account/RealtorProfileEditComponent.vue");
+/* harmony import */ var vue_meta__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! vue-meta */ "./node_modules/vue-meta/dist/vue-meta.esm-browser.min.js");
+/* harmony import */ var _components_home_HomeComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/home/HomeComponent */ "./resources/js/components/home/HomeComponent.vue");
+/* harmony import */ var _components_home_AboutComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/home/AboutComponent */ "./resources/js/components/home/AboutComponent.vue");
+/* harmony import */ var _components_home_PrivacyPolicyComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/home/PrivacyPolicyComponent */ "./resources/js/components/home/PrivacyPolicyComponent.vue");
+/* harmony import */ var _components_home_TermsComponent__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/home/TermsComponent */ "./resources/js/components/home/TermsComponent.vue");
+/* harmony import */ var _components_home_FaqComponent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/home/FaqComponent */ "./resources/js/components/home/FaqComponent.vue");
+/* harmony import */ var _components_home_ContactUsComponent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/home/ContactUsComponent */ "./resources/js/components/home/ContactUsComponent.vue");
+/* harmony import */ var _components_realtors_RealtorLoginComponent__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/realtors/RealtorLoginComponent */ "./resources/js/components/realtors/RealtorLoginComponent.vue");
+/* harmony import */ var _components_realtors_RealtorRegisterComponent__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/realtors/RealtorRegisterComponent */ "./resources/js/components/realtors/RealtorRegisterComponent.vue");
+/* harmony import */ var _components_realtors_account_RealtorLogoutComponent__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/realtors/account/RealtorLogoutComponent */ "./resources/js/components/realtors/account/RealtorLogoutComponent.vue");
+/* harmony import */ var _components_realtors_account_RealtorDashboardComponent__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/realtors/account/RealtorDashboardComponent */ "./resources/js/components/realtors/account/RealtorDashboardComponent.vue");
+/* harmony import */ var _components_realtors_account_RealtorBioComponent__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/realtors/account/RealtorBioComponent */ "./resources/js/components/realtors/account/RealtorBioComponent.vue");
+/* harmony import */ var _components_realtors_account_RealtorMyPropertiesComponent__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/realtors/account/RealtorMyPropertiesComponent */ "./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue");
+/* harmony import */ var _components_realtors_account_RealtorSinglePropertyComponent__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/realtors/account/RealtorSinglePropertyComponent */ "./resources/js/components/realtors/account/RealtorSinglePropertyComponent.vue");
+/* harmony import */ var _components_realtors_account_RealtorAddPropertiesComponent__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/realtors/account/RealtorAddPropertiesComponent */ "./resources/js/components/realtors/account/RealtorAddPropertiesComponent.vue");
+/* harmony import */ var _components_realtors_account_RealtorProfileComponent__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/realtors/account/RealtorProfileComponent */ "./resources/js/components/realtors/account/RealtorProfileComponent.vue");
+/* harmony import */ var _components_realtors_account_RealtorProfileEditComponent__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/realtors/account/RealtorProfileEditComponent */ "./resources/js/components/realtors/account/RealtorProfileEditComponent.vue");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -24325,6 +26012,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 // Default
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
 
 
 
@@ -24349,6 +26037,14 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
+
+
+
+
+
+
+
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -24357,16 +26053,24 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)({
   components: {
-    RealtorRegisterComponent: _components_realtors_RealtorRegisterComponent__WEBPACK_IMPORTED_MODULE_5__["default"],
-    RealtorLoginComponent: _components_realtors_RealtorLoginComponent__WEBPACK_IMPORTED_MODULE_4__["default"],
-    RealtorDashboardComponent: _components_realtors_account_RealtorDashboardComponent__WEBPACK_IMPORTED_MODULE_6__["default"],
-    RealtorBioComponent: _components_realtors_account_RealtorBioComponent__WEBPACK_IMPORTED_MODULE_9__["default"],
-    RealtorProfileComponent: _components_realtors_account_RealtorProfileComponent__WEBPACK_IMPORTED_MODULE_10__["default"],
-    RealtorProfileEditComponent: _components_realtors_account_RealtorProfileEditComponent__WEBPACK_IMPORTED_MODULE_11__["default"],
-    RealtorMyPropertiesComponent: _components_realtors_account_RealtorMyPropertiesComponent__WEBPACK_IMPORTED_MODULE_7__["default"],
-    RealtorAddPropertiesComponent: _components_realtors_account_RealtorAddPropertiesComponent__WEBPACK_IMPORTED_MODULE_8__["default"]
+    HomeComponent: _components_home_HomeComponent__WEBPACK_IMPORTED_MODULE_4__["default"],
+    AboutComponent: _components_home_AboutComponent__WEBPACK_IMPORTED_MODULE_5__["default"],
+    PrivacyPolicyComponent: _components_home_PrivacyPolicyComponent__WEBPACK_IMPORTED_MODULE_6__["default"],
+    TermsComponent: _components_home_TermsComponent__WEBPACK_IMPORTED_MODULE_7__["default"],
+    FaqComponent: _components_home_FaqComponent__WEBPACK_IMPORTED_MODULE_8__["default"],
+    ContactUsComponent: _components_home_ContactUsComponent__WEBPACK_IMPORTED_MODULE_9__["default"],
+    RealtorRegisterComponent: _components_realtors_RealtorRegisterComponent__WEBPACK_IMPORTED_MODULE_11__["default"],
+    RealtorLoginComponent: _components_realtors_RealtorLoginComponent__WEBPACK_IMPORTED_MODULE_10__["default"],
+    RealtorLogoutComponent: _components_realtors_account_RealtorLogoutComponent__WEBPACK_IMPORTED_MODULE_12__["default"],
+    RealtorDashboardComponent: _components_realtors_account_RealtorDashboardComponent__WEBPACK_IMPORTED_MODULE_13__["default"],
+    RealtorBioComponent: _components_realtors_account_RealtorBioComponent__WEBPACK_IMPORTED_MODULE_14__["default"],
+    RealtorProfileComponent: _components_realtors_account_RealtorProfileComponent__WEBPACK_IMPORTED_MODULE_18__["default"],
+    RealtorProfileEditComponent: _components_realtors_account_RealtorProfileEditComponent__WEBPACK_IMPORTED_MODULE_19__["default"],
+    RealtorMyPropertiesComponent: _components_realtors_account_RealtorMyPropertiesComponent__WEBPACK_IMPORTED_MODULE_15__["default"],
+    RealtorSinglePropertyComponent: _components_realtors_account_RealtorSinglePropertyComponent__WEBPACK_IMPORTED_MODULE_16__["default"],
+    RealtorAddPropertiesComponent: _components_realtors_account_RealtorAddPropertiesComponent__WEBPACK_IMPORTED_MODULE_17__["default"]
   }
-}).use(_routes__WEBPACK_IMPORTED_MODULE_1__["default"], (axios__WEBPACK_IMPORTED_MODULE_2___default()), vue_axios__WEBPACK_IMPORTED_MODULE_3__["default"]).mount('#app');
+}).use(_routes__WEBPACK_IMPORTED_MODULE_1__["default"], (axios__WEBPACK_IMPORTED_MODULE_2___default()), vue_axios__WEBPACK_IMPORTED_MODULE_3__["default"], (0,vue_meta__WEBPACK_IMPORTED_MODULE_20__.createMetaManager)(), vue_meta__WEBPACK_IMPORTED_MODULE_20__.useMeta).mount('#app');
 
 /***/ }),
 
@@ -24419,13 +26123,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm-bundler.js");
-/* harmony import */ var _components_NotFoundComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/NotFoundComponent */ "./resources/js/components/NotFoundComponent.vue");
-/* harmony import */ var _components_realtors_account_RealtorDashboardComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/realtors/account/RealtorDashboardComponent */ "./resources/js/components/realtors/account/RealtorDashboardComponent.vue");
-/* harmony import */ var _components_realtors_account_RealtorMyPropertiesComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/realtors/account/RealtorMyPropertiesComponent */ "./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue");
-/* harmony import */ var _components_realtors_account_RealtorAddPropertiesComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/realtors/account/RealtorAddPropertiesComponent */ "./resources/js/components/realtors/account/RealtorAddPropertiesComponent.vue");
-/* harmony import */ var _components_realtors_account_RealtorProfileComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/realtors/account/RealtorProfileComponent */ "./resources/js/components/realtors/account/RealtorProfileComponent.vue");
-/* harmony import */ var _components_realtors_account_RealtorProfileEditComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/realtors/account/RealtorProfileEditComponent */ "./resources/js/components/realtors/account/RealtorProfileEditComponent.vue");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm-bundler.js");
+/* harmony import */ var _components_home_HomeComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/home/HomeComponent */ "./resources/js/components/home/HomeComponent.vue");
+/* harmony import */ var _components_home_AboutComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/home/AboutComponent */ "./resources/js/components/home/AboutComponent.vue");
+/* harmony import */ var _components_home_PrivacyPolicyComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/home/PrivacyPolicyComponent */ "./resources/js/components/home/PrivacyPolicyComponent.vue");
+/* harmony import */ var _components_home_TermsComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/home/TermsComponent */ "./resources/js/components/home/TermsComponent.vue");
+/* harmony import */ var _components_home_FaqComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/home/FaqComponent */ "./resources/js/components/home/FaqComponent.vue");
+/* harmony import */ var _components_home_ContactUsComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/home/ContactUsComponent */ "./resources/js/components/home/ContactUsComponent.vue");
+/* harmony import */ var _components_NotFoundComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/NotFoundComponent */ "./resources/js/components/NotFoundComponent.vue");
+/* harmony import */ var _components_realtors_RealtorRegisterComponent__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/realtors/RealtorRegisterComponent */ "./resources/js/components/realtors/RealtorRegisterComponent.vue");
+/* harmony import */ var _components_realtors_RealtorLoginComponent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/realtors/RealtorLoginComponent */ "./resources/js/components/realtors/RealtorLoginComponent.vue");
+/* harmony import */ var _components_realtors_account_RealtorDashboardComponent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/realtors/account/RealtorDashboardComponent */ "./resources/js/components/realtors/account/RealtorDashboardComponent.vue");
+/* harmony import */ var _components_realtors_account_RealtorMyPropertiesComponent__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/realtors/account/RealtorMyPropertiesComponent */ "./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue");
+/* harmony import */ var _components_realtors_account_RealtorAddPropertiesComponent__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/realtors/account/RealtorAddPropertiesComponent */ "./resources/js/components/realtors/account/RealtorAddPropertiesComponent.vue");
+/* harmony import */ var _components_realtors_account_RealtorProfileComponent__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/realtors/account/RealtorProfileComponent */ "./resources/js/components/realtors/account/RealtorProfileComponent.vue");
+/* harmony import */ var _components_realtors_account_RealtorProfileEditComponent__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/realtors/account/RealtorProfileEditComponent */ "./resources/js/components/realtors/account/RealtorProfileEditComponent.vue");
+/* harmony import */ var _components_realtors_account_RealtorPropertyEditComponent__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/realtors/account/RealtorPropertyEditComponent */ "./resources/js/components/realtors/account/RealtorPropertyEditComponent.vue");
+ // Home
+
+
+
+
+
+
+
+ // Realtor Account
+
+
 
 
 
@@ -24437,16 +26161,59 @@ var routes = [{
   // for urls that don't exist
   path: "/:catchAll(.*)",
   name: "NotFound",
-  component: _components_NotFoundComponent__WEBPACK_IMPORTED_MODULE_0__["default"],
+  component: _components_NotFoundComponent__WEBPACK_IMPORTED_MODULE_6__["default"],
   meta: {
     requiresAuth: false
   }
 }, {
+  path: '/',
+  name: "Home",
+  component: _components_home_HomeComponent__WEBPACK_IMPORTED_MODULE_0__["default"]
+}, {
+  path: '/about',
+  name: "About",
+  component: _components_home_AboutComponent__WEBPACK_IMPORTED_MODULE_1__["default"]
+}, {
+  path: '/privacy-policy',
+  name: "PrivacyPolicy",
+  component: _components_home_PrivacyPolicyComponent__WEBPACK_IMPORTED_MODULE_2__["default"]
+}, {
+  path: '/terms',
+  name: "Terms",
+  component: _components_home_TermsComponent__WEBPACK_IMPORTED_MODULE_3__["default"]
+}, {
+  path: '/faq',
+  name: "FAQ",
+  component: _components_home_FaqComponent__WEBPACK_IMPORTED_MODULE_4__["default"]
+}, {
+  path: '/contact',
+  name: "ContactUs",
+  component: _components_home_ContactUsComponent__WEBPACK_IMPORTED_MODULE_5__["default"]
+}, {
+  path: '/realtor/register',
+  name: "RealtorRegister",
+  component: _components_realtors_RealtorRegisterComponent__WEBPACK_IMPORTED_MODULE_7__["default"]
+}, {
+  // This url route is ignored in web.php using /{any}
+  // being rendered by server
+  path: '/realtor/login',
+  name: "RealtorLogin",
+  component: _components_realtors_RealtorLoginComponent__WEBPACK_IMPORTED_MODULE_8__["default"],
+  beforeRouteEnter: function beforeRouteEnter(to, from, next) {
+    axios.get('/api/realtor/authenticate').then(function () {
+      window.location.href = '/realtor/account';
+    })["catch"](function () {
+      window.location.href = '/realtor/login';
+    });
+  }
+}, {
+  // This url route is ignored in web.php using /{any}
+  // being rendered by server
   path: '/realtor/account',
   name: "RealtorDashboard",
-  component: _components_realtors_account_RealtorDashboardComponent__WEBPACK_IMPORTED_MODULE_1__["default"],
+  component: _components_realtors_account_RealtorDashboardComponent__WEBPACK_IMPORTED_MODULE_9__["default"],
   beforeEnter: function beforeEnter(to, from, next) {
-    axios.get('/api/authenticated').then(function () {
+    axios.get('/api/realtor/authenticate').then(function () {
       next();
     })["catch"](function () {
       window.location.href = '/realtor/login';
@@ -24455,9 +26222,9 @@ var routes = [{
 }, {
   path: '/realtor/account/my-properties',
   name: "RealtorMyProperties",
-  component: _components_realtors_account_RealtorMyPropertiesComponent__WEBPACK_IMPORTED_MODULE_2__["default"],
+  component: _components_realtors_account_RealtorMyPropertiesComponent__WEBPACK_IMPORTED_MODULE_10__["default"],
   beforeEnter: function beforeEnter(to, from, next) {
-    axios.get('/api/authenticated').then(function () {
+    axios.get('/api/realtor/authenticate').then(function () {
       next();
     })["catch"](function () {
       window.location.href = '/realtor/login';
@@ -24466,9 +26233,20 @@ var routes = [{
 }, {
   path: '/realtor/account/properties/add',
   name: "RealtorAddProperties",
-  component: _components_realtors_account_RealtorAddPropertiesComponent__WEBPACK_IMPORTED_MODULE_3__["default"],
+  component: _components_realtors_account_RealtorAddPropertiesComponent__WEBPACK_IMPORTED_MODULE_11__["default"],
   beforeEnter: function beforeEnter(to, from, next) {
-    axios.get('/api/authenticated').then(function () {
+    axios.get('/api/realtor/authenticate').then(function () {
+      next();
+    })["catch"](function () {
+      window.location.href = '/realtor/login';
+    });
+  }
+}, {
+  path: '/realtor/account/property/:id/edit',
+  name: "RealtorEditProperty",
+  component: _components_realtors_account_RealtorPropertyEditComponent__WEBPACK_IMPORTED_MODULE_14__["default"],
+  beforeEnter: function beforeEnter(to, from, next) {
+    axios.get('/api/realtor/authenticate').then(function () {
       next();
     })["catch"](function () {
       window.location.href = '/realtor/login';
@@ -24477,9 +26255,9 @@ var routes = [{
 }, {
   path: '/realtor/account/profile',
   name: "RealtorProfile",
-  component: _components_realtors_account_RealtorProfileComponent__WEBPACK_IMPORTED_MODULE_4__["default"],
+  component: _components_realtors_account_RealtorProfileComponent__WEBPACK_IMPORTED_MODULE_12__["default"],
   beforeEnter: function beforeEnter(to, from, next) {
-    axios.get('/api/authenticated').then(function () {
+    axios.get('/api/realtor/authenticate').then(function () {
       next();
     })["catch"](function () {
       window.location.href = '/realtor/login';
@@ -24488,30 +26266,18 @@ var routes = [{
 }, {
   path: '/realtor/account/profile/edit',
   name: "RealtorProfileEdit",
-  component: _components_realtors_account_RealtorProfileEditComponent__WEBPACK_IMPORTED_MODULE_5__["default"],
+  component: _components_realtors_account_RealtorProfileEditComponent__WEBPACK_IMPORTED_MODULE_13__["default"],
   beforeEnter: function beforeEnter(to, from, next) {
-    axios.get('/api/authenticated').then(function () {
+    axios.get('/api/realtor/authenticate').then(function () {
       next();
     })["catch"](function () {
       window.location.href = '/realtor/login';
     });
   }
-} // {
-//     path: '/account/dashboard',
-//     name: "AccountDashboard",
-//     component: Dashboard,
-//     beforeEnter: (to, from, next) => {
-//         axios.get('/api/authenticated').then(() => {
-//             next()
-//         }).catch(() => {
-//             return next({ name: 'Login' })
-//         });
-//     }
-// },
-];
-var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_6__.createRouter)({
-  linkExactActiveClass: 'active',
-  history: (0,vue_router__WEBPACK_IMPORTED_MODULE_6__.createWebHistory)(),
+}];
+var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_15__.createRouter)({
+  linkExactActiveClass: '',
+  history: (0,vue_router__WEBPACK_IMPORTED_MODULE_15__.createWebHistory)(),
   routes: routes
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (router);
@@ -29542,6 +31308,202 @@ defineJQueryPlugin(Toast);
 
 //# sourceMappingURL=bootstrap.esm.js.map
 
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/AboutComponent.vue?vue&type=style&index=0&id=2e6ccd45&scoped=true&lang=css":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/AboutComponent.vue?vue&type=style&index=0&id=2e6ccd45&scoped=true&lang=css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.ltn__slide-item-2[data-v-2e6ccd45]{\n        height: calc(50vh - 0px) !important;\n        padding-top: 80px !important;\n        min-height: 300px;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/ContactUsComponent.vue?vue&type=style&index=0&id=c54161d8&scoped=true&lang=css":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/ContactUsComponent.vue?vue&type=style&index=0&id=c54161d8&scoped=true&lang=css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.ltn__slide-item-2[data-v-c54161d8]{\n        height: calc(50vh - 0px) !important;\n        padding-top: 80px !important;\n        min-height: 300px;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/FaqComponent.vue?vue&type=style&index=0&id=170390c8&scoped=true&lang=css":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/FaqComponent.vue?vue&type=style&index=0&id=170390c8&scoped=true&lang=css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.ltn__slide-item-2[data-v-170390c8]{\n        height: calc(50vh - 0px) !important;\n        padding-top: 80px !important;\n        min-height: 300px;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/PrivacyPolicyComponent.vue?vue&type=style&index=0&id=1a487a18&scoped=true&lang=css":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/PrivacyPolicyComponent.vue?vue&type=style&index=0&id=1a487a18&scoped=true&lang=css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.ltn__slide-item-2[data-v-1a487a18]{\n        height: calc(50vh - 0px) !important;\n        padding-top: 80px !important;\n        min-height: 300px;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/TermsComponent.vue?vue&type=style&index=0&id=a98aa4ea&scoped=true&lang=css":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/TermsComponent.vue?vue&type=style&index=0&id=a98aa4ea&scoped=true&lang=css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.ltn__slide-item-2[data-v-a98aa4ea]{\n        height: calc(50vh - 0px) !important;\n        padding-top: 80px !important;\n        min-height: 300px;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/api.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
+  \*****************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+// eslint-disable-next-line func-names
+module.exports = function (cssWithMappingToString) {
+  var list = []; // return the list of modules as css string
+
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item);
+
+      if (item[2]) {
+        return "@media ".concat(item[2], " {").concat(content, "}");
+      }
+
+      return content;
+    }).join("");
+  }; // import a list of modules into the list
+  // eslint-disable-next-line func-names
+
+
+  list.i = function (modules, mediaQuery, dedupe) {
+    if (typeof modules === "string") {
+      // eslint-disable-next-line no-param-reassign
+      modules = [[null, modules, ""]];
+    }
+
+    var alreadyImportedModules = {};
+
+    if (dedupe) {
+      for (var i = 0; i < this.length; i++) {
+        // eslint-disable-next-line prefer-destructuring
+        var id = this[i][0];
+
+        if (id != null) {
+          alreadyImportedModules[id] = true;
+        }
+      }
+    }
+
+    for (var _i = 0; _i < modules.length; _i++) {
+      var item = [].concat(modules[_i]);
+
+      if (dedupe && alreadyImportedModules[item[0]]) {
+        // eslint-disable-next-line no-continue
+        continue;
+      }
+
+      if (mediaQuery) {
+        if (!item[2]) {
+          item[2] = mediaQuery;
+        } else {
+          item[2] = "".concat(mediaQuery, " and ").concat(item[2]);
+        }
+      }
+
+      list.push(item);
+    }
+  };
+
+  return list;
+};
 
 /***/ }),
 
@@ -46757,10 +48719,10 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
+/***/ "./resources/css/app.css":
+/*!*******************************!*\
+  !*** ./resources/css/app.css ***!
+  \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -46964,6 +48926,435 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/AboutComponent.vue?vue&type=style&index=0&id=2e6ccd45&scoped=true&lang=css":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/AboutComponent.vue?vue&type=style&index=0&id=2e6ccd45&scoped=true&lang=css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_AboutComponent_vue_vue_type_style_index_0_id_2e6ccd45_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./AboutComponent.vue?vue&type=style&index=0&id=2e6ccd45&scoped=true&lang=css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/AboutComponent.vue?vue&type=style&index=0&id=2e6ccd45&scoped=true&lang=css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_AboutComponent_vue_vue_type_style_index_0_id_2e6ccd45_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_AboutComponent_vue_vue_type_style_index_0_id_2e6ccd45_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/ContactUsComponent.vue?vue&type=style&index=0&id=c54161d8&scoped=true&lang=css":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/ContactUsComponent.vue?vue&type=style&index=0&id=c54161d8&scoped=true&lang=css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ContactUsComponent_vue_vue_type_style_index_0_id_c54161d8_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./ContactUsComponent.vue?vue&type=style&index=0&id=c54161d8&scoped=true&lang=css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/ContactUsComponent.vue?vue&type=style&index=0&id=c54161d8&scoped=true&lang=css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ContactUsComponent_vue_vue_type_style_index_0_id_c54161d8_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ContactUsComponent_vue_vue_type_style_index_0_id_c54161d8_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/FaqComponent.vue?vue&type=style&index=0&id=170390c8&scoped=true&lang=css":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/FaqComponent.vue?vue&type=style&index=0&id=170390c8&scoped=true&lang=css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_FaqComponent_vue_vue_type_style_index_0_id_170390c8_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./FaqComponent.vue?vue&type=style&index=0&id=170390c8&scoped=true&lang=css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/FaqComponent.vue?vue&type=style&index=0&id=170390c8&scoped=true&lang=css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_FaqComponent_vue_vue_type_style_index_0_id_170390c8_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_FaqComponent_vue_vue_type_style_index_0_id_170390c8_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/PrivacyPolicyComponent.vue?vue&type=style&index=0&id=1a487a18&scoped=true&lang=css":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/PrivacyPolicyComponent.vue?vue&type=style&index=0&id=1a487a18&scoped=true&lang=css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PrivacyPolicyComponent_vue_vue_type_style_index_0_id_1a487a18_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./PrivacyPolicyComponent.vue?vue&type=style&index=0&id=1a487a18&scoped=true&lang=css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/PrivacyPolicyComponent.vue?vue&type=style&index=0&id=1a487a18&scoped=true&lang=css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PrivacyPolicyComponent_vue_vue_type_style_index_0_id_1a487a18_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PrivacyPolicyComponent_vue_vue_type_style_index_0_id_1a487a18_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/TermsComponent.vue?vue&type=style&index=0&id=a98aa4ea&scoped=true&lang=css":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/TermsComponent.vue?vue&type=style&index=0&id=a98aa4ea&scoped=true&lang=css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_TermsComponent_vue_vue_type_style_index_0_id_a98aa4ea_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./TermsComponent.vue?vue&type=style&index=0&id=a98aa4ea&scoped=true&lang=css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/TermsComponent.vue?vue&type=style&index=0&id=a98aa4ea&scoped=true&lang=css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_TermsComponent_vue_vue_type_style_index_0_id_a98aa4ea_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_TermsComponent_vue_vue_type_style_index_0_id_a98aa4ea_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \****************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var isOldIE = function isOldIE() {
+  var memo;
+  return function memorize() {
+    if (typeof memo === 'undefined') {
+      // Test for IE <= 9 as proposed by Browserhacks
+      // @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+      // Tests for existence of standard globals is to allow style-loader
+      // to operate correctly into non-standard environments
+      // @see https://github.com/webpack-contrib/style-loader/issues/177
+      memo = Boolean(window && document && document.all && !window.atob);
+    }
+
+    return memo;
+  };
+}();
+
+var getTarget = function getTarget() {
+  var memo = {};
+  return function memorize(target) {
+    if (typeof memo[target] === 'undefined') {
+      var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself
+
+      if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+        try {
+          // This will throw an exception if access to iframe is blocked
+          // due to cross-origin restrictions
+          styleTarget = styleTarget.contentDocument.head;
+        } catch (e) {
+          // istanbul ignore next
+          styleTarget = null;
+        }
+      }
+
+      memo[target] = styleTarget;
+    }
+
+    return memo[target];
+  };
+}();
+
+var stylesInDom = [];
+
+function getIndexByIdentifier(identifier) {
+  var result = -1;
+
+  for (var i = 0; i < stylesInDom.length; i++) {
+    if (stylesInDom[i].identifier === identifier) {
+      result = i;
+      break;
+    }
+  }
+
+  return result;
+}
+
+function modulesToDom(list, options) {
+  var idCountMap = {};
+  var identifiers = [];
+
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i];
+    var id = options.base ? item[0] + options.base : item[0];
+    var count = idCountMap[id] || 0;
+    var identifier = "".concat(id, " ").concat(count);
+    idCountMap[id] = count + 1;
+    var index = getIndexByIdentifier(identifier);
+    var obj = {
+      css: item[1],
+      media: item[2],
+      sourceMap: item[3]
+    };
+
+    if (index !== -1) {
+      stylesInDom[index].references++;
+      stylesInDom[index].updater(obj);
+    } else {
+      stylesInDom.push({
+        identifier: identifier,
+        updater: addStyle(obj, options),
+        references: 1
+      });
+    }
+
+    identifiers.push(identifier);
+  }
+
+  return identifiers;
+}
+
+function insertStyleElement(options) {
+  var style = document.createElement('style');
+  var attributes = options.attributes || {};
+
+  if (typeof attributes.nonce === 'undefined') {
+    var nonce =  true ? __webpack_require__.nc : 0;
+
+    if (nonce) {
+      attributes.nonce = nonce;
+    }
+  }
+
+  Object.keys(attributes).forEach(function (key) {
+    style.setAttribute(key, attributes[key]);
+  });
+
+  if (typeof options.insert === 'function') {
+    options.insert(style);
+  } else {
+    var target = getTarget(options.insert || 'head');
+
+    if (!target) {
+      throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
+    }
+
+    target.appendChild(style);
+  }
+
+  return style;
+}
+
+function removeStyleElement(style) {
+  // istanbul ignore if
+  if (style.parentNode === null) {
+    return false;
+  }
+
+  style.parentNode.removeChild(style);
+}
+/* istanbul ignore next  */
+
+
+var replaceText = function replaceText() {
+  var textStore = [];
+  return function replace(index, replacement) {
+    textStore[index] = replacement;
+    return textStore.filter(Boolean).join('\n');
+  };
+}();
+
+function applyToSingletonTag(style, index, remove, obj) {
+  var css = remove ? '' : obj.media ? "@media ".concat(obj.media, " {").concat(obj.css, "}") : obj.css; // For old IE
+
+  /* istanbul ignore if  */
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = replaceText(index, css);
+  } else {
+    var cssNode = document.createTextNode(css);
+    var childNodes = style.childNodes;
+
+    if (childNodes[index]) {
+      style.removeChild(childNodes[index]);
+    }
+
+    if (childNodes.length) {
+      style.insertBefore(cssNode, childNodes[index]);
+    } else {
+      style.appendChild(cssNode);
+    }
+  }
+}
+
+function applyToTag(style, options, obj) {
+  var css = obj.css;
+  var media = obj.media;
+  var sourceMap = obj.sourceMap;
+
+  if (media) {
+    style.setAttribute('media', media);
+  } else {
+    style.removeAttribute('media');
+  }
+
+  if (sourceMap && typeof btoa !== 'undefined') {
+    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
+  } // For old IE
+
+  /* istanbul ignore if  */
+
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    while (style.firstChild) {
+      style.removeChild(style.firstChild);
+    }
+
+    style.appendChild(document.createTextNode(css));
+  }
+}
+
+var singleton = null;
+var singletonCounter = 0;
+
+function addStyle(obj, options) {
+  var style;
+  var update;
+  var remove;
+
+  if (options.singleton) {
+    var styleIndex = singletonCounter++;
+    style = singleton || (singleton = insertStyleElement(options));
+    update = applyToSingletonTag.bind(null, style, styleIndex, false);
+    remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+  } else {
+    style = insertStyleElement(options);
+    update = applyToTag.bind(null, style, options);
+
+    remove = function remove() {
+      removeStyleElement(style);
+    };
+  }
+
+  update(obj);
+  return function updateStyle(newObj) {
+    if (newObj) {
+      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap) {
+        return;
+      }
+
+      update(obj = newObj);
+    } else {
+      remove();
+    }
+  };
+}
+
+module.exports = function (list, options) {
+  options = options || {}; // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+  // tags it will allow on a page
+
+  if (!options.singleton && typeof options.singleton !== 'boolean') {
+    options.singleton = isOldIE();
+  }
+
+  list = list || [];
+  var lastIdentifiers = modulesToDom(list, options);
+  return function update(newList) {
+    newList = newList || [];
+
+    if (Object.prototype.toString.call(newList) !== '[object Array]') {
+      return;
+    }
+
+    for (var i = 0; i < lastIdentifiers.length; i++) {
+      var identifier = lastIdentifiers[i];
+      var index = getIndexByIdentifier(identifier);
+      stylesInDom[index].references--;
+    }
+
+    var newLastIdentifiers = modulesToDom(newList, options);
+
+    for (var _i = 0; _i < lastIdentifiers.length; _i++) {
+      var _identifier = lastIdentifiers[_i];
+
+      var _index = getIndexByIdentifier(_identifier);
+
+      if (stylesInDom[_index].references === 0) {
+        stylesInDom[_index].updater();
+
+        stylesInDom.splice(_index, 1);
+      }
+    }
+
+    lastIdentifiers = newLastIdentifiers;
+  };
+};
+
+/***/ }),
+
 /***/ "./node_modules/vue-axios/dist/vue-axios.esm.min.js":
 /*!**********************************************************!*\
   !*** ./node_modules/vue-axios/dist/vue-axios.esm.min.js ***!
@@ -47022,6 +49413,187 @@ __webpack_require__.r(__webpack_exports__);
 
 ;
 const __exports__ = /*#__PURE__*/(0,C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_NotFoundComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_NotFoundComponent_vue_vue_type_template_id_2b13f773__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/NotFoundComponent.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/components/home/AboutComponent.vue":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/home/AboutComponent.vue ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _AboutComponent_vue_vue_type_template_id_2e6ccd45_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AboutComponent.vue?vue&type=template&id=2e6ccd45&scoped=true */ "./resources/js/components/home/AboutComponent.vue?vue&type=template&id=2e6ccd45&scoped=true");
+/* harmony import */ var _AboutComponent_vue_vue_type_style_index_0_id_2e6ccd45_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AboutComponent.vue?vue&type=style&index=0&id=2e6ccd45&scoped=true&lang=css */ "./resources/js/components/home/AboutComponent.vue?vue&type=style&index=0&id=2e6ccd45&scoped=true&lang=css");
+/* harmony import */ var C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+const script = {}
+
+;
+
+
+const __exports__ = /*#__PURE__*/(0,C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(script, [['render',_AboutComponent_vue_vue_type_template_id_2e6ccd45_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-2e6ccd45"],['__file',"resources/js/components/home/AboutComponent.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/components/home/ContactUsComponent.vue":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/home/ContactUsComponent.vue ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _ContactUsComponent_vue_vue_type_template_id_c54161d8_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ContactUsComponent.vue?vue&type=template&id=c54161d8&scoped=true */ "./resources/js/components/home/ContactUsComponent.vue?vue&type=template&id=c54161d8&scoped=true");
+/* harmony import */ var _ContactUsComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ContactUsComponent.vue?vue&type=script&lang=js */ "./resources/js/components/home/ContactUsComponent.vue?vue&type=script&lang=js");
+/* harmony import */ var _ContactUsComponent_vue_vue_type_style_index_0_id_c54161d8_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ContactUsComponent.vue?vue&type=style&index=0&id=c54161d8&scoped=true&lang=css */ "./resources/js/components/home/ContactUsComponent.vue?vue&type=style&index=0&id=c54161d8&scoped=true&lang=css");
+/* harmony import */ var C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+
+
+const __exports__ = /*#__PURE__*/(0,C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_ContactUsComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_ContactUsComponent_vue_vue_type_template_id_c54161d8_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-c54161d8"],['__file',"resources/js/components/home/ContactUsComponent.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/components/home/FaqComponent.vue":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/home/FaqComponent.vue ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _FaqComponent_vue_vue_type_template_id_170390c8_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FaqComponent.vue?vue&type=template&id=170390c8&scoped=true */ "./resources/js/components/home/FaqComponent.vue?vue&type=template&id=170390c8&scoped=true");
+/* harmony import */ var _FaqComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FaqComponent.vue?vue&type=script&lang=js */ "./resources/js/components/home/FaqComponent.vue?vue&type=script&lang=js");
+/* harmony import */ var _FaqComponent_vue_vue_type_style_index_0_id_170390c8_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FaqComponent.vue?vue&type=style&index=0&id=170390c8&scoped=true&lang=css */ "./resources/js/components/home/FaqComponent.vue?vue&type=style&index=0&id=170390c8&scoped=true&lang=css");
+/* harmony import */ var C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+
+
+const __exports__ = /*#__PURE__*/(0,C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_FaqComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_FaqComponent_vue_vue_type_template_id_170390c8_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-170390c8"],['__file',"resources/js/components/home/FaqComponent.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/components/home/HomeComponent.vue":
+/*!********************************************************!*\
+  !*** ./resources/js/components/home/HomeComponent.vue ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _HomeComponent_vue_vue_type_template_id_6caa5fce__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HomeComponent.vue?vue&type=template&id=6caa5fce */ "./resources/js/components/home/HomeComponent.vue?vue&type=template&id=6caa5fce");
+/* harmony import */ var _HomeComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HomeComponent.vue?vue&type=script&lang=js */ "./resources/js/components/home/HomeComponent.vue?vue&type=script&lang=js");
+/* harmony import */ var C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_HomeComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_HomeComponent_vue_vue_type_template_id_6caa5fce__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/home/HomeComponent.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/components/home/PrivacyPolicyComponent.vue":
+/*!*****************************************************************!*\
+  !*** ./resources/js/components/home/PrivacyPolicyComponent.vue ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _PrivacyPolicyComponent_vue_vue_type_template_id_1a487a18_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PrivacyPolicyComponent.vue?vue&type=template&id=1a487a18&scoped=true */ "./resources/js/components/home/PrivacyPolicyComponent.vue?vue&type=template&id=1a487a18&scoped=true");
+/* harmony import */ var _PrivacyPolicyComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PrivacyPolicyComponent.vue?vue&type=script&lang=js */ "./resources/js/components/home/PrivacyPolicyComponent.vue?vue&type=script&lang=js");
+/* harmony import */ var _PrivacyPolicyComponent_vue_vue_type_style_index_0_id_1a487a18_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PrivacyPolicyComponent.vue?vue&type=style&index=0&id=1a487a18&scoped=true&lang=css */ "./resources/js/components/home/PrivacyPolicyComponent.vue?vue&type=style&index=0&id=1a487a18&scoped=true&lang=css");
+/* harmony import */ var C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+
+
+const __exports__ = /*#__PURE__*/(0,C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_PrivacyPolicyComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_PrivacyPolicyComponent_vue_vue_type_template_id_1a487a18_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-1a487a18"],['__file',"resources/js/components/home/PrivacyPolicyComponent.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/components/home/TermsComponent.vue":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/home/TermsComponent.vue ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _TermsComponent_vue_vue_type_template_id_a98aa4ea_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TermsComponent.vue?vue&type=template&id=a98aa4ea&scoped=true */ "./resources/js/components/home/TermsComponent.vue?vue&type=template&id=a98aa4ea&scoped=true");
+/* harmony import */ var _TermsComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TermsComponent.vue?vue&type=script&lang=js */ "./resources/js/components/home/TermsComponent.vue?vue&type=script&lang=js");
+/* harmony import */ var _TermsComponent_vue_vue_type_style_index_0_id_a98aa4ea_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TermsComponent.vue?vue&type=style&index=0&id=a98aa4ea&scoped=true&lang=css */ "./resources/js/components/home/TermsComponent.vue?vue&type=style&index=0&id=a98aa4ea&scoped=true&lang=css");
+/* harmony import */ var C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+
+
+const __exports__ = /*#__PURE__*/(0,C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_TermsComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_TermsComponent_vue_vue_type_template_id_a98aa4ea_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-a98aa4ea"],['__file',"resources/js/components/home/TermsComponent.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -47170,6 +49742,34 @@ if (false) {}
 
 /***/ }),
 
+/***/ "./resources/js/components/realtors/account/RealtorLogoutComponent.vue":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/realtors/account/RealtorLogoutComponent.vue ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _RealtorLogoutComponent_vue_vue_type_template_id_134349b6__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RealtorLogoutComponent.vue?vue&type=template&id=134349b6 */ "./resources/js/components/realtors/account/RealtorLogoutComponent.vue?vue&type=template&id=134349b6");
+/* harmony import */ var _RealtorLogoutComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RealtorLogoutComponent.vue?vue&type=script&lang=js */ "./resources/js/components/realtors/account/RealtorLogoutComponent.vue?vue&type=script&lang=js");
+/* harmony import */ var C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_RealtorLogoutComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_RealtorLogoutComponent_vue_vue_type_template_id_134349b6__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/realtors/account/RealtorLogoutComponent.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
 /***/ "./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue":
 /*!***********************************************************************************!*\
   !*** ./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue ***!
@@ -47254,6 +49854,62 @@ if (false) {}
 
 /***/ }),
 
+/***/ "./resources/js/components/realtors/account/RealtorPropertyEditComponent.vue":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/components/realtors/account/RealtorPropertyEditComponent.vue ***!
+  \***********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _RealtorPropertyEditComponent_vue_vue_type_template_id_09b8f3a1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RealtorPropertyEditComponent.vue?vue&type=template&id=09b8f3a1 */ "./resources/js/components/realtors/account/RealtorPropertyEditComponent.vue?vue&type=template&id=09b8f3a1");
+/* harmony import */ var _RealtorPropertyEditComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RealtorPropertyEditComponent.vue?vue&type=script&lang=js */ "./resources/js/components/realtors/account/RealtorPropertyEditComponent.vue?vue&type=script&lang=js");
+/* harmony import */ var C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_RealtorPropertyEditComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_RealtorPropertyEditComponent_vue_vue_type_template_id_09b8f3a1__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/realtors/account/RealtorPropertyEditComponent.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/components/realtors/account/RealtorSinglePropertyComponent.vue":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/realtors/account/RealtorSinglePropertyComponent.vue ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _RealtorSinglePropertyComponent_vue_vue_type_template_id_7a6720e3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RealtorSinglePropertyComponent.vue?vue&type=template&id=7a6720e3 */ "./resources/js/components/realtors/account/RealtorSinglePropertyComponent.vue?vue&type=template&id=7a6720e3");
+/* harmony import */ var _RealtorSinglePropertyComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RealtorSinglePropertyComponent.vue?vue&type=script&lang=js */ "./resources/js/components/realtors/account/RealtorSinglePropertyComponent.vue?vue&type=script&lang=js");
+/* harmony import */ var C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,C_wamp64_www_rentcircles_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_RealtorSinglePropertyComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_RealtorSinglePropertyComponent_vue_vue_type_template_id_7a6720e3__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/realtors/account/RealtorSinglePropertyComponent.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
 /***/ "./resources/js/components/NotFoundComponent.vue?vue&type=script&lang=js":
 /*!*******************************************************************************!*\
   !*** ./resources/js/components/NotFoundComponent.vue?vue&type=script&lang=js ***!
@@ -47266,6 +49922,86 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NotFoundComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NotFoundComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./NotFoundComponent.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/NotFoundComponent.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/components/home/ContactUsComponent.vue?vue&type=script&lang=js":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/home/ContactUsComponent.vue?vue&type=script&lang=js ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ContactUsComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ContactUsComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./ContactUsComponent.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/ContactUsComponent.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/components/home/FaqComponent.vue?vue&type=script&lang=js":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/home/FaqComponent.vue?vue&type=script&lang=js ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_FaqComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_FaqComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./FaqComponent.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/FaqComponent.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/components/home/HomeComponent.vue?vue&type=script&lang=js":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/home/HomeComponent.vue?vue&type=script&lang=js ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_HomeComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_HomeComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./HomeComponent.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/HomeComponent.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/components/home/PrivacyPolicyComponent.vue?vue&type=script&lang=js":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/home/PrivacyPolicyComponent.vue?vue&type=script&lang=js ***!
+  \*****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PrivacyPolicyComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PrivacyPolicyComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./PrivacyPolicyComponent.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/PrivacyPolicyComponent.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/components/home/TermsComponent.vue?vue&type=script&lang=js":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/home/TermsComponent.vue?vue&type=script&lang=js ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_TermsComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_TermsComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./TermsComponent.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/TermsComponent.vue?vue&type=script&lang=js");
  
 
 /***/ }),
@@ -47350,6 +50086,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/realtors/account/RealtorLogoutComponent.vue?vue&type=script&lang=js":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/components/realtors/account/RealtorLogoutComponent.vue?vue&type=script&lang=js ***!
+  \*****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorLogoutComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorLogoutComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./RealtorLogoutComponent.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorLogoutComponent.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
 /***/ "./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue?vue&type=script&lang=js":
 /*!***********************************************************************************************************!*\
   !*** ./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue?vue&type=script&lang=js ***!
@@ -47398,6 +50150,38 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/realtors/account/RealtorPropertyEditComponent.vue?vue&type=script&lang=js":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/components/realtors/account/RealtorPropertyEditComponent.vue?vue&type=script&lang=js ***!
+  \***********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorPropertyEditComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorPropertyEditComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./RealtorPropertyEditComponent.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorPropertyEditComponent.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/components/realtors/account/RealtorSinglePropertyComponent.vue?vue&type=script&lang=js":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/js/components/realtors/account/RealtorSinglePropertyComponent.vue?vue&type=script&lang=js ***!
+  \*************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorSinglePropertyComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorSinglePropertyComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./RealtorSinglePropertyComponent.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorSinglePropertyComponent.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
 /***/ "./resources/js/components/NotFoundComponent.vue?vue&type=template&id=2b13f773":
 /*!*************************************************************************************!*\
   !*** ./resources/js/components/NotFoundComponent.vue?vue&type=template&id=2b13f773 ***!
@@ -47410,6 +50194,102 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NotFoundComponent_vue_vue_type_template_id_2b13f773__WEBPACK_IMPORTED_MODULE_0__.render)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NotFoundComponent_vue_vue_type_template_id_2b13f773__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./NotFoundComponent.vue?vue&type=template&id=2b13f773 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/NotFoundComponent.vue?vue&type=template&id=2b13f773");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/home/AboutComponent.vue?vue&type=template&id=2e6ccd45&scoped=true":
+/*!***************************************************************************************************!*\
+  !*** ./resources/js/components/home/AboutComponent.vue?vue&type=template&id=2e6ccd45&scoped=true ***!
+  \***************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_AboutComponent_vue_vue_type_template_id_2e6ccd45_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_AboutComponent_vue_vue_type_template_id_2e6ccd45_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./AboutComponent.vue?vue&type=template&id=2e6ccd45&scoped=true */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/AboutComponent.vue?vue&type=template&id=2e6ccd45&scoped=true");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/home/ContactUsComponent.vue?vue&type=template&id=c54161d8&scoped=true":
+/*!*******************************************************************************************************!*\
+  !*** ./resources/js/components/home/ContactUsComponent.vue?vue&type=template&id=c54161d8&scoped=true ***!
+  \*******************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ContactUsComponent_vue_vue_type_template_id_c54161d8_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ContactUsComponent_vue_vue_type_template_id_c54161d8_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./ContactUsComponent.vue?vue&type=template&id=c54161d8&scoped=true */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/ContactUsComponent.vue?vue&type=template&id=c54161d8&scoped=true");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/home/FaqComponent.vue?vue&type=template&id=170390c8&scoped=true":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/components/home/FaqComponent.vue?vue&type=template&id=170390c8&scoped=true ***!
+  \*************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_FaqComponent_vue_vue_type_template_id_170390c8_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_FaqComponent_vue_vue_type_template_id_170390c8_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./FaqComponent.vue?vue&type=template&id=170390c8&scoped=true */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/FaqComponent.vue?vue&type=template&id=170390c8&scoped=true");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/home/HomeComponent.vue?vue&type=template&id=6caa5fce":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/home/HomeComponent.vue?vue&type=template&id=6caa5fce ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_HomeComponent_vue_vue_type_template_id_6caa5fce__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_HomeComponent_vue_vue_type_template_id_6caa5fce__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./HomeComponent.vue?vue&type=template&id=6caa5fce */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/HomeComponent.vue?vue&type=template&id=6caa5fce");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/home/PrivacyPolicyComponent.vue?vue&type=template&id=1a487a18&scoped=true":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/components/home/PrivacyPolicyComponent.vue?vue&type=template&id=1a487a18&scoped=true ***!
+  \***********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PrivacyPolicyComponent_vue_vue_type_template_id_1a487a18_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PrivacyPolicyComponent_vue_vue_type_template_id_1a487a18_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./PrivacyPolicyComponent.vue?vue&type=template&id=1a487a18&scoped=true */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/PrivacyPolicyComponent.vue?vue&type=template&id=1a487a18&scoped=true");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/home/TermsComponent.vue?vue&type=template&id=a98aa4ea&scoped=true":
+/*!***************************************************************************************************!*\
+  !*** ./resources/js/components/home/TermsComponent.vue?vue&type=template&id=a98aa4ea&scoped=true ***!
+  \***************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_TermsComponent_vue_vue_type_template_id_a98aa4ea_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_TermsComponent_vue_vue_type_template_id_a98aa4ea_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./TermsComponent.vue?vue&type=template&id=a98aa4ea&scoped=true */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/TermsComponent.vue?vue&type=template&id=a98aa4ea&scoped=true");
 
 
 /***/ }),
@@ -47494,6 +50374,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/realtors/account/RealtorLogoutComponent.vue?vue&type=template&id=134349b6":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/components/realtors/account/RealtorLogoutComponent.vue?vue&type=template&id=134349b6 ***!
+  \***********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorLogoutComponent_vue_vue_type_template_id_134349b6__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorLogoutComponent_vue_vue_type_template_id_134349b6__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./RealtorLogoutComponent.vue?vue&type=template&id=134349b6 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorLogoutComponent.vue?vue&type=template&id=134349b6");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue?vue&type=template&id=bc90fdbe":
 /*!*****************************************************************************************************************!*\
   !*** ./resources/js/components/realtors/account/RealtorMyPropertiesComponent.vue?vue&type=template&id=bc90fdbe ***!
@@ -47538,6 +50434,134 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorProfileEditComponent_vue_vue_type_template_id_79d54157__WEBPACK_IMPORTED_MODULE_0__.render)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorProfileEditComponent_vue_vue_type_template_id_79d54157__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./RealtorProfileEditComponent.vue?vue&type=template&id=79d54157 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorProfileEditComponent.vue?vue&type=template&id=79d54157");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/realtors/account/RealtorPropertyEditComponent.vue?vue&type=template&id=09b8f3a1":
+/*!*****************************************************************************************************************!*\
+  !*** ./resources/js/components/realtors/account/RealtorPropertyEditComponent.vue?vue&type=template&id=09b8f3a1 ***!
+  \*****************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorPropertyEditComponent_vue_vue_type_template_id_09b8f3a1__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorPropertyEditComponent_vue_vue_type_template_id_09b8f3a1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./RealtorPropertyEditComponent.vue?vue&type=template&id=09b8f3a1 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorPropertyEditComponent.vue?vue&type=template&id=09b8f3a1");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/realtors/account/RealtorSinglePropertyComponent.vue?vue&type=template&id=7a6720e3":
+/*!*******************************************************************************************************************!*\
+  !*** ./resources/js/components/realtors/account/RealtorSinglePropertyComponent.vue?vue&type=template&id=7a6720e3 ***!
+  \*******************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorSinglePropertyComponent_vue_vue_type_template_id_7a6720e3__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_RealtorSinglePropertyComponent_vue_vue_type_template_id_7a6720e3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./RealtorSinglePropertyComponent.vue?vue&type=template&id=7a6720e3 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/realtors/account/RealtorSinglePropertyComponent.vue?vue&type=template&id=7a6720e3");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/home/AboutComponent.vue?vue&type=style&index=0&id=2e6ccd45&scoped=true&lang=css":
+/*!*****************************************************************************************************************!*\
+  !*** ./resources/js/components/home/AboutComponent.vue?vue&type=style&index=0&id=2e6ccd45&scoped=true&lang=css ***!
+  \*****************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_AboutComponent_vue_vue_type_style_index_0_id_2e6ccd45_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./AboutComponent.vue?vue&type=style&index=0&id=2e6ccd45&scoped=true&lang=css */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/AboutComponent.vue?vue&type=style&index=0&id=2e6ccd45&scoped=true&lang=css");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/home/ContactUsComponent.vue?vue&type=style&index=0&id=c54161d8&scoped=true&lang=css":
+/*!*********************************************************************************************************************!*\
+  !*** ./resources/js/components/home/ContactUsComponent.vue?vue&type=style&index=0&id=c54161d8&scoped=true&lang=css ***!
+  \*********************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ContactUsComponent_vue_vue_type_style_index_0_id_c54161d8_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./ContactUsComponent.vue?vue&type=style&index=0&id=c54161d8&scoped=true&lang=css */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/ContactUsComponent.vue?vue&type=style&index=0&id=c54161d8&scoped=true&lang=css");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/home/FaqComponent.vue?vue&type=style&index=0&id=170390c8&scoped=true&lang=css":
+/*!***************************************************************************************************************!*\
+  !*** ./resources/js/components/home/FaqComponent.vue?vue&type=style&index=0&id=170390c8&scoped=true&lang=css ***!
+  \***************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_FaqComponent_vue_vue_type_style_index_0_id_170390c8_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./FaqComponent.vue?vue&type=style&index=0&id=170390c8&scoped=true&lang=css */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/FaqComponent.vue?vue&type=style&index=0&id=170390c8&scoped=true&lang=css");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/home/PrivacyPolicyComponent.vue?vue&type=style&index=0&id=1a487a18&scoped=true&lang=css":
+/*!*************************************************************************************************************************!*\
+  !*** ./resources/js/components/home/PrivacyPolicyComponent.vue?vue&type=style&index=0&id=1a487a18&scoped=true&lang=css ***!
+  \*************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PrivacyPolicyComponent_vue_vue_type_style_index_0_id_1a487a18_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./PrivacyPolicyComponent.vue?vue&type=style&index=0&id=1a487a18&scoped=true&lang=css */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/PrivacyPolicyComponent.vue?vue&type=style&index=0&id=1a487a18&scoped=true&lang=css");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/home/TermsComponent.vue?vue&type=style&index=0&id=a98aa4ea&scoped=true&lang=css":
+/*!*****************************************************************************************************************!*\
+  !*** ./resources/js/components/home/TermsComponent.vue?vue&type=style&index=0&id=a98aa4ea&scoped=true&lang=css ***!
+  \*****************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_TermsComponent_vue_vue_type_style_index_0_id_a98aa4ea_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./TermsComponent.vue?vue&type=style&index=0&id=a98aa4ea&scoped=true&lang=css */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/TermsComponent.vue?vue&type=style&index=0&id=a98aa4ea&scoped=true&lang=css");
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-meta/dist/vue-meta.esm-browser.min.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/vue-meta/dist/vue-meta.esm-browser.min.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createMetaManager": () => (/* binding */ H),
+/* harmony export */   "deepestResolver": () => (/* binding */ m),
+/* harmony export */   "defaultConfig": () => (/* binding */ b),
+/* harmony export */   "getCurrentManager": () => (/* binding */ q),
+/* harmony export */   "plugin": () => (/* binding */ K),
+/* harmony export */   "resolveOption": () => (/* binding */ d),
+/* harmony export */   "useActiveMeta": () => (/* binding */ I),
+/* harmony export */   "useMeta": () => (/* binding */ B)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+/**
+ * vue-meta v3.0.0-alpha.10
+ * (c) 2022
+ * - Pim (@pimlie)
+ * - All the amazing contributors
+ * @license MIT
+ */
+const d=(t,e)=>(o,r)=>{let n=-1;if(r.reduce(((e,o,r)=>{const s=t(e,o);return s!==e?(n=r,s):e}),e),n>-1)return o[n]},p=d(((t,e)=>{const{depth:o}=e;return!t||o>t?o:t}));var m=Object.freeze({__proto__:null,setup:t=>{let e=0;if(t.vm){let{vm:o}=t;do{o.parent&&(e++,o=o.parent)}while(o&&o.parent&&o!==o.root)}t.depth=e},resolve:p});const b={body:{tag:"script",to:"body"},base:{valueAttribute:"href"},charset:{tag:"meta",nameless:!0,valueAttribute:"charset"},description:{tag:"meta"},og:{group:!0,namespacedAttribute:!0,tag:"meta",keyAttribute:"property"},twitter:{group:!0,namespacedAttribute:!0,tag:"meta"},htmlAttrs:{attributesFor:"html"},headAttrs:{attributesFor:"head"},bodyAttrs:{attributesFor:"body"}},h={title:{attributes:!1},base:{contentAsAttribute:!0,attributes:["href","target"]},meta:{contentAsAttribute:!0,keyAttribute:"name",attributes:["content","name","http-equiv","charset"]},link:{contentAsAttribute:!0,attributes:["href","crossorigin","rel","media","integrity","hreflang","type","referrerpolicy","sizes","imagesrcset","imagesizes","as","color"]},style:{attributes:["media"]},script:{attributes:["src","type","nomodule","async","defer","crossorigin","integrity","referrerpolicy"]},noscript:{attributes:!1}};Object.freeze({}),Object.freeze([]);const g=Array.isArray,y=t=>"function"==typeof t,v=t=>"string"==typeof t,S=t=>null!==t&&"object"==typeof t,A=Object.prototype.toString,k=t=>"[object Object]"===A.call(t),N=Symbol("kIsProxy"),j=Symbol("kProxySources"),R=Symbol("kProxyTarget"),w=Symbol("kResolveContext");function x(t){if(g(t))return t.map(x);if(S(t)){const e={};for(const o in t)e[o]="context"===o?t[o]:x(t[o]);return e}return t}const O=(t,e,o)=>{const r=[];for(const n of t)n&&e in n&&(r.push(n[e]),o&&o(n));return r},$=(t,e=[],o,r)=>{if(!o&&!r&&(({active:o,sources:r}=t),e.length))for(let t=0;t<e.length;t++){const n=e[t];if(!o||!o[n])return void console.error(`recompute: segment ${n} not found on target`,e,o);o=o[n],r=r.map((t=>t[n])).filter(Boolean)}if(!o||!r)return;const n=((t,...e)=>{const o=t?Object.keys(t):[];if(e)for(const t of e)if(t&&S(t))for(const e in t)o.includes(e)||o.push(e);return o})(...r),s=Object.keys(o);for(const t of s)n.includes(t)||delete o[t];for(const s of n){let n=!1;for(let t=0;t<r.length;t++){const e=r[t];if(e&&s in e&&void 0!==e[s]){n=k(e[s]);break}}if(n){o[s]||(o[s]={});const n=[];for(const t of r)s in t&&n.push(t[s]);$(t,[...e,s],o[s],n);continue}!o[s]&&g(r[0][s])&&(o[s]=[]);const i=[],c=O(r,s,(t=>i.push(t[w])));let a=t.resolve(c,i,o[s],s,e);k(a)&&(a=x(a)),o[s]=a}},P=(e,o,r,n=[])=>{const s=C(e,r,n),i=(0,vue__WEBPACK_IMPORTED_MODULE_0__.markRaw)(new Proxy(o,s));return!n.length&&e.sources&&e.sources.push(i),i},C=(t,e,o=[])=>({get:(r,n,s)=>{if(n===N)return!0;if(n===j)return t.sources;if(n===R)return r;if(n===w)return e;let i=Reflect.get(r,n,s);if(!S(i))return i;if(!i[N]){const s=[...o,n];i=P(t,i,e,s),Reflect.set(r,n,i)}return i},set:(e,r,n)=>{const s=Reflect.set(e,r,n);if(s){const i=g(e);let c,a=!1,{sources:u,active:l}=t,f=0;for(const t of o){if(u=O(u,t),i&&f===o.length-1){c=t;break}g(l)&&(a=!0),l=l[t],f++}if(a)return $(t),s;if(k(n))return $(t,o),s;let d,p=[];i?(d=u,p=u.map((t=>t[w]))):d=O(u,r,(t=>p.push(t[w])));let m=t.resolve(d,p,l,r,o);k(m)&&(m=x(m)),i&&c?l[c]=m:l[r]=m}return s},deleteProperty:(e,r)=>{const n=Reflect.deleteProperty(e,r);if(n){const n=g(e);let s,i=t.sources,c=t.active,a=0;for(const t of o){if(i=i.map((e=>e&&e[t])),n&&a===o.length-1){s=t;break}c=c[t],a++}if(i.some((t=>t&&r in t))){let e,a=[];n?(e=i,a=i.map((t=>t[w]))):e=O(i,r,(t=>a.push(t[w])));let u=t.resolve(e,a,c,r,o);k(u)&&(u=x(u)),n&&s?c[s]=u:c[r]=u}else delete c[r]}return n}}),M={};function F(t,o,r,n){return"attributesFor"in n?function(t,o,r,n){const{attributesFor:s}=n;if(!s||!r)return;if(t.isSSR)return{to:"",vnode:(0,vue__WEBPACK_IMPORTED_MODULE_0__.h)(`ssr-${s}`,r)};if(!M[s]){const[t,e]=Array.from(document.querySelectorAll(s));if(!t)return void console.error("Could not find element for selector",s,", won't render attributes");e&&console.warn("Found multiple elements for selector",s),M[s]={el:t,attrs:[]}}const{el:i,attrs:c}=M[s];for(const e in r){let n=U(t,`${o}(${e})`,r[e],r);g(n)&&(n=n.join(",")),i.setAttribute(e,n||""),c.includes(e)||c.push(e)}const a=c.filter((t=>!r[t]));for(const t of a)i.removeAttribute(t)}(t,o,r,n):"group"in n?function(t,e,o,r){if(g(o))return console.warn("Specifying an array for group properties isnt supported"),[];return Object.keys(o).map((n=>{const s={group:e,data:o};if(r.namespaced)s.tagNamespace=!0===r.namespaced?e:r.namespaced;else if(r.namespacedAttribute){const t=!0===r.namespacedAttribute?e:r.namespacedAttribute;s.fullName=`${t}:${n}`,s.slotName=`${t}(${n})`}return E(t,e,o[n],r,s)})).filter(Boolean).flat()}(t,o,r,n):E(t,o,r,n)}function E(t,o,r,n={},s){const i=["content","json","rawContent"],c=t=>function(t,e){for(const o of t){const t=h[o];if(o&&t)return t[e]}}([a,n.tag],t);if(g(r))return r.map((e=>E(t,o,e,n,s))).filter(Boolean).flat();const{tag:a=n.tag||o}=r;let u="",l=!1,f=!1;if(v(r))u=r;else if(r.children&&g(r.children))l=!0,u=r.children.map((e=>{const r=E(t,o,e,n,s);return g(r)?r.map((({vnode:t})=>t)):r&&r.vnode}));else{let t=0;for(const e of i){if(!u&&r[e]){u=1===t?JSON.stringify(r[e]):r[e],f=t>1;break}t++}}const d=s&&s.fullName||o,p=s&&s.slotName||o;let{attrs:m}=r;if(m||"object"!=typeof r)m||(m={});else{m={...r},delete m.tag,delete m.children,delete m.to;for(const t of i)delete m[t]}if(l)u=U(t,p,u,r);else{const e=!!c("contentAsAttribute");let{valueAttribute:o}=n;if(!o&&e){const[t]=c("attributes");o=v(e)?e:t}if(o){const{nameless:e}=n;if(!e){const t=n.keyAttribute||c("keyAttribute");t&&(m[t]=d)}m[o]=U(t,p,m[o]||u,s),u=""}else u=U(t,p,u,r)}const b=s&&s.tagNamespace?`${s.tagNamespace}:${a}`:a;if("title"===b&&!t.isSSR)return void(document.title=u);f&&u&&(m.innerHTML=u);const y=(0,vue__WEBPACK_IMPORTED_MODULE_0__.h)(b,m,u||void 0);return{to:r.to,vnode:y}}function U({metainfo:t,slots:e},o,r,n){const s=e&&e[o];if(!s||!y(s))return r;const i={content:r,metainfo:t};if(n&&n.group){const{group:t,data:e}=n;i[t]=e}const c=s(i);if(c&&c.length){const{children:t}=c[0];return t?t.toString():""}return r}const z="function"==typeof Symbol&&"symbol"==typeof Symbol.toStringTag,_=(t=>z?Symbol("[vue-meta]: "+t):"[vue-meta]: "+t)("meta_active");function L(t,e,o){for(const r in e)r in o?S(t[r])?L(t[r],e[r],o[r]):e[r]!==o[r]&&(t[r]=e[r]):t[r]=e[r];for(const r in o)e&&r in e||delete t[r]}function q(t){if(t||(t=(0,vue__WEBPACK_IMPORTED_MODULE_0__.getCurrentInstance)()||void 0),t)return t.appContext.config.globalProperties.$metaManager}function B(t,e){const s=(0,vue__WEBPACK_IMPORTED_MODULE_0__.getCurrentInstance)()||void 0;if(!e&&s&&(e=q(s)),!e)throw new Error("No manager or current instance");(0,vue__WEBPACK_IMPORTED_MODULE_0__.isProxy)(t)&&((0,vue__WEBPACK_IMPORTED_MODULE_0__.watch)(t,((t,e)=>{L(i.meta,t,e)})),t=t.value);const i=e.addMeta(t,s);return i}function I(){return (0,vue__WEBPACK_IMPORTED_MODULE_0__.inject)(_)}const T=(0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({name:"Metainfo",inheritAttrs:!1,setup:(t,{slots:e})=>()=>{const t=q();if(t)return t.render({slots:e})}});function D(t,e,o,r){const n=g(r)?r:[r];t?o.endsWith("Attrs")||n.forEach((t=>{t.props||(t.props={}),t.props["data-vm-ssr"]=!0})):n.forEach(((t,e)=>{t.type===vue__WEBPACK_IMPORTED_MODULE_0__.Comment&&n.splice(e,1)})),e[o]||(e[o]=[]),e[o].push(...n)}const H=(t=!1,e,o)=>J.create(t,e||b,o||m);class J{isSSR=!1;config;target;resolver;ssrCleanedUp=!1;constructor(t,e,o,r){this.isSSR=t,this.config=e,this.target=o,r&&"setup"in r&&y(r.setup)&&(this.resolver=r)}static create=(t,e,o)=>{const r=((t,e)=>{const o=[],r={active:e,resolve:t,sources:o},n=()=>$(r);return{context:r,compute:n,addSource:(t,e,o=!1)=>{const s=P(r,t,e||{});return o&&n(),s},delSource:(t,e=!0)=>{const r=o.findIndex((e=>e===t||e[R]===t));return r>-1&&(o.splice(r,1),e&&n(),!0)}}})(((t,e,r,n,s)=>y(o)?o(t,e,r,n,s):o.resolve(t,e,r,n,s)),(0,vue__WEBPACK_IMPORTED_MODULE_0__.reactive)({}));return new J(t,e,r,o)};install(t){t.component("Metainfo",T),t.config.globalProperties.$metaManager=this,t.provide(_,this.target.context.active)}addMeta(t,e){e||(e=(0,vue__WEBPACK_IMPORTED_MODULE_0__.getCurrentInstance)()||void 0);const r={removed:[]},n={vm:e},{resolver:s}=this;s&&s.setup&&s.setup(n);const i=this.target.addSource(t,n,!0),c=t=>this.unmount(!!t,i,r,e);return e&&(0,vue__WEBPACK_IMPORTED_MODULE_0__.onUnmounted)(c),{meta:i,onRemoved:t=>r.removed.push(t),unmount:c}}unmount(t,e,o,r){if(r){const{$el:n}=r.proxy;if(n&&n.offsetParent){let r=new MutationObserver((s=>{for(const{removedNodes:i}of s)i&&i.forEach((s=>{s===n&&r&&(r.disconnect(),r=void 0,this.reallyUnmount(t,e,o))}))}));return void r.observe(n.parentNode,{childList:!0})}}this.reallyUnmount(t,e,o)}async reallyUnmount(t,e,o){this.target.delSource(e),!t&&o&&await Promise.all(o.removed.map((t=>t())))}render({slots:t}={}){const o=this.target.context.active,{isSSR:r}=this;if(!r&&!this.ssrCleanedUp){this.ssrCleanedUp=!0;const t=()=>{const t=document.querySelectorAll("[data-vm-ssr]");t&&t.length&&t.forEach((t=>t.parentNode&&t.parentNode.removeChild(t)))};"loading"===document.readyState?window.addEventListener("DOMContentLoaded",t,{once:!0}):t()}const n={};for(const e in o){const s=this.config[e]||{};let i=F({isSSR:r,metainfo:o,slots:t},e,o[e],s);if(!i)continue;g(i)||(i=[i]);let c="base"!==e&&o[e].to;!c&&"to"in s&&(c=s.to),!c&&"attributesFor"in s&&(c=e);for(const{to:t,vnode:e}of i)D(this.isSSR,n,t||c||"head",e)}if(t)for(const e in t){const r="default"===e?"head":e;if("head"!==r&&"body"!==r)continue;const s=t[e];y(s)&&D(this.isSSR,n,r,s({metainfo:o}))}return Object.keys(n).map((t=>(0,vue__WEBPACK_IMPORTED_MODULE_0__.h)(vue__WEBPACK_IMPORTED_MODULE_0__.Teleport,{to:t},n[t])))}}const W={keyName:"metaInfo"},G=t=>({created(){const e=(0,vue__WEBPACK_IMPORTED_MODULE_0__.getCurrentInstance)();if(!e?.type||!(t.keyName in e.type))return;const r=e.type[t.keyName];if(y(r)){B((0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(r.bind(this)))}else B(r)}}),K=(t,e={})=>{const o=Object.assign({},W,e);t.mixin(G(o))};
 
 
 /***/ }),
@@ -51477,7 +54501,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/css/app.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

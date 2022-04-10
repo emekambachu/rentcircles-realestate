@@ -63,14 +63,14 @@ class RealtorLoginController extends Controller
             $request->get('remember'))) {
             return response()->json([
                 'success' => true,
-            ]);
+            ], 200);
         }
 
         Session::flash('warning', 'Incorrect Login Details');
         return response()->json([
             'success' => false,
             "message" => "Incorrect login details"
-        ]);
+        ], 404);
     }
 
     //add for logout function to work
@@ -81,6 +81,8 @@ class RealtorLoginController extends Controller
     //perform logout
     public function logout(){
         Auth::guard('realtor')->logout();
-        return redirect()->route('realtor.login');
+        return response()->json([
+            'success' => true,
+        ], 200);
     }
 }

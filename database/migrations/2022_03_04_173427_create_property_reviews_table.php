@@ -18,7 +18,6 @@ class CreatePropertyReviewsTable extends Migration
             $table->unsignedBigInteger('property_detail_id');
             $table->unsignedBigInteger('user_id')->nullable();
             $table->string('name')->nullable();
-            $table->string('email')->nullable();
             $table->text('description');
             $table->timestamps();
         });

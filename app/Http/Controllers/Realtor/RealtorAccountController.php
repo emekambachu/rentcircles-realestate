@@ -151,4 +151,36 @@ class RealtorAccountController extends Controller
             "message" => "Property submitted successfully, will be published once approved"
         ]);
     }
+
+    public function myProperties(){
+        $properties = PropertyDetail::with('state', 'property_type', 'property_reviews')
+            ->where('realtor_id', Auth::user()->id)->get();
+
+        if($properties->count() > 0){
+            return response()->json([
+                "success" => true,
+                "properties" => $properties
+            ]);
+        }
+
+        return response()->json([
+            "success" => false,
+        ]);
+    }
+
+    public function myPropertyEdit($id){
+        $property = PropertyDetail::with('property_type', 'state')->findOrFail($id);
+        return response()->json([
+            "success" => true,
+            "property" => $property
+        ]);
+    }
+
+    public function myPropertyUpdate($id){
+
+    }
+
+    public function myPropertyDelete($id){
+
+    }
 }

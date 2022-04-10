@@ -29,11 +29,8 @@
                                         </div>
                                         <h1 class="animated mt-40">
                                             Let us help you Find an apartment or property</h1>
-{{--                                        <div class="slide-brief animated">--}}
-{{--                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>--}}
-{{--                                        </div>--}}
                                         <div class="btn-wrapper animated">
-                                            <a href="{{ url('contact') }}"
+                                            <a href=""
                                                class="theme-btn-1 btn btn-effect-1 border-radius-8">Make An Enquiry</a>
                                         </div>
                                     </div>
@@ -45,7 +42,7 @@
             </div>
 
             <!-- ltn__slide-item -->
-            <div class="ltn__slide-item ltn__slide-item-2  ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60" data-bs-bg="{{ asset('main-assets/img/slider/12.jpg') }}">
+            <div class="ltn__slide-item ltn__slide-item-2  ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60" data-bs-bg="/main-assets/img/slider/12.jpg">
                 <div class="ltn__slide-item-inner  text-right text-end">
                     <div class="container">
                         <div class="row">
@@ -58,7 +55,7 @@
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
                                         </div>
                                         <div class="btn-wrapper animated">
-                                            <a href="{{ url('contact') }}" class="theme-btn-1 btn btn-effect-1">
+                                            <a href="" class="theme-btn-1 btn btn-effect-1">
                                                 Make An Enquiry</a>
                                         </div>
                                     </div>
@@ -70,7 +67,7 @@
             </div>
 
             <!-- ltn__slide-item -->
-            <div class="ltn__slide-item ltn__slide-item-2  ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60" data-bs-bg="{{ asset('main-assets/img/slider/13.jpg') }}">
+            <div class="ltn__slide-item ltn__slide-item-2  ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60" data-bs-bg="main-assets/img/slider/13.jpg">
                 <div class="ltn__slide-item-inner  text-left">
                     <div class="container">
                         <div class="row">
@@ -84,8 +81,7 @@
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
                                         </div>
                                         <div class="btn-wrapper animated">
-                                            <a href="{{ url('contact') }}"
-                                               class="theme-btn-1 btn btn-effect-1">Make An Enquiry</a>
+                                            <a href="" class="theme-btn-1 btn btn-effect-1">Make An Enquiry</a>
                                         </div>
                                     </div>
                                 </div>
@@ -223,7 +219,7 @@
                 <div class="col-lg-6 col-sm-6 col-12">
                     <div class="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1">
                         <div class="ltn__feature-icon">
-                            <img src="{{ asset('main-assets/img/icons/icon-img/21.png') }}" alt="#">
+                            <img src="/main-assets/img/icons/icon-img/21.png" alt="#">
                         </div>
                         <div class="ltn__feature-info">
                             <h3><a href="">Buy/Sell a Properties</a></h3>
@@ -236,7 +232,7 @@
                 <div class="col-lg-6 col-sm-6 col-12">
                     <div class="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1 active">
                         <div class="ltn__feature-icon">
-                            <img src="{{ asset('main-assets/img/icons/icon-img/22.png') }}" alt="#">
+                            <img src="/main-assets/img/icons/icon-img/22.png" alt="#">
                         </div>
                         <div class="ltn__feature-info">
                             <h3><a href="">Rent an apartment</a></h3>
@@ -300,7 +296,7 @@
 
     <!-- SEARCH BY PLACE AREA START (testimonial-7) -->
     <div class="ltn__search-by-place-area section-bg-1 before-bg-top--- bg-image-top--- pt-115 pb-70"
-         data-bs-bg="{{ asset('main/assets/img/bg/20.jpg') }}">
+         data-bs-bg="/main/assets/img/bg/20.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -313,8 +309,8 @@
             <div class="row">
                 <div class="col-lg-8 col-md-6">
                     <div class="ltn__banner-item ltn__banner-style-4 text-color-white bg-image"
-                         data-bs-bg="{{ asset('main-assets/img/location/1.jpg') }}"
-                         style="background-image: url(&quot;{{ asset('main-assets/img/location/1.jpg') }}&quot;);">
+                         data-bs-bg="/main-assets/img/location/1.jpg"
+                         style="background-image: url(&quot;/main-assets/img/location/1.jpg&quot;);">
                         <div class="ltn__banner-info">
                             <h3 class="animated fadeIn"><a href=""> Lagos </a></h3>
                             <p> Great Deals Available</p>
@@ -324,8 +320,8 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="ltn__banner-item ltn__banner-style-4 text-color-white bg-image"
-                         data-bs-bg="{{ asset('main-assets/img/location/2.jpg') }}"
-                         style="background-image: url(&quot;{{ asset('main-assets/img/location/2.jpg') }}&quot;);">
+                         data-bs-bg="/main-assets/img/location/2.jpg"
+                         style="background-image: url(&quot;/main-assets/img/location/2.jpg&quot;);">
                         <div class="ltn__banner-info">
                             <h3 class="animated fadeIn"><a href="">Abuja</a></h3>
                             <p> Great Deals Available</p>
@@ -335,8 +331,8 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="ltn__banner-item ltn__banner-style-4 text-color-white bg-image"
-                         data-bs-bg="{{ asset('main-assets/img/location/3.jpg') }}"
-                         style="background-image: url(&quot;{{ asset('main-assets/img/location/3.jpg') }}&quot;);">
+                         data-bs-bg="/main-assets/img/location/3.jpg"
+                         style="background-image: url(&quot;/main-assets/img/location/3.jpg&quot;);">
                         <div class="ltn__banner-info">
                             <h3 class="animated fadeIn"><a href="">Port hacourt</a></h3>
                             <p> Great Deals Available</p>
@@ -346,7 +342,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="ltn__banner-item ltn__banner-style-4 text-color-white bg-image"
-                         data-bs-bg="{{ asset('main-assets/img/location/4.jpg') }}"
+                         data-bs-bg="/main-assets/img/location/4.jpg"
                          style="background-image: url(&quot;{{ asset('main-assets/img/location/4.jpg') }}&quot;);">
                         <div class="ltn__banner-info">
                             <h3 class="animated fadeIn"><a href="">Kaduna</a></h3>
@@ -357,7 +353,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="ltn__banner-item ltn__banner-style-4 text-color-white bg-image"
-                         data-bs-bg="{{ asset('main-assets/img/location/5.jpg') }}"
+                         data-bs-bg="/main-assets/img/location/5.jpg"
                          style="background-image: url(&quot;{{ asset('main-assets/img/gallery/9.jpg') }}&quot;);">
                         <div class="ltn__banner-info">
                             <h3 class="animated fadeIn"><a href="">Ibadan</a></h3>
@@ -368,7 +364,7 @@
                 </div>
 
                 <div class="col-12 d-flex justify-content-center">
-                    <a href="{{ url('contact') }}"
+                    <a href=""
                        class="theme-btn-1 btn border-radius-8">Explore Locations</a>
                 </div>
             </div>
@@ -392,7 +388,7 @@
                 <div class="col-lg-12">
                     <div class="ltn__product-item ltn__product-item-4 text-center---">
                         <div class="product-img">
-                            <a href=""><img src="{{ asset('main-assets/img/product-3/1.jpg') }}" alt="#"></a>
+                            <a href=""><img src="/main-assets/img/product-3/1.jpg" alt="#"></a>
                             <div class="product-badge">
                                 <ul>
                                     <li class="sale-badge bg-green">For Rent</li>
@@ -442,7 +438,7 @@
                         <div class="product-info-bottom">
                             <div class="real-estate-agent">
                                 <div class="agent-img">
-                                    <a href=""><img src="{{ asset('main-assets/img/blog/author.jpg') }}" alt="#"></a>
+                                    <a href=""><img src="/main-assets/img/blog/author.jpg" alt="#"></a>
                                 </div>
                                 <div class="agent-brief">
                                     <h6><a href="">William Seklo</a></h6>
@@ -478,7 +474,7 @@
                 <div class="col-lg-12">
                     <div class="ltn__product-item ltn__product-item-4 text-center---">
                         <div class="product-img">
-                            <a href=""><img src="{{ asset('main-assets/img/product-3/2.jpg') }}" alt="#"></a>
+                            <a href=""><img src="/main-assets/img/product-3/2.jpg" alt="#"></a>
                             <div class="product-badge">
                                 <ul>
                                     <li class="sale-badge bg-green---">For Sale</li>
@@ -528,7 +524,7 @@
                         <div class="product-info-bottom">
                             <div class="real-estate-agent">
                                 <div class="agent-img">
-                                    <a href=""><img src="{{ asset('main-assets/img/blog/author.jpg') }}" alt="#"></a>
+                                    <a href=""><img src="/main-assets/img/blog/author.jpg" alt="#"></a>
                                 </div>
                                 <div class="agent-brief">
                                     <h6><a href="">William Seklo</a></h6>
@@ -562,7 +558,7 @@
                 <div class="col-lg-12">
                     <div class="ltn__product-item ltn__product-item-4 text-center---">
                         <div class="product-img">
-                            <a href=""><img src="{{ asset('main-assets/img/product-3/3.jpg') }}" alt="#"></a>
+                            <a href=""><img src="/main-assets/img/product-3/3.jpg" alt="#"></a>
                             <div class="product-badge">
                                 <ul>
                                     <li class="sale-badge bg-green">For Rent</li>
@@ -612,7 +608,7 @@
                         <div class="product-info-bottom">
                             <div class="real-estate-agent">
                                 <div class="agent-img">
-                                    <a href=""><img src="{{ asset('main-assets/img/blog/author.jpg') }}" alt="#"></a>
+                                    <a href=""><img src="/main-assets/img/blog/author.jpg" alt="#"></a>
                                 </div>
                                 <div class="agent-brief">
                                     <h6><a href="">William Seklo</a></h6>
@@ -646,7 +642,7 @@
                 <div class="col-lg-12">
                     <div class="ltn__product-item ltn__product-item-4 text-center---">
                         <div class="product-img">
-                            <a href=""><img src="{{ asset('main-assets/img/product-3/4.jpg') }}" alt="#"></a>
+                            <a href=""><img src="/main-assets/img/product-3/4.jpg" alt="#"></a>
                             <div class="product-badge">
                                 <ul>
                                     <li class="sale-badge bg-green">For Rent</li>
@@ -696,7 +692,7 @@
                         <div class="product-info-bottom">
                             <div class="real-estate-agent">
                                 <div class="agent-img">
-                                    <a href=""><img src="{{ asset('main-assets/img/blog/author.jpg') }}" alt="#"></a>
+                                    <a href=""><img src="/main-assets/img/blog/author.jpg" alt="#"></a>
                                 </div>
                                 <div class="agent-brief">
                                     <h6><a href="">William Seklo</a></h6>
@@ -731,7 +727,7 @@
                 <div class="col-lg-12">
                     <div class="ltn__product-item ltn__product-item-4 text-center---">
                         <div class="product-img">
-                            <a href=""><img src="{{ asset('main-assets/img/product-3/5.jpg') }}" alt="#"></a>
+                            <a href=""><img src="/main-assets/img/product-3/5.jpg" alt="#"></a>
                             <div class="product-badge">
                                 <ul>
                                     <li class="sale-badge bg-green">For Rent</li>
@@ -781,7 +777,7 @@
                         <div class="product-info-bottom">
                             <div class="real-estate-agent">
                                 <div class="agent-img">
-                                    <a href=""><img src="{{ asset('main-assets/img/blog/author.jpg') }}" alt="#"></a>
+                                    <a href=""><img src="/main-assets/img/blog/author.jpg" alt="#"></a>
                                 </div>
                                 <div class="agent-brief">
                                     <h6><a href="">William Seklo</a></h6>
@@ -820,7 +816,7 @@
     <!-- VIDEO AREA START -->
     <div class="ltn__video-popup-area ltn__video-popup-margin---">
         <div class="ltn__video-bg-img ltn__video-popup-height-600--- bg-overlay-black-30 bg-image bg-fixed ltn__animation-pulse1"
-             data-bs-bg="{{ asset('main-assets/img/bg/1.jpg') }}">
+             data-bs-bg="/main-assets/img/bg/1.jpg">
         </div>
     </div>
     <!-- VIDEO AREA END -->
@@ -840,7 +836,7 @@
                 <div class="col-lg-12">
                     <div class="ltn__blog-item ltn__blog-item-3">
                         <div class="ltn__blog-img">
-                            <a href=""><img src="{{ asset('main-assets/img/blog/1.jpg') }}" alt="#"></a>
+                            <a href=""><img src="/main-assets/img/blog/1.jpg" alt="#"></a>
                         </div>
                         <div class="ltn__blog-brief">
                             <div class="ltn__blog-meta">
@@ -871,7 +867,7 @@
                 <div class="col-lg-12">
                     <div class="ltn__blog-item ltn__blog-item-3">
                         <div class="ltn__blog-img">
-                            <a href=""><img src="{{ asset('main-assets/img/blog/2.jpg') }}" alt="#"></a>
+                            <a href=""><img src="/main-assets/img/blog/2.jpg" alt="#"></a>
                         </div>
                         <div class="ltn__blog-brief">
                             <div class="ltn__blog-meta">
@@ -902,7 +898,7 @@
                 <div class="col-lg-12">
                     <div class="ltn__blog-item ltn__blog-item-3">
                         <div class="ltn__blog-img">
-                            <a href=""><img src="{{ asset('main-assets/img/blog/3.jpg') }}" alt="#"></a>
+                            <a href=""><img src="/main-assets/img/blog/3.jpg" alt="#"></a>
                         </div>
                         <div class="ltn__blog-brief">
                             <div class="ltn__blog-meta">
@@ -933,7 +929,7 @@
                 <div class="col-lg-12">
                     <div class="ltn__blog-item ltn__blog-item-3">
                         <div class="ltn__blog-img">
-                            <a href=""><img src="{{ asset('main-assets/img/blog/4.jpg') }}" alt="#"></a>
+                            <a href=""><img src="/main-assets/img/blog/4.jpg" alt="#"></a>
                         </div>
                         <div class="ltn__blog-brief">
                             <div class="ltn__blog-meta">
@@ -964,7 +960,7 @@
                 <div class="col-lg-12">
                     <div class="ltn__blog-item ltn__blog-item-3">
                         <div class="ltn__blog-img">
-                            <a href="blog-details.html"><img src="img/blog/5.jpg" alt="#"></a>
+                            <a href=""><img src="/img/blog/5.jpg" alt="#"></a>
                         </div>
                         <div class="ltn__blog-brief">
                             <div class="ltn__blog-meta">
@@ -977,7 +973,8 @@
                                     </li>
                                 </ul>
                             </div>
-                            <h3 class="ltn__blog-title"><a href="blog-details.html">7 home trends that will shape your house in 2021</a></h3>
+                            <h3 class="ltn__blog-title">
+                                <a href="">7 home trends that will shape your house in 2021</a></h3>
                             <div class="ltn__blog-meta-btn">
                                 <div class="ltn__blog-meta">
                                     <ul>
@@ -985,7 +982,7 @@
                                     </ul>
                                 </div>
                                 <div class="ltn__blog-btn">
-                                    <a href="blog-details.html">Read more</a>
+                                    <a href="">Read more</a>
                                 </div>
                             </div>
                         </div>
@@ -998,7 +995,8 @@
     <!-- BLOG AREA END -->
 
     <!-- CALL TO ACTION START (call-to-action-6) -->
-    <div class="ltn__call-to-action-area call-to-action-6 before-bg-bottom" data-bs-bg="{{ asset('main-assets/img/1.jpg') }}">
+    <div class="ltn__call-to-action-area call-to-action-6 before-bg-bottom"
+         data-bs-bg="/main-assets/img/1.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -1008,7 +1006,8 @@
                             <p>We can help you realize your new home</p>
                         </div>
                         <div class="btn-wrapper">
-                            <a class="btn btn-effect-3 btn-white" href="">Explore apartments <i class="icon-next"></i></a>
+                            <a class="btn btn-effect-3 btn-white" href="">
+                                Explore apartments <i class="icon-next"></i></a>
                         </div>
                     </div>
                 </div>

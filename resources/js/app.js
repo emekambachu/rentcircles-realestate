@@ -10,6 +10,7 @@ import { createApp } from 'vue';
 import router from './routes';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
+import { createMetaManager, useMeta } from 'vue-meta'
 
 /**
  * The following block of code may be used to automatically register your
@@ -23,14 +24,23 @@ import VueAxios from 'vue-axios';
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 // Local Components
+import HomeComponent from './components/home/HomeComponent';
+import AboutComponent from './components/home/AboutComponent';
+import PrivacyPolicyComponent from './components/home/PrivacyPolicyComponent';
+import TermsComponent from './components/home/TermsComponent';
+import FaqComponent from './components/home/FaqComponent';
+import ContactUsComponent from './components/home/ContactUsComponent';
+
 import RealtorLoginComponent from './components/realtors/RealtorLoginComponent';
 import RealtorRegisterComponent from './components/realtors/RealtorRegisterComponent';
+import RealtorLogoutComponent from './components/realtors/account/RealtorLogoutComponent';
 
 import RealtorDashboardComponent from './components/realtors/account/RealtorDashboardComponent';
+import RealtorBioComponent from './components/realtors/account/RealtorBioComponent';
 
 import RealtorMyPropertiesComponent from './components/realtors/account/RealtorMyPropertiesComponent';
+import RealtorSinglePropertyComponent from './components/realtors/account/RealtorSinglePropertyComponent';
 import RealtorAddPropertiesComponent from './components/realtors/account/RealtorAddPropertiesComponent';
-import RealtorBioComponent from './components/realtors/account/RealtorBioComponent';
 
 import RealtorProfileComponent from './components/realtors/account/RealtorProfileComponent';
 import RealtorProfileEditComponent from './components/realtors/account/RealtorProfileEditComponent';
@@ -43,8 +53,16 @@ import RealtorProfileEditComponent from './components/realtors/account/RealtorPr
 
 createApp({
     components: {
+        HomeComponent,
+        AboutComponent,
+        PrivacyPolicyComponent,
+        TermsComponent,
+        FaqComponent,
+        ContactUsComponent,
+
         RealtorRegisterComponent,
         RealtorLoginComponent,
+        RealtorLogoutComponent,
 
         RealtorDashboardComponent,
         RealtorBioComponent,
@@ -53,8 +71,10 @@ createApp({
         RealtorProfileEditComponent,
 
         RealtorMyPropertiesComponent,
+        RealtorSinglePropertyComponent,
         RealtorAddPropertiesComponent,
-
     }
-}).use(router, axios, VueAxios).mount('#app');
+}).use(
+    router, axios, VueAxios, createMetaManager(), useMeta
+).mount('#app');
 
