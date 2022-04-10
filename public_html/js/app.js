@@ -23356,11 +23356,28 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.get('/api/realtor/property/' + this.$route.params.id + '/edit').then(function (response) {
-        response.data.success === true ? _this.form = response.data.property : false;
+        response.data.success === true ? _this.populateForm(response) : false;
         console.log(response.data.property);
       })["catch"](function (error) {
         console.log(error);
       });
+    },
+    populateForm: function populateForm(response) {
+      this.form.title = response.data.property.title;
+      this.form.property_type_id = response.data.property.property_type_id;
+      this.form.state_id = response.data.property.state_id;
+      this.form.address = response.data.property.address;
+      this.form.description = response.data.property.description;
+      this.form.bedrooms = response.data.property.bedrooms;
+      this.form.bathrooms = response.data.property.bathrooms;
+      this.form.living_rooms = response.data.property.living_rooms;
+      this.form.cost = response.data.property.cost;
+      this.form.features = response.data.property.features.split(',');
+      this.form.image1 = response.data.property.image1;
+      this.form.image2 = response.data.property.image2;
+      this.form.image3 = response.data.property.image3;
+      this.form.image4 = response.data.property.image4;
+      this.form.image5 = response.data.property.image5;
     },
     updateProperty: function updateProperty() {
       var _this2 = this;
@@ -23377,8 +23394,14 @@ __webpack_require__.r(__webpack_exports__);
       formData.append("living_rooms", this.form.living_rooms);
       formData.append("cost", this.form.cost);
       formData.append("features", this.form.features);
-      formData.append("image1", this.form.image1);
-      formData.append("image2", this.form.image2);
+
+      if (this.form.image1) {
+        formData.append("image1", this.form.image1);
+      }
+
+      if (this.form.image2) {
+        formData.append("image2", this.form.image2);
+      }
 
       if (this.form.image3) {
         formData.append("image3", this.form.image3);
@@ -23397,6 +23420,7 @@ __webpack_require__.r(__webpack_exports__);
           'content-type': 'multipart/form-data'
         }
       };
+      console.log(this.form.title);
       axios.post('/api/realtor/property/' + this.$route.params.id + '/update', formData, config).then(function (response) {
         response.data.success === true ? _this2.formSuccess(response) : _this2.formError(response);
         _this2.messageAlert = response.data.message;
@@ -23406,6 +23430,13 @@ __webpack_require__.r(__webpack_exports__);
       })["finally"](function () {
         _this2.formLoading = false;
       });
+    },
+    formSuccess: function formSuccess(response) {
+      this.successAlert = true;
+    },
+    formError: function formError(response) {
+      this.errorAlert = true;
+      this.errors = response.data.errors;
     },
     // upload and preview image
     uploadImage1: function uploadImage1(event) {
@@ -23481,25 +23512,6 @@ __webpack_require__.r(__webpack_exports__);
         this.errorAlert = false;
         this.messageAlert = '';
       }
-    },
-    formSuccess: function formSuccess(response) {
-      console.log('Reset the form');
-      this.successAlert = true;
-      var self = this; //you need this because *this* will refer to Object.keys below`
-      //Iterate through each object field, key is name of the object field`
-
-      Object.keys(this.form).forEach(function (key, index) {
-        self.form[key] = '';
-      });
-      this.image1preview = null;
-      this.image2preview = null;
-      this.image3preview = null;
-      this.image4preview = null;
-      this.image5preview = null;
-    },
-    formError: function formError(response) {
-      this.errorAlert = true;
-      this.errors = response.data.errors;
     },
     getStates: function getStates() {
       var _this3 = this;
@@ -25393,7 +25405,7 @@ var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_29 = ["value"];
+var _hoisted_29 = ["value", "selected"];
 var _hoisted_30 = {
   "class": "col-md-3"
 };
@@ -25422,7 +25434,7 @@ var _hoisted_36 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_37 = ["value"];
+var _hoisted_37 = ["value", "selected"];
 var _hoisted_38 = {
   "class": "col-md-6"
 };
@@ -25530,17 +25542,18 @@ var _hoisted_63 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 );
 
 var _hoisted_64 = ["src"];
-var _hoisted_65 = {
+var _hoisted_65 = ["src"];
+var _hoisted_66 = {
   "class": "col-md-2"
 };
-var _hoisted_66 = {
+var _hoisted_67 = {
   "class": "form-group"
 };
-var _hoisted_67 = {
+var _hoisted_68 = {
   "class": "add-listing__input-file-box"
 };
 
-var _hoisted_68 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_69 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "add-listing__input-file-wrap"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "ion-ios-cloud-upload"
@@ -25548,37 +25561,19 @@ var _hoisted_68 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_69 = ["src"];
-var _hoisted_70 = {
-  "class": "col-md-2"
-};
-var _hoisted_71 = {
-  "class": "form-group"
-};
+var _hoisted_70 = ["src"];
+var _hoisted_71 = ["src"];
 var _hoisted_72 = {
-  "class": "add-listing__input-file-box"
-};
-
-var _hoisted_73 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "add-listing__input-file-wrap"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "class": "ion-ios-cloud-upload"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Click to upload your images")], -1
-/* HOISTED */
-);
-
-var _hoisted_74 = ["src"];
-var _hoisted_75 = {
   "class": "col-md-2"
 };
-var _hoisted_76 = {
+var _hoisted_73 = {
   "class": "form-group"
 };
-var _hoisted_77 = {
+var _hoisted_74 = {
   "class": "add-listing__input-file-box"
 };
 
-var _hoisted_78 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_75 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "add-listing__input-file-wrap"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "ion-ios-cloud-upload"
@@ -25586,18 +25581,39 @@ var _hoisted_78 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_79 = ["src"];
+var _hoisted_76 = ["src"];
+var _hoisted_77 = ["src"];
+var _hoisted_78 = {
+  "class": "col-md-2"
+};
+var _hoisted_79 = {
+  "class": "form-group"
+};
 var _hoisted_80 = {
-  "class": "col-md-2"
-};
-var _hoisted_81 = {
-  "class": "form-group"
-};
-var _hoisted_82 = {
   "class": "add-listing__input-file-box"
 };
 
-var _hoisted_83 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_81 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "add-listing__input-file-wrap"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-ios-cloud-upload"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Click to upload your images")], -1
+/* HOISTED */
+);
+
+var _hoisted_82 = ["src"];
+var _hoisted_83 = ["src"];
+var _hoisted_84 = {
+  "class": "col-md-2"
+};
+var _hoisted_85 = {
+  "class": "form-group"
+};
+var _hoisted_86 = {
+  "class": "add-listing__input-file-box"
+};
+
+var _hoisted_87 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "add-listing__input-file-wrap"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "ion-ios-cloud-upload"
@@ -25605,14 +25621,15 @@ var _hoisted_83 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_84 = ["src"];
+var _hoisted_88 = ["src"];
+var _hoisted_89 = ["src"];
 
-var _hoisted_85 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_90 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "col-12"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "submit",
   "class": "btn v8 mar-top-15"
-}, "Submit Property")], -1
+}, "Update Property")], -1
 /* HOISTED */
 );
 
@@ -25648,7 +25665,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     key: 2,
     enctype: "multipart/form-data",
     onSubmit: _cache[17] || (_cache[17] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
-      return _ctx.submitProperty && _ctx.submitProperty.apply(_ctx, arguments);
+      return $options.updateProperty && $options.updateProperty.apply($options, arguments);
     }, ["prevent"]))
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [_hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
@@ -25669,7 +25686,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
       "class": "option",
       key: type.id,
-      value: type.id
+      value: type.id,
+      selected: type.id === $data.form.property_type_id
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(type.name), 9
     /* TEXT, PROPS */
     , _hoisted_29);
@@ -25696,7 +25714,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
       "class": "option",
       key: state.id,
-      value: state.id
+      value: state.id,
+      selected: state.id === $data.form.state_id
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(state.name), 9
     /* TEXT, PROPS */
     , _hoisted_37);
@@ -25789,12 +25808,19 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 32
   /* HYDRATE_EVENTS */
-  ), _hoisted_63]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  ), _hoisted_63]), $data.form.image1preview === null && $data.form.image1 !== null ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", {
+    key: 0,
+    src: '/photos/properties/' + $data.form.image1,
+    width: "100"
+  }, null, 8
+  /* PROPS */
+  , _hoisted_64)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.form.image1preview ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", {
+    key: 1,
     src: $data.form.image1preview,
     width: "100"
   }, null, 8
   /* PROPS */
-  , _hoisted_64)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_65, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_66, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_67, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  , _hoisted_65)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_66, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_67, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_68, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     "class": "add-listing__input-file",
     type: "file",
     name: "file",
@@ -25804,11 +25830,19 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 32
   /* HYDRATE_EVENTS */
-  ), _hoisted_68]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    src: $data.form.image2preview
+  ), _hoisted_69]), $data.form.image2preview === null && $data.form.image2 !== null ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", {
+    key: 0,
+    src: '/photos/properties/' + $data.form.image2,
+    width: "100"
   }, null, 8
   /* PROPS */
-  , _hoisted_69)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_70, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_71, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_72, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  , _hoisted_70)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.form.image2preview ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", {
+    key: 1,
+    src: $data.form.image2preview,
+    width: "100"
+  }, null, 8
+  /* PROPS */
+  , _hoisted_71)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_72, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_73, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_74, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     "class": "add-listing__input-file",
     type: "file",
     name: "file",
@@ -25818,11 +25852,19 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 32
   /* HYDRATE_EVENTS */
-  ), _hoisted_73]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    src: $data.form.image3preview
+  ), _hoisted_75]), $data.form.image3preview === null && $data.form.image3 !== null ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", {
+    key: 0,
+    src: '/photos/properties/' + $data.form.image3,
+    width: "100"
   }, null, 8
   /* PROPS */
-  , _hoisted_74)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_75, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_76, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_77, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  , _hoisted_76)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.form.image3preview ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", {
+    key: 1,
+    src: $data.form.image3preview,
+    width: "100"
+  }, null, 8
+  /* PROPS */
+  , _hoisted_77)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_78, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_79, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_80, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     "class": "add-listing__input-file",
     type: "file",
     name: "file",
@@ -25832,11 +25874,19 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 32
   /* HYDRATE_EVENTS */
-  ), _hoisted_78]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    src: $data.form.image4preview
+  ), _hoisted_81]), $data.form.image4preview === null && $data.form.image4 !== null ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", {
+    key: 0,
+    src: '/photos/properties/' + $data.form.image4,
+    width: "100"
   }, null, 8
   /* PROPS */
-  , _hoisted_79)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_80, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_81, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_82, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  , _hoisted_82)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.form.image4preview ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", {
+    key: 1,
+    src: $data.form.image4preview,
+    width: "100"
+  }, null, 8
+  /* PROPS */
+  , _hoisted_83)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_84, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_85, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_86, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     "class": "add-listing__input-file",
     type: "file",
     name: "file",
@@ -25846,11 +25896,19 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 32
   /* HYDRATE_EVENTS */
-  ), _hoisted_83]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    src: $data.form.image5preview
+  ), _hoisted_87]), $data.form.image5preview === null && $data.form.image5 !== null ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", {
+    key: 0,
+    src: '/photos/properties/' + $data.form.image5,
+    width: "100"
   }, null, 8
   /* PROPS */
-  , _hoisted_84)])]), _hoisted_85])], 32
+  , _hoisted_88)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.form.image5preview ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", {
+    key: 1,
+    src: $data.form.image5preview,
+    width: "100"
+  }, null, 8
+  /* PROPS */
+  , _hoisted_89)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])]), _hoisted_90])], 32
   /* HYDRATE_EVENTS */
   )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])])])])])], 64
   /* STABLE_FRAGMENT */
@@ -31328,7 +31386,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.ltn__slide-item-2[data-v-2e6ccd45]{\n        height: calc(50vh - 0px) !important;\n        padding-top: 80px !important;\n        min-height: 300px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.ltn__slide-item-2[data-v-2e6ccd45]{\r\n        height: calc(50vh - 0px) !important;\r\n        padding-top: 80px !important;\r\n        min-height: 300px;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -31352,7 +31410,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.ltn__slide-item-2[data-v-c54161d8]{\n        height: calc(50vh - 0px) !important;\n        padding-top: 80px !important;\n        min-height: 300px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.ltn__slide-item-2[data-v-c54161d8]{\r\n        height: calc(50vh - 0px) !important;\r\n        padding-top: 80px !important;\r\n        min-height: 300px;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -31376,7 +31434,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.ltn__slide-item-2[data-v-170390c8]{\n        height: calc(50vh - 0px) !important;\n        padding-top: 80px !important;\n        min-height: 300px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.ltn__slide-item-2[data-v-170390c8]{\r\n        height: calc(50vh - 0px) !important;\r\n        padding-top: 80px !important;\r\n        min-height: 300px;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -31400,7 +31458,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.ltn__slide-item-2[data-v-1a487a18]{\n        height: calc(50vh - 0px) !important;\n        padding-top: 80px !important;\n        min-height: 300px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.ltn__slide-item-2[data-v-1a487a18]{\r\n        height: calc(50vh - 0px) !important;\r\n        padding-top: 80px !important;\r\n        min-height: 300px;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -31424,7 +31482,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.ltn__slide-item-2[data-v-a98aa4ea]{\n        height: calc(50vh - 0px) !important;\n        padding-top: 80px !important;\n        min-height: 300px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.ltn__slide-item-2[data-v-a98aa4ea]{\r\n        height: calc(50vh - 0px) !important;\r\n        padding-top: 80px !important;\r\n        min-height: 300px;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

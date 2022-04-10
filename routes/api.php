@@ -40,7 +40,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/realtor/property/submit', [RealtorAccountController::class, 'submitProperty']);
     Route::get('/realtor/properties', [RealtorAccountController::class, 'myProperties']);
     Route::get('/realtor/property/{id}/edit', [RealtorAccountController::class, 'myPropertyEdit']);
-    Route::put('/realtor/property/{id}/update', [RealtorAccountController::class, 'myPropertyUpdate']);
+    Route::post('/realtor/property/{id}/update', [RealtorAccountController::class, 'myPropertyUpdate']);
     Route::delete('/realtor/properties/{id}/delete', [RealtorAccountController::class, 'myPropertyDelete']);
 
     // User Account

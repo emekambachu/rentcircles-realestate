@@ -51,7 +51,8 @@
                                 <img src="/images/loader-gradient.gif" width="200"/>
                             </p>
 
-                            <form enctype="multipart/form-data" @submit.prevent="submitProperty" v-if="!formLoading">
+                            <form enctype="multipart/form-data"
+                                  @submit.prevent="updateProperty" v-if="!formLoading">
                                 <div class="row">
 
                                     <div class="col-md-6">
@@ -71,7 +72,8 @@
                                                 <option selected>Select</option>
                                                 <option class="option" v-for="type in propertyTypes"
                                                         :key="type.id"
-                                                        :value="type.id">
+                                                        :value="type.id"
+                                                :selected="type.id === form.property_type_id">
                                                     {{ type.name }}
                                                 </option>
                                             </select>
@@ -94,7 +96,8 @@
                                                 <option selected>Select</option>
                                                 <option class="option" v-for="state in states"
                                                         :key="state.id"
-                                                        :value="state.id">
+                                                        :value="state.id"
+                                                        :selected="state.id === form.state_id">
                                                     {{ state.name }}
                                                 </option>
                                             </select>
@@ -175,7 +178,10 @@
                                                     <p>Click to upload your images</p>
                                                 </div>
                                             </div>
-                                            <img :src="form.image1preview" width="100"/>
+                                            <img v-if="form.image1preview === null && form.image1 !== null"
+                                                 :src="'/photos/properties/'+form.image1"
+                                                 width="100"/>
+                                            <img v-if="form.image1preview" :src="form.image1preview" width="100"/>
                                         </div>
                                     </div>
 
@@ -190,7 +196,10 @@
                                                     <p>Click to upload image</p>
                                                 </div>
                                             </div>
-                                            <img :src="form.image2preview"/>
+                                            <img v-if="form.image2preview === null && form.image2 !== null"
+                                                 :src="'/photos/properties/'+form.image2"
+                                                 width="100"/>
+                                            <img v-if="form.image2preview" :src="form.image2preview" width="100"/>
                                         </div>
                                     </div>
 
@@ -205,7 +214,10 @@
                                                     <p>Click to upload your images</p>
                                                 </div>
                                             </div>
-                                            <img :src="form.image3preview"/>
+                                            <img v-if="form.image3preview === null && form.image3 !== null"
+                                                 :src="'/photos/properties/'+form.image3"
+                                                 width="100"/>
+                                            <img v-if="form.image3preview" :src="form.image3preview" width="100"/>
                                         </div>
                                     </div>
 
@@ -220,7 +232,10 @@
                                                     <p>Click to upload your images</p>
                                                 </div>
                                             </div>
-                                            <img :src="form.image4preview"/>
+                                            <img v-if="form.image4preview === null && form.image4 !== null"
+                                                 :src="'/photos/properties/'+form.image4"
+                                                 width="100"/>
+                                            <img v-if="form.image4preview" :src="form.image4preview" width="100"/>
                                         </div>
                                     </div>
 
@@ -235,12 +250,15 @@
                                                     <p>Click here to upload your images</p>
                                                 </div>
                                             </div>
-                                            <img :src="form.image5preview">
+                                            <img v-if="form.image5preview === null && form.image5 !== null"
+                                                 :src="'/photos/properties/'+form.image5"
+                                                 width="100"/>
+                                            <img v-if="form.image5preview" :src="form.image5preview" width="100"/>
                                         </div>
                                     </div>
 
                                     <div class="col-12">
-                                        <button type="submit" class="btn v8 mar-top-15">Submit Property</button>
+                                        <button type="submit" class="btn v8 mar-top-15">Update Property</button>
                                     </div>
 
                                 </div>
@@ -300,11 +318,29 @@
             getCurrentProperty(){
                 axios.get('/api/realtor/property/'+ this.$route.params.id +'/edit')
                     .then((response) => {
-                        response.data.success === true ? this.form = response.data.property : false;
+                        response.data.success === true ? this.populateForm(response) : false;
                         console.log(response.data.property);
                     }).catch((error) => {
                     console.log(error);
                 });
+            },
+
+            populateForm(response){
+                this.form.title = response.data.property.title;
+                this.form.property_type_id = response.data.property.property_type_id;
+                this.form.state_id = response.data.property.state_id;
+                this.form.address = response.data.property.address;
+                this.form.description = response.data.property.description;
+                this.form.bedrooms = response.data.property.bedrooms;
+                this.form.bathrooms = response.data.property.bathrooms;
+                this.form.living_rooms = response.data.property.living_rooms;
+                this.form.cost = response.data.property.cost;
+                this.form.features = response.data.property.features.split(',');
+                this.form.image1 = response.data.property.image1;
+                this.form.image2 = response.data.property.image2;
+                this.form.image3 = response.data.property.image3;
+                this.form.image4 = response.data.property.image4;
+                this.form.image5 = response.data.property.image5;
             },
 
             updateProperty: function(){
@@ -322,8 +358,12 @@
                 formData.append("cost", this.form.cost);
                 formData.append("features", this.form.features);
 
-                formData.append("image1", this.form.image1);
-                formData.append("image2", this.form.image2);
+                if(this.form.image1){
+                    formData.append("image1", this.form.image1);
+                }
+                if(this.form.image2){
+                    formData.append("image2", this.form.image2);
+                }
                 if(this.form.image3){
                     formData.append("image3", this.form.image3);
                 }
@@ -335,8 +375,9 @@
                 }
 
                 let config = {
-                    headers: { 'content-type': 'multipart/form-data' }
+                    headers: {'content-type': 'multipart/form-data'}
                 }
+                console.log(this.form.title);
                 axios.post('/api/realtor/property/'+ this.$route.params.id +'/update', formData, config)
                     .then((response) => {
                         response.data.success === true ? this.formSuccess(response) : this.formError(response);
@@ -347,6 +388,15 @@
                 }).finally(() => {
                     this.formLoading = false;
                 });
+            },
+
+            formSuccess: function(response){
+                this.successAlert = true;
+            },
+
+            formError: function(response){
+                this.errorAlert = true;
+                this.errors = response.data.errors
             },
 
             // upload and preview image
@@ -423,26 +473,6 @@
                     this.errorAlert = false;
                     this.messageAlert = '';
                 }
-            },
-
-            formSuccess: function(response){
-                console.log('Reset the form');
-                this.successAlert = true;
-                let self = this; //you need this because *this* will refer to Object.keys below`
-                //Iterate through each object field, key is name of the object field`
-                Object.keys(this.form).forEach(function(key,index) {
-                    self.form[key] = '';
-                });
-                this.image1preview = null;
-                this.image2preview = null;
-                this.image3preview = null;
-                this.image4preview = null;
-                this.image5preview = null;
-            },
-
-            formError: function(response){
-                this.errorAlert = true;
-                this.errors = response.data.errors
             },
 
             getStates: function(){
