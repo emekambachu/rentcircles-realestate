@@ -16,7 +16,7 @@
                             <div class="ltn__car-dealer-form-item ltn__custom-icon col-lg-4 col-md-6">
                                 <select class="nice-select" name="property_type_id"
                                         v-model="form.property_type_id">
-                                    <option :selected="''">Property Type</option>
+                                    <option>Property Type</option>
                                     <option v-for="(type, index) in property_types" :key="type.id"
                                             :value="type.id">{{ type.name }}</option>
                                 </select>
@@ -24,7 +24,7 @@
 
                             <div class="ltn__car-dealer-form-item ltn__custom-icon col-lg-4 col-md-6">
                                 <select class="nice-select" name="state_id" v-model="form.state_id">
-                                    <option :selected="''">State</option>
+                                    <option>State</option>
                                     <option v-for="(state, index) in states" :key="state.id"
                                             :value="state.id">{{ state.name }}</option>
                                 </select>
@@ -34,7 +34,7 @@
                                     <div v-if="moreFilter"
                                          class="ltn__car-dealer-form-item ltn__custom-icon col-lg-4 col-md-6">
                                         <select class="nice-select" name="bedrooms" v-model="form.bedrooms">
-                                            <option :selected="''">Number of bedrooms</option>
+                                            <option>Number of bedrooms</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -46,7 +46,7 @@
                                     <div v-if="moreFilter"
                                          class="ltn__car-dealer-form-item ltn__custom-icon col-lg-4 col-md-6">
                                         <select class="nice-select" name="bathrooms">
-                                            <option :selected="''">Number of bathrooms</option>
+                                            <option>Number of bathrooms</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -70,7 +70,7 @@
                                     <div v-if="moreFilter"
                                          class="ltn__car-dealer-form-item ltn__custom-icon col-lg-6 col-md-6">
                                         <select class="nice-select" name="max_cost">
-                                            <option :selected="''">Cost (Max)</option>
+                                            <option>Cost (Max)</option>
                                             <option value="200000">₦200,000</option>
                                             <option value="500000">₦500,000</option>
                                             <option value="700000">₦700,000</option>
@@ -82,7 +82,7 @@
                                     <div v-if="moreFilter"
                                          class="ltn__car-dealer-form-item ltn__custom-icon col-lg-6 col-md-6">
                                         <select class="nice-select" name="min_cost">
-                                            <option :selected="''">Cost (Min)</option>
+                                            <option>Cost (Min)</option>
                                             <option value="200000">₦200,000</option>
                                             <option value="500000">₦500,000</option>
                                             <option value="700000">₦700,000</option>
