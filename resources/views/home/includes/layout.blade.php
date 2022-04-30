@@ -42,7 +42,7 @@
 <!-- Add your site or application content here -->
 
 <!-- Body main wrapper start -->
-<div id="" class="body-wrapper">
+<div class="body-wrapper">
 
     <!-- HEADER AREA START (header-5) -->
     <header class="ltn__header-area ltn__header-5 ltn__header-logo-and-mobile-menu-in-mobile ltn__header-logo-and-mobile-menu ltn__header-transparent gradient-color-4---">
