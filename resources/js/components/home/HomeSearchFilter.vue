@@ -13,14 +13,14 @@
                                        name="term" v-model="form.term">
                             </div>
 
-                            <div class="ltn__car-dealer-form-item ltn__custom-icon col-lg-4 col-md-6">
-                                <select class="nice-select" name="property_type_id"
-                                        v-model="form.property_type_id">
-                                    <option>Property Type</option>
-                                    <option v-for="(type, index) in property_types" :key="type.id"
-                                            :value="type.id">{{ type.name }}</option>
-                                </select>
-                            </div>
+<!--                            <div class="ltn__car-dealer-form-item ltn__custom-icon col-lg-4 col-md-6">-->
+<!--                                <select class="nice-select" name="property_type_id"-->
+<!--                                        v-model="form.property_type_id">-->
+<!--                                    <option>Property Type</option>-->
+<!--                                    <option v-for="(type, index) in property_types" :key="type.id"-->
+<!--                                            :value="type.id">{{ type.name }}</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
 
                             <div class="ltn__car-dealer-form-item ltn__custom-icon col-lg-4 col-md-6">
                                 <select class="nice-select" name="state_id" v-model="form.state_id">
