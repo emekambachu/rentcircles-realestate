@@ -10,7 +10,7 @@
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="RentCircles | Property, realtors, real estates, rent">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-{{--    <meta name="csrf-token" content="{{ csrf_token() }}">--}}
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <script>window.Laravel = {csrfToken: '{{ csrf_token() }}'}</script>
 
     <!-- Place favicon.png in the root directory -->
