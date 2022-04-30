@@ -11,5 +11,8 @@ class PropertyType extends Model
         'name'
     ];
 
+    public static function getName($id){
+        return self::findOrFail($id)->name;
+    }
 
 }

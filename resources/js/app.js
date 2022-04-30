@@ -7,10 +7,16 @@
 // Default
 require('./bootstrap');
 import { createApp } from 'vue';
+// SPA Router
 import router from './routes';
+// Axios api
 import axios from 'axios';
 import VueAxios from 'vue-axios';
-import { createMetaManager, useMeta } from 'vue-meta'
+// Moment time-stamp
+import moment from 'moment';
+// Sweet Alert
+import Swal from 'sweetalert2';
+window.Swal = Swal;
 
 /**
  * The following block of code may be used to automatically register your
@@ -23,27 +29,24 @@ import { createMetaManager, useMeta } from 'vue-meta'
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-// Local Components
-import HomeComponent from './components/home/HomeComponent';
-import AboutComponent from './components/home/AboutComponent';
-import PrivacyPolicyComponent from './components/home/PrivacyPolicyComponent';
-import TermsComponent from './components/home/TermsComponent';
-import FaqComponent from './components/home/FaqComponent';
-import ContactUsComponent from './components/home/ContactUsComponent';
+// Home
+import HomeSearchFilter from './components/home/HomeSearchFilter';
+import HomeProperties from "./components/home/HomeProperties";
+import HomePropertyDetail from "./components/home/HomePropertyDetail";
 
+// Auth
 import RealtorLoginComponent from './components/realtors/RealtorLoginComponent';
 import RealtorRegisterComponent from './components/realtors/RealtorRegisterComponent';
-import RealtorLogoutComponent from './components/realtors/account/RealtorLogoutComponent';
 
-import RealtorDashboardComponent from './components/realtors/account/RealtorDashboardComponent';
-import RealtorBioComponent from './components/realtors/account/RealtorBioComponent';
+// Profile
+import RealtorDashboard from './components/realtors/account/RealtorDashboard';
+import RealtorBio from './components/realtors/account/profile/RealtorBio';
+import RealtorProfile from './components/realtors/account/profile/RealtorProfile';
+import RealtorProfileEdit from './components/realtors/account/profile/RealtorProfileEdit';
 
-import RealtorMyPropertiesComponent from './components/realtors/account/RealtorMyPropertiesComponent';
-import RealtorSinglePropertyComponent from './components/realtors/account/RealtorSinglePropertyComponent';
-import RealtorAddPropertiesComponent from './components/realtors/account/RealtorAddPropertiesComponent';
-
-import RealtorProfileComponent from './components/realtors/account/RealtorProfileComponent';
-import RealtorProfileEditComponent from './components/realtors/account/RealtorProfileEditComponent';
+import RealtorMyProperties from './components/realtors/account/properties/RealtorMyProperties';
+import RealtorAddProperties from './components/realtors/account/properties/RealtorAddProperties';
+import RealtorPropertyEdit from './components/realtors/account/properties/RealtorPropertyEdit';
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -53,28 +56,23 @@ import RealtorProfileEditComponent from './components/realtors/account/RealtorPr
 
 createApp({
     components: {
-        HomeComponent,
-        AboutComponent,
-        PrivacyPolicyComponent,
-        TermsComponent,
-        FaqComponent,
-        ContactUsComponent,
+        HomeSearchFilter,
+        HomeProperties,
+        HomePropertyDetail,
 
-        RealtorRegisterComponent,
         RealtorLoginComponent,
-        RealtorLogoutComponent,
+        RealtorRegisterComponent,
 
-        RealtorDashboardComponent,
-        RealtorBioComponent,
+        RealtorDashboard,
+        RealtorBio,
+        RealtorProfile,
+        RealtorProfileEdit,
 
-        RealtorProfileComponent,
-        RealtorProfileEditComponent,
-
-        RealtorMyPropertiesComponent,
-        RealtorSinglePropertyComponent,
-        RealtorAddPropertiesComponent,
+        RealtorMyProperties,
+        RealtorAddProperties,
+        RealtorPropertyEdit,
     }
 }).use(
-    router, axios, VueAxios, createMetaManager(), useMeta
+    router, axios, VueAxios, moment
 ).mount('#app');
 

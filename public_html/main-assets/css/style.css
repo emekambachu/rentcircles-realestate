@@ -14391,10 +14391,12 @@ input.cart-plus-minus-box {
 
 .theme-btn-1 {
   background-color: var(--ltn__secondary-color);
-  color: var(--white); }
+  color: var(--white);
+}
   .theme-btn-1:hover {
-    background-color: var(--ltn__primary-color);
-    color: var(--white); }
+      background-color: var(--ltn__secondary-color);
+      color: var(--white);
+  }
 
 .theme-btn-2 {
   background-color: var(--ltn__primary-color);

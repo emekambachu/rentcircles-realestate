@@ -20,7 +20,9 @@
         <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1">
 
             <!-- ltn__slide-item -->
-            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60" data-bs-bg="{{ asset('main-assets/img/slider/11.jpg') }}">
+            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-overlay-theme-black-60" style="background-image: url({{ asset('/main-assets/img/slider/52.jpg') }});
+                background-size: cover; background-repeat: no-repeat;  background-position: center;
+                background-attachment: fixed;">
                 <div class="ltn__slide-item-inner text-center">
                     <div class="container">
                         <div class="row">
@@ -44,7 +46,7 @@
                 <div class="col-lg-4">
                     <div class="ltn__contact-address-item ltn__contact-address-item-3 box-shadow">
                         <div class="ltn__contact-address-icon">
-                            <img src="{{ asset('main-assets/img/icons/10.png') }}" alt="Icon Image">
+                            <img src="{{ asset('/main-assets/img/icons/10.png') }}" alt="Icon Image">
                         </div>
                         <h3 class="animated fadeIn">Email Address</h3>
                         <p>info@rentcircles.com</p>
@@ -53,7 +55,7 @@
                 <div class="col-lg-4">
                     <div class="ltn__contact-address-item ltn__contact-address-item-3 box-shadow">
                         <div class="ltn__contact-address-icon">
-                            <img src="{{ asset('main-assets/img/icons/11.png') }}" alt="Icon Image">
+                            <img src="{{ asset('/main-assets/img/icons/11.png') }}" alt="Icon Image">
                         </div>
                         <h3 class="animated fadeIn">Phone Number</h3>
                         <p>+0123-456789</p>
@@ -62,7 +64,7 @@
                 <div class="col-lg-4">
                     <div class="ltn__contact-address-item ltn__contact-address-item-3 box-shadow">
                         <div class="ltn__contact-address-icon">
-                            <img src="{{ asset('main-assets/img/icons/12.png') }}" alt="Icon Image">
+                            <img src="{{ asset('/main-assets/img/icons/12.png') }}" alt="Icon Image">
                         </div>
                         <h3 class="animated fadeIn">Office Address</h3>
                         <p>18/A, New Born Town Hall New York, US</p>
@@ -100,7 +102,17 @@
                                             <option>Home Buying</option>
                                             <option>Home Selling</option>
                                             <option>Escrow Services</option>
-                                        </select><div class="nice-select" tabindex="0"><span class="current">Select Service Type</span><ul class="list"><li data-value="Select Service Type" class="option selected">Select Service Type</li><li data-value="Property Management" class="option">Property Management </li><li data-value="Mortgage Service" class="option">Mortgage Service </li><li data-value="Consulting Service" class="option">Consulting Service</li><li data-value="Home Buying" class="option">Home Buying</li><li data-value="Home Selling" class="option">Home Selling</li><li data-value="Escrow Services" class="option">Escrow Services</li></ul></div>
+                                        </select><div class="nice-select" tabindex="0">
+                                            <span class="current">Select Service Type</span>
+                                            <ul class="list">
+                                                <li data-value="Select Service Type" class="option selected">Select Service Type</li>
+                                                <li data-value="Property Management" class="option">Property Management </li>
+                                                <li data-value="Mortgage Service" class="option">Mortgage Service </li>
+                                                <li data-value="Consulting Service" class="option">Consulting Service</li>
+                                                <li data-value="Home Buying" class="option">Home Buying</li>
+                                                <li data-value="Home Selling" class="option">Home Selling</li>
+                                                <li data-value="Escrow Services" class="option">Escrow Services</li>
+                                            </ul></div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -126,7 +138,7 @@
 
     <!-- CALL TO ACTION START (call-to-action-6) -->
     <div class="ltn__call-to-action-area call-to-action-6 before-bg-bottom mt-100"
-         data-bs-bg="{{ asset('main-assets/img/1.jpg') }}">
+         data-bs-bg="{{ asset('/main-assets/img/1.jpg') }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">

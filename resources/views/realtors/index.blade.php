@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="LionCoders" />
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <script>window.Laravel = {csrfToken: '{{ csrf_token() }}'}</script>
 
     <!-- Links -->
@@ -29,7 +30,7 @@
     <!-- Vue.js -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
-    <title> Realtor Dashboard | RentCircles</title>
+    <title>Realtor Dashboard | RentCircles</title>
 
 </head>
 <body>
@@ -45,7 +46,7 @@
         </div>
         <div class="menu-sidebar__content js-scrollbar2">
 
-            <realtor-bio-component></realtor-bio-component>
+            <realtor-bio></realtor-bio>
 
             <nav class="navbar-sidebar2">
                 <ul class="list-unstyled navbar__list">
@@ -62,7 +63,7 @@
                         <router-link
                             class="nav-link"
                             exact
-                            to="/realtor/account/my-properties">
+                            to="/realtor/my-properties">
                             <i class="ion-ios-home"></i>My Properties
                         </router-link>
                     </li>
@@ -71,7 +72,7 @@
                         <router-link
                             class="nav-link"
                             exact
-                            to="/realtor/account/properties/add">
+                            to="/realtor/property/add">
                             <i class="ion-ios-plus"></i>Add Property
                         </router-link>
                     </li>
@@ -80,13 +81,18 @@
                         <router-link
                             class="nav-link"
                             exact
-                            to="/realtor/account/profile">
+                            to="/realtor/profile">
                             <i class="ion-ios-person"></i>Profile
                         </router-link>
                     </li>
 
                     <li>
-                        <realtor-logout-component></realtor-logout-component>
+                        <router-link
+                            class="nav-link"
+                            exact
+                            to="/realtor/logout">
+                            <i class="ion-ios-locked"></i>Logout
+                        </router-link>
                     </li>
                 </ul>
             </nav>
@@ -120,7 +126,7 @@
                                                     <router-link
                                                         class="nav-link"
                                                         exact
-                                                        to="/realtor/account/my-properties">My Properties
+                                                        to="/realtor/my-properties">My Properties
                                                     </router-link>
                                                 </li>
 
@@ -128,7 +134,7 @@
                                                     <router-link
                                                         class="nav-link"
                                                         exact
-                                                        to="/realtor/account/properties/add">Add Property
+                                                        to="/realtor/property/add">Add Property
                                                     </router-link>
                                                 </li>
 
@@ -136,7 +142,7 @@
                                                     <router-link
                                                         class="nav-link"
                                                         exact
-                                                        to="/realtor/account/profile">Profile
+                                                        to="/realtor/profile">Profile
                                                     </router-link>
                                                 </li>
 

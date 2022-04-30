@@ -9,14 +9,20 @@
                             <div class="breadcrumb-menu text-right sm-left">
                                 <ul>
                                     <li class="active">
-                                        <a href="/realtor/account">Home</a>
+                                        <a href="/">Home</a>
                                     </li>
-                                    <li>My Listings</li>
+                                    <li>
+                                        My Listings
+                                    </li>
                                 </ul>
                             </div>
                         </div>
-                        <a class="btn v3" href="">
-                            <i class="ion-plus-round"></i>Add Listing </a>
+                        <router-link
+                            class="btn v3"
+                            exact
+                            to="/realtor/property/add">
+                            <i class="ion-plus-round"></i>Add Property
+                        </router-link>
                     </div>
                 </div>
             </div>
@@ -33,10 +39,10 @@
                         </div>
 
                         <div class="viewd-item-wrap">
-                            <realtor-single-property-component
+                            <realtor-single-property
                                 v-for="property in properties" :key="property.id"
-                                :property_id="property.id"
-                                :property_type="property.property_type"
+                                :id="property.id"
+                                :type="property.property_type"
                                 :state="property.state"
                                 :title="property.title"
                                 :address="property.address"
@@ -52,7 +58,7 @@
                                 :image5="property.image5"
                                 :features="property.features"
                                 :status="property.status"
-                            ></realtor-single-property-component>
+                            ></realtor-single-property>
                         </div>
 
                     </div>
@@ -65,10 +71,10 @@
 </template>
 
 <script>
-    import RealtorSinglePropertyComponent from "./RealtorSinglePropertyComponent";
+    import RealtorSingleProperty from "./RealtorSingleProperty";
     export default {
         components: {
-            RealtorSinglePropertyComponent
+            RealtorSingleProperty
         },
         data(){
             return{

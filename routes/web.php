@@ -24,16 +24,49 @@ use Illuminate\Support\Facades\Route;
 // Auth
 Auth::routes();
 
-Route::get('/{any}', static function () {
-    return view('home');
-    // vue route should ignore these urls and allow server to render it
-    // ignore realtor/login and realtor/account from vue router, allow server to render
-})->where('any', '^(?!realtor/login|realtor/account).*$');
+//Route::get('/{any}', static function () {
+//    return view('home');
+//    // vue route should ignore these urls and allow server to render it
+//    // ignore realtor/login and realtor/account from vue router, allow server to render
+//})->where('any', '^(?!realtor/login|realtor/account).*$');
 
-// Properties
-Route::get('/properties', [PropertyController::class, 'index'])
-    ->name('realtor.verify.email');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/properties', [App\Http\Controllers\Properties\PropertyController::class, 'index'])
+    ->name('properties');
+Route::get('/properties/search', [App\Http\Controllers\Properties\PropertyController::class, 'search'])
+    ->name('properties.search');
+Route::get('/property/{id}/detail', [App\Http\Controllers\Properties\PropertyController::class, 'detail'])
+    ->name('property.detail');
+
+Route::get('/locations', [App\Http\Controllers\HomeController::class, 'locations'])->name('locations');
+
+Route::get('/about', static function () {
+    return view('home.about');
+});
+
+Route::get('/terms', static function () {
+    return view('home.terms');
+});
+
+Route::get('/privacy', static function () {
+    return view('home.privacy-policy');
+});
+
+Route::get('/faq', static function () {
+    return view('home.faq');
+});
+
+Route::get('/contact', static function () {
+    return view('home.contact');
+});
+
+
+// Realtor Auth
+Route::get('/realtor/login', [RealtorLoginController::class, 'showLoginForm'])
+    ->name('realtor.login');
+Route::get('/realtor/register', [RealtorRegisterController::class, 'showRegistrationForm'])
+    ->name('realtor.register');
 
 // Realtor email verification
 Route::get('/realtor/{token}/verify/email', [RealtorRegisterController::class, 'verifyEmail'])
@@ -41,38 +74,29 @@ Route::get('/realtor/{token}/verify/email', [RealtorRegisterController::class, '
 Route::get('/realtor/{token}/verify/email-complete', [RealtorRegisterController::class, 'verifyEmailComplete'])
     ->name('realtor.verify.email-complete');
 
-// Realtor Login
-// ignore this page for vue router above, so laravel server can render it
-Route::get('/realtor/login', [RealtorLoginController::class, 'showLoginForm'])
-    ->name('realtor.login');
-
 // Realtors Account SPA
-Route::get('/realtor/account/{any}', static function () {
+Route::get('/realtor/{any}', static function () {
     return view('realtors.index');
 })->where('any', '.*');
 
-// ignore this page from vue router above in /{any}, so laravel server can render it
-Route::get('/realtor/account', [RealtorAccountController::class, 'dashboard'])
-    ->name('realtor.dashboard');
-
 
 // Users SPA
-Route::get('/users/account/{any}', static function () {
+Route::get('/user/{any}', static function () {
     return view('users.index');
 })->where('any', '.*');
 
 
-// Realtors SPA
-Route::get('/admin/account/{any}', static function () {
+// Admin SPA
+Route::get('/admin/{any}', static function () {
     return view('admin.index');
 })->where('any', '.*');
 
 
 // Admin Auth
-Route::get('admin/login', [AdminLoginController::class, 'showLoginForm'])
+Route::get('/admin/login', [AdminLoginController::class, 'showLoginForm'])
     ->name('admin.login');
-Route::get('admin', [AdminLoginController::class, 'showLoginForm'])
+Route::get('/admin', [AdminLoginController::class, 'showLoginForm'])
     ->name('admin');
 
 //Github Deployment
-Route::post('github/deploy', [GithubDeploymentController::class, 'deploy']);
+Route::post('/github/deploy', [GithubDeploymentController::class, 'deploy']);

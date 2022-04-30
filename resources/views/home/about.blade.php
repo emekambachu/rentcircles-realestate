@@ -19,7 +19,9 @@
     <div class="ltn__slider-area ltn__slider-3 section-bg-2">
         <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1">
             <!-- ltn__slide-item -->
-            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60" data-bs-bg="{{ asset('main-assets/img/slider/11.jpg') }}">
+            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-overlay-theme-black-60" style="background-image: url({{ asset('/main-assets/img/slider/12.jpg') }});
+            background-size: cover; background-repeat: no-repeat;  background-position: center;
+             background-attachment: fixed;">
                 <div class="ltn__slide-item-inner text-center pt-100 pb-100">
                     <div class="container">
                         <div class="row">
@@ -41,11 +43,12 @@
             <div class="row">
                 <div class="col-lg-6 align-self-center">
                     <div class="about-us-img-wrap about-img-left">
-                        <img src="{{ asset('main-assets/img/others/7.png') }}" alt="About Us Image">
+                        <img src="{{ asset('/main-assets/img/others/7.png') }}" alt="About Us Image">
                         <div class="about-us-img-info about-us-img-info-2 about-us-img-info-3">
 
                             <div class="ltn__video-img ltn__animation-pulse1">
-                                <img src="{{ asset('main-assets/img/others/8.png') }}" alt="video popup bg image">
+                                <img src="{{ asset('/main-assets/img/others/8.png') }}"
+                                     alt="video popup bg image">
                                 <a class="ltn__video-icon-2 ltn__video-icon-2-border---"
                                    href="https://www.youtube.com/embed/X7R-q9rsrtU?autoplay=1&amp;showinfo=0"
                                    data-rel="lightcase:myCollection">
@@ -110,7 +113,7 @@
                 <div class="col-lg-6 col-sm-6 col-12">
                     <div class="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1">
                         <div class="ltn__feature-icon">
-                            <img src="{{ asset('main-assets/img/icons/icon-img/21.png') }}" alt="#">
+                            <img src="{{ asset('/main-assets/img/icons/icon-img/21.png') }}" alt="#">
                         </div>
                         <div class="ltn__feature-info">
                             <h3><a href="">Buy/Sell a Properties</a></h3>
@@ -123,7 +126,7 @@
                 <div class="col-lg-6 col-sm-6 col-12">
                     <div class="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1 active">
                         <div class="ltn__feature-icon">
-                            <img src="{{ asset('main-assets/img/icons/icon-img/22.png') }}" alt="#">
+                            <img src="{{ asset('/main-assets/img/icons/icon-img/22.png') }}" alt="#">
                         </div>
                         <div class="ltn__feature-info">
                             <h3><a href="">Rent an apartment</a></h3>
@@ -157,7 +160,8 @@
                         <div class="counter-icon">
                             <i class="flaticon-office"></i>
                         </div>
-                        <h1><span class="counter animated fadeInDownBig">197</span><span class="counterUp-letter">K</span><span class="counterUp-icon">+</span> </h1>
+                        <h1><span class="counter animated fadeInDownBig">197</span><span class="counterUp-letter">K</span>
+                            <span class="counterUp-icon">+</span> </h1>
                         <h6>Apartments Rented</h6>
                     </div>
                 </div>
@@ -303,7 +307,7 @@
 
     <!-- CALL TO ACTION START (call-to-action-6) -->
     <div class="ltn__call-to-action-area call-to-action-6 before-bg-bottom"
-         data-bs-bg="{{ asset('main-assets/img/1.jpg') }}">
+         data-bs-bg="{{ asset('/main-assets/img/1.jpg') }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">

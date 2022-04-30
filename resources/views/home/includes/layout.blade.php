@@ -153,17 +153,17 @@
                                         </li>
                                         <li class="menu-icon">
                                             <a href="{{ route('properties') }}">Properties</a>
-                                            <ul class="sub-menu menu-pages-img-show">
-                                                <li>
-                                                    <a href="">Rent</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Buy</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Location</a>
-                                                </li>
-                                            </ul>
+{{--                                            <ul class="sub-menu menu-pages-img-show">--}}
+{{--                                                <li>--}}
+{{--                                                    <a href="">Rent</a>--}}
+{{--                                                </li>--}}
+{{--                                                <li>--}}
+{{--                                                    <a href="">Buy</a>--}}
+{{--                                                </li>--}}
+{{--                                                <li>--}}
+{{--                                                    <a href="">Location</a>--}}
+{{--                                                </li>--}}
+{{--                                            </ul>--}}
                                         </li>
 
                                         <li><a href="{{ url('contact') }}">Contact</a></li>

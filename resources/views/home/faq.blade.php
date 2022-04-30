@@ -20,7 +20,9 @@
         <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1">
 
             <!-- ltn__slide-item -->
-            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60" data-bs-bg="{{ asset('main-assets/img/slider/11.jpg') }}">
+            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-overlay-theme-black-60" style="background-image: url({{ asset('/main-assets/img/slider/14.jpg') }});
+                background-size: cover; background-repeat: no-repeat;  background-position: center;
+                background-attachment: fixed;">
                 <div class="ltn__slide-item-inner text-center">
                     <div class="container">
                         <div class="row">
@@ -47,7 +49,8 @@
 
                             <!-- card -->
                             <div class="card">
-                                <h6 class="ltn__card-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-item-2-1" aria-expanded="false">
+                                <h6 class="ltn__card-title collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-item-2-1" aria-expanded="false">
                                     How to buy a product?
                                 </h6>
                                 <div id="faq-item-2-1" class="collapse" data-bs-parent="#accordion_2" style="">
@@ -66,9 +69,9 @@
                                 <div id="faq-item-2-2" class="collapse" data-bs-parent="#accordion_2" style="">
                                     <div class="card-body">
                                         <div class="ltn__video-img alignleft">
-                                            <img src="{{ asset('main-assets/img/bg/17.jpg') }}"
+                                            <img src="{{ asset('/main-assets/img/bg/17.jpg') }}"
                                                  alt="video popup bg image">
-                                            <a class="ltn__video-icon-2 ltn__video-icon-2-small ltn__video-icon-2-border----" href="https://www.youtube.com/embed/LjCzPp-MK48?autoplay=1&amp;showinfo=0"
+                                            <a class="ltn__video-icon-2 ltn__video-icon-2-small ltn__video-icon-2-border----" href=""
                                                data-rel="lightcase:myCollection">
                                                 <i class="fa fa-play"></i>
                                             </a>
@@ -80,7 +83,8 @@
 
                             <!-- card -->
                             <div class="card">
-                                <h6 class="collapsed ltn__card-title" data-bs-toggle="collapse" data-bs-target="#faq-item-2-3" aria-expanded="false">
+                                <h6 class="collapsed ltn__card-title" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-item-2-3" aria-expanded="false">
                                     I am a new user. How should I start?
                                 </h6>
                                 <div id="faq-item-2-3" class="collapse" data-bs-parent="#accordion_2">
@@ -92,7 +96,8 @@
 
                             <!-- card -->
                             <div class="card">
-                                <h6 class="collapsed ltn__card-title" data-bs-toggle="collapse" data-bs-target="#faq-item-2-4" aria-expanded="false">
+                                <h6 class="collapsed ltn__card-title" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-item-2-4" aria-expanded="false">
                                     Returns and refunds
                                 </h6>
                                 <div id="faq-item-2-4" class="collapse" data-bs-parent="#accordion_2">
@@ -104,7 +109,8 @@
 
                             <!-- card -->
                             <div class="card">
-                                <h6 class="collapsed ltn__card-title" data-bs-toggle="collapse" data-bs-target="#faq-item-2-5" aria-expanded="false">
+                                <h6 class="collapsed ltn__card-title" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-item-2-5" aria-expanded="false">
                                     Are my details secured?
                                 </h6>
                                 <div id="faq-item-2-5" class="collapse" data-bs-parent="#accordion_2">
@@ -116,7 +122,8 @@
 
                             <!-- card -->
                             <div class="card">
-                                <h6 class="collapsed ltn__card-title" data-bs-toggle="collapse" data-bs-target="#faq-item-2-6" aria-expanded="false">
+                                <h6 class="collapsed ltn__card-title" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-item-2-6" aria-expanded="false">
                                     Sale code is not working
                                 </h6>
                                 <div id="faq-item-2-6" class="collapse" data-bs-parent="#accordion_2">
@@ -128,7 +135,8 @@
 
                             <!-- card -->
                             <div class="card">
-                                <h6 class="collapsed ltn__card-title" data-bs-toggle="collapse" data-bs-target="#faq-item-2-7" aria-expanded="false">
+                                <h6 class="collapsed ltn__card-title" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-item-2-7" aria-expanded="false">
                                     How do I make payment by my credit card
                                 </h6>
                                 <div id="faq-item-2-7" class="collapse" data-bs-parent="#accordion_2">
@@ -174,7 +182,7 @@
 
     <!-- CALL TO ACTION START (call-to-action-6) -->
     <div class="ltn__call-to-action-area call-to-action-6 before-bg-bottom"
-         data-bs-bg="{{ asset('main-assets/img/1.jpg') }}">
+         data-bs-bg="/main-assets/img/1.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">

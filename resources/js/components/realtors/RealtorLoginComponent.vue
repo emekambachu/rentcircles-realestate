@@ -66,20 +66,14 @@
                     <div class="widget-2 ltn__menu-widget ltn__menu-widget-2 text-uppercase">
                         <ul>
                             <li>
-                                <router-link
-                                    class=""
-                                    exact
-                                    to="/realtor/register">No account? Sign up
+                                <a href="/realtor/register">No account? Register
                                     <span><i class="fas fa-arrow-right"></i></span>
-                                </router-link>
+                                </a>
                             </li>
                             <li>
-                                <router-link
-                                    class=""
-                                    exact
-                                    to="/register">Sign up as a user
+                                <a href="/register">Sign up as a user
                                     <span><i class="fas fa-arrow-right"></i></span>
-                                </router-link>
+                                </a>
                             </li>
                         </ul>
                     </div>

@@ -8,15 +8,20 @@
                         <div class="dash-breadcrumb-left">
                             <div class="breadcrumb-menu text-right sm-left">
                                 <ul>
-                                    <li class="active"><a href="#">Home</a></li>
-                                    <li><a href="#">Dashboard</a></li>
-                                    <li>Add Listing</li>
+                                    <li><a href="/">Home</a></li>
+                                    <li>
+                                        <router-link
+                                            exact to="/realtor/account">
+                                            Dashboard
+                                        </router-link>
+                                    </li>
+                                    <li>Add Properties</li>
                                 </ul>
                             </div>
                         </div>
                         <router-link
                             class="btn v3"
-                            exact to="/realtor/account/my-properties">
+                            exact to="/realtor/my-properties">
                             <i class="ion-ios-home"></i>My Properties
                         </router-link>
                     </div>
@@ -150,17 +155,37 @@
                                         <div class="form-group">
                                             <label>Features</label>
                                             <div class="filter-checkbox">
-                                                <input id="check-ac" type="checkbox" value="air condition"
+                                                <input id="check-ac" type="checkbox" value="Air condition"
                                                        v-model="form.features">
                                                 <label for="check-ac">Air condition</label>
 
-                                                <input id="check-wf" type="checkbox" value="wifi"
+                                                <input id="check-wf" type="checkbox" value="Wifi"
                                                        v-model="form.features">
                                                 <label for="check-wf">Wi Fi</label>
 
-                                                <input id="check-g" type="checkbox" value="gym"
+                                                <input id="check-g" type="checkbox" value="Gym"
                                                        v-model="form.features">
                                                 <label for="check-g">Gym</label>
+
+                                                <input id="check-lr" type="checkbox" value="Laundry room"
+                                                       v-model="form.features">
+                                                <label for="check-lr">Laundry Room</label>
+
+                                                <input id="check-i" type="checkbox" value="Internet"
+                                                       v-model="form.features">
+                                                <label for="check-i">Internet</label>
+
+                                                <input id="check-pa" type="checkbox" value="Pets allowed"
+                                                       v-model="form.features">
+                                                <label for="check-pa">Pets Allowed</label>
+
+                                                <input id="check-ch" type="checkbox" value="Central heating"
+                                                       v-model="form.features">
+                                                <label for="check-ch">Central heating</label>
+
+                                                <input id="check-sp" type="checkbox" value="Swimming pool"
+                                                       v-model="form.features">
+                                                <label for="check-sp">Swimming pool</label>
                                             </div>
                                         </div>
                                     </div>
@@ -299,7 +324,18 @@
         methods: {
 
             submitProperty: function(){
-                this.formLoading = true;
+                // Install sweetalert2 to use
+                // Loading
+                Swal.fire({
+                    title: 'Please Wait !',
+                    html: 'Submitting',// add html attribute if you want or remove
+                    allowOutsideClick: false,
+                    showCancelButton: false,
+                    showConfirmButton: false,
+                    didOpen: () => {
+                        Swal.showLoading();
+                    },
+                });
 
                 let formData = new FormData();
                 formData.append("title", this.form.title);
@@ -417,13 +453,19 @@
             },
 
             formSuccess: function(response){
-                console.log('Reset the form');
-                this.successAlert = true;
+                // Success alert
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Submitted',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
                 let self = this; //you need this because *this* will refer to Object.keys below`
                 //Iterate through each object field, key is name of the object field`
-                Object.keys(this.form).forEach(function(key,index) {
-                    self.form[key] = '';
+                Object.keys(this.form).forEach(function(value,index) {
+                    self.form[value] = '';
                 });
+                this.features = [];
                 this.image1preview = null;
                 this.image2preview = null;
                 this.image3preview = null;

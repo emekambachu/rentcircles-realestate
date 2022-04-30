@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class State extends Model
 {
-    use HasFactory;
+   public static function getName($id){
+       return self::findOrFail($id)->name;
+   }
 }

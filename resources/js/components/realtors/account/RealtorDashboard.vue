@@ -16,7 +16,7 @@
                         <router-link
                             class="btn v3"
                             exact
-                            to="/realtor/account/properties/add">
+                            to="/realtor/properties/add">
                             <i class="ion-plus-round"></i>Add Listing
                         </router-link>
                     </div>
@@ -28,46 +28,7 @@
 
     <!-- Dashboard Statistics starts-->
     <div class="statistic-wrap">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-3 col-md-6 col-12">
-                    <div class="statistic__item item--green">
-                        <h2 class="counter-value">18</h2>
-                        <span class="desc">Published Properties</span>
-                        <div class="icon">
-                            <img src="/admin-assets/images/dashboard/map-of-roads.png" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-12">
-                    <div class="statistic__item item--orange">
-                        <h2 class="counter-value">115</h2>
-                        <span class="desc">Submitted Properties</span>
-                        <div class="icon">
-                            <img src="/admin-assets/images/dashboard/review.png" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-12">
-                    <div class="statistic__item item--blue">
-                        <h2 class="counter-value">800</h2>
-                        <span class="desc">Total Views</span>
-                        <div class="icon">
-                            <img src="/admin-assets/images/dashboard/bar-chart.png" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-12">
-                    <div class="statistic__item item--red">
-                        <h2 class="counter-value">15</h2>
-                        <span class="desc">Messages sent</span>
-                        <div class="icon">
-                            <img src="/admin-assets/images/dashboard/like.png" alt="...">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <realtor-dashboard-stats></realtor-dashboard-stats>
     </div>
     <!-- Dashboard Statistics ends-->
 
@@ -195,7 +156,7 @@
                             <div class="most-viewed-item">
                                 <div class="most-viewed-img">
                                     <a href="#">
-                                        <img src="admin-assets/images/single-listing/single-list-2.jpg"
+                                        <img src="/admin-assets/images/single-listing/single-list-2.jpg"
                                              alt="..."></a>
                                 </div>
                                 <div class="most-viewed-detail">
@@ -224,8 +185,11 @@
 </template>
 
 <script>
+    import RealtorDashboardStats from "./RealtorDashboardStats";
     export default {
-        name: "RealtorDashboardComponent"
+        components: {
+            RealtorDashboardStats
+        }
     }
 </script>
 

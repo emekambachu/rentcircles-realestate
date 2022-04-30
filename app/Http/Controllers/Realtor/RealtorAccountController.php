@@ -214,7 +214,7 @@ class RealtorAccountController extends Controller
             $convert_image = InterventionImage::make($file->path());
             // resize image and save to converted path
             // resize and fit width
-            $convert_image->resize(700, 700, static function ($constraint){
+            $convert_image->resize(850, 650, static function ($constraint){
                 $constraint->aspectRatio();
                 $constraint->upsize();
             });
@@ -235,7 +235,7 @@ class RealtorAccountController extends Controller
             }
             $name = time() . $file->getClientOriginalName();
             $convert_image = InterventionImage::make($file->path());
-            $convert_image->resize(500, 500, static function ($constraint){
+            $convert_image->resize(850, 650, static function ($constraint){
                 $constraint->aspectRatio();
                 $constraint->upsize();
             });
@@ -253,7 +253,7 @@ class RealtorAccountController extends Controller
             }
             $name = time() . $file->getClientOriginalName();
             $convert_image = InterventionImage::make($file->path());
-            $convert_image->resize(500, 500, static function ($constraint){
+            $convert_image->resize(850, 650, static function ($constraint){
                 $constraint->aspectRatio();
                 $constraint->upsize();
             });
@@ -271,7 +271,7 @@ class RealtorAccountController extends Controller
             }
             $name = time() . $file->getClientOriginalName();
             $convert_image = InterventionImage::make($file->path());
-            $convert_image->resize(500, 500, static function ($constraint){
+            $convert_image->resize(850, 650, static function ($constraint){
                 $constraint->aspectRatio();
                 $constraint->upsize();
             });
@@ -289,7 +289,7 @@ class RealtorAccountController extends Controller
             }
             $name = time() . $file->getClientOriginalName();
             $convert_image = InterventionImage::make($file->path());
-            $convert_image->resize(500, 500, static function ($constraint){
+            $convert_image->resize(850, 650, static function ($constraint){
                 $constraint->aspectRatio();
                 $constraint->upsize();
             });
@@ -300,7 +300,6 @@ class RealtorAccountController extends Controller
         }
 
         $input['features'] = !empty($request['features']) ? implode(', ',(array) $request['features']) : Null;
-
         $property->update($input);
 
         // After update, check if session file is the current file, else delete
@@ -336,6 +335,27 @@ class RealtorAccountController extends Controller
     }
 
     public function myPropertyDelete($id){
+        $property = PropertyDetail::findOrFail($id);
+        if(!empty($property->image1) && File::exists(public_path() . '/photos/properties/' . $property->image1)) {
+            FILE::delete(public_path() . '/photos/properties/' . $property->image1);
+        }
+        if(!empty($property->image2) && File::exists(public_path() . '/photos/properties/' . $property->image2)) {
+            FILE::delete(public_path() . '/photos/properties/' . $property->image2);
+        }
+        if(!empty($property->image3) && File::exists(public_path() . '/photos/properties/' . $property->image3)) {
+            FILE::delete(public_path() . '/photos/properties/' . $property->image3);
+        }
+        if(!empty($property->image4) && File::exists(public_path() . '/photos/properties/' . $property->image4)) {
+            FILE::delete(public_path() . '/photos/properties/' . $property->image4);
+        }
+        if(!empty($property->image5) && File::exists(public_path() . '/photos/properties/' . $property->image5)) {
+            FILE::delete(public_path() . '/photos/properties/' . $property->image5);
+        }
+        $property->delete();
 
+        return response()->json([
+            "success" => true,
+            "message" => "Deleted"
+        ]);
     }
 }

@@ -5,3 +5,21 @@
 .primary-color-text{
     color: #029391;
 }
+
+.height-600{
+    height: 600px;
+}
+
+.center-cropped{
+    object-fit: none; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    height: 270px;
+    width: 850px;
+}
+
+.center-cropped-w700h300{
+    object-fit: none; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    height: 300px;
+    width: 700px;
+}

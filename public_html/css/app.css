@@ -13112,10 +13112,12 @@ input.cart-plus-minus-box {
 
 .theme-btn-1 {
   background-color: var(--ltn__secondary-color);
-  color: var(--white); }
+  color: var(--white);
+}
   .theme-btn-1:hover {
-    background-color: var(--ltn__primary-color);
-    color: var(--white); }
+      background-color: var(--ltn__secondary-color);
+      color: var(--white);
+  }
 
 .theme-btn-2 {
   background-color: var(--ltn__primary-color);
@@ -14100,6 +14102,28 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
 
 .primary-color-text{
     color: #029391;
+}
+
+.height-600{
+    height: 600px;
+}
+
+.center-cropped{
+    -o-object-fit: none;
+       object-fit: none; /* Do not scale the image */
+    -o-object-position: center;
+       object-position: center; /* Center the image within the element */
+    height: 270px;
+    width: 850px;
+}
+
+.center-cropped-w700h300{
+    -o-object-fit: none;
+       object-fit: none; /* Do not scale the image */
+    -o-object-position: center;
+       object-position: center; /* Center the image within the element */
+    height: 300px;
+    width: 700px;
 }
 
 

@@ -41,7 +41,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/realtor/properties', [RealtorAccountController::class, 'myProperties']);
     Route::get('/realtor/property/{id}/edit', [RealtorAccountController::class, 'myPropertyEdit']);
     Route::post('/realtor/property/{id}/update', [RealtorAccountController::class, 'myPropertyUpdate']);
-    Route::delete('/realtor/properties/{id}/delete', [RealtorAccountController::class, 'myPropertyDelete']);
+    Route::delete('/realtor/property/{id}/delete', [RealtorAccountController::class, 'myPropertyDelete']);
+
+    Route::get('/realtor/logout', [RealtorLoginController::class, 'logout']);
 
     // User Account
     Route::get('/user/authenticate', static function (Request $request) {
