@@ -1,39 +1,38 @@
 <template>
-
     <div class="slide-item-car-dealer-form">
         <div class="ltn__car-dealer-form-tab">
             <div class="tab-content pb-10 mt-20">
                 <div class="tab-pane fade active show" id="ltn__form_tab_1_1">
                     <div class="car-dealer-form-inner">
 
-                        <form method="get" action="/properties/search" class="ltn__car-dealer-form-box row">
-                            <input type="hidden" name="_token" :value="csrf_token" />
+                        <form @submit.prevent="searchProperties" class="ltn__car-dealer-form-box row">
                             <div class="ltn__car-dealer-form-item ltn__custom-icon col-lg-4 col-md-6">
                                 <input type="text" placeholder="Search term or location" class="nice-select"
-                                       name="term" v-model="form.term">
+                                       :name="form.term">
                             </div>
 
                             <div class="ltn__car-dealer-form-item ltn__custom-icon col-lg-4 col-md-6">
-                                <select class="nice-select" name="property_type_id"
-                                        v-model="form.property_type_id">
-                                    <option :selected="''">Property Type</option>
+                                <select :name="this.property_type_id">
+                                    <option selected>Property Type</option>
                                     <option v-for="(type, index) in property_types" :key="type.id"
                                             :value="type.id">{{ type.name }}</option>
                                 </select>
                             </div>
 
                             <div class="ltn__car-dealer-form-item ltn__custom-icon col-lg-4 col-md-6">
-                                <select class="nice-select" name="state_id" v-model="form.state_id">
-                                    <option :selected="''">State</option>
-                                    <option v-for="(state, index) in states" :key="state.id"
-                                            :value="state.id">{{ state.name }}</option>
+                                <select class="nice-select" name="state_id">
+                                    <option selected>State</option>
+                                    <option v-for="(state, index) in states"
+                                            :key="state.id"
+                                            :value="state.id"
+                                    >{{ state.name }}</option>
                                 </select>
                             </div>
 
                             <TransitionGroup name="fade">
                                     <div v-if="moreFilter"
                                          class="ltn__car-dealer-form-item ltn__custom-icon col-lg-4 col-md-6">
-                                        <select class="nice-select" name="bedrooms" v-model="form.bedrooms">
+                                        <select class="nice-select" name="bedrooms">
                                             <option :selected="''">Number of bedrooms</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -116,7 +115,7 @@
         props: {
             states: Object,
             property_types: Object,
-            csrf_token: String
+            // csrf_token: String
         },
         data(){
             return {
@@ -137,7 +136,7 @@
             searchProperties(){
                 axios.get('/api/properties/search')
                     .then((response) => {
-                        response.data.success === true ? window.location = '/properties/search/results' : false;
+                        // response.data.success === true ? window.location = '/properties/search/results' : false;
                     }).catch((error) => {
 
                 });

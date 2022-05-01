@@ -109,7 +109,6 @@
             <div class="row">
                 <div class="col-lg-12 align-self-center">
                     <home-search-filter
-{{--                        :csrf_token="{{ csrf_token() }}"--}}
                         :states="{{ $states }}"
                         :property_types="{{ $property_types }}"
                     ></home-search-filter>

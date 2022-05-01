@@ -60,8 +60,9 @@ Route::middleware('auth:sanctum')->group(function () {
 });
 
 // Properties
-Route::get('states', [PropertyController::class, 'getStates']);
-Route::get('property/types', [PropertyController::class, 'getPropertyTypes']);
+Route::get('/states', [PropertyController::class, 'getStates']);
+Route::get('/property/types', [PropertyController::class, 'getPropertyTypes']);
+Route::get('/properties/search', [PropertyController::class, 'search']);
 
 // Realtor Register/Login
 Route::post('realtor/register/submit', [RealtorRegisterController::class, 'createRealtor']);

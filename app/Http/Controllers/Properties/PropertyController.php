@@ -24,6 +24,7 @@ class PropertyController extends Controller
 
     public function search(Request $request){
 
+        session_start();
         $data['states'] = State::orderBy('name')->get();
         $data['property_types'] = PropertyType::orderBy('name')->get();
 
@@ -119,7 +120,7 @@ class PropertyController extends Controller
         if($data['properties']->first()){
             return view('home.properties.index', $data);
         }
-        return redirect()->back();
+        return redirect()->route('properties');
     }
 
     public function detail($id){
