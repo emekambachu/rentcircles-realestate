@@ -32,6 +32,7 @@ window.Swal = Swal;
 // Home
 import HomeSearchFilter from './components/home/HomeSearchFilter';
 import HomeProperties from "./components/home/HomeProperties";
+import HomeSampleProperties from "./components/home/HomeSampleProperties";
 import HomePropertyDetail from "./components/home/HomePropertyDetail";
 
 // Auth
@@ -58,6 +59,7 @@ createApp({
     components: {
         HomeSearchFilter,
         HomeProperties,
+        HomeSampleProperties,
         HomePropertyDetail,
 
         RealtorLoginComponent,

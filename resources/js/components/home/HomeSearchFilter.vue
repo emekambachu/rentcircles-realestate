@@ -5,24 +5,25 @@
                 <div class="tab-pane fade active show" id="ltn__form_tab_1_1">
                     <div class="car-dealer-form-inner">
 
-                        <form @submit.prevent="searchProperties" class="ltn__car-dealer-form-box row">
+                        <form method="get" action="/properties/search" class="ltn__car-dealer-form-box row">
                             <div class="ltn__car-dealer-form-item ltn__custom-icon col-lg-4 col-md-6">
-                                <input type="text" placeholder="Search term or location" class="nice-select"
-                                       :name="form.term">
+                                <input type="text" placeholder="Search term or location"
+                                       class="nice-select" name="term">
                             </div>
 
                             <div class="ltn__car-dealer-form-item ltn__custom-icon col-lg-4 col-md-6">
-                                <select :name="this.property_type_id">
-                                    <option selected>Property Type</option>
-                                    <option v-for="(type, index) in property_types" :key="type.id"
-                                            :value="type.id">{{ type.name }}</option>
+                                <select name="property_type_id">
+                                    <option v-for="(type, index) in newPropertyTypes"
+                                            :key="type.id"
+                                            :value="type.id"
+                                            :selected="type.id === 0"
+                                    >{{ type.name }}</option>
                                 </select>
                             </div>
 
                             <div class="ltn__car-dealer-form-item ltn__custom-icon col-lg-4 col-md-6">
                                 <select class="nice-select" name="state_id">
-                                    <option selected>State</option>
-                                    <option v-for="(state, index) in states"
+                                    <option v-for="(state, index) in newStates"
                                             :key="state.id"
                                             :value="state.id"
                                     >{{ state.name }}</option>
@@ -68,7 +69,7 @@
 
                                     <div v-if="moreFilter"
                                          class="ltn__car-dealer-form-item ltn__custom-icon col-lg-6 col-md-6">
-                                        <select class="nice-select" name="max_cost">
+                                        <select class="nice-select" name="cost">
                                             <option :selected="''">Cost (Max)</option>
                                             <option value="200000">₦200,000</option>
                                             <option value="500000">₦500,000</option>
@@ -80,7 +81,7 @@
 
                                     <div v-if="moreFilter"
                                          class="ltn__car-dealer-form-item ltn__custom-icon col-lg-6 col-md-6">
-                                        <select class="nice-select" name="min_cost">
+                                        <select class="nice-select" name="cost">
                                             <option :selected="''">Cost (Min)</option>
                                             <option value="200000">₦200,000</option>
                                             <option value="500000">₦500,000</option>
@@ -127,16 +128,19 @@
                     bedrooms: '',
                     bathrooms: '',
                     living_rooms: '',
-                    cost: '',
+                    min_cost: '',
+                    max_cost: '',
                 },
                 moreFilter: false,
+                newStates: [],
+                newPropertyTypes: [],
             }
         },
         methods: {
             searchProperties(){
-                axios.get('/api/properties/search')
+                axios.get('/api/properties/search', this.form)
                     .then((response) => {
-                        // response.data.success === true ? window.location = '/properties/search/results' : false;
+                        response.data.success === true ? window.location = '/properties/search/results' : false;
                     }).catch((error) => {
 
                 });
@@ -147,6 +151,14 @@
             },
 
         },
+
+        mounted(){
+            // modify states and property_types array and add to select input
+            this.newStates = this.states;
+            this.newStates.unshift({id: '', name: 'select'});
+            this.newPropertyTypes = this.property_types;
+            this.newPropertyTypes.unshift({id: '', name: 'select'});
+        }
     }
 </script>
 

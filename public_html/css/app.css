@@ -14126,5 +14126,25 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
     width: 700px;
 }
 
+.success-alert{
+    width: 70%;
+    background-color: #0BF389;
+    color: #000;
+    padding: 2px;
+    border-radius: 7px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.danger-alert{
+    width: 70%;
+    background-color: #fc4560;
+    color: #fff;
+    padding: 2px;
+    border-radius: 7px;
+    text-align: center;
+    margin: 0 auto;
+}
+
 
 

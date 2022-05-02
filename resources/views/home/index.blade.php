@@ -104,18 +104,8 @@
     </div>
     <!-- SLIDER AREA END -->
 
-    <div class="ltn__slide-item-inner text-center" style="margin-top: -120px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 align-self-center">
-                    <home-search-filter
-                        :states="{{ $states }}"
-                        :property_types="{{ $property_types }}"
-                    ></home-search-filter>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--Home Search Component Laravel-->
+    <x-home.home-search></x-home.home-search>
 
     <!-- FEATURE AREA START ( Feature - 6) -->
     <div class="ltn__feature-area section-bg-1--- pt-115 pb-90 mb-120---">
@@ -127,7 +117,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row ltn__custom-gutter---  justify-content-center">
+            <div class="row ltn__custom-gutter--- justify-content-center">
 
                 <div class="col-lg-6 col-sm-6 col-12">
                     <div class="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1 active">
@@ -175,7 +165,7 @@
             <div class="row ltn__product-slider-item-three-active slick-arrow-1">
 
                 @foreach($properties as $property)
-                    <home-properties :property="{{ $property }}"></home-properties>
+                    <home-sample-properties :property="{{ $property }}"></home-sample-properties>
                 @endforeach
 
             </div>
@@ -505,5 +495,5 @@
 @endsection
 
 @section('bottom-assets')
-{{--    <script src="{{ asset('main-assets/custom/scripts.js') }}" type="text/javascript"></script>--}}
+    <script src="{{ asset('main-assets/custom/scripts.js') }}" type="text/javascript"></script>
 @endsection
