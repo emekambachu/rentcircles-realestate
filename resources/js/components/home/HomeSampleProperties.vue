@@ -27,7 +27,8 @@
                 <div class="product-price">
                     <span>₦{{ addComma(property.cost) }}<label>/Year</label></span>
                 </div>
-                <h2 class="product-title"><a href="">{{ property.title }}</a></h2>
+                <h2 class="product-title"><a :href="'/property/'+property.id+'/detail'">
+                    {{ property.title }}</a></h2>
                 <div class="product-description">
                     <p>{{ property.address }}</p>
                 </div>

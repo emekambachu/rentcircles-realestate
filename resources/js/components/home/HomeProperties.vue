@@ -21,7 +21,7 @@
                         <li class="sale-badg">{{ property.property_type.name }}</li>
                     </ul>
                 </div>
-                <h2 class="product-title"><a href="">{{ property.title }}</a></h2>
+                <h2 class="product-title"><a :href="'/property/'+property.id+'/detail'">{{ property.title }}</a></h2>
                 <div class="product-img-location">
                     <ul>
                         <li>
@@ -37,7 +37,7 @@
                 </ul>
                 <div class="product-hover-action">
                     <ul>
-                        <li><a href="#" title="Quick View">
+                        <li><a :href="'/property/'+property.id+'/detail'" title="Quick View">
                                 <i class="flaticon-expand"></i></a>
                         </li>
                         <li><a href="#" title="Wishlist">
