@@ -40,20 +40,21 @@ Properties
     <div class="ltn__product-area ltn__product-gutter mb-100 mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+
+                <div id="app" class="col-lg-12">
                     <div class="tab-content">
                         <div class="tab-pane fade active show" id="liton_product_grid">
                             <div class="ltn__product-tab-content-inner ltn__product-grid-view">
                                 <div class="row">
-                                    @forelse($properties as $property)
-                                        <home-properties :property="{{ $property }}"></home-properties>
-                                    @empty
-                                        @if(Session::has('no-results'))
-                                            <div class="danger-alert">
-                                                {{ Session::get('no-results') }}
-                                            </div>
-                                        @endif
-                                    @endforelse
+                                @forelse($properties as $property)
+                                    <home-properties :property="{{ $property }}"></home-properties>
+                                @empty
+                                    @if(Session::has('no-results'))
+                                        <div class="danger-alert">
+                                            {{ Session::get('no-results') }}
+                                        </div>
+                                    @endif
+                                @endforelse
                                 </div>
                             </div>
                         </div>
@@ -66,8 +67,8 @@ Properties
                         </div>
                     </div>
                     @endif
-
                 </div>
+
             </div>
         </div>
     </div>

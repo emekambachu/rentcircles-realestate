@@ -47,12 +47,7 @@
                             <p class="bg-success text-white text-center p-2" v-if="successAlert">
                                 {{ messageAlert }}</p>
 
-                            <p class="text-center p-2" v-show="formLoading">
-                                <img src="/images/loader-gradient.gif" width="200"/>
-                            </p>
-
-                            <form enctype="multipart/form-data"
-                                  @submit.prevent="updateProperty" v-if="!formLoading">
+                            <form enctype="multipart/form-data" @submit.prevent="updateProperty">
                                 <div class="row">
 
                                     <div class="col-md-6">
@@ -115,13 +110,12 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Room Description</label>
-                                            <textarea type="text" name="description"
-                                                      class="form-control filter-input"
-                                                      v-model="form.description"></textarea>
+                                            <ckeditor :editor="editor" v-model="form.description"
+                                                      :config="editorConfig"></ckeditor>
                                         </div>
                                     </div>
 
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
                                         <div class="form-group">
                                             <label>Bedrooms</label>
                                             <input type="text" name="bedroom" required
@@ -130,7 +124,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
                                         <div class="form-group">
                                             <label>Bathrooms</label>
                                             <input type="number" name="bathroom" required
@@ -139,7 +133,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
                                         <div class="form-group">
                                             <label>Living Rooms</label>
                                             <input type="text" name="living_room" required
@@ -148,112 +142,79 @@
                                         </div>
                                     </div>
 
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Square Feet</label>
+                                            <input type="number" name="living_room"
+                                                   class="form-control filter-input"
+                                                   v-model="form.square_feet">
+                                        </div>
+                                    </div>
+
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Features</label>
                                             <div class="filter-checkbox">
-                                                <input id="check-ac" type="checkbox" value="air condition"
+                                                <input id="check-ac" type="checkbox" value="Air condition"
                                                        v-model="form.features">
                                                 <label for="check-ac">Air condition</label>
 
-                                                <input id="check-wf" type="checkbox" value="wifi"
+                                                <input id="check-wf" type="checkbox" value="Wifi"
                                                        v-model="form.features">
                                                 <label for="check-wf">Wi Fi</label>
 
-                                                <input id="check-g" type="checkbox" value="gym"
+                                                <input id="check-g" type="checkbox" value="Gym"
                                                        v-model="form.features">
                                                 <label for="check-g">Gym</label>
+
+                                                <input id="check-lr" type="checkbox" value="Laundry room"
+                                                       v-model="form.features">
+                                                <label for="check-lr">Laundry Room</label>
+
+                                                <input id="check-i" type="checkbox" value="Internet"
+                                                       v-model="form.features">
+                                                <label for="check-i">Internet</label>
+
+                                                <input id="check-pa" type="checkbox" value="Pets allowed"
+                                                       v-model="form.features">
+                                                <label for="check-pa">Pets Allowed</label>
+
+                                                <input id="check-ch" type="checkbox" value="Central heating"
+                                                       v-model="form.features">
+                                                <label for="check-ch">Central heating</label>
+
+                                                <input id="check-sp" type="checkbox" value="Swimming pool"
+                                                       v-model="form.features">
+                                                <label for="check-sp">Swimming pool</label>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="col-md-2">
+                                    <div class="col-12">
                                         <div class="form-group">
                                             <div class="add-listing__input-file-box">
                                                 <input class="add-listing__input-file" type="file"
-                                                       name="file" id="file"
-                                                       @change="uploadImage1">
+                                                       name="file" id="file" multiple
+                                                       @change="uploadImages">
                                                 <div class="add-listing__input-file-wrap">
                                                     <i class="ion-ios-cloud-upload"></i>
                                                     <p>Click to upload your images</p>
                                                 </div>
                                             </div>
-                                            <img v-if="form.image1preview === null && form.image1 !== null"
-                                                 :src="'/photos/properties/'+form.image1"
-                                                 width="100"/>
-                                            <img v-if="form.image1preview" :src="form.image1preview" width="100"/>
-                                        </div>
-                                    </div>
 
-                                    <div class="col-md-2">
-                                        <div class="form-group">
-                                            <div class="add-listing__input-file-box">
-                                                <input class="add-listing__input-file" type="file"
-                                                       name="file" id="file"
-                                                       @change="uploadImage2">
-                                                <div class="add-listing__input-file-wrap">
-                                                    <i class="ion-ios-cloud-upload"></i>
-                                                    <p>Click to upload image</p>
+                                            <div class="d-flex justify-content-center">
+                                                <p v-if="imageValidation !== ''"
+                                                   class="text-danger text-center">{{ imageValidation }}</p>
+                                                <div v-for="(image, index) in images" :key="index"
+                                                     style="width:100px; margin-right:5px;"
+                                                     class="text-center">
+                                                    <img :src="image.file !== null ? image.src : '/photos/properties/'+image.src"/><br>
+                                                    <i @click.prevent="removeImage(index)"
+                                                       class="fa-duotone fa-x bg-danger text-white p-1"
+                                                       title="remove"></i>
                                                 </div>
                                             </div>
-                                            <img v-if="form.image2preview === null && form.image2 !== null"
-                                                 :src="'/photos/properties/'+form.image2"
-                                                 width="100"/>
-                                            <img v-if="form.image2preview" :src="form.image2preview" width="100"/>
-                                        </div>
-                                    </div>
 
-                                    <div class="col-md-2">
-                                        <div class="form-group">
-                                            <div class="add-listing__input-file-box">
-                                                <input class="add-listing__input-file" type="file"
-                                                       name="file" id="file"
-                                                       @change="uploadImage3">
-                                                <div class="add-listing__input-file-wrap">
-                                                    <i class="ion-ios-cloud-upload"></i>
-                                                    <p>Click to upload your images</p>
-                                                </div>
-                                            </div>
-                                            <img v-if="form.image3preview === null && form.image3 !== null"
-                                                 :src="'/photos/properties/'+form.image3"
-                                                 width="100"/>
-                                            <img v-if="form.image3preview" :src="form.image3preview" width="100"/>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2">
-                                        <div class="form-group">
-                                            <div class="add-listing__input-file-box">
-                                                <input class="add-listing__input-file" type="file"
-                                                       name="file" id="file"
-                                                       @change="uploadImage4">
-                                                <div class="add-listing__input-file-wrap">
-                                                    <i class="ion-ios-cloud-upload"></i>
-                                                    <p>Click to upload your images</p>
-                                                </div>
-                                            </div>
-                                            <img v-if="form.image4preview === null && form.image4 !== null"
-                                                 :src="'/photos/properties/'+form.image4"
-                                                 width="100"/>
-                                            <img v-if="form.image4preview" :src="form.image4preview" width="100"/>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2">
-                                        <div class="form-group">
-                                            <div class="add-listing__input-file-box">
-                                                <input class="add-listing__input-file" type="file"
-                                                       name="file" id="file"
-                                                       @change="uploadImage5">
-                                                <div class="add-listing__input-file-wrap">
-                                                    <i class="ion-ios-cloud-upload"></i>
-                                                    <p>Click here to upload your images</p>
-                                                </div>
-                                            </div>
-                                            <img v-if="form.image5preview === null && form.image5 !== null"
-                                                 :src="'/photos/properties/'+form.image5"
-                                                 width="100"/>
-                                            <img v-if="form.image5preview" :src="form.image5preview" width="100"/>
                                         </div>
                                     </div>
 
@@ -276,9 +237,20 @@
 </template>
 
 <script>
+    import CKEditor from '@ckeditor/ckeditor5-vue';
+    import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
     export default {
+        components: {
+            // Use the <ckeditor> component in this view.
+            ckeditor: CKEditor.component
+        },
         data(){
             return {
+                editor: ClassicEditor,
+                editorConfig: {
+
+                },
                 form: {
                     title: '',
                     property_type_id: '',
@@ -290,31 +262,20 @@
                     living_rooms: '',
                     cost: '',
                     features: [],
-                    image1: null,
-                    image1preview: null,
-                    image2: null,
-                    image2preview: null,
-                    image3: null,
-                    image3preview: null,
-                    image4: null,
-                    image4preview: null,
-                    image5: null,
-                    image5preview: null,
                 },
-
+                images: [],
                 states: [],
                 propertyTypes: [],
 
                 errors:[],
-                formLoading: false,
                 successAlert: false,
                 errorAlert: false,
                 messageAlert: '',
+                imageValidation: '',
             }
         },
 
         methods: {
-
             getCurrentProperty(){
                 axios.get('/api/realtor/property/'+ this.$route.params.id +'/edit')
                     .then((response) => {
@@ -326,137 +287,139 @@
             },
 
             populateForm(response){
-                this.form.title = response.data.property.title;
-                this.form.property_type_id = response.data.property.property_type_id;
-                this.form.state_id = response.data.property.state_id;
-                this.form.address = response.data.property.address;
-                this.form.description = response.data.property.description;
-                this.form.bedrooms = response.data.property.bedrooms;
-                this.form.bathrooms = response.data.property.bathrooms;
-                this.form.living_rooms = response.data.property.living_rooms;
-                this.form.cost = response.data.property.cost;
-                this.form.features = response.data.property.features.split(',');
-                this.form.image1 = response.data.property.image1;
-                this.form.image2 = response.data.property.image2;
-                this.form.image3 = response.data.property.image3;
-                this.form.image4 = response.data.property.image4;
-                this.form.image5 = response.data.property.image5;
+                // populate form object
+                let self = this; //you need this because *this* will refer to Object.keys below`
+                //Iterate through each object field, key is name of the object field`
+                Object.keys(response.data.property).forEach(function(key,index){
+                    console.log(key); // key
+                    console.log(response.data.property[key]); // value
+                    if(key === 'features'){
+                        self.form.features = response.data.property.features.split(',');
+                    }else{
+                        self.form[key] = response.data.property[key];
+                    }
+                });
+
+                // populate images
+                for (let i = 0; i < response.data.images.length; i++) {
+                    this.images.push({
+                        src: response.data.images[i],
+                        file: null
+                    });
+                }
             },
 
             updateProperty: function(){
-                this.formLoading = true;
+                // Install sweetalert2 to use
+                // Loading
+                Swal.fire({
+                    title: 'Please Wait !',
+                    html: 'Updating',// add html attribute if you want or remove
+                    allowOutsideClick: false,
+                    showCancelButton: false,
+                    showConfirmButton: false,
+                    didOpen: () => {
+                        Swal.showLoading();
+                    },
+                });
 
                 let formData = new FormData();
-                formData.append("title", this.form.title);
-                formData.append("property_type_id", this.form.property_type_id);
-                formData.append("state_id", this.form.state_id);
-                formData.append("address", this.form.address);
-                formData.append("description", this.form.description);
-                formData.append("bedrooms", this.form.bedrooms);
-                formData.append("bathrooms", this.form.bathrooms);
-                formData.append("living_rooms", this.form.living_rooms);
-                formData.append("cost", this.form.cost);
-                formData.append("features", this.form.features);
+                // iterate form object
+                let self = this; //you need this because *this* will refer to Object.keys below`
+                //Iterate through each object field, key is name of the object field`
+                Object.keys(this.form).forEach(function(key,index){
+                    console.log(key); // key
+                    console.log(self.form[key]); // value
+                    formData.append(key, self.form[key]);
+                });
 
-                if(this.form.image1){
-                    formData.append("image1", this.form.image1);
-                }
-                if(this.form.image2){
-                    formData.append("image2", this.form.image2);
-                }
-                if(this.form.image3){
-                    formData.append("image3", this.form.image3);
-                }
-                if(this.form.image4){
-                    formData.append("image4", this.form.image4);
-                }
-                if(this.form.image5){
-                    formData.append("image5", this.form.image5);
+                for (let i = 0; i < this.images.length; i++) {
+                    if(this.images[i].file !== null){
+                        formData.append("images[]", this.images[i].file);
+                    }
                 }
 
                 let config = {
                     headers: {'content-type': 'multipart/form-data'}
                 }
-                console.log(this.form.title);
+
                 axios.post('/api/realtor/property/'+ this.$route.params.id +'/update', formData, config)
                     .then((response) => {
-                        response.data.success === true ? this.formSuccess(response) : this.formError(response);
+                        if(response.data.success === true){
+                            this.formSuccess(response)
+                        }else{
+                            this.formError(response)
+                        }
                         this.messageAlert = response.data.message;
                         console.log(response.data.message);
                     }).catch((error) => {
                     console.log(error);
-                }).finally(() => {
-                    this.formLoading = false;
                 });
             },
 
             formSuccess: function(response){
-                this.successAlert = true;
+                // Success alert
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Updated',
+                    showConfirmButton: true,
+                    timer: 10500
+                })
             },
 
             formError: function(response){
+                // Success alert
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error occurred',
+                    showConfirmButton: true,
+                    timer: 10500
+                })
                 this.errorAlert = true;
                 this.errors = response.data.errors
             },
 
             // upload and preview image
-            uploadImage1: function(event){
-                //Assign image and path to this variable
-                this.form.image1 = event.target.files[0];
-                // assign variable to the event image upload
-                const file = event.target.files[0];
-                // validate image
-                this.validateImage(this.form.image1, file);
-                // assign variable to the image preview
-                this.form.image1preview = URL.createObjectURL(file);
+            // uploadImage1: function(event){
+            //     //Assign image and path to this variable
+            //     this.form.image1 = event.target.files[0];
+            //     // assign variable to the event image upload
+            //     const file = event.target.files[0];
+            //     // validate image
+            //     this.validateImage(this.form.image1, file);
+            //     // assign variable to the image preview
+            //     this.form.image1preview = URL.createObjectURL(file);
+            // },
+
+            // upload and preview image
+            uploadImages: function(event){
+                // assign selected files to event array
+                // loop through files and validate
+                // Add to img object and push to images array
+                let selectedFiles = event.target.files;
+                for (let i = 0; i < selectedFiles.length; i++){
+                    if(i >= 15 || this.images.length >= 15){// 15 images max
+                        this.imageValidation = "15 images max";
+                        return false;
+                    }
+                    this.validateImage(selectedFiles[i]);
+                    let img = {
+                        src: URL.createObjectURL(selectedFiles[i]),
+                        file: selectedFiles[i],
+                    }
+                    this.images.push(img);
+                }
             },
-            uploadImage2: function(event){
-                //Assign image and path to this variable
-                this.form.image2 = event.target.files[0];
-                // assign variable to the event image upload
-                const file = event.target.files[0];
-                // validate image
-                this.validateImage(this.form.image2, file);
-                // assign variable to the image preview
-                this.form.image2preview = URL.createObjectURL(file);
-            },
-            uploadImage3: function(event){
-                //Assign image and path to this variable
-                this.form.image3 = event.target.files[0];
-                // assign variable to the event image upload
-                const file = event.target.files[0];
-                // validate image
-                this.validateImage(this.form.image3, file);
-                // assign variable to the image preview
-                this.form.image3preview = URL.createObjectURL(file);
-            },
-            uploadImage4: function(event){
-                //Assign image and path to this variable
-                this.form.image4 = event.target.files[0];
-                // assign variable to the event image upload
-                const file = event.target.files[0];
-                // validate image
-                this.validateImage(this.form.image4, file);
-                // assign variable to the image preview
-                this.form.image4preview = URL.createObjectURL(file);
-            },
-            uploadImage5: function(event){
-                //Assign image and path to this variable
-                this.form.image5 = event.target.files[0];
-                // assign variable to the event image upload
-                const file = event.target.files[0];
-                // validate image
-                this.validateImage(this.form.image5, file);
-                // assign variable to the image preview
-                this.form.image5preview = URL.createObjectURL(file);
+
+            removeImage(index){
+                this.images.splice(index, 1);
             },
 
             // Validate image
-            validateImage: function(img, file){
-                console.log(img.type +' - '+ img.size);
+            validateImage: function(file){
+                console.log(file.type +' - '+ file.size);
                 let fileType = ['image/png', 'image/jpg', 'image/jpeg']
                 if(fileType.includes(file.type) === false){
-                    img = null;
                     this.errorAlert = true;
                     this.messageAlert = "Incorrect format for "+file.name;
                     return false;
@@ -465,7 +428,7 @@
                     this.messageAlert = '';
                 }
 
-                if(img.size > 3000000){
+                if(file.size > 5000000){
                     this.errorAlert = true;
                     this.messageAlert = "Image can't be greater than 3mb for"+file.name;
                     return false;

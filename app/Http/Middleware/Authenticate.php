@@ -16,10 +16,6 @@ class Authenticate extends Middleware
     {
         if (! $request->expectsJson()) {
 
-            if (!auth()->guard('admin')->check()) {
-                return redirect()->route('admin.login');
-            }
-
             if(!auth()->guard('realtor')->check()) {
                 return redirect()->route('realtor.login');
             }

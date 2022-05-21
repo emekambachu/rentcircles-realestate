@@ -119,7 +119,7 @@
             </div>
             <div class="row ltn__custom-gutter--- justify-content-center">
 
-                <div class="col-lg-6 col-sm-6 col-12">
+                <div class="col-md-4 col-12">
                     <div class="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1 active">
                         <div class="ltn__feature-icon">
                             <img src="{{ asset('/main-assets/img/icons/icon-img/22.png') }}" alt="#">
@@ -133,7 +133,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-sm-6 col-12">
+                <div class="col-md-4 col-12">
                     <div class="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1">
                         <div class="ltn__feature-icon">
                             <img src="{{ asset('/main-assets/img/icons/icon-img/21.png') }}" alt="#">
@@ -141,6 +141,20 @@
                         <div class="ltn__feature-info">
                             <h3><a href="">Lease a Properties</a></h3>
                             <p>Lease a property by signing up as a realtor</p>
+                            <a class="ltn__service-btn" href="{{ route('realtor.register') }}">
+                                Find more <i class="flaticon-right-arrow"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-12">
+                    <div class="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1">
+                        <div class="ltn__feature-icon">
+                            <img src="{{ asset('/main-assets/img/icons/icon-img/21.png') }}" alt="#">
+                        </div>
+                        <div class="ltn__feature-info">
+                            <h3><a href="">Short let</a></h3>
+                            <p>Get an apartment for a short term</p>
                             <a class="ltn__service-btn" href="{{ route('realtor.register') }}">
                                 Find more <i class="flaticon-right-arrow"></i></a>
                         </div>
@@ -162,12 +176,10 @@
                     </div>
                 </div>
             </div>
-            <div class="row ltn__product-slider-item-three-active slick-arrow-1">
-
+            <div id="app" class="row ltn__product-slider-item-three-active slick-arrow-1">
                 @foreach($properties as $property)
                     <home-sample-properties :property="{{ $property }}"></home-sample-properties>
                 @endforeach
-
             </div>
         </div>
     </div>

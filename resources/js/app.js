@@ -12,7 +12,7 @@ import router from './routes';
 // Axios api
 import axios from 'axios';
 import VueAxios from 'vue-axios';
-// Moment time-stamp
+// Moment timestamp
 import moment from 'moment';
 // Sweet Alert
 import Swal from 'sweetalert2';

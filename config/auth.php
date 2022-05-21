@@ -40,10 +40,6 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-        'admin' => [
-            'driver' => 'session',
-            'provider' => 'admins',
-        ],
         'realtor' => [
             'driver' => 'session',
             'provider' => 'realtors',
@@ -78,11 +74,6 @@ return [
         //     'table' => 'users',
         // ],
 
-        'admins' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Admin\Admin::class,
-        ],
-
         'realtors' => [
             'driver' => 'eloquent',
             'model' => App\Models\Realtor\Realtor::class,
@@ -107,12 +98,6 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
-            'table' => 'password_resets',
-            'expire' => 60,
-            'throttle' => 60,
-        ],
-        'admins' => [
-            'provider' => 'admins',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

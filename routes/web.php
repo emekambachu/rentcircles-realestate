@@ -61,7 +61,6 @@ Route::get('/contact', static function () {
     return view('home.contact');
 });
 
-
 // Realtor Auth
 Route::get('/realtor/login', [RealtorLoginController::class, 'showLoginForm'])
     ->name('realtor.login');
@@ -79,24 +78,17 @@ Route::get('/realtor/{any}', static function () {
     return view('realtors.index');
 })->where('any', '.*');
 
+// realtor admin group
+Route::middleware(['admin'])->group(static function(){
+
+
+
+});
 
 // Users SPA
 Route::get('/user/{any}', static function () {
     return view('users.index');
 })->where('any', '.*');
-
-
-// Admin SPA
-Route::get('/admin/{any}', static function () {
-    return view('admin.index');
-})->where('any', '.*');
-
-
-// Admin Auth
-Route::get('/admin/login', [AdminLoginController::class, 'showLoginForm'])
-    ->name('admin.login');
-Route::get('/admin', [AdminLoginController::class, 'showLoginForm'])
-    ->name('admin');
 
 //Github Deployment
 Route::post('/github/deploy', [GithubDeploymentController::class, 'deploy']);

@@ -2,17 +2,18 @@
     <div v-if="!deleted" class="most-viewed-item">
         <div class="most-viewed-img">
             <a href="#">
-                <img :src="'/photos/properties/'+ image1" alt="...">
+                <img v-for="(photo, index) in property.property_photos.slice(0, 1)" :key="photo.id"
+                     :src="'/photos/properties/'+ photo.image" alt="...">
             </a>
         </div>
         <div class="most-viewed-detail">
             <a class="category" href="#">
                 <span class="list-bg aqua"><i class="icofont-hotel"></i></span>
-                {{ type.name }}
+                {{ property.property_type.name }}
             </a>
-            <h3><a href="">{{ title }}</a></h3>
+            <h3><a href="">{{ property.title }}</a></h3>
             <p class="list-address"><i class="icofont-google-map"></i>
-                {{ address }}</p>
+                {{ property.address }}</p>
             <!--                                    <div class="views">Views : <span>325</span></div>-->
         </div>
         <div class="listing-button">
@@ -21,7 +22,7 @@
                 exact
                 :to="{
                     name: 'RealtorEditProperty',
-                    params: { id: id },
+                    params: { id: property.id },
                 }">
                 <i class="ion-edit"></i> Edit </router-link>
                 <a @click.prevent="deleteProperty" class="btn v5">
@@ -33,23 +34,7 @@
 <script>
     export default {
         props: {
-            id: Number,
-            type: Object,
-            state: Object,
-            title: String,
-            address: String,
-            description: String,
-            bedrooms: Number,
-            living_rooms: Number,
-            bathrooms: Number,
-            cost: Number,
-            image1: String,
-            image2: String,
-            image3: String,
-            image4: String,
-            image5: String,
-            features: String,
-            status: Boolean,
+            property: Object
         },
 
         data(){
@@ -86,8 +71,8 @@
                                     Swal.fire({
                                         icon: 'success',
                                         title: 'Deleted',
-                                        showConfirmButton: false,
-                                        timer: 1500
+                                        showConfirmButton: true,
+                                        timer: 10500
                                     }),
                                     this.deleted = true
                                 ] : false;

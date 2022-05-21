@@ -14,7 +14,8 @@
     <div class="ltn__slider-area ltn__slider-3 section-bg-2">
         <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1">
             <!-- ltn__slide-item -->
-            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-overlay-theme-black-60" style="background-image: url({{ asset('/main-assets/img/slider/12.jpg') }});
+            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-overlay-theme-black-60"
+                 style="background-image: url({{ asset('/main-assets/img/slider/12.jpg') }});
                 background-size: cover; background-repeat: no-repeat;  background-position: center;
                 background-attachment: fixed;">
                 <div class="ltn__slide-item-inner text-center pt-100 pb-100">
@@ -36,7 +37,7 @@
     <div class="ltn__slide-item-inner text-center" style="margin-top: -120px;">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 align-self-center">
+                <div id="app" class="col-lg-12 align-self-center">
                     <home-search-filter
                         :csrf_token="{{ csrf_token() }}"
                         :states="{{ $states }}"
@@ -47,9 +48,11 @@
         </div>
     </div>
 
-    <home-property-detail
-        :property="{{ $property }}"
-    ></home-property-detail>
+   <div id="app">
+       <home-property-detail
+           :property="{{ $property }}"
+       ></home-property-detail>
+   </div>
 
     <!-- CALL TO ACTION START (call-to-action-6) -->
     <div class="ltn__call-to-action-area call-to-action-6 before-bg-bottom"
@@ -63,7 +66,7 @@
                             <p>We can help you realize your new home</p>
                         </div>
                         <div class="btn-wrapper">
-                            <a class="btn btn-effect-3 btn-white" href="">
+                            <a class="btn btn-effect-3 btn-white" href="{{ route('properties') }}">
                                 Explore apartments <i class="icon-next"></i></a>
                         </div>
                     </div>

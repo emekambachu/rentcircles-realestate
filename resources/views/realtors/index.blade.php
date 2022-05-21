@@ -14,6 +14,8 @@
     <link rel="icon" type="image/png" href="#" />
     <!-- google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Plugins CSS -->
     <link href="{{ asset('admin-assets/css/plugin.css') }}" rel="stylesheet" />
     <!-- Perfect scrollbar CSS-->

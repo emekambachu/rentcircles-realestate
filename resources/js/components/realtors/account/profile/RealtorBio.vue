@@ -1,30 +1,30 @@
 <template>
     <div class="account-img">
-        <img src="/admin-assets/images/clients/reviewer-4.png" alt="" />
+        <img v-if="user.image !== null"
+             :src="'/photos/users/'+user.image" alt="" />
+        <img v-else src="/images/user.png" alt="" />
     </div>
-    <h4 class="name">Howdy, {{ realtor.name }}</h4>
+    <h4 class="name text-white">Howdy, {{ user.name }}</h4>
 </template>
 
 <script>
     export default {
         data(){
             return{
-                realtor: {
-                    name: '',
-                },
+                user: {},
             }
         },
 
         methods: {
             loadBio(){
                 axios.get('/api/realtor/authenticate').then((response) => {
-                    this.realtor.name = response.data.name;
+                    this.user = response.data;
                 });
             }
         },
 
         mounted(){
-           this.loadBio();
+            this.loadBio();
         },
     }
 </script>

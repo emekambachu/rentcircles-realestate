@@ -28,7 +28,7 @@
     </div>
 
     <!-- SLIDER AREA END -->
-    <div class="ltn__login-area pb-65 mt-50">
+    <div id="app" class="ltn__login-area pb-65 mt-50">
         <realtor-login-component></realtor-login-component>
     </div>
 @endsection

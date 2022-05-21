@@ -14,10 +14,14 @@ class Realtor extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'image',
         'mobile',
         'country',
         'state',
         'password',
+        'verification_token',
+        'verified',
+        'admin',
     ];
 
     protected $hidden = [

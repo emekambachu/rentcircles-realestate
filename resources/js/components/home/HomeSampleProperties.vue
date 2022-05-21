@@ -5,7 +5,9 @@
         <div class="ltn__product-item ltn__product-item-4 text-center---">
             <div class="product-img">
                 <a href="">
-                    <img class="center-cropped" :src="'/photos/properties/'+property.image1"
+                    <img v-for="(photo, index) in property.property_photos"
+                         :key="photo.id" class="center-cropped"
+                         :src="'/photos/properties/'+photo.image"
                          :alt="property.title">
                 </a>
                 <div class="product-badge">

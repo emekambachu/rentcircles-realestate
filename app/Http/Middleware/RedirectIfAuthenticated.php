@@ -29,10 +29,6 @@ class RedirectIfAuthenticated
             if ($guard === "realtor" && Auth::guard($guard)->check()) {
                 return redirect('realtor/login');
             }
-
-            if ($guard === "admin" && Auth::guard($guard)->check()) {
-                return redirect('admin/login');
-            }
         }
 
         return $next($request);

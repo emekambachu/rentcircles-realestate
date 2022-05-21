@@ -10,6 +10,7 @@
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="RentCircles | Property, realtors, real estates, rent">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script>window.Laravel = {csrfToken: '{{ csrf_token() }}'}</script>
 
@@ -25,6 +26,9 @@
     <link rel="stylesheet" href="{{ asset('main-assets/css/responsive.css') }}">
     <!--Custom-->
     <link rel="stylesheet" href="{{ asset('main-assets/custom/styles.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
     <!-- Vue.js -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -56,7 +60,7 @@
                                 <li><a href="mailto:info@rentcircles.com?Subject=Inquiry">
                                         <i class="icon-mail"></i> info@rentcircles.com</a></li>
                                 <li><a href="{{ url('contact') }}"><i class="icon-placeholder"></i>
-                                        15/A, Nest Tower, NYC</a></li>
+                                        Lagos, Nigeria</a></li>
                             </ul>
                         </div>
                     </div>
@@ -71,12 +75,8 @@
                                                 <li><a href="#" class="dropdown-toggle">
                                                         <span class="active-currency">English</span></a>
                                                     <ul>
-                                                        <li><a href="#">Arabic</a></li>
-                                                        <li><a href="#">Bengali</a></li>
-                                                        <li><a href="#">Chinese</a></li>
                                                         <li><a href="#">English</a></li>
                                                         <li><a href="#">French</a></li>
-                                                        <li><a href="#">Hindi</a></li>
                                                     </ul>
                                                 </li>
                                             </ul>
@@ -116,7 +116,7 @@
                         <div class="site-logo-wrap">
                             <div class="site-logo">
                                 <a href="{{ url('/') }}">
-                                    <img src="{{ asset('main-assets/img/logo-2.png') }}" alt="Logo"></a>
+                                    <img src="{{ asset('main-assets/img/logo-2.png') }}" width="200" alt="Logo"></a>
                             </div>
                             <div class="get-support clearfix d-none">
                                 <div class="get-support-icon">
@@ -213,7 +213,8 @@
             </div>
             <div class="ltn__utilize-menu-search-form">
                 <form action="#">
-                    <input type="text" placeholder="Search...">
+                    <input method="get" action="{{ route('properties.search') }}"
+                           type="text" placeholder="Search...">
                     <button><i class="fas fa-search"></i></button>
                 </form>
             </div>
@@ -223,15 +224,15 @@
                     <li><a href="{{ url('/') }}">Home</a></li>
                     <li><a href="{{ url('about') }}">About</a>
                         <ul class="sub-menu">
-                            <li><a href="{{ url('about') }}">Overview</a></li>
-                            <li><a href="{{ url('terms') }}">Terms of use</a></li>
-                            <li><a href="{{ url('privacy-policy') }}">Privacy Policy</a></li>
-                            <li><a href="{{ url('faq') }}">FAQ</a></li>
+                            <li><a href="{{ url('/about') }}">Overview</a></li>
+                            <li><a href="{{ url('/terms') }}">Terms of use</a></li>
+                            <li><a href="{{ url('/privacy-policy') }}">Privacy Policy</a></li>
+                            <li><a href="{{ url('/faq') }}">FAQ</a></li>
                         </ul>
                     </li>
-                    <li><a href="{{ url('contact') }}">Contact</a></li>
-                    <li><a href="">Realtors</a></li>
-                    <li><a href="">Customers</a></li>
+                    <li><a href="{{ url('/contact') }}">Contact</a></li>
+                    <li><a href="{{ url('/realtors/login') }}">Realtors</a></li>
+                    <li><a href="{{ url('/login') }}">Customers</a></li>
                 </ul>
             </div>
 
@@ -254,7 +255,7 @@
 
     <div class="ltn__utilize-overlay"></div>
 
-    <div id="app">
+    <div>
         @yield('content')
     </div>
 

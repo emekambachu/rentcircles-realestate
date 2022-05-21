@@ -19,12 +19,8 @@ class PropertyDetail extends Model
         'bedrooms',
         'bathrooms',
         'living_rooms',
+        'square_feet',
         'cost',
-        'image1',
-        'image2',
-        'image3',
-        'image4',
-        'image5',
         'features',
         'status'
     ];
@@ -39,6 +35,10 @@ class PropertyDetail extends Model
 
     public function property_type(){
         return $this->belongsTo(PropertyType::class, 'property_type_id', 'id');
+    }
+
+    public function property_photos(){
+        return $this->hasMany(PropertyPhoto::class, 'property_detail_id', 'id');
     }
 
     public function property_reviews(){

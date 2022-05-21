@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Realtor;
 
 use App\Http\Controllers\Controller;
 use App\Models\Properties\PropertyDetail;
+use App\Models\Properties\PropertyPhoto;
 use App\Models\Properties\PropertyType;
 use App\Models\Realtor\Realtor;
 use App\Models\State;
@@ -32,6 +33,20 @@ class RealtorAccountController extends Controller
         ], 200);
     }
 
+    public function propertyStats(){
+        $properties = new PropertyDetail();
+        $recentProperties = $properties->with('property_type', 'property_photos')
+            ->where('realtor_id', Auth::user()->id)
+            ->latest()->limit(10)->get();
+        $totalProperties = $properties->where('realtor_id', Auth::user()->id)->count();
+
+        return response()->json([
+           'success' => true,
+           'recent_properties' => $recentProperties,
+           'total_properties' => $totalProperties,
+        ]);
+    }
+
     public function submitProperty(Request $request){
         $input = $request->all();
         $rules = array(
@@ -42,14 +57,11 @@ class RealtorAccountController extends Controller
             'description' => 'required',
             'bedrooms' => 'required|numeric',
             'bathrooms' => 'required|numeric',
+            'square_feet' => 'nullable|numeric',
             'living_rooms' => 'required|numeric',
             'cost' => 'required|numeric',
             'features' => 'nullable',
-            'image1' => 'required|image|mimes:jpg,jpeg,png,gif|max:5048',
-            'image2' => 'required|image|mimes:jpg,jpeg,png,gif|max:5048',
-            'image3' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:5048',
-            'image4' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:5048',
-            'image5' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:5048',
+            'images.*' => 'required|image|mimes:jpg,jpeg,png,gif|max:5048',
         );
         $validator = Validator::make($input, $rules);
         if($validator->fails()){
@@ -59,93 +71,34 @@ class RealtorAccountController extends Controller
             ]);
         }
 
-        if($request->hasFile('image1') && $file = $request->file('image1')){
-            $converted_path = 'photos/properties/';
-            if (!File::exists($converted_path)){
-                File::makeDirectory($converted_path, $mode = 0777, true, true);
-            }
-            $name = time() . $file->getClientOriginalName();
-            // create canvas background to hold the image (Must install Image Intervention Package first)
-            // $background = InterventionImage::canvas(500, 270);
-            // start image conversion (Must install Image Intervention Package first)
-            $convert_image = InterventionImage::make($file->path());
-            // resize image and save to converted path
-            // resize and fit width
-            $convert_image->resize(700, 700, static function ($constraint){
-                $constraint->aspectRatio();
-                $constraint->upsize();
-            });
-
-            // insert image to canvas
-//            $background->insert($convert_image, 'center');
-            $convert_image->save($converted_path . '/' . $name);
-            $input['image1'] = $name;
-        }
-
-        if($request->hasFile('image2') && $file = $request->file('image2')){
-            $converted_path = 'photos/properties/';
-            if (!File::exists($converted_path)){
-                File::makeDirectory($converted_path, $mode = 0777, true, true);
-            }
-            $name = time() . $file->getClientOriginalName();
-            $convert_image = InterventionImage::make($file->path());
-            $convert_image->resize(500, 500, static function ($constraint){
-                $constraint->aspectRatio();
-                $constraint->upsize();
-            });
-            $convert_image->save($converted_path . '/' . $name);
-            !empty($input['image2']) ? $input['image2'] = $name : $input['image2'] = null;
-        }
-
-        if($request->hasFile('image3') && $file = $request->file('image3')){
-            $converted_path = 'photos/properties/';
-            if (!File::exists($converted_path)){
-                File::makeDirectory($converted_path, $mode = 0777, true, true);
-            }
-            $name = time() . $file->getClientOriginalName();
-            $convert_image = InterventionImage::make($file->path());
-            $convert_image->resize(500, 500, static function ($constraint){
-                $constraint->aspectRatio();
-                $constraint->upsize();
-            });
-            $convert_image->save($converted_path . '/' . $name);
-            !empty($input['image3']) ? $input['image3'] = $name : $input['image3'] = null;
-        }
-
-        if($request->hasFile('image4') && $file = $request->file('image4')){
-            $converted_path = 'photos/properties/';
-            if (!File::exists($converted_path)){
-                File::makeDirectory($converted_path, $mode = 0777, true, true);
-            }
-            $name = time() . $file->getClientOriginalName();
-            $convert_image = InterventionImage::make($file->path());
-            $convert_image->resize(500, 500, static function ($constraint){
-                $constraint->aspectRatio();
-                $constraint->upsize();
-            });
-            $convert_image->save($converted_path . '/' . $name);
-            !empty($input['image4']) ? $input['image4'] = $name : $input['image4'] = null;
-        }
-
-        if($request->hasFile('image5') && $file = $request->file('image5')){
-            $converted_path = 'photos/properties/';
-            if (!File::exists($converted_path)){
-                File::makeDirectory($converted_path, $mode = 0777, true, true);
-            }
-            $name = time() . $file->getClientOriginalName();
-            $convert_image = InterventionImage::make($file->path());
-            $convert_image->resize(500, 500, static function ($constraint){
-                $constraint->aspectRatio();
-                $constraint->upsize();
-            });
-            $convert_image->save($converted_path . '/' . $name);
-            !empty($input['image5']) ? $input['image5'] = $name : $input['image5'] = null;
-        }
-
         $input['realtor_id'] = Auth::user()->id;
         $input['features'] = !empty($request['features']) ? implode(', ',(array) $request['features']) : Null;
 
-        PropertyDetail::create($input);
+        $property = PropertyDetail::create($input);
+
+        // Submit images using for loop
+        if(!empty($request->images)){
+            for($i = 0, $count = count($request->images); $i < $count; $i++){
+                if(isset($request['images'][$i])){
+                    $file = $request->file('images')[$i];
+                    $path = 'photos/properties';
+                    if (!File::exists($path)){
+                        File::makeDirectory($path, $mode = 0777, true, true);
+                    }
+                    $name = time() . $file->getClientOriginalName();
+                    //Move image to photos directory
+                    $file->move($path, $name);
+                }else{
+                    $name = null;
+                }
+
+                // Submit photos
+                PropertyPhoto::create([
+                    'property_detail_id' => $property->id,
+                    'image' => $name,
+                ]);
+            }
+        }
 
         return response()->json([
             "success" => true,
@@ -154,7 +107,7 @@ class RealtorAccountController extends Controller
     }
 
     public function myProperties(){
-        $properties = PropertyDetail::with('state', 'property_type', 'property_reviews')
+        $properties = PropertyDetail::with('state', 'property_type', 'property_reviews', 'property_photos')
             ->where('realtor_id', Auth::user()->id)->get();
 
         if($properties->count() > 0){
@@ -170,10 +123,19 @@ class RealtorAccountController extends Controller
     }
 
     public function myPropertyEdit($id){
-        $property = PropertyDetail::with('property_type', 'state')->findOrFail($id);
+        $property = PropertyDetail::with('property_type', 'state', 'property_photos')->findOrFail($id);
+
+        $images = [];
+        if(count($property->property_photos) > 0){
+            foreach($property->property_photos as $photo){
+                $images[] = $photo->image;
+            }
+        }
+
         return response()->json([
             "success" => true,
-            "property" => $property
+            "property" => $property,
+            "images" => $images
         ]);
     }
 
@@ -189,9 +151,11 @@ class RealtorAccountController extends Controller
             'description' => 'required',
             'bedrooms' => 'required|numeric',
             'bathrooms' => 'required|numeric',
+            'square_feet' => 'nullable|numeric',
             'living_rooms' => 'required|numeric',
             'cost' => 'required|numeric',
             'features' => 'nullable',
+            'images.*' => 'required|image|mimes:jpg,jpeg,png,gif|max:5048',
         );
         $validator = Validator::make($request->all(), $rules);
         if($validator->fails()){
@@ -201,131 +165,46 @@ class RealtorAccountController extends Controller
             ]);
         }
 
-        if($request->hasFile('image1') && $file = $request->file('image1')){
-            Session::put('image1', $property->image1);
-            $converted_path = 'photos/properties/';
-            if (!File::exists($converted_path)){
-                File::makeDirectory($converted_path, $mode = 0777, true, true);
-            }
-            $name = time() . $file->getClientOriginalName();
-            // create canvas background to hold the image (Must install Image Intervention Package first)
-            // $background = InterventionImage::canvas(500, 270);
-            // start image conversion (Must install Image Intervention Package first)
-            $convert_image = InterventionImage::make($file->path());
-            // resize image and save to converted path
-            // resize and fit width
-            $convert_image->resize(850, 650, static function ($constraint){
-                $constraint->aspectRatio();
-                $constraint->upsize();
-            });
-
-            // insert image to canvas
-//            $background->insert($convert_image, 'center');
-            $convert_image->save($converted_path . '/' . $name);
-            $input['image1'] = $name;
-        }else{
-            $input['image1'] = $property->image1;
-        }
-
-        if($request->hasFile('image2') && $file = $request->file('image2')){
-            Session::put('image2', $property->image2);
-            $converted_path = 'photos/properties/';
-            if (!File::exists($converted_path)){
-                File::makeDirectory($converted_path, $mode = 0777, true, true);
-            }
-            $name = time() . $file->getClientOriginalName();
-            $convert_image = InterventionImage::make($file->path());
-            $convert_image->resize(850, 650, static function ($constraint){
-                $constraint->aspectRatio();
-                $constraint->upsize();
-            });
-            $convert_image->save($converted_path . '/' . $name);
-            !empty($input['image2']) ? $input['image2'] = $name : $input['image2'] = null;
-        }else{
-            $input['image2'] = $property->image2;
-        }
-
-        if($request->hasFile('image3') && $file = $request->file('image3')){
-            Session::put('image3', $property->image3);
-            $converted_path = 'photos/properties/';
-            if (!File::exists($converted_path)){
-                File::makeDirectory($converted_path, $mode = 0777, true, true);
-            }
-            $name = time() . $file->getClientOriginalName();
-            $convert_image = InterventionImage::make($file->path());
-            $convert_image->resize(850, 650, static function ($constraint){
-                $constraint->aspectRatio();
-                $constraint->upsize();
-            });
-            $convert_image->save($converted_path . '/' . $name);
-            !empty($input['image3']) ? $input['image3'] = $name : $input['image3'] = null;
-        }else{
-            $input['image3'] = $property->image3;
-        }
-
-        if($request->hasFile('image4') && $file = $request->file('image4')){
-            Session::put('image4', $property->image4);
-            $converted_path = 'photos/properties/';
-            if (!File::exists($converted_path)){
-                File::makeDirectory($converted_path, $mode = 0777, true, true);
-            }
-            $name = time() . $file->getClientOriginalName();
-            $convert_image = InterventionImage::make($file->path());
-            $convert_image->resize(850, 650, static function ($constraint){
-                $constraint->aspectRatio();
-                $constraint->upsize();
-            });
-            $convert_image->save($converted_path . '/' . $name);
-            !empty($input['image4']) ? $input['image4'] = $name : $input['image4'] = null;
-        }else{
-            $input['image4'] = $property->image4;
-        }
-
-        if($request->hasFile('image5') && $file = $request->file('image5')){
-            Session::put('image5', $property->image5);
-            $converted_path = 'photos/properties/';
-            if (!File::exists($converted_path)){
-                File::makeDirectory($converted_path, $mode = 0777, true, true);
-            }
-            $name = time() . $file->getClientOriginalName();
-            $convert_image = InterventionImage::make($file->path());
-            $convert_image->resize(850, 650, static function ($constraint){
-                $constraint->aspectRatio();
-                $constraint->upsize();
-            });
-            $convert_image->save($converted_path . '/' . $name);
-            !empty($input['image5']) ? $input['image5'] = $name : $input['image5'] = null;
-        }else{
-            $input['image5'] = $property->image5;
-        }
 
         $input['features'] = !empty($request['features']) ? implode(', ',(array) $request['features']) : Null;
         $property->update($input);
 
-        // After update, check if session file is the current file, else delete
-        if(Session::get('image1') !== $property->image1 && File::exists(public_path() . '/photos/properties/' . Session::get('image1'))) {
-            FILE::delete(public_path() . '/photos/properties/' . Session::get('image1'));
-            Session::forget('image1');
+        // add property photos to oldPhotos array
+        $oldPhotos = [];
+        foreach($property->property_photos as $photo){
+            $oldPhotos[] = $photo->image;
         }
 
-        if(Session::get('image2') !== $property->image2 && File::exists(public_path() . '/photos/properties/' . Session::get('image2'))) {
-            FILE::delete(public_path() . '/photos/properties/' . Session::get('image2'));
-            Session::forget('image2');
+        $propertyPhotos = new PropertyPhoto();
+
+        // Add any new images that were recently uploaded
+        if(!empty($request->images)){
+            for($i = 0, $count = count($request->images); $i < $count; $i++){
+                if(isset($request['images'][$i]) && !in_array($request['images'][$i], $oldPhotos)){
+                    $file = $request->file('images')[$i];
+                    $path = 'photos/properties';
+                    if (!File::exists($path)){
+                        File::makeDirectory($path, $mode = 0777, true, true);
+                    }
+                    $name = time() . $file->getClientOriginalName();
+                    //Move image to photos directory
+                    $file->move($path, $name);
+
+                    // Submit photos
+                    $propertyPhotos->create([
+                        'image' => $name,
+                        'property_detail_id' => $property->id,
+                    ]);
+                }
+            }
         }
 
-        if(Session::get('image3') !== $property->image3 && File::exists(public_path() . '/photos/properties/' . Session::get('image3'))) {
-            FILE::delete(public_path() . '/photos/properties/' . Session::get('image3'));
-            Session::forget('image3');
-        }
-
-        if(Session::get('image4') !== $property->image4 && File::exists(public_path() . '/photos/properties/' . Session::get('image4'))) {
-            FILE::delete(public_path() . '/photos/properties/' . Session::get('image4'));
-            Session::forget('image4');
-        }
-
-        if(Session::get('image5') !== $property->image5 && File::exists(public_path() . '/photos/properties/' . Session::get('image5'))) {
-            FILE::delete(public_path() . '/photos/properties/' . Session::get('image5'));
-            Session::forget('image5');
+        // Delete images that were not part of the recently uploaded batch
+        foreach($property->property_photos as $photo){
+            if(!in_array($photo->image, $request->images) && File::exists(public_path() . '/photos/properties/' . $photo->image)){
+                FILE::delete(public_path() . '/photos/properties/' . $photo->image);
+                $propertyPhotos->where('id', $photo->id)->delete();
+            }
         }
 
         return response()->json([
@@ -335,22 +214,16 @@ class RealtorAccountController extends Controller
     }
 
     public function myPropertyDelete($id){
-        $property = PropertyDetail::findOrFail($id);
-        if(!empty($property->image1) && File::exists(public_path() . '/photos/properties/' . $property->image1)) {
-            FILE::delete(public_path() . '/photos/properties/' . $property->image1);
+        $property = PropertyDetail::with('property_photos')->findOrFail($id);
+
+        if(count($property->property_photos) > 0){
+            foreach($property->property_photos as $photo){
+                if(!empty($photo->image) && File::exists(public_path() . '/photos/properties/' . $photo->image)) {
+                    FILE::delete(public_path() . '/photos/properties/' . $photo->image);
+                }
+            }
         }
-        if(!empty($property->image2) && File::exists(public_path() . '/photos/properties/' . $property->image2)) {
-            FILE::delete(public_path() . '/photos/properties/' . $property->image2);
-        }
-        if(!empty($property->image3) && File::exists(public_path() . '/photos/properties/' . $property->image3)) {
-            FILE::delete(public_path() . '/photos/properties/' . $property->image3);
-        }
-        if(!empty($property->image4) && File::exists(public_path() . '/photos/properties/' . $property->image4)) {
-            FILE::delete(public_path() . '/photos/properties/' . $property->image4);
-        }
-        if(!empty($property->image5) && File::exists(public_path() . '/photos/properties/' . $property->image5)) {
-            FILE::delete(public_path() . '/photos/properties/' . $property->image5);
-        }
+
         $property->delete();
 
         return response()->json([

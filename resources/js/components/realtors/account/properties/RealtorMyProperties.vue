@@ -41,23 +41,7 @@
                         <div class="viewd-item-wrap">
                             <realtor-single-property
                                 v-for="property in properties" :key="property.id"
-                                :id="property.id"
-                                :type="property.property_type"
-                                :state="property.state"
-                                :title="property.title"
-                                :address="property.address"
-                                :description="property.description"
-                                :bedrooms="property.bedrooms"
-                                :bathrooms="property.bathrooms"
-                                :living_rooms="property.living_rooms"
-                                :cost="property.cost"
-                                :image1="property.image1"
-                                :image2="property.image2"
-                                :image3="property.image3"
-                                :image4="property.image4"
-                                :image5="property.image5"
-                                :features="property.features"
-                                :status="property.status"
+                                :property="property"
                             ></realtor-single-property>
                         </div>
 

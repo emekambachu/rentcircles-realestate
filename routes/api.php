@@ -9,6 +9,7 @@ use App\Http\Controllers\Auth\Realtor\RealtorRegisterController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Properties\PropertyController;
 use App\Http\Controllers\Realtor\RealtorAccountController;
+use App\Http\Controllers\Realtor\RealtorAdminController;
 use App\Http\Controllers\User\UserAccountController;
 use App\Models\Properties\Country;
 use Illuminate\Http\Request;
@@ -37,11 +38,15 @@ Route::middleware('auth:sanctum')->group(function () {
         return $request->user('realtor');
     });
     Route::get('/realtor/account', [RealtorAccountController::class, 'getProfile']);
+    Route::get('/realtor/properties/stats', [RealtorAccountController::class, 'propertyStats']);
     Route::post('/realtor/property/submit', [RealtorAccountController::class, 'submitProperty']);
     Route::get('/realtor/properties', [RealtorAccountController::class, 'myProperties']);
     Route::get('/realtor/property/{id}/edit', [RealtorAccountController::class, 'myPropertyEdit']);
     Route::post('/realtor/property/{id}/update', [RealtorAccountController::class, 'myPropertyUpdate']);
     Route::delete('/realtor/property/{id}/delete', [RealtorAccountController::class, 'myPropertyDelete']);
+
+    // Realtor admin account
+    Route::get('/realtor/admin/authenticate', [RealtorAdminController::class, 'realtorAdminProfile']);
 
     Route::get('/realtor/logout', [RealtorLoginController::class, 'logout']);
 
@@ -50,12 +55,6 @@ Route::middleware('auth:sanctum')->group(function () {
         return $request->user('web');
     });
     Route::get('/user/account', [UserAccountController::class, 'getProfile']);
-
-    // Admin Account
-    Route::get('/admin/authenticate', static function (Request $request) {
-        return $request->user('admin');
-    });
-    Route::get('/admin/account', [AdminAccountController::class, 'getProfile']);
 
 });
 
