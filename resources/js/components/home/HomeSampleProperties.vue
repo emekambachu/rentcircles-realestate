@@ -5,7 +5,7 @@
         <div class="ltn__product-item ltn__product-item-4 text-center---">
             <div class="product-img">
                 <a href="">
-                    <img v-for="(photo, index) in property.property_photos"
+                    <img v-for="(photo, index) in property.property_photos.slice(0, 1)"
                          :key="photo.id" class="center-cropped"
                          :src="'/photos/properties/'+photo.image"
                          :alt="property.title">
@@ -44,15 +44,6 @@
                 </ul>
             </div>
             <div class="product-info-bottom">
-                <div class="real-estate-agent">
-                    <div class="agent-img">
-                        <a href=""><img src="/main-assets/img/blog/author.jpg" alt="#"></a>
-                    </div>
-                    <div class="agent-brief">
-                        <h6><a href="">{{ property.realtor.name }}</a></h6>
-                        <small>Estate Agents</small>
-                    </div>
-                </div>
                 <div class="product-hover-action">
                     <ul>
                         <li>

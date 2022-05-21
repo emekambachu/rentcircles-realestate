@@ -4,18 +4,11 @@
         <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
             <div class="product-img">
                 <a href="">
-                    <img v-for="(photo, index) in property.property_photos"
+                    <img v-for="(photo, index) in property.property_photos.slice(0,1)"
                          :key="photo.id" class="center-cropped"
                          :src="'/photos/properties/'+photo.image"
                          :alt="property.title">
                 </a>
-                <div class="real-estate-agent">
-                    <div class="agent-img">
-                        <a href="">
-                            <img src="/main-assets/img/blog/author.jpg" alt="#">
-                        </a>
-                    </div>
-                </div>
             </div>
             <div class="product-info">
                 <div class="product-badge">
