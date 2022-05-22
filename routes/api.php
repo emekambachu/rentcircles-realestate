@@ -38,6 +38,8 @@ Route::middleware('auth:sanctum')->group(function () {
         return $request->user('realtor');
     });
     Route::get('/realtor/account', [RealtorAccountController::class, 'getProfile']);
+    Route::post('/realtor/profile/update', [RealtorAccountController::class, 'updateProfile']);
+
     Route::get('/realtor/properties/stats', [RealtorAccountController::class, 'propertyStats']);
     Route::post('/realtor/property/submit', [RealtorAccountController::class, 'submitProperty']);
     Route::get('/realtor/properties', [RealtorAccountController::class, 'myProperties']);

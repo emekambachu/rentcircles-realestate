@@ -23120,7 +23120,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "RealtorProfileComponent"
+  data: function data() {
+    return {
+      user: ''
+    };
+  },
+  methods: {},
+  mounted: function mounted() {
+    var _this = this;
+
+    axios.get('/api/realtor/authenticate').then(function (response) {
+      _this.user = response.data;
+    });
+  }
 });
 
 /***/ }),
@@ -23137,7 +23149,103 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "RealtorProfileEditComponent"
+  data: function data() {
+    return {
+      form: {
+        name: '',
+        email: '',
+        mobile: '',
+        image: null
+      },
+      imageThumb: null,
+      validationAlert: '',
+      errors: []
+    };
+  },
+  methods: {
+    uploadPhoto: function uploadPhoto(event) {
+      //Assign image and path to this variable
+      this.form.image = event.target.files[0]; // validate image
+
+      this.validateImage(this.form.image); // assign variable to the image preview
+
+      this.imageThumb = URL.createObjectURL(event.target.files[0]);
+    },
+    // Validate image
+    validateImage: function validateImage(file) {
+      console.log(file.type + ' - ' + file.size);
+      var fileType = ['image/png', 'image/jpg', 'image/jpeg'];
+
+      if (fileType.includes(file.type) === false) {
+        this.validationAlert = "Incorrect format for " + file.name;
+        return false;
+      } else {
+        this.validationAlert = '';
+      }
+
+      if (file.size > 3000000) {
+        this.validationAlert = "Image can't be greater than 3mb for " + file.name;
+        return false;
+      } else {
+        this.validationAlert = '';
+      }
+    },
+    updateProfile: function updateProfile() {
+      var _this = this;
+
+      // Install sweetalert2 to use
+      // Loading
+      Swal.fire({
+        title: 'Please Wait !',
+        html: 'Updating',
+        // add html attribute if you want or remove
+        allowOutsideClick: false,
+        showCancelButton: false,
+        showConfirmButton: false,
+        didOpen: function didOpen() {
+          Swal.showLoading();
+        }
+      });
+      var formData = new FormData();
+      formData.append("name", this.form.name);
+      formData.append("email", this.form.email);
+      formData.append("mobile", this.form.mobile);
+
+      if (this.form.imageThumb !== null) {
+        formData.append("image", this.form.image);
+      }
+
+      var config = {
+        headers: {
+          'content-type': 'multipart/form-data'
+        }
+      };
+      axios.post('/api/realtor/profile/update', formData, config).then(function (response) {
+        if (response.data.success === true) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Submitted',
+            showConfirmButton: true,
+            timer: 10500
+          });
+        } else {
+          console.log(response.data.errors), _this.errors = response.data.errors, Swal.fire({
+            icon: 'error',
+            title: 'Error updating profile',
+            showConfirmButton: true,
+            timer: 10500
+          });
+        }
+      })["catch"](function (error) {});
+    }
+  },
+  mounted: function mounted() {
+    var _this2 = this;
+
+    axios.get('/api/realtor/authenticate').then(function (response) {
+      _this2.form = response.data;
+    });
+  }
 });
 
 /***/ }),
@@ -25070,26 +25178,68 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
-
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"dash-breadcrumb\"><div class=\"container-fluid\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"dash-breadcrumb-content\"><div class=\"dash-breadcrumb-left\"><div class=\"breadcrumb-menu text-right sm-left\"><ul><li class=\"active\"><a href=\"#\">Home</a></li><li>My Profile</li></ul></div></div><a class=\"btn v3\" href=\"add-listing.html\"><i class=\"ion-plus-round\"></i>Add Listing </a></div></div></div></div></div>", 1);
-
-var _hoisted_2 = {
-  "class": "dash-content"
+var _hoisted_1 = {
+  "class": "dash-breadcrumb"
 };
-var _hoisted_3 = {
+var _hoisted_2 = {
   "class": "container-fluid"
 };
-var _hoisted_4 = {
+var _hoisted_3 = {
   "class": "row"
 };
+var _hoisted_4 = {
+  "class": "col-md-12"
+};
 var _hoisted_5 = {
-  "class": "col-md-10 offset-md-1"
+  "class": "dash-breadcrumb-content"
 };
 var _hoisted_6 = {
+  "class": "dash-breadcrumb-left"
+};
+var _hoisted_7 = {
+  "class": "breadcrumb-menu text-right sm-left"
+};
+var _hoisted_8 = {
+  "class": "active"
+};
+
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-ios-gear-outline"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Home ");
+
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, "My Profile", -1
+/* HOISTED */
+);
+
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-plus-round"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Add Listing ");
+
+var _hoisted_14 = {
+  "class": "dash-content"
+};
+var _hoisted_15 = {
+  "class": "container-fluid"
+};
+var _hoisted_16 = {
+  "class": "row"
+};
+var _hoisted_17 = {
+  "class": "col-md-10 offset-md-1"
+};
+var _hoisted_18 = {
   "class": "recent-activity"
 };
 
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "act-title"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "ion-person"
@@ -25097,51 +25247,98 @@ var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 /* HOISTED */
 );
 
-var _hoisted_8 = {
+var _hoisted_20 = {
   "class": "profile-wrap"
 };
-var _hoisted_9 = {
+var _hoisted_21 = {
   "class": "row"
 };
-
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_22 = {
   "class": "col-md-8 offset-md-2 py-4"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+};
+var _hoisted_23 = {
   "class": "edit-profile-photo text-center"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  src: "admin-assets/images/clients/reviewer-4.png",
+};
+var _hoisted_24 = {
+  key: 0,
+  src: "/images/user.png",
   alt: ""
-})])], -1
+};
+var _hoisted_25 = ["src"];
+var _hoisted_26 = {
+  "class": "col-md-12"
+};
+var _hoisted_27 = {
+  "class": "my-profile"
+};
+var _hoisted_28 = {
+  "class": "db-profile-info"
+};
+
+var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "Name :", -1
 /* HOISTED */
 );
 
-var _hoisted_11 = {
-  "class": "col-md-12"
-};
-var _hoisted_12 = {
-  "class": "my-profile"
-};
+var _hoisted_30 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "Email :", -1
+/* HOISTED */
+);
 
-var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<ul class=\"db-profile-info\"><li><h6>First Name :</h6><span>Steve </span></li><li><h6>Last Name :</h6><span> Austin</span></li><li><h6>Email Id :</h6><span> steve_aus@mail.com</span></li><li><h6>Phone :</h6><span> +44 20 7336 8898</span></li><li><h6>Password :</h6><span>123456</span></li><li><h6>Address :</h6><span> 864 W. Walnut Ave. Avon, IN 46123 St James Pl, Brooklyn</span></li><li><h6>Social Profile :</h6><ul class=\"social-profile\"><li class=\"bg-fb\"><a href=\"https://www.facebook.com/\"><i class=\"ion-social-facebook\"></i></a></li><li class=\"bg-tt\"><a href=\"https://www.twitter.com/\"><i class=\"ion-social-twitter\"></i></a></li><li class=\"bg-ig\"><a href=\"https://www.instagram.com/\"><i class=\"ion-social-instagram\"></i></a></li></ul></li></ul>", 1);
+var _hoisted_31 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "Mobile :", -1
+/* HOISTED */
+);
 
-var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+var _hoisted_32 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "ion-ios-gear-outline"
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Edit profile ");
+var _hoisted_33 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Edit profile ");
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [_hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    "class": "btn v5",
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    "class": "",
     exact: "",
-    to: "/realtor/account/profile/edit"
+    to: "/realtor/account"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_14, _hoisted_15];
+      return [_hoisted_9, _hoisted_10];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), _hoisted_11])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    "class": "btn v3",
+    exact: "",
+    to: "/realtor/property/add"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_12, _hoisted_13];
+    }),
+    _: 1
+    /* STABLE */
+
+  })])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [_hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [$data.user.image === null ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", _hoisted_24)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", {
+    key: 1,
+    src: '/photos/users/' + $data.user.image,
+    alt: ""
+  }, null, 8
+  /* PROPS */
+  , _hoisted_25))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [_hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.user.name), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [_hoisted_30, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.user.email), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [_hoisted_31, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.user.mobile), 1
+  /* TEXT */
+  )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    "class": "btn v5",
+    exact: "",
+    to: "/realtor/profile/edit"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_32, _hoisted_33];
     }),
     _: 1
     /* STABLE */
@@ -25166,11 +25363,251 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+var _hoisted_1 = {
+  "class": "dash-breadcrumb"
+};
+var _hoisted_2 = {
+  "class": "container-fluid"
+};
+var _hoisted_3 = {
+  "class": "row"
+};
+var _hoisted_4 = {
+  "class": "col-md-12"
+};
+var _hoisted_5 = {
+  "class": "dash-breadcrumb-content"
+};
+var _hoisted_6 = {
+  "class": "dash-breadcrumb-left"
+};
+var _hoisted_7 = {
+  "class": "breadcrumb-menu text-right sm-left"
+};
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"dash-breadcrumb\"><div class=\"container-fluid\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"dash-breadcrumb-content\"><div class=\"dash-breadcrumb-left\"><div class=\"breadcrumb-menu text-right sm-left\"><ul><li class=\"active\"><a href=\"#\">Home</a></li><li class=\"active\"><a href=\"#\">Dashboard</a></li><li>Edit Profile</li></ul></div></div><a class=\"btn v3\" href=\"add-listing.html\"><i class=\"ion-plus-round\"></i>Add Listing </a></div></div></div></div></div><div class=\"dash-content\"><div class=\"container-fluid\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"db-add-list-wrap\"><div class=\"act-title\"><h5><i class=\"ion-person\"></i> Profile Details :</h5></div><div class=\"db-add-listing\"><div class=\"row\"><div class=\"col-md-4 offset-md-4\"><!-- Avatar --><div class=\"edit-profile-photo\"><img src=\"admin-assets/images/clients/reviewer-1.png\" alt=\"\"><div class=\"change-photo-btn\"><div class=\"contact-form__upload-btn xs-left\"><input class=\"contact-form__input-file\" type=\"file\" name=\"photo-upload\" id=\"photo-upload\"><span><i class=\"icofont-upload-alt\"></i> Upload Photos </span></div></div></div></div><div class=\"col-md-12\"><div class=\"row\"><div class=\"col-md-6\"><div class=\"form-group\"><label>First name</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"Steve\"></div></div><div class=\"col-md-6\"><div class=\"form-group\"><label>Last name</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"Austin\"></div></div><div class=\"col-md-12\"><div class=\"form-group\"><label>Address</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"864 W. Walnut Ave. Avon, IN 46123 St James Pl, Brooklyn\"></div></div><div class=\"col-md-6\"><div class=\"form-group\"><label>Email id</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"steve@mail.com\"></div></div><div class=\"col-md-6\"><div class=\"form-group\"><label>Phone</label><input type=\"text\" class=\"form-control filter-input\" placeholder=\"+880 252 333\"></div></div><div class=\"col-md-12\"><a href=\"#\" class=\"btn v5\">Save Changes</a></div></div></div></div></div></div></div><div class=\"col-md-6\"><div class=\"db-add-list-wrap\"><div class=\"act-title\"><h5><i class=\"ion-person\"></i>Change Password :</h5></div><div class=\"db-add-listing\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"form-group\"><label>Old Password</label><input type=\"password\" class=\"form-control filter-input\"></div></div><div class=\"col-md-12\"><div class=\"form-group\"><label>New Password</label><input type=\"password\" class=\"form-control filter-input\"></div></div><div class=\"col-md-12\"><div class=\"form-group\"><label>Confirm new Password</label><input type=\"password\" class=\"form-control filter-input\"></div></div><div class=\"col-md-12\"><a href=\"#\" class=\"btn v5\">Change Password</a></div></div></div></div></div><div class=\"col-md-6\"><div class=\"db-add-list-wrap\"><div class=\"act-title\"><h5><i class=\"icofont-ui-social-link\"></i>Social Networks</h5></div><div class=\"db-add-listing\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"form-group\"><label>Facebook url</label><input type=\"password\" class=\"form-control filter-input\"></div></div><div class=\"col-md-12\"><div class=\"form-group\"><label>Twitter url</label><input type=\"password\" class=\"form-control filter-input\"></div></div><div class=\"col-md-12\"><div class=\"form-group\"><label>Instagram url</label><input type=\"password\" class=\"form-control filter-input\"></div></div><div class=\"col-md-12\"><a href=\"#\" class=\"btn v5\">Save Chages</a></div></div></div></div></div></div></div></div>", 2);
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+  "class": "active"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "/"
+}, "Home")], -1
+/* HOISTED */
+);
+
+var _hoisted_9 = {
+  "class": "active"
+};
+
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Dashboard ");
+
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, "Edit Profile", -1
+/* HOISTED */
+);
+
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-plus-round"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Add Listing ");
+
+var _hoisted_14 = {
+  "class": "dash-content"
+};
+var _hoisted_15 = {
+  "class": "container-fluid"
+};
+var _hoisted_16 = {
+  "class": "row"
+};
+var _hoisted_17 = {
+  "class": "col-md-12"
+};
+var _hoisted_18 = {
+  "class": "db-add-list-wrap"
+};
+
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "act-title"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "ion-person"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Profile Details :")])], -1
+/* HOISTED */
+);
+
+var _hoisted_20 = {
+  "class": "db-add-listing"
+};
+var _hoisted_21 = {
+  "class": "row"
+};
+var _hoisted_22 = {
+  "class": "col-md-4 offset-md-4"
+};
+var _hoisted_23 = {
+  key: 0,
+  "class": "bg-danger p-1 text-white"
+};
+var _hoisted_24 = {
+  "class": "edit-profile-photo"
+};
+var _hoisted_25 = {
+  key: 0,
+  src: "/images/user.png",
+  alt: ""
+};
+var _hoisted_26 = ["src"];
+var _hoisted_27 = ["src"];
+var _hoisted_28 = {
+  "class": "change-photo-btn"
+};
+var _hoisted_29 = {
+  "class": "contact-form__upload-btn xs-left"
+};
+
+var _hoisted_30 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "photo-upload"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "icofont-upload-alt"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Upload Photo ")], -1
+/* HOISTED */
+);
+
+var _hoisted_31 = {
+  "class": "col-md-12"
+};
+var _hoisted_32 = {
+  "class": "row"
+};
+var _hoisted_33 = {
+  "class": "col-md-6"
+};
+var _hoisted_34 = {
+  "class": "form-group"
+};
+
+var _hoisted_35 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "First name", -1
+/* HOISTED */
+);
+
+var _hoisted_36 = {
+  "class": "col-md-6"
+};
+var _hoisted_37 = {
+  "class": "form-group"
+};
+
+var _hoisted_38 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Email", -1
+/* HOISTED */
+);
+
+var _hoisted_39 = {
+  "class": "col-md-6"
+};
+var _hoisted_40 = {
+  "class": "form-group"
+};
+
+var _hoisted_41 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Phone", -1
+/* HOISTED */
+);
+
+var _hoisted_42 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-12"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  "class": "btn v5"
+}, "Update profile")], -1
+/* HOISTED */
+);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return _hoisted_1;
+  var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    exact: "",
+    to: "/user"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_10];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), _hoisted_11])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    "class": "btn v3",
+    exact: "",
+    to: "/user/properties/add"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_12, _hoisted_13];
+    }),
+    _: 1
+    /* STABLE */
+
+  })])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [_hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+    onSubmit: _cache[4] || (_cache[4] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+      return $options.updateProfile && $options.updateProfile.apply($options, arguments);
+    }, ["prevent"]))
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [$data.errors.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.validationAlert) + " ", 1
+  /* TEXT */
+  ), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors, function (error, index) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", {
+      key: index
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(error), 1
+    /* TEXT */
+    );
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Avatar "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [$data.form.image === null && $data.imageThumb === null ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", _hoisted_25)) : $data.imageThumb !== null ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", {
+    key: 1,
+    src: $data.imageThumb,
+    alt: ""
+  }, null, 8
+  /* PROPS */
+  , _hoisted_26)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", {
+    key: 2,
+    src: '/photos/users/' + $data.form.image,
+    alt: ""
+  }, null, 8
+  /* PROPS */
+  , _hoisted_27)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_29, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    onChange: _cache[0] || (_cache[0] = function () {
+      return $options.uploadPhoto && $options.uploadPhoto.apply($options, arguments);
+    }),
+    "class": "contact-form__input-file",
+    type: "file",
+    id: "photo-upload"
+  }, null, 32
+  /* HYDRATE_EVENTS */
+  ), _hoisted_30])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [_hoisted_35, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    "class": "form-control filter-input",
+    "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
+      return $data.form.name = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.name]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [_hoisted_38, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    "class": "form-control filter-input",
+    "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
+      return $data.form.email = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.email]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_40, [_hoisted_41, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    "class": "form-control filter-input",
+    "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
+      return $data.form.mobile = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.mobile]])])]), _hoisted_42])])])], 32
+  /* HYDRATE_EVENTS */
+  )])])])])])])], 64
+  /* STABLE_FRAGMENT */
+  );
 }
 
 /***/ }),

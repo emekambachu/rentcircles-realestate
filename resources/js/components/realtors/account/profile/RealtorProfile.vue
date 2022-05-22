@@ -8,12 +8,24 @@
                         <div class="dash-breadcrumb-left">
                             <div class="breadcrumb-menu text-right sm-left">
                                 <ul>
-                                    <li class="active"><a href="#">Home</a></li>
+                                    <li class="active">
+                                        <router-link
+                                            class=""
+                                            exact
+                                            to="/realtor/account">
+                                            <i class="ion-ios-gear-outline"></i>Home
+                                        </router-link>
+                                    </li>
                                     <li>My Profile</li>
                                 </ul>
                             </div>
                         </div>
-                        <a class="btn v3" href="add-listing.html"><i class="ion-plus-round"></i>Add Listing </a>
+                        <router-link
+                            class="btn v3"
+                            exact
+                            to="/realtor/property/add">
+                            <i class="ion-plus-round"></i>Add Listing
+                        </router-link>
                     </div>
                 </div>
             </div>
@@ -32,50 +44,31 @@
                             <div class="row">
                                 <div class="col-md-8 offset-md-2 py-4">
                                     <div class="edit-profile-photo text-center">
-                                        <img src="admin-assets/images/clients/reviewer-4.png" alt="">
+                                        <img v-if="user.image === null" src="/images/user.png" alt="">
+                                        <img v-else :src="'/photos/users/'+user.image" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="my-profile">
                                         <ul class="db-profile-info">
                                             <li>
-                                                <h6>First Name :</h6>
-                                                <span>Steve </span>
+                                                <h6>Name :</h6>
+                                                <span>{{ user.name }} </span>
                                             </li>
                                             <li>
-                                                <h6>Last Name :</h6>
-                                                <span> Austin</span>
+                                                <h6>Email :</h6>
+                                                <span>{{ user.email }}</span>
                                             </li>
                                             <li>
-                                                <h6>Email Id :</h6>
-                                                <span> steve_aus@mail.com</span>
-                                            </li>
-                                            <li>
-                                                <h6>Phone :</h6>
-                                                <span> +44 20 7336 8898</span>
-                                            </li>
-                                            <li>
-                                                <h6>Password :</h6>
-                                                <span>123456</span>
-                                            </li>
-                                            <li>
-                                                <h6>Address :</h6>
-                                                <span> 864 W. Walnut Ave. Avon, IN 46123 St James Pl, Brooklyn</span>
-                                            </li>
-                                            <li>
-                                                <h6>Social Profile :</h6>
-                                                <ul class="social-profile">
-                                                    <li class="bg-fb"><a href="https://www.facebook.com/"><i class="ion-social-facebook"></i></a></li>
-                                                    <li class="bg-tt"><a href="https://www.twitter.com/"><i class="ion-social-twitter"></i></a></li>
-                                                    <li class="bg-ig"><a href="https://www.instagram.com/"><i class="ion-social-instagram"></i></a></li>
-                                                </ul>
+                                                <h6>Mobile :</h6>
+                                                <span> {{ user.mobile }}</span>
                                             </li>
 
                                         </ul>
                                         <router-link
                                             class="btn v5"
                                             exact
-                                            to="/realtor/account/profile/edit">
+                                            to="/realtor/profile/edit">
                                             <i class="ion-ios-gear-outline"></i>Edit profile
                                         </router-link>
                                     </div>
@@ -92,7 +85,19 @@
 
 <script>
     export default {
-        name: "RealtorProfileComponent"
+        data(){
+            return {
+                user: ''
+            }
+        },
+        methods: {
+
+        },
+        mounted(){
+            axios.get('/api/realtor/authenticate').then((response) => {
+                this.user = response.data;
+            });
+        }
     }
 </script>
 

@@ -33,6 +33,58 @@ class RealtorAccountController extends Controller
         ], 200);
     }
 
+    public function updateProfile(Request $request){
+
+        $realtor = Realtor::findOrFail(Auth::user()->id);
+
+        $input = $request->all();
+        $rules = array(
+            'name' => 'required',
+            'email' => 'required|email|unique:realtors,email,'.Auth::user()->id,
+            'mobile' => 'nullable',
+            'image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:5048',
+        );
+        $validator = Validator::make($input, $rules);
+        if($validator->fails()){
+            return response()->json([
+                "success" => false,
+                "errors" => $validator->getMessageBag()->toArray()
+            ]);
+        }
+
+        if($request->hasFile('image') && $file = $request->file('image')){
+            $path = 'photos/users/';
+            if(!File::exists($path)){
+                File::makeDirectory($path, $mode = 0777, true, true);
+            }
+            $name = time() . $file->getClientOriginalName();
+            // create canvas background to hold the image (Must install Image Intervention Package first)
+            // $background = InterventionImage::canvas(500, 270);
+            // start image conversion (Must install Image Intervention Package first)
+            $convert_image = InterventionImage::make($file->path());
+            // resize image and save to converted path
+            // resize and fit width
+            $convert_image->resize(700, 700, static function ($constraint){
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            });
+
+            // insert image to canvas
+            // $background->insert($convert_image, 'center');
+            $convert_image->save($path . '/' . $name);
+            $input['image'] = $name;
+        }else{
+            $input['image'] = $realtor->image;
+        }
+
+        $realtor->update($input);
+
+        return response()->json([
+            "success" => true,
+            "message" => "Profile updated"
+        ]);
+    }
+
     public function propertyStats(){
         $properties = new PropertyDetail();
         $recentProperties = $properties->with('property_type', 'property_photos')
