@@ -215,7 +215,7 @@ class RealtorAccountController extends Controller
     }
 
     public function myPropertyDelete($id){
-        $property = PropertyDetail::with('property_photos')->findOrFail($id);
+        $property = PropertyDetail::with('property_photos')->where('id', $id)->first();
 
         if($property->property_photos && count($property->property_photos) > 0){
             foreach($property->property_photos as $photo){
