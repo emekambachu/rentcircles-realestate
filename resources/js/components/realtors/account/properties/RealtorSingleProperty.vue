@@ -67,7 +67,7 @@
                                 Swal.showLoading();
                             },
                         });
-                        axios.delete('/api/realtor/property/'+this.id+'/delete')
+                        axios.delete('/api/realtor/property/'+this.property.id+'/delete')
                             .then((response) => {
                                 response.data.success === true ? [
                                     Swal.fire({

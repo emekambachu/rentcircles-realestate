@@ -23695,7 +23695,7 @@ __webpack_require__.r(__webpack_exports__);
               Swal.showLoading();
             }
           });
-          axios["delete"]('/api/realtor/property/' + _this.id + '/delete').then(function (response) {
+          axios["delete"]('/api/realtor/property/' + _this.property.id + '/delete').then(function (response) {
             response.data.success === true ? [Swal.fire({
               icon: 'success',
               title: 'Deleted',

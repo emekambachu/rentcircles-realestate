@@ -215,9 +215,9 @@ class RealtorAccountController extends Controller
     }
 
     public function myPropertyDelete($id){
-        $property = PropertyDetail::with('property_photos')->where('id', $id)->first();
+        $property = PropertyDetail::with('property_photos')->findOrFail($id);
 
-        if($property->property_photos && count($property->property_photos) > 0){
+        if(count($property->property_photos) > 0){
             foreach($property->property_photos as $photo){
                 if(!empty($photo->image) && File::exists(public_path() . '/photos/properties/' . $photo->image)) {
                     FILE::delete(public_path() . '/photos/properties/' . $photo->image);
