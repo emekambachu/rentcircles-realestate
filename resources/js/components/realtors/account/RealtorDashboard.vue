@@ -88,8 +88,11 @@
 </template>
 
 <script>
-    import moment from 'moment';
+    import RealtorSingleProperty from "./properties/RealtorSingleProperty";
     export default {
+        components: {
+            RealtorSingleProperty
+        },
         data(){
             return {
                 recent_properties: [],
@@ -109,12 +112,6 @@
                     console.log(error);
                 });
             },
-            addComma(number){
-                return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            },
-            fullDate (value){
-                return moment(value).format('MMMM Do YYYY, h:mm:ss a');
-            }
         },
 
         mounted(){

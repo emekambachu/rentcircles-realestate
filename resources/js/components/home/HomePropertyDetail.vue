@@ -3,46 +3,16 @@
     <div class="ltn__img-slider-area mb-90 mt-5">
         <div class="container-fluid">
             <div class="row ltn__image-slider-5-active slick-arrow-1 slick-arrow-1-inner ltn__no-gutter-all">
-                <div class="col-lg-12">
+
+                <div v-for="(photo, index) in property.property_photos" :key="photo.id" class="col-lg-12">
                     <div class="ltn__img-slide-item-4">
-                        <a :href="'/photos/properties/'+property.image1" data-rel="lightcase:myCollection">
+                        <a :href="'/photos/properties/'+photo.image" data-rel="lightcase:myCollection">
                             <img class="center-cropped-w700h300"
-                                 :src="'/photos/properties/'+property.image1" alt="Image">
+                                 :src="'/photos/properties/'+photo.image" alt="Image">
                         </a>
                     </div>
                 </div>
-                <div v-if="property.image2" class="col-lg-12">
-                    <div class="ltn__img-slide-item-4">
-                        <a :href="'/photos/properties/'+property.image2" data-rel="lightcase:myCollection">
-                            <img class="center-cropped-w700h300"
-                                 :src="'/photos/properties/'+property.image2" alt="Image">
-                        </a>
-                    </div>
-                </div>
-                <div v-if="property.image3" class="col-lg-12">
-                    <div class="ltn__img-slide-item-4">
-                        <a :href="'/photos/properties/'+property.image3" data-rel="lightcase:myCollection">
-                            <img class="center-cropped-w700h300"
-                                 :src="'/photos/properties/'+property.image3" alt="Image">
-                        </a>
-                    </div>
-                </div>
-                <div v-if="property.image4" class="col-lg-12">
-                    <div class="ltn__img-slide-item-4">
-                        <a :href="'/photos/properties/'+property.image4" data-rel="lightcase:myCollection">
-                            <img class="center-cropped-w700h300"
-                                 :src="'/photos/properties/'+property.image4" alt="Image">
-                        </a>
-                    </div>
-                </div>
-                <div v-if="property.image5" class="col-lg-12">
-                    <div class="ltn__img-slide-item-4">
-                        <a :href="'/photos/properties/'+property.image5" data-rel="lightcase:myCollection">
-                            <img class="center-cropped-w700h300"
-                                 :src="'/photos/properties/'+property.image5" alt="Image">
-                        </a>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
@@ -74,7 +44,7 @@
                         <label><span class="ltn__secondary-color"><i class="flaticon-pin"></i></span>
                             {{ property.address }}, {{ property.state.name }}</label>
                         <h4 class="title-2">Description</h4>
-                        <p>{{ property.description }}</p>
+                        <p v-html="property.description"></p>
 
                         <h4 class="title-2">Property Detail</h4>
                         <div class="property-detail-info-list section-bg-1 clearfix mb-60">
@@ -84,9 +54,7 @@
                                 <li><label>Living rooms:</label> <span>{{ property.living_rooms }}</span></li>
                             </ul>
                             <ul>
-                                <li><label>Lot Area:</label> <span>HZ29 </span></li>
-                                <li><label>Lot dimensions:</label> <span>120 sqft</span></li>
-                                <li><label>Beds:</label> <span>7</span></li>
+                                <li><label>Square feet:</label> <span>{{ property.square_feet }} </span></li>
                             </ul>
                         </div>
 
@@ -476,7 +444,6 @@
                                     <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
                                     <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
                                     <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-
                                 </ul>
                             </div>
                         </div>

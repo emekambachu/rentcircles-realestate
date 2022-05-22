@@ -57,7 +57,7 @@ class RealtorAccountController extends Controller
             'description' => 'required',
             'bedrooms' => 'required|numeric',
             'bathrooms' => 'required|numeric',
-            'square_feet' => 'nullable|numeric',
+            'square_feet' => 'nullable',
             'living_rooms' => 'required|numeric',
             'cost' => 'required|numeric',
             'features' => 'nullable',
@@ -73,6 +73,7 @@ class RealtorAccountController extends Controller
 
         $input['realtor_id'] = Auth::user()->id;
         $input['features'] = !empty($request['features']) ? implode(', ',(array) $request['features']) : Null;
+        $input['square_feet'] = $request['square_feet'] === "null" ? Null : $request['square_feet'];
 
         $property = PropertyDetail::create($input);
 
@@ -151,7 +152,6 @@ class RealtorAccountController extends Controller
             'description' => 'required',
             'bedrooms' => 'required|numeric',
             'bathrooms' => 'required|numeric',
-            'square_feet' => 'nullable|numeric',
             'living_rooms' => 'required|numeric',
             'cost' => 'required|numeric',
             'features' => 'nullable',
@@ -165,8 +165,9 @@ class RealtorAccountController extends Controller
             ]);
         }
 
-
         $input['features'] = !empty($request['features']) ? implode(', ',(array) $request['features']) : Null;
+        $input['square_feet'] = $request['square_feet'] === "null" ? Null : $request['square_feet'];
+
         $property->update($input);
 
         // add property photos to oldPhotos array

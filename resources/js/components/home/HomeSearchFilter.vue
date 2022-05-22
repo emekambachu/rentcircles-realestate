@@ -116,7 +116,6 @@
         props: {
             states: Object,
             property_types: Object,
-            // csrf_token: String
         },
         data(){
             return {

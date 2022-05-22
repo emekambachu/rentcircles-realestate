@@ -14,7 +14,7 @@ class PropertyController extends Controller
 {
     public function index(){
 
-        $data['properties'] = PropertyDetail::with('state', 'property_type')
+        $data['properties'] = PropertyDetail::with('state', 'property_type', 'property_photos')
             ->latest()->paginate(12);
         $data['states'] = State::orderBy('name')->get();
         $data['property_types'] = PropertyType::orderBy('name')->get();
@@ -76,7 +76,7 @@ class PropertyController extends Controller
         }
 
         // search query through the yaedpUser relationship of learningAssessment
-        $data['properties'] = PropertyDetail::with('state', 'property_type', 'realtor')
+        $data['properties'] = PropertyDetail::with('state', 'property_type', 'realtor', 'property_photos')
             ->wherehas('property_type', function ($query) use ($input){
                 $query->when(!empty($input['term']), static function($type) use($input){
                     $type->where('name', 'like' , '%'. $input['term'] .'%');
@@ -128,7 +128,8 @@ class PropertyController extends Controller
 
     public function detail($id){
 
-        $data['property'] = PropertyDetail::with('state', 'property_type', 'realtor')->findOrFail($id);
+        $data['property'] = PropertyDetail::with('state', 'property_type', 'realtor', 'property_photos')
+            ->findOrFail($id);
         $data['states'] = State::orderBy('name')->get();
         $data['property_types'] = PropertyType::orderBy('name')->get();
 

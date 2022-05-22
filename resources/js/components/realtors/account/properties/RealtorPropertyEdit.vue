@@ -37,15 +37,6 @@
                         </div>
 
                         <div class="db-add-listing">
-                            <div class="bg-danger text-white text-center p-2" v-if="errorAlert">
-                                <p>{{ messageAlert }}</p>
-                                <p v-for="(error, key) in errors" :key="key">
-                                    {{ error.toString() }}
-                                </p>
-                            </div>
-
-                            <p class="bg-success text-white text-center p-2" v-if="successAlert">
-                                {{ messageAlert }}</p>
 
                             <form enctype="multipart/form-data" @submit.prevent="updateProperty">
                                 <div class="row">
@@ -219,6 +210,16 @@
                                     </div>
 
                                     <div class="col-12">
+                                        <div class="bg-danger text-white text-center p-2" v-if="errorAlert">
+                                            <p>{{ messageAlert }}</p>
+                                            <p v-for="(error, key) in errors" :key="key">
+                                                {{ error.toString() }}
+                                            </p>
+                                        </div>
+
+                                        <p class="bg-success text-white text-center p-2" v-if="successAlert">
+                                            {{ messageAlert }}</p>
+
                                         <button type="submit" class="btn v8 mar-top-15">Update Property</button>
                                     </div>
 
@@ -260,6 +261,7 @@
                     bedrooms: '',
                     bathrooms: '',
                     living_rooms: '',
+                    square_feet: '',
                     cost: '',
                     features: [],
                 },
@@ -352,6 +354,7 @@
                         }
                         this.messageAlert = response.data.message;
                         console.log(response.data.message);
+                        console.log(response.data.errors);
                     }).catch((error) => {
                     console.log(error);
                 });

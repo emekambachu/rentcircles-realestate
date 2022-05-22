@@ -32,6 +32,8 @@
 </template>
 
 <script>
+    import moment from "moment";
+
     export default {
         props: {
             property: Object
@@ -82,6 +84,12 @@
                         return false;
                     }
                 });
+            },
+            addComma(number){
+                return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            },
+            fullDate (value){
+                return moment(value).format('MMMM Do YYYY, h:mm:ss a');
             }
         },
 

@@ -34,25 +34,25 @@
     </div>
     <!-- SLIDER AREA END -->
 
-    <div class="ltn__slide-item-inner text-center" style="margin-top: -120px;">
-        <div class="container">
-            <div class="row">
-                <div id="app" class="col-lg-12 align-self-center">
-                    <home-search-filter
-                        :csrf_token="{{ csrf_token() }}"
-                        :states="{{ $states }}"
-                        :property_types="{{ $property_types }}"
-                    ></home-search-filter>
+    <div id="app">
+        <div class="ltn__slide-item-inner text-center" style="margin-top: -120px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 align-self-center">
+                        <home-search-filter
+                            :states="{{ $states }}"
+                            :property_types="{{ $property_types }}"
+                        ></home-search-filter>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <home-property-detail
+            :property="{{ $property }}"
+        ></home-property-detail>
     </div>
 
-   <div id="app">
-       <home-property-detail
-           :property="{{ $property }}"
-       ></home-property-detail>
-   </div>
 
     <!-- CALL TO ACTION START (call-to-action-6) -->
     <div class="ltn__call-to-action-area call-to-action-6 before-bg-bottom"
