@@ -22,6 +22,8 @@ class PropertyDetail extends Model
         'square_feet',
         'cost',
         'features',
+        'video',
+        'map',
         'status'
     ];
 
