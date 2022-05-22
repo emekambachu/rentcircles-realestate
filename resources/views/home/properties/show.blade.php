@@ -1,7 +1,7 @@
 @extends('home.includes.layout')
 
 @section('title')
-
+{{ $property->title }}
 @endsection
 
 @section('top-assets')

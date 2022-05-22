@@ -33,7 +33,7 @@
                                     <a class="bg-orange" href="#">{{ property.property_type.name }}</a>
                                 </li>
                                 <li class="ltn__blog-date">
-                                    <i class="far fa-calendar-alt"></i>May 19, 2021
+                                    <i class="far fa-calendar-alt"></i>Published: {{ fullDate(property.created_at) }}
                                 </li>
 <!--                                <li>-->
 <!--                                    <a href="#"><i class="far fa-comments"></i>35 Comments</a>-->
@@ -339,102 +339,24 @@
                         <!-- Author Widget -->
                         <div class="widget ltn__author-widget">
                             <div class="ltn__author-widget-inner text-center">
-                                <img src="/main-assets/img/team/4.jpg" alt="Image">
+                                <img v-if="property.realtor.image !== null"
+                                     :src="'/photos/users/'+property.realtor.image" alt="Image">
+                                <img v-else :src="'/images/user.png'" alt="Image">
                                 <h5>{{ property.realtor.name }}</h5>
-                                <small>Traveller/Photographer</small>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis distinctio, odio, eligendi suscipit reprehenderit atque.</p>
                             </div>
                         </div>
 
                         <!-- Form Widget -->
                         <div class="widget ltn__form-widget">
-                            <h4 class="ltn__widget-title ltn__widget-title-border-2">Drop Messege</h4>
-                            <form action="#">
-                                <input type="text" name="yourname" placeholder="Your Name*">
-                                <input type="text" name="youremail" placeholder="Your e-Mail*">
-                                <textarea name="yourmessage" placeholder="Write Message..."></textarea>
-                                <button type="submit" class="btn theme-btn-1">Send Messege</button>
+                            <h4 class="ltn__widget-title ltn__widget-title-border-2">Contact Realtor</h4>
+                            <form @submit.prevent="contactRealtor">
+                                <input type="text" v-model="contact.name" placeholder="Your Name/Company*">
+                                <input type="email" v-model="contact.email" placeholder="Your e-Mail*">
+                                <textarea v-model="contact.message" placeholder="Write Message..."></textarea>
+                                <button type="submit" class="btn theme-btn-1">Send</button>
                             </form>
                         </div>
 
-                        <!-- Popular Post Widget -->
-<!--                        <div class="widget ltn__popular-post-widget">-->
-<!--                            <h4 class="ltn__widget-title ltn__widget-title-border-2">Leatest Blogs</h4>-->
-<!--                            <ul>-->
-<!--                                <li>-->
-<!--                                    <div class="popular-post-widget-item clearfix">-->
-<!--                                        <div class="popular-post-widget-img">-->
-<!--                                            <a href=""><img src="img/team/5.jpg" alt="#"></a>-->
-<!--                                        </div>-->
-<!--                                        <div class="popular-post-widget-brief">-->
-<!--                                            <h6><a href="">Lorem ipsum dolor sit-->
-<!--                                                cing elit, sed do.</a></h6>-->
-<!--                                            <div class="ltn__blog-meta">-->
-<!--                                                <ul>-->
-<!--                                                    <li class="ltn__blog-date">-->
-<!--                                                        <a href="#"><i class="far fa-calendar-alt"></i>June 22, 2020</a>-->
-<!--                                                    </li>-->
-<!--                                                </ul>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <div class="popular-post-widget-item clearfix">-->
-<!--                                        <div class="popular-post-widget-img">-->
-<!--                                            <a href=""><img src="img/team/6.jpg" alt="#"></a>-->
-<!--                                        </div>-->
-<!--                                        <div class="popular-post-widget-brief">-->
-<!--                                            <h6><a href="">Lorem ipsum dolor sit-->
-<!--                                                cing elit, sed do.</a></h6>-->
-<!--                                            <div class="ltn__blog-meta">-->
-<!--                                                <ul>-->
-<!--                                                    <li class="ltn__blog-date">-->
-<!--                                                        <a href="#"><i class="far fa-calendar-alt"></i>June 22, 2020</a>-->
-<!--                                                    </li>-->
-<!--                                                </ul>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <div class="popular-post-widget-item clearfix">-->
-<!--                                        <div class="popular-post-widget-img">-->
-<!--                                            <a href=""><img src="img/team/7.jpg" alt="#"></a>-->
-<!--                                        </div>-->
-<!--                                        <div class="popular-post-widget-brief">-->
-<!--                                            <h6><a href="">Lorem ipsum dolor sit-->
-<!--                                                cing elit, sed do.</a></h6>-->
-<!--                                            <div class="ltn__blog-meta">-->
-<!--                                                <ul>-->
-<!--                                                    <li class="ltn__blog-date">-->
-<!--                                                        <a href="#"><i class="far fa-calendar-alt"></i>June 22, 2020</a>-->
-<!--                                                    </li>-->
-<!--                                                </ul>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <div class="popular-post-widget-item clearfix">-->
-<!--                                        <div class="popular-post-widget-img">-->
-<!--                                            <a href=""><img src="img/team/8.jpg" alt="#"></a>-->
-<!--                                        </div>-->
-<!--                                        <div class="popular-post-widget-brief">-->
-<!--                                            <h6><a href="">Lorem ipsum dolor sit-->
-<!--                                                cing elit, sed do.</a></h6>-->
-<!--                                            <div class="ltn__blog-meta">-->
-<!--                                                <ul>-->
-<!--                                                    <li class="ltn__blog-date">-->
-<!--                                                        <a href="#"><i class="far fa-calendar-alt"></i>June 22, 2020</a>-->
-<!--                                                    </li>-->
-<!--                                                </ul>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                        </div>-->
                         <!-- Social Media Widget -->
                         <div class="widget ltn__social-media-widget">
                             <h4 class="ltn__widget-title ltn__widget-title-border-2">Follow us</h4>
@@ -447,26 +369,6 @@
                                 </ul>
                             </div>
                         </div>
-                        <!-- Tagcloud Widget -->
-                        <!--<div class="widget ltn__tagcloud-widget">-->
-<!--                            <h4 class="ltn__widget-title ltn__widget-title-border-2">Popular Tags</h4>-->
-<!--                            <ul>-->
-<!--                                <li><a href="#">Popular</a></li>-->
-<!--                                <li><a href="#">desgin</a></li>-->
-<!--                                <li><a href="#">ux</a></li>-->
-<!--                                <li><a href="#">usability</a></li>-->
-<!--                                <li><a href="#">develop</a></li>-->
-<!--                                <li><a href="#">icon</a></li>-->
-<!--                                <li><a href="#">Car</a></li>-->
-<!--                                <li><a href="#">Service</a></li>-->
-<!--                                <li><a href="#">Repairs</a></li>-->
-<!--                                <li><a href="#">Auto Parts</a></li>-->
-<!--                                <li><a href="#">Oil</a></li>-->
-<!--                                <li><a href="#">Dealer</a></li>-->
-<!--                                <li><a href="#">Oil Change</a></li>-->
-<!--                                <li><a href="#">Body Color</a></li>-->
-<!--                            </ul>-->
-<!--                        </div>-->
                         <!-- Banner Widget -->
                         <div class="widget ltn__banner-widget d-none">
                             <a href=""><img src="/main-assets/img/banner/2.jpg" alt="#"></a>
@@ -615,16 +517,25 @@
 </template>
 
 <script>
+    import moment from 'moment';
     export default {
         props: {
             property: Object,
         },
         data(){
             return{
-
+                contact: {
+                    name: '',
+                    email: '',
+                    message: ''
+                }
             }
         },
         methods: {
+            contactRealtor(){
+
+            },
+
             fullDate (value){
                 return moment(value).format('MMMM Do YYYY, h:mm:ss a');
             }
