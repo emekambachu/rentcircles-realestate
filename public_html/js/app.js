@@ -22813,6 +22813,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       contact: {
+        property_detail_id: '',
+        realtor_id: '',
         name: '',
         email: '',
         message: ''

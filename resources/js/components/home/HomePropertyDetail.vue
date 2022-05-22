@@ -525,6 +525,8 @@
         data(){
             return{
                 contact: {
+                    property_detail_id: '',
+                    realtor_id: '',
                     name: '',
                     email: '',
                     message: ''
