@@ -93,7 +93,7 @@
                                             <label>Select Location</label>
                                             <select class="nice-select filter-input" name="property_type_id"
                                                     v-model="form.state_id">
-                                                <option selected>Select</option>
+                                                <option selected value="">Select</option>
                                                 <option class="option" v-for="state in states"
                                                         :key="state.id"
                                                         :value="state.id">
