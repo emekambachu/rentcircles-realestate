@@ -23399,12 +23399,11 @@ __webpack_require__.r(__webpack_exports__);
       this.images.splice(index, 1);
     },
     // Validate image
-    validateImage: function validateImage(img, file) {
-      console.log(img.type + ' - ' + img.size);
+    validateImage: function validateImage(file) {
+      console.log(file.type + ' - ' + file.size);
       var fileType = ['image/png', 'image/jpg', 'image/jpeg'];
 
       if (fileType.includes(file.type) === false) {
-        img = null;
         this.errorAlert = true;
         this.messageAlert = "Incorrect format for " + file.name;
         return false;
@@ -23413,7 +23412,7 @@ __webpack_require__.r(__webpack_exports__);
         this.messageAlert = '';
       }
 
-      if (img.size > 5000000) {
+      if (file.size > 5000000) {
         this.errorAlert = true;
         this.messageAlert = "Image can't be greater than 3mb for" + file.name;
         return false;
