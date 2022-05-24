@@ -408,7 +408,7 @@
             formError: function(response){
                 Swal.fire({
                     icon: 'error',
-                    title: 'Error occurred',
+                    title: 'Error occurred, check form and try again',
                     showConfirmButton: true,
                     timer: 10500
                 });
