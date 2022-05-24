@@ -26075,7 +26075,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     name: "property_type_id",
     "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
       return $data.form.state_id = $event;
-    })
+    }),
+    required: ""
   }, [_hoisted_37, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.states, function (state) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
       "class": "option",
@@ -26094,7 +26095,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "form-control filter-input",
     "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
       return $data.form.address = $event;
-    })
+    }),
+    required: ""
   }, null, 512
   /* NEED_PATCH */
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.address]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_42, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_43, [_hoisted_44, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ckeditor, {
@@ -26103,6 +26105,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "onUpdate:modelValue": _cache[5] || (_cache[5] = function ($event) {
       return $data.form.description = $event;
     }),
+    required: "",
     config: $data.editorConfig
   }, null, 8
   /* PROPS */
@@ -26139,7 +26142,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.living_rooms]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_54, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_55, [_hoisted_56, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "number",
     name: "living_room",
-    required: "",
     "class": "form-control filter-input",
     "onUpdate:modelValue": _cache[9] || (_cache[9] = function ($event) {
       return $data.form.square_feet = $event;

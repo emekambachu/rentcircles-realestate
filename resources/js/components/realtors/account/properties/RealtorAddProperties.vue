@@ -92,7 +92,7 @@
                                         <div class="form-group">
                                             <label>Select Location</label>
                                             <select class="nice-select filter-input" name="property_type_id"
-                                                    v-model="form.state_id">
+                                                    v-model="form.state_id" required>
                                                 <option selected value="">Select</option>
                                                 <option class="option" v-for="state in states"
                                                         :key="state.id"
@@ -107,14 +107,14 @@
                                         <div class="form-group">
                                             <label>Address</label>
                                             <input type="text" name="address" class="form-control filter-input"
-                                                   v-model="form.address">
+                                                   v-model="form.address" required>
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Room Description</label>
-                                            <ckeditor :editor="editor" v-model="form.description"
+                                            <ckeditor :editor="editor" v-model="form.description" required
                                                       :config="editorConfig"></ckeditor>
                                         </div>
                                     </div>
@@ -149,7 +149,7 @@
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label>Square Feet</label>
-                                            <input type="number" name="living_room" required
+                                            <input type="number" name="living_room"
                                                    class="form-control filter-input"
                                                    v-model="form.square_feet">
                                         </div>
