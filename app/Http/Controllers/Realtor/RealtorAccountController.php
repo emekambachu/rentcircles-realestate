@@ -42,7 +42,7 @@ class RealtorAccountController extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:realtors,email,'.Auth::user()->id,
             'mobile' => 'nullable',
-            'image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:5048',
+            'image' => 'nullable|mimes:jpg,jpeg,png,gif|max:5048',
         );
         $validator = Validator::make($input, $rules);
         if($validator->fails()){
@@ -52,7 +52,7 @@ class RealtorAccountController extends Controller
             ]);
         }
 
-        if($request->hasFile('image') && $file = $request->file('image')){
+        if($file = $request->file('image')){
             $path = 'photos/users/';
             if(!File::exists($path)){
                 File::makeDirectory($path, $mode = 0777, true, true);

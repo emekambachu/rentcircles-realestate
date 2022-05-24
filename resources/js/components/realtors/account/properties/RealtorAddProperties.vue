@@ -43,16 +43,6 @@
 
                         <div class="db-add-listing">
 
-                            <div class="bg-danger text-white text-center p-2" v-if="errorAlert">
-                                <p>{{ messageAlert }}</p>
-                                <p v-for="(error, key) in errors" :key="key">
-                                    {{ error.toString() }}
-                                </p>
-                            </div>
-
-                            <p class="bg-success text-white text-center p-2" v-if="successAlert">
-                                {{ messageAlert }}</p>
-
                             <form enctype="multipart/form-data" @submit.prevent="submitProperty">
                                 <div class="row">
 
@@ -114,7 +104,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Room Description</label>
-                                            <ckeditor :editor="editor" v-model="form.description" required
+                                            <ckeditor :editor="editor" v-model="form.description"
                                                       :config="editorConfig"></ckeditor>
                                         </div>
                                     </div>
@@ -224,6 +214,17 @@
                                     </div>
 
                                     <div class="col-12">
+
+                                        <div class="bg-danger text-white text-center p-2" v-if="errorAlert">
+                                            <p>{{ messageAlert }}</p>
+                                            <p v-for="(error, key) in errors" :key="key">
+                                                {{ error.toString() }}
+                                            </p>
+                                        </div>
+
+                                        <p class="bg-success text-white text-center p-2 mb-1" v-if="successAlert">
+                                            {{ messageAlert }}</p>
+
                                         <button type="submit" class="btn v8 mar-top-15">Submit Property</button>
                                     </div>
 
@@ -394,7 +395,7 @@
                     title: 'Submitted',
                     showConfirmButton: true,
                     timer: 10500
-                })
+                });
                 let self = this; //you need this because *this* will refer to Object.keys below`
                 //Iterate through each object field, key is name of the object field`
                 Object.keys(this.form).forEach(function(value,index) {
@@ -405,6 +406,12 @@
             },
 
             formError: function(response){
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error occurred',
+                    showConfirmButton: true,
+                    timer: 10500
+                });
                 this.errorAlert = true;
                 this.errors = response.data.errors
             },
