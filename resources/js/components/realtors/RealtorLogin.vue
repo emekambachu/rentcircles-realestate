@@ -1,27 +1,4 @@
 <template>
-<!--    &lt;!&ndash; SLIDER AREA START (slider-3) &ndash;&gt;-->
-<!--    <div class="ltn__slider-area ltn__slider-3 section-bg-2">-->
-<!--        <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1">-->
-
-<!--            &lt;!&ndash; ltn__slide-item &ndash;&gt;-->
-<!--            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal-&#45;&#45; ltn__slide-item-3 bg-overlay-theme-black-60" style="background-image: url('/main-assets/img/slider/12.jpg');  background-size: cover; background-repeat: no-repeat;  background-position: center; background-attachment: fixed;">-->
-<!--                <div class="ltn__slide-item-inner text-center">-->
-<!--                    <div class="container">-->
-<!--                        <div class="row">-->
-<!--                            <div class="col-lg-12 align-self-center">-->
-<!--                                <div class="ltn__breadcrumb-inner">-->
-<!--                                    <h1 class="page-title mt-5">Realtor Login</h1>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--        </div>-->
-<!--    </div>-->
-<!--    &lt;!&ndash; SLIDER AREA END &ndash;&gt;-->
-
     <div class="ltn__contact-address-area mb-90 mt-40">
         <div id="login" class="container">
         <div class="row">
@@ -38,6 +15,9 @@
                                 {{ errors.email.toString() }}</p>
                             <input type="text" name="email"
                                    class="form-control"
+                                   :class="{
+                                        input_danger: errors.email,
+                                    }"
                                    placeholder="Email*" required
                                    v-model="form.email">
                         </div>
@@ -65,11 +45,11 @@
                     <!-- Menu Widget -->
                     <div class="widget-2 ltn__menu-widget ltn__menu-widget-2 text-uppercase">
                         <ul>
-                            <li>
-                                <a href="/realtor/register">No account? Register
-                                    <span><i class="fas fa-arrow-right"></i></span>
-                                </a>
-                            </li>
+<!--                            <li>-->
+<!--                                <a href="/realtor/register">No account? Register-->
+<!--                                    <span><i class="fas fa-arrow-right"></i></span>-->
+<!--                                </a>-->
+<!--                            </li>-->
                             <li>
                                 <a href="/register">Sign up as a user
                                     <span><i class="fas fa-arrow-right"></i></span>
@@ -116,11 +96,14 @@
                 console.log(this.form);
                 axios.post('/api/realtor/login/submit', this.form)
                     .then((response) => {
-                        response.data.success === true ? window.location.href = '/realtor/account' : false;
-                        console.log(response.data);
-                        response.data.success === false ? this.errors = response.data.errors : this.errors = [];
+                        if(response.data.success === true){
+                            window.location.href = '/realtor/account';
+                            this.errors = [];
+                        }else{
+                            this.errors = response.data.errors;
+                        }
+                        console.log(this.errors);
                     }).catch((error) => {
-                    // this.errors = error.response.data.errors;
                     console.log(error);
                 });
             },

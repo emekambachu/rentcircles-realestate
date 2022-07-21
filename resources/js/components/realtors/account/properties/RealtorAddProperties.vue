@@ -49,16 +49,31 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Room Title</label>
-                                            <input type="text" name="title"
-                                                   class="form-control filter-input"
+                                            <input type="text" class="form-control filter-input"
+                                                   :class="{ input_danger: errors.title }"
                                                     v-model="form.title">
                                         </div>
                                     </div>
 
-                                    <div class="col-md-3">
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>Service</label>
+                                            <select class="nice-select filter-input"
+                                                    :class="{ input_danger: errors.service }"
+                                                    v-model="form.service">
+                                                <option selected value="">Select</option>
+                                                <option @click.prevent="is_shortLet = false"
+                                                        value="rent">Rent</option>
+                                                <option @click.prevent="is_shortLet = true"
+                                                        value="shortlet">Short Let</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
                                         <div class="form-group">
                                             <label>Type</label>
-                                            <select class="nice-select filter-input" name="property_type_id"
+                                            <select class="nice-select filter-input"
                                                     v-model="form.property_type_id">
                                                 <option selected>Select</option>
                                                 <option class="option" v-for="type in propertyTypes"
@@ -70,19 +85,34 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-md-3">
+                                    <div class="col-md-2">
                                         <div class="form-group">
-                                            <label>Price</label>
-                                            <input type="number" name="cost" class="form-control filter-input"
+                                            <label>Cost</label>
+                                            <input type="number" class="form-control filter-input"
+                                                   :class="{ input_danger: errors.cost }"
                                                    v-model="form.cost">
                                         </div>
                                     </div>
 
-                                    <div class="col-md-6">
+                                    <div class="col-md-2" v-if="is_shortLet">
+                                        <div class="form-group">
+                                            <label>Cost Period</label>
+                                            <select class="nice-select filter-input"
+                                                    v-model="form.cost_period">
+                                                <option selected>Select</option>
+                                                <option value="year">Year</option>
+                                                <option value="month">Month</option>
+                                                <option value="week">Week</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
                                         <div class="form-group">
                                             <label>Select Location</label>
-                                            <select class="nice-select filter-input" name="property_type_id"
-                                                    v-model="form.state_id" required>
+                                            <select class="nice-select filter-input"
+                                                    v-model="form.state_id"
+                                                    required>
                                                 <option selected value="">Select</option>
                                                 <option class="option" v-for="state in states"
                                                         :key="state.id"
@@ -96,51 +126,42 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Address</label>
-                                            <input type="text" name="address" class="form-control filter-input"
+                                            <input type="text" class="form-control filter-input"
                                                    v-model="form.address" required>
                                         </div>
                                     </div>
 
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label>Room Description</label>
-                                            <ckeditor :editor="editor" v-model="form.description"
-                                                      :config="editorConfig"></ckeditor>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-3">
+                                    <div class="col-md-2">
                                         <div class="form-group">
                                             <label>Bedrooms</label>
-                                            <input type="text" name="bedroom" required
+                                            <input type="text" required
                                                    class="form-control filter-input"
                                                    v-model="form.bedrooms">
                                         </div>
                                     </div>
 
-                                    <div class="col-md-3">
+                                    <div class="col-md-2">
                                         <div class="form-group">
                                             <label>Bathrooms</label>
-                                            <input type="number" name="bathroom" required
+                                            <input type="number" required
                                                    class="form-control filter-input"
                                                    v-model="form.bathrooms">
                                         </div>
                                     </div>
 
-                                    <div class="col-md-3">
+                                    <div class="col-md-2">
                                         <div class="form-group">
                                             <label>Living Rooms</label>
-                                            <input type="text" name="living_room" required
+                                            <input type="text" required
                                                    class="form-control filter-input"
                                                    v-model="form.living_rooms">
                                         </div>
                                     </div>
 
-                                    <div class="col-md-3">
+                                    <div class="col-md-2">
                                         <div class="form-group">
                                             <label>Square Feet</label>
-                                            <input type="number" name="living_room"
-                                                   class="form-control filter-input"
+                                            <input type="number" class="form-control filter-input"
                                                    v-model="form.square_feet">
                                         </div>
                                     </div>
@@ -184,11 +205,20 @@
                                         </div>
                                     </div>
 
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Room Description</label>
+                                            <ckeditor :editor="editor" v-model="form.description"
+                                                      :config="editorConfig"></ckeditor>
+                                        </div>
+                                    </div>
+
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <div class="add-listing__input-file-box">
-                                                <input class="add-listing__input-file" type="file"
-                                                       name="file" id="file" multiple
+                                            <div class="add-listing__input-file-box"
+                                                 :class="{ input_danger: errors.images }">
+                                                <input class="add-listing__input-file"
+                                                       type="file" name="file" id="file" multiple
                                                        @change="uploadImages">
                                                 <div class="add-listing__input-file-wrap">
                                                     <i class="ion-ios-cloud-upload"></i>
@@ -199,7 +229,8 @@
                                             <div class="d-flex justify-content-center">
                                                 <p v-if="imageValidation !== ''"
                                                    class="p-1 text-white text-center"></p>
-                                                <div v-for="(image, index) in images" :key="index"
+                                                <div v-for="(image, index) in images"
+                                                     :key="index"
                                                      style="width:100px; margin-right:5px;"
                                                      class="text-center">
                                                     <img :src="image.src" :alt="image.file.name"
@@ -260,6 +291,7 @@
                 form: {
                     title: '',
                     property_type_id: '',
+                    service: '',
                     state_id: '',
                     address: '',
                     description: '',
@@ -268,8 +300,10 @@
                     living_rooms: '',
                     square_feet: '',
                     cost: '',
+                    cost_period: '',
                     features: [],
                 },
+                is_shortLet: false,
                 images: [],
                 states: [],
                 propertyTypes: [],
@@ -361,10 +395,6 @@
                 }
             },
 
-            removeImage(index){
-                this.images.splice(index, 1);
-            },
-
             // Validate image
             validateImage: function(file){
                 console.log(file.type +' - '+ file.size);
@@ -388,6 +418,10 @@
                 }
             },
 
+            removeImage(index){
+                this.images.splice(index, 1);
+            },
+
             formSuccess: function(response){
                 // Success alert
                 Swal.fire({
@@ -403,6 +437,7 @@
                 });
                 this.features = [];
                 this.images = [];
+                this.errors = [];
             },
 
             formError: function(response){
@@ -419,7 +454,9 @@
            getStates: function(){
                axios.get('/api/states')
                    .then((response) => {
-                       response.data.success ? this.states = response.data.states : false;
+                       if(response.data.success === true){
+                           this.states = response.data.states;
+                       }
                        console.log(response.data);
                    }).catch((error) => {
                    console.log(error);
@@ -429,7 +466,9 @@
             getPropertyTypes: function(){
                 axios.get('/api/property/types')
                     .then((response) => {
-                        response.data.success ? this.propertyTypes = response.data.property_types : false;
+                        if(response.data.success === true){
+                            this.propertyTypes = response.data.property_types
+                        }
                         console.log(response.data);
                     }).catch((error) => {
                     console.log(error);

@@ -13,9 +13,10 @@ class CreatePropertyContactMessagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('property_contact_messages', function (Blueprint $table) {
+        Schema::create('property_contact_messages', static function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

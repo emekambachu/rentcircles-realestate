@@ -4,10 +4,12 @@ import NotFound from './components/NotFoundComponent';
 
 // Realtor Account
 import RealtorDashboard from './components/realtors/account/RealtorDashboard';
+
 // Properties
 import RealtorMyProperties from "./components/realtors/account/properties/RealtorMyProperties";
 import RealtorAddProperties from "./components/realtors/account/properties/RealtorAddProperties";
 import RealtorPropertyEdit from "./components/realtors/account/properties/RealtorPropertyEdit";
+
 // Profile
 import RealtorProfile from "./components/realtors/account/profile/RealtorProfile";
 import RealtorProfileEdit from "./components/realtors/account/profile/RealtorProfileEdit";
@@ -16,7 +18,7 @@ import RealtorProfileEdit from "./components/realtors/account/profile/RealtorPro
 const routes = [
     {
         // for urls that don't exist
-        path: "/:catchAll(.*)",
+        path: "/:pathMatch(.*)*",
         name: "NotFound",
         component: NotFound,
         meta: {

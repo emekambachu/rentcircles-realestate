@@ -7,9 +7,12 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\Realtor\RealtorLoginController;
 use App\Http\Controllers\Auth\Realtor\RealtorRegisterController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\BaseController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Properties\PropertyController;
 use App\Http\Controllers\Realtor\RealtorAccountController;
 use App\Http\Controllers\Realtor\RealtorAdminController;
+use App\Http\Controllers\Realtor\RealtorPropertyController;
 use App\Http\Controllers\User\UserAccountController;
 use App\Models\Properties\Country;
 use Illuminate\Http\Request;
@@ -40,15 +43,14 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/realtor/account', [RealtorAccountController::class, 'getProfile']);
     Route::post('/realtor/profile/update', [RealtorAccountController::class, 'updateProfile']);
 
-    Route::get('/realtor/properties/stats', [RealtorAccountController::class, 'propertyStats']);
-    Route::post('/realtor/property/submit', [RealtorAccountController::class, 'submitProperty']);
-    Route::get('/realtor/properties', [RealtorAccountController::class, 'myProperties']);
-    Route::get('/realtor/property/{id}/edit', [RealtorAccountController::class, 'myPropertyEdit']);
-    Route::post('/realtor/property/{id}/update', [RealtorAccountController::class, 'myPropertyUpdate']);
-    Route::delete('/realtor/property/{id}/delete', [RealtorAccountController::class, 'myPropertyDelete']);
-
-    // Realtor admin account
-    Route::get('/realtor/admin/authenticate', [RealtorAdminController::class, 'realtorAdminProfile']);
+    Route::get('/realtor/properties/stats', [RealtorPropertyController::class, 'propertyStats']);
+    Route::post('/realtor/property/submit', [RealtorPropertyController::class, 'submitProperty']);
+    Route::get('/realtor/properties', [RealtorPropertyController::class, 'myProperties']);
+    Route::get('/realtor/properties/search', [RealtorPropertyController::class, 'search']);
+    Route::get('/realtor/property/{id}/edit', [RealtorPropertyController::class, 'myPropertyEdit']);
+    Route::post('/realtor/property/{id}/update', [RealtorPropertyController::class, 'myPropertyUpdate']);
+    Route::post('/realtor/property/{id}/approve', [RealtorPropertyController::class, 'approveProperty']);
+    Route::delete('/realtor/property/{id}/delete', [RealtorPropertyController::class, 'myPropertyDelete']);
 
     Route::get('/realtor/logout', [RealtorLoginController::class, 'logout']);
 
@@ -60,22 +62,25 @@ Route::middleware('auth:sanctum')->group(function () {
 
 });
 
+// States
+Route::get('/states', [BaseController::class, 'propertyStates']);
+Route::get('/countries', [BaseController::class, 'propertyCountries']);
+
+// Home
+Route::get('/home/properties', [HomeController::class, 'homeProperties']);
+
 // Properties
-Route::get('/states', [PropertyController::class, 'getStates']);
+Route::get('/properties', [PropertyController::class, 'index']);
 Route::get('/property/types', [PropertyController::class, 'getPropertyTypes']);
-Route::get('/properties/search', [PropertyController::class, 'search']);
 
 // Realtor Register/Login
-Route::post('realtor/register/submit', [RealtorRegisterController::class, 'createRealtor']);
-Route::get('property/countries', [PropertyController::class, 'propertyCountries']);
-Route::post('realtor/login/submit', [RealtorLoginController::class, 'login']);
+Route::post('/realtor/register/submit', [RealtorRegisterController::class, 'createRealtor']);
+Route::post('/realtor/login/submit', [RealtorLoginController::class, 'login']);
 Route::get('/realtor/account/logout', [RealtorLoginController::class, 'logout']);
 
 // User Register/Login
-Route::post('register', [RegisterController::class, 'register']);
-Route::get('property/countries', [PropertyController::class, 'propertyCountries']);
-Route::post('login', [LoginController::class, 'login']);
+Route::post('/register', [RegisterController::class, 'register']);
+Route::post('/login', [LoginController::class, 'login']);
 
 // Admin Register/Login
-Route::post('admin/register', [AdminRegisterController::class, 'register']);
-Route::post('login', [AdminLoginController::class, 'login']);
+Route::post('/admin/login', [AdminLoginController::class, 'login']);

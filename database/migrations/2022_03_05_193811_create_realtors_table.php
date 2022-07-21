@@ -27,6 +27,7 @@ class CreateRealtorsTable extends Migration
             $table->boolean('email_verified')->default(0);
             $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

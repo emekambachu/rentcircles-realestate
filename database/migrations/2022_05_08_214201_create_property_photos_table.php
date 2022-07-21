@@ -18,6 +18,7 @@ class CreatePropertyPhotosTable extends Migration
             $table->unsignedBigInteger('property_detail_id');
             $table->binary('image');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

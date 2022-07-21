@@ -47,7 +47,7 @@ Properties
                             <div class="ltn__product-tab-content-inner ltn__product-grid-view">
                                 <div class="row">
                                 @forelse($properties as $property)
-                                    <home-properties :property="{{ $property }}"></home-properties>
+                                    <home-rproperties-item :property="{{ $property }}"></home-rproperties-item>
                                 @empty
                                     @if(Session::has('no-results'))
                                         <div class="danger-alert">

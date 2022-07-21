@@ -6,14 +6,21 @@
 
 // Default
 require('./bootstrap');
-import { createApp } from 'vue';
+
+import {
+    createApp
+} from 'vue';
+
 // SPA Router
 import router from './routes';
+
 // Axios api
 import axios from 'axios';
 import VueAxios from 'vue-axios';
+
 // Moment timestamp
 import moment from 'moment';
+
 // Sweet Alert
 import Swal from 'sweetalert2';
 window.Swal = Swal;
@@ -32,12 +39,12 @@ window.Swal = Swal;
 // Home
 import HomeSearchFilter from './components/home/HomeSearchFilter';
 import HomeProperties from "./components/home/HomeProperties";
-import HomeSampleProperties from "./components/home/HomeSampleProperties";
+import HomePropertiesItem from "./components/home/HomePropertiesItem";
 import HomePropertyDetail from "./components/home/HomePropertyDetail";
 
 // Auth
-import RealtorLoginComponent from './components/realtors/RealtorLoginComponent';
-import RealtorRegisterComponent from './components/realtors/RealtorRegisterComponent';
+import RealtorLogin from './components/realtors/RealtorLogin';
+import RealtorRegister from './components/realtors/RealtorRegister';
 
 // Profile
 import RealtorDashboard from './components/realtors/account/RealtorDashboard';
@@ -59,11 +66,11 @@ createApp({
     components: {
         HomeSearchFilter,
         HomeProperties,
-        HomeSampleProperties,
+        HomePropertiesItem,
         HomePropertyDetail,
 
-        RealtorLoginComponent,
-        RealtorRegisterComponent,
+        RealtorLogin,
+        RealtorRegister,
 
         RealtorDashboard,
         RealtorBio,

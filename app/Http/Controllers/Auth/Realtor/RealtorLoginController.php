@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Auth\Realtor;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Realtor\RealtorLoginRequest;
 use App\Providers\RouteServiceProvider;
+use App\Services\Realtor\RealtorLoginService;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -39,38 +41,16 @@ class RealtorLoginController extends Controller
         return view('auth.realtors.login', ['url' => 'realtor/login']);
     }
 
-    public function login(Request $request){
+    public function login(RealtorLoginRequest $request){
 
-        $rules = array(
-            'email' => 'required|exists:realtors,email',
-            'password' => 'required|min:6',
-        );
-
-        $validator = Validator::make($request->all(), $rules);
-
-        if($validator->fails()){
+        try {
+            return RealtorLoginService::login($request);
+        } catch (\Exception $e) {
             return response()->json([
-                "success" => false,
-                "errors" => $validator->getMessageBag()->toArray()
+                'success' => false,
+                'message' => $e->getMessage(),
             ]);
         }
-
-        if(Auth::guard('realtor')->attempt([
-            'email' => $request->email,
-            'password' => $request->password
-        ],
-
-            $request->get('remember'))) {
-            return response()->json([
-                'success' => true,
-            ], 200);
-        }
-
-        Session::flash('warning', 'Incorrect Login Details');
-        return response()->json([
-            'success' => false,
-            "message" => "Incorrect login details"
-        ], 404);
     }
 
     //add for logout function to work
@@ -80,9 +60,13 @@ class RealtorLoginController extends Controller
 
     //perform logout
     public function logout(){
-        Auth::guard('realtor')->logout();
-        return response()->json([
-            'success' => true,
-        ], 200);
+        try {
+            return RealtorLoginService::logout();
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => $e->getMessage(),
+            ]);
+        }
     }
 }

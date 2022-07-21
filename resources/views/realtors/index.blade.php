@@ -29,6 +29,9 @@
           media="screen" id="style-colors" />
     <!-- Document Title -->
 
+    <!--Custom CSS-->
+    <link href="{{ asset('admin-assets/custom/style.css') }}" rel="stylesheet" />
+
     <!-- Vue.js -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -43,7 +46,7 @@
     <aside class="menu-sidebar js-right-sidebar d-block d-lg-none">
         <div class="logo">
             <a href="#">
-                <img src="{{ asset('admin-assets/images/logo-black.png') }}" alt="" />
+                <img src="{{ asset('main-assets/img/logo-2.png') }}" width="200" alt="Logo">
             </a>
         </div>
         <div class="menu-sidebar__content js-scrollbar2">

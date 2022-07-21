@@ -2,8 +2,10 @@
 
 namespace App\View\Components\Home;
 
+use App\Http\Controllers\BaseController;
 use App\Models\Properties\PropertyType;
 use App\Models\State;
+use App\Services\BaseService;
 use Illuminate\View\Component;
 
 class HomeSearch extends Component
@@ -25,7 +27,7 @@ class HomeSearch extends Component
      */
     public function render()
     {
-        $data['states'] = State::orderBy('name')->get();
+        $data['states'] = BaseService::propertyStates();
         $data['property_types'] = PropertyType::orderBy('name')->get();
 
         return view('home.components.home-search', $data);

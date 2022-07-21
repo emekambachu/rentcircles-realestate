@@ -119,7 +119,7 @@
             </div>
             <div class="row ltn__custom-gutter--- justify-content-center">
 
-                <div class="col-md-4 col-12">
+                <div class="col-md-6 col-12">
                     <div class="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1 active">
                         <div class="ltn__feature-icon">
                             <img src="{{ asset('/main-assets/img/icons/icon-img/22.png') }}" alt="#">
@@ -133,21 +133,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 col-12">
-                    <div class="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1">
-                        <div class="ltn__feature-icon">
-                            <img src="{{ asset('/main-assets/img/icons/icon-img/21.png') }}" alt="#">
-                        </div>
-                        <div class="ltn__feature-info">
-                            <h3><a href="">Lease a Properties</a></h3>
-                            <p>Lease a property by signing up as a realtor</p>
-                            <a class="ltn__service-btn" href="{{ route('realtor.register') }}">
-                                Find more <i class="flaticon-right-arrow"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-12">
+                <div class="col-md-6 col-12">
                     <div class="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1">
                         <div class="ltn__feature-icon">
                             <img src="{{ asset('/main-assets/img/icons/icon-img/21.png') }}" alt="#">
@@ -178,7 +164,7 @@
             </div>
             <div id="app" class="row ltn__product-slider-item-three-active slick-arrow-1">
                 @foreach($properties as $property)
-                    <home-sample-properties :property="{{ $property }}"></home-sample-properties>
+                    <home-properties-item :property="{{ $property }}"></home-properties-item>
                 @endforeach
             </div>
         </div>
@@ -507,5 +493,6 @@
 @endsection
 
 @section('bottom-assets')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{ asset('main-assets/custom/scripts.js') }}" type="text/javascript"></script>
 @endsection

@@ -116,7 +116,7 @@
                         <div class="site-logo-wrap">
                             <div class="site-logo">
                                 <a href="{{ url('/') }}">
-                                    <img src="{{ asset('main-assets/img/logo-2.png') }}" width="200" alt="Logo"></a>
+                                    <img src="{{ asset('main-assets/img/logo.png') }}" width="200" alt="Logo"></a>
                             </div>
                             <div class="get-support clearfix d-none">
                                 <div class="get-support-icon">
@@ -167,12 +167,11 @@
                                         </li>
 
                                         <li><a href="{{ url('contact') }}">Contact</a></li>
-
+{{--                                        <li class="special-link">--}}
+{{--                                            <a class="border-radius-8" href="{{ route('realtor.login') }}">Realtor</a>--}}
+{{--                                        </li>--}}
                                         <li class="special-link">
-                                            <a class="border-radius-8" href="{{ route('realtor.login') }}">Realtor</a>
-                                        </li>
-                                        <li class="special-link">
-                                            <a class="border-radius-8" href="{{ route('login') }}">Customer</a>
+                                            <a class="border-radius-8" href="{{ route('login') }}">Login</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -206,7 +205,7 @@
             <div class="ltn__utilize-menu-head">
                 <div class="site-logo">
                     <a href="{{ url('/') }}">
-                        <img src="{{ asset('main-assets/img/logo.png') }}" alt="Logo">
+                        <img src="{{ asset('main-assets/img/logo-2.png') }}" alt="Logo">
                     </a>
                 </div>
                 <button class="ltn__utilize-close">×</button>
@@ -231,8 +230,8 @@
                         </ul>
                     </li>
                     <li><a href="{{ url('/contact') }}">Contact</a></li>
-                    <li><a href="{{ url('/realtors/login') }}">Realtors</a></li>
-                    <li><a href="{{ url('/login') }}">Customers</a></li>
+{{--                    <li><a href="{{ url('/realtors/login') }}">Realtors</a></li>--}}
+                    <li><a href="{{ url('/login') }}">Login</a></li>
                 </ul>
             </div>
 
@@ -268,7 +267,7 @@
                         <div class="footer-widget footer-about-widget">
                             <div class="footer-logo">
                                 <div class="site-logo">
-                                    <img src="{{ asset('main-assets/img/logo-2.png') }}" alt="Logo">
+                                    <img src="{{ asset('main-assets/img/logo.png') }}" width="200" alt="Logo">
                                 </div>
                             </div>
                             <p>Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum is dummy text of the printing.</p>
@@ -279,7 +278,7 @@
                                             <i class="icon-placeholder"></i>
                                         </div>
                                         <div class="footer-address-info">
-                                            <p>Brooklyn, New York, United States</p>
+                                            <p>Lagos, Nigeria.</p>
                                         </div>
                                     </li>
                                     <li>
@@ -438,11 +437,14 @@
                                                 <ul>
                                                     <li>
                                                         <div class="cart-plus-minus">
-                                                            <input type="text" value="02" name="qtybutton" class="cart-plus-minus-box">
+                                                            <input type="text" value="02" name="qtybutton"
+                                                                   class="cart-plus-minus-box">
                                                         </div>
                                                     </li>
                                                     <li>
-                                                        <a href="#" class="theme-btn-1 btn btn-effect-1" title="Add to Cart" data-bs-toggle="modal" data-bs-target="#add_to_cart_modal">
+                                                        <a href="#" class="theme-btn-1 btn btn-effect-1"
+                                                           title="Add to Cart" data-bs-toggle="modal"
+                                                           data-bs-target="#add_to_cart_modal">
                                                             <i class="fas fa-shopping-cart"></i>
                                                             <span>ADD TO CART</span>
                                                         </a>
@@ -453,7 +455,8 @@
                                             <div class="ltn__product-details-menu-3">
                                                 <ul>
                                                     <li>
-                                                        <a href="#" class="" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
+                                                        <a href="#" class="" title="Wishlist" data-bs-toggle="modal"
+                                                           data-bs-target="#liton_wishlist_modal">
                                                             <i class="far fa-heart"></i>
                                                             <span>Add to Wishlist</span>
                                                         </a>
@@ -577,7 +580,7 @@
 <!-- Body main wrapper end -->
 
 <!-- preloader area start -->
-<div class="preloader d-none" id="preloader">
+<div class="preloader" id="preloader">
     <div class="preloader-inner">
         <div class="spinner">
             <div class="dot1"></div>
@@ -587,13 +590,25 @@
 </div>
 <!-- preloader area end -->
 
-
 @yield('bottom-assets')
 
 <!-- All JS Plugins -->
 <script src="{{ asset('main-assets/js/plugins.js') }}"></script>
 <!-- Main JS -->
 <script src="{{ asset('main-assets/js/main.js') }}"></script>
+
+<script>
+    $('body').append('<div style="" id="loadingDiv"><div class="loader">Loading...</div></div>');
+    $(window).on('load', function(){
+        setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
+    });
+    function removeLoader(){
+        $( "#loadingDiv" ).fadeOut(500, function() {
+            // fadeOut complete. Remove the loading div
+            $( "#loadingDiv" ).remove(); //makes page more lightweight
+        });
+    }
+</script>
 
 </body>
 

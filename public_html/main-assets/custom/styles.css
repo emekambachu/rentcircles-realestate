@@ -43,3 +43,7 @@
     text-align: center;
     margin: 0 auto;
 }
+
+.input_danger{
+    border-color: #fc4560 !important;
+}

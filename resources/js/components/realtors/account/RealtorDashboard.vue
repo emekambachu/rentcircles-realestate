@@ -16,7 +16,7 @@
                         <router-link
                             class="btn v3"
                             exact
-                            to="/realtor/properties/add">
+                            to="/realtor/property/add">
                             <i class="ion-plus-round"></i>Add Listing
                         </router-link>
                     </div>
@@ -33,7 +33,7 @@
 
                 <div class="col-md-4 col-12">
                     <div class="statistic__item item--green">
-                        <h2 class="counter-value">{{ total_properties }}</h2>
+                        <h2 class="counter-value">{{ total }}</h2>
                         <span class="desc">Submitted Properties</span>
                         <div class="icon">
                             <img src="/admin-assets/images/dashboard/map-of-roads.png">
@@ -74,10 +74,31 @@
                             <h5><i class="icofont-eye-alt"></i>Recently Added</h5>
                         </div>
                         <div class="viewd-item-wrap">
-                            <realtor-single-property
-                                v-for="property in recent_properties" :key="property.id"
-                                :property="property"
-                            ></realtor-single-property>
+                            <template v-if="dataLoaded">
+                                <realtor-property-item
+                                    v-for="property in recent_properties"
+                                    :key="property.id"
+                                    :property="property"
+                                ></realtor-property-item>
+                            </template>
+                            <template v-else>
+                                <ContentLoader
+                                    :speed=2
+                                    :animate=true
+                                    width={400}
+                                    height={160}
+                                    viewBox="0 0 400 160"
+                                    backgroundColor="#d9d9d9"
+                                    foregroundColor="#ededed"
+                                >
+                                    <rect x="50" y="6" rx="4" ry="4" width="343" height="38" />
+                                    <rect x="8" y="6" rx="4" ry="4" width="35" height="38" />
+                                    <rect x="50" y="55" rx="4" ry="4" width="343" height="38" />
+                                    <rect x="8" y="55" rx="4" ry="4" width="35" height="38" />
+                                    <rect x="50" y="104" rx="4" ry="4" width="343" height="38" />
+                                    <rect x="8" y="104" rx="4" ry="4" width="35" height="38" />
+                                </ContentLoader>
+                            </template>
                         </div>
                     </div>
                 </div>
@@ -88,15 +109,31 @@
 </template>
 
 <script>
-    import RealtorSingleProperty from "./properties/RealtorSingleProperty";
+    import RealtorPropertyItem from "./properties/RealtorPropertyItem";
+    import {
+        ContentLoader,
+        FacebookLoader,
+        CodeLoader,
+        BulletListLoader,
+        InstagramLoader,
+        ListLoader,
+    } from 'vue-content-loader';
+
     export default {
         components: {
-            RealtorSingleProperty
+            RealtorPropertyItem,
+            ContentLoader,
+            FacebookLoader,
+            CodeLoader,
+            BulletListLoader,
+            InstagramLoader,
+            ListLoader,
         },
         data(){
             return {
+                dataLoaded: false,
                 recent_properties: [],
-                total_properties: 0
+                total: 0
             }
         },
         methods: {
@@ -106,7 +143,8 @@
                         if(response.data.success === true){
                             console.log(response.data.recent_properties);
                            this.recent_properties = response.data.recent_properties;
-                           this.total_properties = response.data.total_properties;
+                           this.total = response.data.total_properties;
+                           this.dataLoaded = true;
                         }
                     }).catch((error) => {
                     console.log(error);

@@ -14146,5 +14146,9 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
     margin: 0 auto;
 }
 
+.input_danger{
+    border-color: #fc4560 !important;
+}
+
 
 
