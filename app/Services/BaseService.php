@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Models\Properties\PropertyType;
 use App\Models\State;
 
 /**
@@ -23,4 +24,14 @@ class BaseService
     public static function countries(){
 
     }
+
+    public static function propertyTypes(){
+        return new PropertyType();
+    }
+
+    public static function PropertyTypesList(){
+        return self::propertyTypes()->orderBy('name')->get();
+    }
+
+
 }

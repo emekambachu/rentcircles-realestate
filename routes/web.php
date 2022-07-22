@@ -62,6 +62,7 @@ Route::get('/contact', static function () {
 });
 
 // Realtor Auth
+Route::get('/realtor', [RealtorLoginController::class, 'showLoginForm']);
 Route::get('/realtor/login', [RealtorLoginController::class, 'showLoginForm'])
     ->name('realtor.login');
 Route::get('/realtor/register', [RealtorRegisterController::class, 'showRegistrationForm'])

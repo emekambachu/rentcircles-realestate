@@ -23,4 +23,20 @@ class BaseController extends Controller
         }
     }
 
+    public function propertyTypes(){
+        try {
+            $types = BaseService::propertyTypesList();
+            return response()->json([
+                'success' => true,
+                'property_types' => $types,
+            ]);
+
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'error_message' => $e->getMessage(),
+            ]);
+        }
+    }
+
 }

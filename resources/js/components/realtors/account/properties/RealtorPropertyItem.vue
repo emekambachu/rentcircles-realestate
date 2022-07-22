@@ -26,15 +26,15 @@
                 }">
                 <i class="ion-edit"></i> Edit </router-link>
 
-                <a @click.prevent="deleteProperty" href="" class="btn-sm mr-1 btn-danger text-white">
-                    <i class="ion-android-delete"></i> Delete</a>
-
-                <a @click.prevent="approveProperty" href="" class="btn-sm btn-info text-white">
+            <a @click.prevent="approveProperty" href="" class="btn-sm btn-info text-white">
                     <span v-if="published">
                         <i class="ion-android-checkmark-circle"></i> Hide</span>
-                    <span v-else>
+                <span v-else>
                         <i class="ion-android-checkmark-circle"></i> publish</span>
-                </a>
+            </a>
+
+            <a @click.prevent="deleteProperty" href="" class="btn-sm mr-1 btn-danger text-white">
+                <i class="ion-android-delete"></i> Delete</a>
         </div>
     </div>
 </template>

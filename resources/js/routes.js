@@ -41,18 +41,18 @@ const routes = [
         }
     },
 
-    {
-        path: '/realtor',
-        name: "RealtorDashboard2",
-        component: RealtorDashboard,
-        beforeEnter: (to, from, next) => {
-            axios.get('/api/realtor/authenticate').then(() => {
-                next()
-            }).catch(() => {
-                window.location.href = '/realtor/login';
-            });
-        }
-    },
+    // {
+    //     path: '/realtor',
+    //     name: "RealtorDashboard2",
+    //     component: RealtorDashboard,
+    //     beforeEnter: (to, from, next) => {
+    //         axios.get('/api/realtor/authenticate').then(() => {
+    //             next()
+    //         }).catch(() => {
+    //             window.location.href = '/realtor/login';
+    //         });
+    //     }
+    // },
 
     {
         path: '/realtor/my-properties',
