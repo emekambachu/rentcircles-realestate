@@ -295,7 +295,7 @@
                 Object.keys(response.data.property).forEach(function(key,index){
                     console.log(key); // key
                     console.log(response.data.property[key]); // value
-                    if(key === 'features'){
+                    if(key === 'features' && response.data.property[key] !== null){
                         self.form.features = response.data.property.features.split(',');
                     }else{
                         self.form[key] = response.data.property[key];
@@ -309,6 +309,8 @@
                         file: null
                     });
                 }
+
+                console.log(response.data.images);
             },
 
             updateProperty: function(){

@@ -23631,7 +23631,7 @@ __webpack_require__.r(__webpack_exports__);
 
         console.log(response.data.property[key]); // value
 
-        if (key === 'features') {
+        if (key === 'features' && response.data.property[key] !== null) {
           self.form.features = response.data.property.features.split(',');
         } else {
           self.form[key] = response.data.property[key];
@@ -23644,6 +23644,8 @@ __webpack_require__.r(__webpack_exports__);
           file: null
         });
       }
+
+      console.log(response.data.images);
     },
     updateProperty: function updateProperty() {
       var _this2 = this;

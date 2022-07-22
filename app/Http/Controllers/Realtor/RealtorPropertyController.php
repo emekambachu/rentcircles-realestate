@@ -89,7 +89,7 @@ class RealtorPropertyController extends Controller
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => $e->getMessage(),
+                'error_message' => $e->getMessage(),
             ]);
         }
     }
