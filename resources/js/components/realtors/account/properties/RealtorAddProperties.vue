@@ -245,7 +245,6 @@
                                     </div>
 
                                     <div class="col-12">
-
                                         <div class="bg-danger text-white text-center p-2" v-if="errorAlert">
                                             <p>{{ messageAlert }}</p>
                                             <p v-for="(error, key) in errors" :key="key">

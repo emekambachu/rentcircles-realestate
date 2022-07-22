@@ -44,9 +44,24 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Room Title</label>
-                                            <input type="text" name="title"
-                                                   class="form-control filter-input"
+                                            <input type="text" class="form-control filter-input"
                                                    v-model="form.title">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>Service</label>
+                                            <select class="nice-select filter-input"
+                                                    :class="{ input_danger: errors.service }"
+                                                    v-model="form.service">
+                                                <option :selected="form.service === 'rent'"
+                                                        @click.prevent="is_shortLet = false"
+                                                        value="rent">Rent</option>
+                                                <option :selected="form.service === 'shortlet'"
+                                                        @click.prevent="is_shortLet = true"
+                                                        value="shortlet">Short Let</option>
+                                            </select>
                                         </div>
                                     </div>
 
@@ -68,9 +83,22 @@
 
                                     <div class="col-md-3">
                                         <div class="form-group">
-                                            <label>Price</label>
-                                            <input type="number" name="cost" class="form-control filter-input"
+                                            <label>Cost</label>
+                                            <input type="number" class="form-control filter-input"
                                                    v-model="form.cost">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2" v-if="is_shortLet">
+                                        <div class="form-group">
+                                            <label>Cost Period</label>
+                                            <select class="nice-select filter-input"
+                                                    v-model="form.cost_period">
+                                                <option selected>Select</option>
+                                                <option value="year">Year</option>
+                                                <option value="month">Month</option>
+                                                <option value="week">Week</option>
+                                            </select>
                                         </div>
                                     </div>
 
@@ -95,14 +123,6 @@
                                             <label>Address</label>
                                             <input type="text" name="address" class="form-control filter-input"
                                                    v-model="form.address">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label>Room Description</label>
-                                            <ckeditor :editor="editor" v-model="form.description"
-                                                      :config="editorConfig"></ckeditor>
                                         </div>
                                     </div>
 
@@ -181,6 +201,14 @@
                                         </div>
                                     </div>
 
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Room Description</label>
+                                            <ckeditor :editor="editor" v-model="form.description"
+                                                      :config="editorConfig"></ckeditor>
+                                        </div>
+                                    </div>
+
                                     <div class="col-12">
                                         <div class="form-group">
                                             <div class="add-listing__input-file-box">
@@ -255,6 +283,7 @@
                 form: {
                     title: '',
                     property_type_id: '',
+                    service: '',
                     state_id: '',
                     address: '',
                     description: '',
@@ -263,6 +292,7 @@
                     living_rooms: '',
                     square_feet: '',
                     cost: '',
+                    cost_period: '',
                     features: [],
                 },
                 images: [],
@@ -309,7 +339,6 @@
                         file: null
                     });
                 }
-
                 console.log(response.data.images);
             },
 
