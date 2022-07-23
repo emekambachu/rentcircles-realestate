@@ -228,8 +228,9 @@
                                                      style="width:100px; margin-right:5px;"
                                                      class="text-center">
                                                     <img :src="image.file !== null ? image.src : '/photos/properties/'+image.src"/><br>
-                                                    <i @click.prevent="removeImage(index)"
+                                                    <i @click.prevent="removeImage(index, image.src)"
                                                        class="fa-duotone fa-x bg-danger text-white p-1"
+                                                       :class="{ 'fa-spinner fa-spin': deletePhotoLoading}"
                                                        title="remove"></i>
                                                 </div>
                                             </div>
@@ -295,7 +296,10 @@
                     cost_period: '',
                     features: [],
                 },
+
                 images: [],
+                deletePhotoLoading: false,
+
                 states: [],
                 propertyTypes: [],
 
@@ -333,7 +337,7 @@
                 });
 
                 // populate images
-                for (let i = 0; i < response.data.images.length; i++) {
+                for (let i = 0; i < response.data.images.length; i++){
                     this.images.push({
                         src: response.data.images[i],
                         file: null
@@ -445,8 +449,20 @@
                 }
             },
 
-            removeImage(index){
+            removeImage(index, image){
+                //delete photo from database
+                this.deletePhotoLoading = true;
+                axios.delete('/api/realtor/property/photo/'+image+'/delete')
+                    .then((response) => {
+                        if(response.data.success === true){
+                            console.log(response.data.message);
+                        }else{
+                            console.log("Not deleted");
+                        }
+                    });
+                // remove photo from array
                 this.images.splice(index, 1);
+                this.deletePhotoLoading = false;
             },
 
             // Validate image

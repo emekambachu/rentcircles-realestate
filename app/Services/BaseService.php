@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Models\Properties\PropertyFeature;
 use App\Models\Properties\PropertyType;
 use App\Models\State;
 
@@ -33,5 +34,12 @@ class BaseService
         return self::propertyTypes()->orderBy('name')->get();
     }
 
+    public static function propertyFeatures(){
+        return new PropertyFeature();
+    }
+
+    public static function propertyFeaturesList(){
+        return self::PropertyFeatures()->orderBy('name')->get();
+    }
 
 }

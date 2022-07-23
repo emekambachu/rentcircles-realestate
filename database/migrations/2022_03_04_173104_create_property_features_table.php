@@ -13,9 +13,12 @@ class CreatePropertyFeaturesTable extends Migration
      */
     public function up()
     {
-        Schema::create('property_features', function (Blueprint $table) {
+        Schema::create('property_features', static function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('slug');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

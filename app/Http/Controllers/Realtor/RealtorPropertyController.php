@@ -94,6 +94,23 @@ class RealtorPropertyController extends Controller
         }
     }
 
+    public function deletePropertyPhoto($image){
+
+        try {
+            PropertyService::deletePropertyPhoto($image);
+            return response()->json([
+                "success" => true,
+                "message" => "Deleted"
+            ]);
+
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'error_message' => $e->getMessage(),
+            ]);
+        }
+    }
+
     public function myPropertyUpdate(UpdatePropertyRequest $request, $id){
 
         try {

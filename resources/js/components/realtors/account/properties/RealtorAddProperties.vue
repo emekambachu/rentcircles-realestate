@@ -61,7 +61,7 @@
                                             <select class="nice-select filter-input"
                                                     :class="{ input_danger: errors.service }"
                                                     v-model="form.service">
-                                                <option selected value="">Select</option>
+                                                <option selected value=''>Select</option>
                                                 <option @click.prevent="is_shortLet = false"
                                                         value="rent">Rent</option>
                                                 <option @click.prevent="is_shortLet = true"
@@ -75,7 +75,7 @@
                                             <label>Type</label>
                                             <select class="nice-select filter-input"
                                                     v-model="form.property_type_id">
-                                                <option selected>Select</option>
+                                                <option selected value=''>Select</option>
                                                 <option class="option" v-for="type in propertyTypes"
                                                         :key="type.id"
                                                         :value="type.id">
@@ -99,7 +99,7 @@
                                             <label>Cost Period</label>
                                             <select class="nice-select filter-input"
                                                     v-model="form.cost_period">
-                                                <option selected>Select</option>
+                                                <option selected value=''>Select</option>
                                                 <option value="year">Year</option>
                                                 <option value="month">Month</option>
                                                 <option value="week">Week</option>
@@ -170,37 +170,46 @@
                                         <div class="form-group">
                                             <label>Features</label>
                                             <div class="filter-checkbox">
-                                                <input id="check-ac" type="checkbox" value="Air condition"
-                                                       v-model="form.features">
-                                                <label for="check-ac">Air condition</label>
 
-                                                <input id="check-wf" type="checkbox" value="Wifi"
-                                                       v-model="form.features">
-                                                <label for="check-wf">Wi Fi</label>
+                                                <span v-for="(feature, index) in propertyFeatures"
+                                                      :key="feature.id">
+                                                    <input :id="feature.slug" type="checkbox"
+                                                           :value="feature.name"
+                                                           v-model="form.features">
+                                                    <label :for="feature.slug">{{ feature.name }}</label>
+                                                </span>
 
-                                                <input id="check-g" type="checkbox" value="Gym"
-                                                       v-model="form.features">
-                                                <label for="check-g">Gym</label>
+<!--                                                <input id="check-ac" type="checkbox" value="Air condition"-->
+<!--                                                       v-model="form.features">-->
+<!--                                                <label for="check-ac">Air condition</label>-->
 
-                                                <input id="check-lr" type="checkbox" value="Laundry room"
-                                                       v-model="form.features">
-                                                <label for="check-lr">Laundry Room</label>
+<!--                                                <input id="check-wf" type="checkbox" value="Wifi"-->
+<!--                                                       v-model="form.features">-->
+<!--                                                <label for="check-wf">Wi Fi</label>-->
 
-                                                <input id="check-i" type="checkbox" value="Internet"
-                                                       v-model="form.features">
-                                                <label for="check-i">Internet</label>
+<!--                                                <input id="check-g" type="checkbox" value="Gym"-->
+<!--                                                       v-model="form.features">-->
+<!--                                                <label for="check-g">Gym</label>-->
 
-                                                <input id="check-pa" type="checkbox" value="Pets allowed"
-                                                       v-model="form.features">
-                                                <label for="check-pa">Pets Allowed</label>
+<!--                                                <input id="check-lr" type="checkbox" value="Laundry room"-->
+<!--                                                       v-model="form.features">-->
+<!--                                                <label for="check-lr">Laundry Room</label>-->
 
-                                                <input id="check-ch" type="checkbox" value="Central heating"
-                                                       v-model="form.features">
-                                                <label for="check-ch">Central heating</label>
+<!--                                                <input id="check-i" type="checkbox" value="Internet"-->
+<!--                                                       v-model="form.features">-->
+<!--                                                <label for="check-i">Internet</label>-->
 
-                                                <input id="check-sp" type="checkbox" value="Swimming pool"
-                                                       v-model="form.features">
-                                                <label for="check-sp">Swimming pool</label>
+<!--                                                <input id="check-pa" type="checkbox" value="Pets allowed"-->
+<!--                                                       v-model="form.features">-->
+<!--                                                <label for="check-pa">Pets Allowed</label>-->
+
+<!--                                                <input id="check-ch" type="checkbox" value="Central heating"-->
+<!--                                                       v-model="form.features">-->
+<!--                                                <label for="check-ch">Central heating</label>-->
+
+<!--                                                <input id="check-sp" type="checkbox" value="Swimming pool"-->
+<!--                                                       v-model="form.features">-->
+<!--                                                <label for="check-sp">Swimming pool</label>-->
                                             </div>
                                         </div>
                                     </div>
@@ -306,6 +315,7 @@
                 images: [],
                 states: [],
                 propertyTypes: [],
+                propertyFeatures: [],
 
                 errors:[],
                 successAlert: false,
@@ -434,7 +444,11 @@
                 Object.keys(this.form).forEach(function(value,index) {
                     self.form[value] = '';
                 });
-                this.features = [];
+
+                // clear all array items
+                this.features = []; // clear selected property features
+                this.propertyFeatures = []; // clear property features
+                this.getPropertyFeatures(); // load back property features
                 this.images = [];
                 this.errors = [];
             },
@@ -472,6 +486,18 @@
                     }).catch((error) => {
                     console.log(error);
                 });
+            },
+
+            getPropertyFeatures: function(){
+                axios.get('/api/property/features')
+                    .then((response) => {
+                        if(response.data.success === true){
+                            this.propertyFeatures = response.data.property_features
+                        }
+                        console.log(response.data.property_features);
+                    }).catch((error) => {
+                    console.log(error);
+                });
             }
 
         },
@@ -479,6 +505,7 @@
         mounted(){
             this.getStates();
             this.getPropertyTypes();
+            this.getPropertyFeatures();
         },
 
         created(){

@@ -191,6 +191,14 @@ class PropertyService extends BaseService
         ]);
     }
 
+    public static function deletePropertyPhoto($image){
+        $photo = self::propertyPhoto()->where('image', $image)->first();
+        if(File::exists(public_path() . '/photos/properties/' . $photo->image)){
+            FILE::delete(public_path() . '/photos/properties/' . $photo->image);
+        }
+        $photo->delete();
+    }
+
     public static function updateProperty($request, $id){
         $input = $request->all();
         $property = self::propertyWithRelationships()->findOrFail($id);
@@ -230,12 +238,13 @@ class PropertyService extends BaseService
         }
 
         // Delete images that were not part of the recently uploaded batch
-        foreach($property->property_photos as $photo){
-            if(!in_array($photo->image, $request->images) && File::exists(public_path() . '/photos/properties/' . $photo->image)){
-                FILE::delete(public_path() . '/photos/properties/' . $photo->image);
-                $propertyPhotos->where('id', $photo->id)->delete();
-            }
-        }
+        // Not working as it should. Fix this later
+//        foreach($property->property_photos as $photo){
+//            if(!in_array($photo->image, $request->images) && File::exists(public_path() . '/photos/properties/' . $photo->image)){
+//                FILE::delete(public_path() . '/photos/properties/' . $photo->image);
+//                $propertyPhotos->where('id', $photo->id)->delete();
+//            }
+//        }
     }
 
     public static function approveProperty($id){

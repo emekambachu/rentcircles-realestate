@@ -23318,6 +23318,7 @@ __webpack_require__.r(__webpack_exports__);
       images: [],
       states: [],
       propertyTypes: [],
+      propertyFeatures: [],
       errors: [],
       successAlert: false,
       errorAlert: false,
@@ -23448,8 +23449,14 @@ __webpack_require__.r(__webpack_exports__);
 
       Object.keys(this.form).forEach(function (value, index) {
         self.form[value] = '';
-      });
-      this.features = [];
+      }); // clear all array items
+
+      this.features = []; // clear selected property features
+
+      this.propertyFeatures = []; // clear property features
+
+      this.getPropertyFeatures(); // load back property features
+
       this.images = [];
       this.errors = [];
     },
@@ -23488,11 +23495,25 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         console.log(error);
       });
+    },
+    getPropertyFeatures: function getPropertyFeatures() {
+      var _this4 = this;
+
+      axios.get('/api/property/features').then(function (response) {
+        if (response.data.success === true) {
+          _this4.propertyFeatures = response.data.property_features;
+        }
+
+        console.log(response.data.property_features);
+      })["catch"](function (error) {
+        console.log(error);
+      });
     }
   },
   mounted: function mounted() {
     this.getStates();
     this.getPropertyTypes();
+    this.getPropertyFeatures();
   },
   created: function created() {}
 });
@@ -23603,6 +23624,7 @@ __webpack_require__.r(__webpack_exports__);
         features: []
       },
       images: [],
+      deletePhotoLoading: false,
       states: [],
       propertyTypes: [],
       errors: [],
@@ -23756,8 +23778,19 @@ __webpack_require__.r(__webpack_exports__);
         this.images.push(img);
       }
     },
-    removeImage: function removeImage(index) {
+    removeImage: function removeImage(index, image) {
+      //delete photo from database
+      this.deletePhotoLoading = true;
+      axios["delete"]('/api/realtor/property/photo/' + image + '/delete').then(function (response) {
+        if (response.data.success === true) {
+          console.log(response.data.message);
+        } else {
+          console.log("Not deleted");
+        }
+      }); // remove photo from array
+
       this.images.splice(index, 1);
+      this.deletePhotoLoading = false;
     },
     // Validate image
     validateImage: function validateImage(file) {
@@ -25873,7 +25906,8 @@ var _hoisted_30 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 );
 
 var _hoisted_31 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
-  selected: ""
+  selected: "",
+  value: ""
 }, "Select", -1
 /* HOISTED */
 );
@@ -25903,7 +25937,8 @@ var _hoisted_38 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 );
 
 var _hoisted_39 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
-  selected: ""
+  selected: "",
+  value: ""
 }, "Select", -1
 /* HOISTED */
 );
@@ -26015,74 +26050,27 @@ var _hoisted_66 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 var _hoisted_67 = {
   "class": "filter-checkbox"
 };
-
-var _hoisted_68 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "for": "check-ac"
-}, "Air condition", -1
-/* HOISTED */
-);
-
-var _hoisted_69 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "for": "check-wf"
-}, "Wi Fi", -1
-/* HOISTED */
-);
-
-var _hoisted_70 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "for": "check-g"
-}, "Gym", -1
-/* HOISTED */
-);
-
-var _hoisted_71 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "for": "check-lr"
-}, "Laundry Room", -1
-/* HOISTED */
-);
-
-var _hoisted_72 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "for": "check-i"
-}, "Internet", -1
-/* HOISTED */
-);
-
-var _hoisted_73 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "for": "check-pa"
-}, "Pets Allowed", -1
-/* HOISTED */
-);
-
-var _hoisted_74 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "for": "check-ch"
-}, "Central heating", -1
-/* HOISTED */
-);
-
-var _hoisted_75 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "for": "check-sp"
-}, "Swimming pool", -1
-/* HOISTED */
-);
-
-var _hoisted_76 = {
+var _hoisted_68 = ["id", "value"];
+var _hoisted_69 = ["for"];
+var _hoisted_70 = {
   "class": "col-md-12"
 };
-var _hoisted_77 = {
+var _hoisted_71 = {
   "class": "form-group"
 };
 
-var _hoisted_78 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Room Description", -1
+var _hoisted_72 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Room Description", -1
 /* HOISTED */
 );
 
-var _hoisted_79 = {
+var _hoisted_73 = {
   "class": "col-12"
 };
-var _hoisted_80 = {
+var _hoisted_74 = {
   "class": "form-group"
 };
 
-var _hoisted_81 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_75 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "add-listing__input-file-wrap"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "ion-ios-cloud-upload"
@@ -26090,33 +26078,33 @@ var _hoisted_81 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_82 = {
+var _hoisted_76 = {
   "class": "d-flex justify-content-center"
 };
-var _hoisted_83 = {
+var _hoisted_77 = {
   key: 0,
   "class": "p-1 text-white text-center"
 };
-var _hoisted_84 = ["src", "alt", "title"];
+var _hoisted_78 = ["src", "alt", "title"];
 
-var _hoisted_85 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
+var _hoisted_79 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
 /* HOISTED */
 );
 
-var _hoisted_86 = ["onClick"];
-var _hoisted_87 = {
+var _hoisted_80 = ["onClick"];
+var _hoisted_81 = {
   "class": "col-12"
 };
-var _hoisted_88 = {
+var _hoisted_82 = {
   key: 0,
   "class": "bg-danger text-white text-center p-2"
 };
-var _hoisted_89 = {
+var _hoisted_83 = {
   key: 1,
   "class": "bg-success text-white text-center p-2 mb-1"
 };
 
-var _hoisted_90 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+var _hoisted_84 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "submit",
   "class": "btn v8 mar-top-15"
 }, "Submit Property", -1
@@ -26151,7 +26139,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   })])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [_hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     enctype: "multipart/form-data",
-    onSubmit: _cache[23] || (_cache[23] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+    onSubmit: _cache[16] || (_cache[16] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $options.submitProperty && $options.submitProperty.apply($options, arguments);
     }, ["prevent"]))
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [_hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
@@ -26279,88 +26267,35 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.square_feet]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_64, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_65, [_hoisted_66, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_67, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    id: "check-ac",
-    type: "checkbox",
-    value: "Air condition",
-    "onUpdate:modelValue": _cache[13] || (_cache[13] = function ($event) {
-      return $data.form.features = $event;
-    })
-  }, null, 512
-  /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, $data.form.features]]), _hoisted_68, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    id: "check-wf",
-    type: "checkbox",
-    value: "Wifi",
-    "onUpdate:modelValue": _cache[14] || (_cache[14] = function ($event) {
-      return $data.form.features = $event;
-    })
-  }, null, 512
-  /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, $data.form.features]]), _hoisted_69, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    id: "check-g",
-    type: "checkbox",
-    value: "Gym",
-    "onUpdate:modelValue": _cache[15] || (_cache[15] = function ($event) {
-      return $data.form.features = $event;
-    })
-  }, null, 512
-  /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, $data.form.features]]), _hoisted_70, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    id: "check-lr",
-    type: "checkbox",
-    value: "Laundry room",
-    "onUpdate:modelValue": _cache[16] || (_cache[16] = function ($event) {
-      return $data.form.features = $event;
-    })
-  }, null, 512
-  /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, $data.form.features]]), _hoisted_71, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    id: "check-i",
-    type: "checkbox",
-    value: "Internet",
-    "onUpdate:modelValue": _cache[17] || (_cache[17] = function ($event) {
-      return $data.form.features = $event;
-    })
-  }, null, 512
-  /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, $data.form.features]]), _hoisted_72, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    id: "check-pa",
-    type: "checkbox",
-    value: "Pets allowed",
-    "onUpdate:modelValue": _cache[18] || (_cache[18] = function ($event) {
-      return $data.form.features = $event;
-    })
-  }, null, 512
-  /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, $data.form.features]]), _hoisted_73, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    id: "check-ch",
-    type: "checkbox",
-    value: "Central heating",
-    "onUpdate:modelValue": _cache[19] || (_cache[19] = function ($event) {
-      return $data.form.features = $event;
-    })
-  }, null, 512
-  /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, $data.form.features]]), _hoisted_74, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    id: "check-sp",
-    type: "checkbox",
-    value: "Swimming pool",
-    "onUpdate:modelValue": _cache[20] || (_cache[20] = function ($event) {
-      return $data.form.features = $event;
-    })
-  }, null, 512
-  /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, $data.form.features]]), _hoisted_75])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_76, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_77, [_hoisted_78, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ckeditor, {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.square_feet]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_64, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_65, [_hoisted_66, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_67, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.propertyFeatures, function (feature, index) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("span", {
+      key: feature.id
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+      id: feature.slug,
+      type: "checkbox",
+      value: feature.name,
+      "onUpdate:modelValue": _cache[13] || (_cache[13] = function ($event) {
+        return $data.form.features = $event;
+      })
+    }, null, 8
+    /* PROPS */
+    , _hoisted_68), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, $data.form.features]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+      "for": feature.slug
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(feature.name), 9
+    /* TEXT, PROPS */
+    , _hoisted_69)]);
+  }), 128
+  /* KEYED_FRAGMENT */
+  )), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <input id=\"check-ac\" type=\"checkbox\" value=\"Air condition\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                       v-model=\"form.features\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <label for=\"check-ac\">Air condition</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <input id=\"check-wf\" type=\"checkbox\" value=\"Wifi\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                       v-model=\"form.features\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <label for=\"check-wf\">Wi Fi</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <input id=\"check-g\" type=\"checkbox\" value=\"Gym\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                       v-model=\"form.features\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <label for=\"check-g\">Gym</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <input id=\"check-lr\" type=\"checkbox\" value=\"Laundry room\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                       v-model=\"form.features\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <label for=\"check-lr\">Laundry Room</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <input id=\"check-i\" type=\"checkbox\" value=\"Internet\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                       v-model=\"form.features\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <label for=\"check-i\">Internet</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <input id=\"check-pa\" type=\"checkbox\" value=\"Pets allowed\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                       v-model=\"form.features\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <label for=\"check-pa\">Pets Allowed</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <input id=\"check-ch\" type=\"checkbox\" value=\"Central heating\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                       v-model=\"form.features\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <label for=\"check-ch\">Central heating</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <input id=\"check-sp\" type=\"checkbox\" value=\"Swimming pool\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                       v-model=\"form.features\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <label for=\"check-sp\">Swimming pool</label>")])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_70, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_71, [_hoisted_72, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ckeditor, {
     editor: $data.editor,
     modelValue: $data.form.description,
-    "onUpdate:modelValue": _cache[21] || (_cache[21] = function ($event) {
+    "onUpdate:modelValue": _cache[14] || (_cache[14] = function ($event) {
       return $data.form.description = $event;
     }),
     config: $data.editorConfig
   }, null, 8
   /* PROPS */
-  , ["editor", "modelValue", "config"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_79, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_80, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  , ["editor", "modelValue", "config"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_73, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_74, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["add-listing__input-file-box", {
       input_danger: $data.errors.images
     }])
@@ -26370,14 +26305,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     name: "file",
     id: "file",
     multiple: "",
-    onChange: _cache[22] || (_cache[22] = function () {
+    onChange: _cache[15] || (_cache[15] = function () {
       return $options.uploadImages && $options.uploadImages.apply($options, arguments);
     })
   }, null, 32
   /* HYDRATE_EVENTS */
-  ), _hoisted_81], 2
+  ), _hoisted_75], 2
   /* CLASS */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_82, [_ctx.imageValidation !== '' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_83)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.images, function (image, index) {
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_76, [_ctx.imageValidation !== '' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_77)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.images, function (image, index) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       key: index,
       style: {
@@ -26391,7 +26326,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       title: image.file.name
     }, null, 8
     /* PROPS */
-    , _hoisted_84), _hoisted_85, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+    , _hoisted_78), _hoisted_79, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
       onClick: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function ($event) {
         return $options.removeImage(index);
       }, ["prevent"]),
@@ -26399,10 +26334,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       title: "remove"
     }, null, 8
     /* PROPS */
-    , _hoisted_86)]);
+    , _hoisted_80)]);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_87, [$data.errorAlert ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_88, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.messageAlert), 1
+  ))])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_81, [$data.errorAlert ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_82, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.messageAlert), 1
   /* TEXT */
   ), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors, function (error, key) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", {
@@ -26412,9 +26347,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     );
   }), 128
   /* KEYED_FRAGMENT */
-  ))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.successAlert ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_89, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.messageAlert), 1
+  ))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.successAlert ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_83, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.messageAlert), 1
   /* TEXT */
-  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _hoisted_90])])], 32
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _hoisted_84])])], 32
   /* HYDRATE_EVENTS */
   )])])])])])])], 64
   /* STABLE_FRAGMENT */
@@ -27265,12 +27200,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     /* PROPS */
     , _hoisted_82), _hoisted_83, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
       onClick: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function ($event) {
-        return $options.removeImage(index);
+        return $options.removeImage(index, image.src);
       }, ["prevent"]),
-      "class": "fa-duotone fa-x bg-danger text-white p-1",
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["fa-duotone fa-x bg-danger text-white p-1", {
+        'fa-spinner fa-spin': $data.deletePhotoLoading
+      }]),
       title: "remove"
-    }, null, 8
-    /* PROPS */
+    }, null, 10
+    /* CLASS, PROPS */
     , _hoisted_84)]);
   }), 128
   /* KEYED_FRAGMENT */

@@ -39,4 +39,20 @@ class BaseController extends Controller
         }
     }
 
+    public function propertyFeatures(){
+        try {
+            $features = BaseService::propertyFeaturesList();
+            return response()->json([
+                'success' => true,
+                'property_features' => $features,
+            ]);
+
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'error_message' => $e->getMessage(),
+            ]);
+        }
+    }
+
 }
