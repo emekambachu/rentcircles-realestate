@@ -21,7 +21,7 @@ class HomeController extends Controller
 
     public function index(){
         try {
-            $properties = PropertyService::propertyWithRelationships()->limit(3)->get();
+            $properties = PropertyService::propertyApproved()->limit(3)->get();
             return view('home.index', compact('properties'));
 
         } catch (\Exception $e) {
