@@ -5,14 +5,9 @@ namespace App\Http\Controllers\Realtor;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Realtor\SubmitPropertyRequest;
 use App\Http\Requests\Realtor\UpdatePropertyRequest;
-use App\Http\Resources\PropertyResource;
-use App\Models\Properties\PropertyDetail;
-use App\Models\Properties\PropertyPhoto;
 use App\Services\Properties\PropertyService;
-use Illuminate\Http\Request;
+use App\Services\Realtor\RealtorPropertyService;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Validator;
 
 class RealtorPropertyController extends Controller
 {
@@ -43,24 +38,6 @@ class RealtorPropertyController extends Controller
                 'message' => $e->getMessage(),
             ]);
         }
-
-    }
-
-    public function submitProperty(SubmitPropertyRequest $request){
-
-        try {
-            PropertyService::submitProperty($request);
-            return response()->json([
-                "success" => true,
-                "message" => "Property submitted successfully, will be published once approved"
-            ]);
-
-        } catch (\Exception $e) {
-            return response()->json([
-                'success' => false,
-                'message' => $e->getMessage(),
-            ]);
-        }
     }
 
     public function myProperties(){
@@ -82,9 +59,26 @@ class RealtorPropertyController extends Controller
         }
     }
 
+    public function submitProperty(SubmitPropertyRequest $request){
+
+        try {
+            RealtorPropertyService::submitProperty($request);
+            return response()->json([
+                "success" => true,
+                "message" => "Property submitted successfully, will be published once approved"
+            ]);
+
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => $e->getMessage(),
+            ]);
+        }
+    }
+
     public function myPropertyEdit($id){
         try {
-            return PropertyService::getAndEditProperty($id);
+            return RealtorPropertyService::getAndEditProperty($id);
 
         } catch (\Exception $e) {
             return response()->json([
@@ -97,7 +91,7 @@ class RealtorPropertyController extends Controller
     public function deletePropertyPhoto($image){
 
         try {
-            PropertyService::deletePropertyPhoto($image);
+            RealtorPropertyService::deletePropertyPhoto($image);
             return response()->json([
                 "success" => true,
                 "message" => "Deleted"
@@ -114,7 +108,7 @@ class RealtorPropertyController extends Controller
     public function myPropertyUpdate(UpdatePropertyRequest $request, $id){
 
         try {
-            PropertyService::updateProperty($request, $id);
+            RealtorPropertyService::updateProperty($request, $id);
             return response()->json([
                 "success" => true,
                 "message" => "Property updated successfully"
@@ -130,7 +124,7 @@ class RealtorPropertyController extends Controller
 
     public function approveProperty($id){
         try {
-            $property = PropertyService::approveProperty($id);
+            $property = RealtorPropertyService::approveProperty($id);
             return response()->json([
                 "success" => true,
                 "status" => $property->status
@@ -147,7 +141,7 @@ class RealtorPropertyController extends Controller
     public function myPropertyDelete($id){
 
         try {
-            PropertyService::deleteProperty($id);
+            RealtorPropertyService::deleteProperty($id);
             return response()->json([
                 "success" => true,
                 "message" => "Deleted"

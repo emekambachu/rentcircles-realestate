@@ -6469,7 +6469,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 .product-hover-action {
   position: absolute;
-  top: 60%;
   left: 0;
   right: 0;
   text-align: center;
@@ -6521,21 +6520,28 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 .product-badge ul {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 .product-badge li {
+    background-color: #d9fcfb;
   list-style: none;
   display: inline-block;
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 600;
-  background-color: var(--ltn__secondary-color);
   color: var(--white);
   padding: 3px 15px 0px;
-  text-transform: uppercase;
-  line-height: 25px; }
+  line-height: 25px;
+    border-radius: 7px;
+    margin-right: 3px;
+}
+
   .product-badge li:first-child {
-    margin-top: 0; }
+    margin-top: 0;
+  }
   .product-badge li::before {
+      background-color: #d9fcfb;
+      border-radius: 7px;
     position: absolute;
     content: "";
     bottom: -8px;
@@ -6544,9 +6550,11 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     width: 0;
     height: 0;
     border-bottom: 8px solid transparent;
-    display: none; }
+    display: none;
+  }
   .product-badge li .soldout-badge {
-    background-color: var(--red-2); }
+    background-color: var(--red-2);
+  }
 
 .product-info {
   padding: 20px 0 0; }
@@ -6710,7 +6718,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
       font-weight: 400;
       font-size: 14px; }
   .ltn__product-item-4 .product-title {
-    font-size: 22px;
+    font-size: 18px;
     margin-bottom: 15px;
     font-weight: 600; }
   .ltn__product-item-4 .product-description p {
@@ -6777,12 +6785,12 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     padding: 20px 30px 15px; }
   .ltn__product-item-5 .product-badge {
     position: inherit;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+  }
     .ltn__product-item-5 .product-badge li {
       font-size: 16px;
-      background-color: transparent;
-      color: var(--ltn__secondary-color);
-      padding: 0; }
+      color: #029391;
+    }
   .ltn__product-item-5 .product-img-location ul {
     padding: 0;
     margin-bottom: 0; }
@@ -14118,8 +14126,6 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
 }
 
 .center-cropped-w700h300{
-    -o-object-fit: none;
-       object-fit: none; /* Do not scale the image */
     -o-object-position: center;
        object-position: center; /* Center the image within the element */
     height: 400px;
@@ -14148,6 +14154,14 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
 
 .input_danger{
     border-color: #fc4560 !important;
+}
+
+.search-result-bg{
+    background-color: #d9fcfb;
+    border-radius: 6px;
+    font-size: 18px;
+    width: 70%;
+    margin: 0 auto;
 }
 
 

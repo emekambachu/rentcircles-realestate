@@ -39,10 +39,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 align-self-center">
-                        <home-search-filter
-                            :states="{{ $states }}"
-                            :property_types="{{ $property_types }}"
-                        ></home-search-filter>
+                        <!--Home Search Component Laravel-->
+                        <x-home.home-search></x-home.home-search>
                     </div>
                 </div>
             </div>

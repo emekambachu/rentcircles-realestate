@@ -1,14 +1,20 @@
-// document.addEventListener("DOMContentLoaded", function(event) {
-//
-//     // Show search dropdown
-//     document.getElementById("search-more-angle")
-//         .addEventListener("click", function(){
-//             let moreInputs = document.querySelectorAll(".search-more-input");
-//             for (let i = 0; i < moreInputs.length; i++) {
-//                 (moreInputs.item(i).classList.toggle("d-none"));
-//             }
-//     });
-// });
+document.addEventListener("DOMContentLoaded", function(event) {
+
+    // Show search dropdown
+    // document.getElementById("search-more-angle")
+    //     .addEventListener("click", function(){
+    //         let moreInputs = document.querySelectorAll(".search-more-input");
+    //         for (let i = 0; i < moreInputs.length; i++) {
+    //             (moreInputs.item(i).classList.toggle("d-none"));
+    //         }
+    // });
+    $(".search-more-angle").click(function() {
+        $(".search-more-angle").toggleClass("fa-angle-up", "fa-angle-down");
+        $(".search-more-input").toggle( "slow", function() {
+            // Animation complete.
+        });
+    });
+});
 
 // $(document).ready(function(){
 //     $("#search-more-angle").click(function(){
@@ -22,11 +28,11 @@
 //     });
 // });
 
-$(document).ready(function(){
-    $(".search-more-angle").click(function() {
-        $(".search-more-angle").toggleClass("fa-angle-up", "fa-angle-down");
-        $(".search-more-input").toggle( "slow", function() {
-            // Animation complete.
-        });
-    });
-});
+// $(document).ready(function(){
+//     $(".search-more-angle").click(function() {
+//         $(".search-more-angle").toggleClass("fa-angle-up", "fa-angle-down");
+//         $(".search-more-input").toggle( "slow", function() {
+//             // Animation complete.
+//         });
+//     });
+// });

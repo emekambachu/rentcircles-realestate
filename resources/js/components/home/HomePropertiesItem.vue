@@ -13,11 +13,12 @@
             <div class="product-info">
                 <div class="product-badge">
                     <ul>
-                        <li class="sale-badg">{{ property.property_type.name }}</li>
+                        <li class="">{{ property.property_type.name }}</li>
+                        <li class="">{{ property.service }}</li>
                     </ul>
                 </div>
-                <h2 class="product-title"><a :href="'/property/'+property.id+'/detail'">
-                    {{ property.title }}</a></h2>
+                <h4 class="product-title"><a :href="'/property/'+property.id+'/detail'">
+                    {{ property.title }}</a></h4>
                 <div class="product-img-location">
                     <ul>
                         <li>

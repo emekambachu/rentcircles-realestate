@@ -15,6 +15,10 @@ class BaseService
         return new State();
     }
 
+    public static function stateNameById($id){
+        return self::states()->findOrFail($id)->name;
+    }
+
     public static function propertyStates(){
         return self::states()->where(function($query) {
             $query->where('name', '=', "Lagos")

@@ -46,15 +46,31 @@ Properties
                         <div class="tab-pane fade active show" id="liton_product_grid">
                             <div class="ltn__product-tab-content-inner ltn__product-grid-view">
                                 <div class="row">
-                                @forelse($properties as $property)
-                                    <home-rproperties-item :property="{{ $property }}"></home-rproperties-item>
-                                @empty
-                                    @if(Session::has('no-results'))
-                                        <div class="danger-alert">
-                                            {{ Session::get('no-results') }}
+                                    <div class="col-12 mb-2">
+                                        <p class="text-center search-result-bg">
+                                            @if(Session::has('search_inputs'))
+                                            <strong style="color: #029391;">
+                                                {{ $total }}</strong> results for
+                                            <strong>
+                                                @foreach(Session::get('search_inputs') as $input)
+                                                    @foreach($input as $key=>$value)
+                                                        {{ $value }}
+                                                    @endforeach
+                                                    @if(!$loop->last),@endif
+                                                @endforeach
+                                            </strong>
+                                            @endif
+                                        </p>
+                                    </div>
+                                    @forelse($properties as $property)
+                                        <home-properties-item
+                                            :property="{{ $property }}"
+                                        ></home-properties-item>
+                                    @empty
+                                        <div>
+                                            <p class="text-center search-result-bg">No results</p>
                                         </div>
-                                    @endif
-                                @endforelse
+                                    @endforelse
                                 </div>
                             </div>
                         </div>
