@@ -74,6 +74,7 @@ Route::get('/home/properties', [HomeController::class, 'homeProperties']);
 Route::get('/properties', [PropertyController::class, 'index']);
 Route::get('/property/types', [BaseController::class, 'propertyTypes']);
 Route::get('/property/features', [BaseController::class, 'propertyFeatures']);
+Route::post('/property/{id}/contact-realtor', [PropertyController::class, 'contactRealtor']);
 
 // Realtor Register/Login
 Route::post('/realtor/register/submit', [RealtorRegisterController::class, 'createRealtor']);

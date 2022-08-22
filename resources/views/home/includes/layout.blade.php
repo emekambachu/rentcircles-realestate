@@ -170,9 +170,9 @@
 {{--                                        <li class="special-link">--}}
 {{--                                            <a class="border-radius-8" href="{{ route('realtor.login') }}">Realtor</a>--}}
 {{--                                        </li>--}}
-                                        <li class="special-link">
-                                            <a class="border-radius-8" href="{{ route('login') }}">Login</a>
-                                        </li>
+{{--                                        <li class="special-link">--}}
+{{--                                            <a class="border-radius-8" href="{{ route('login') }}">Login</a>--}}
+{{--                                        </li>--}}
                                     </ul>
                                 </div>
                             </nav>

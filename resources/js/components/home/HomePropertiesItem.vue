@@ -3,7 +3,7 @@
     <div class="col-lg-4 col-sm-6 col-12">
         <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
             <div class="product-img">
-                <a href="">
+                <a :href="'/property/'+property.id+'/detail'">
                     <img v-for="(photo, index) in property.property_photos.slice(0,1)"
                          :key="photo.id" class="center-cropped"
                          :src="'/photos/properties/'+photo.image"
@@ -17,8 +17,10 @@
                         <li class="">{{ property.service }}</li>
                     </ul>
                 </div>
-                <h4 class="product-title"><a :href="'/property/'+property.id+'/detail'">
-                    {{ property.title }}</a></h4>
+                <h4 class="product-title">
+                    <a :href="'/property/'+property.id+'/detail'">
+                    {{ property.title }}</a>
+                </h4>
                 <div class="product-img-location">
                     <ul>
                         <li>
@@ -39,9 +41,6 @@
                         </li>
                         <li><a href="#" title="Wishlist">
                             <i class="flaticon-heart-1"></i></a>
-                        </li>
-                        <li><a href="" title="Product Details">
-                            <i class="flaticon-add"></i></a>
                         </li>
                     </ul>
                 </div>

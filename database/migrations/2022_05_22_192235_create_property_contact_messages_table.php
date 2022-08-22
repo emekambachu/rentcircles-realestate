@@ -15,6 +15,12 @@ class CreatePropertyContactMessagesTable extends Migration
     {
         Schema::create('property_contact_messages', static function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('property_id');
+            $table->unsignedBigInteger('realtor_id')->nullable();
+            $table->string('name');
+            $table->string('email');
+            $table->longText('message');
+            $table->tinyInteger('read')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });

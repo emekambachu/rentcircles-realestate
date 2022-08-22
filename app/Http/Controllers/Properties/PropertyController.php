@@ -62,4 +62,19 @@ class PropertyController extends Controller
         return view('home.properties.show', $data);
     }
 
+    public function contactRealtor(Request $request, $id){
+        try {
+            PropertyService::contactRealtorWithPropertyId($request, $id);
+            return response()->json([
+                'success' => true
+            ]);
+
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => $e->getMessage(),
+            ]);
+        }
+    }
+
 }

@@ -3,6 +3,7 @@
 namespace App\Services\Properties;
 
 use App\Models\Properties\Property;
+use App\Models\Properties\PropertyContactMessage;
 use App\Models\Properties\PropertyDetail;
 use App\Models\Properties\PropertyPhoto;
 use App\Models\Properties\PropertyType;
@@ -44,6 +45,26 @@ class PropertyService extends BaseService
 
     public static function PropertyTypeName($id){
         return self::propertyType()->findOrFail($id)->name;
+    }
+
+    public static function propertyContactMessage(){
+        return new PropertyContactMessage();
+    }
+
+    public static function propertyContactMessageWithRelations(){
+        return PropertyContactMessage::with('realtor', 'property');
+    }
+
+    public static function contactRealtorWithPropertyId($request, $id){
+
+        $input = $request->all();
+        self::propertyContactMessage()->create([
+            'property_id' => $id,
+            'realtor_id' => $input['realtor_id'],
+            'name' => $input['name'],
+            'email' => $input['email'],
+            'message' => $input['message'],
+        ]);
     }
 
     public static function searchProperties($request){
@@ -118,5 +139,6 @@ class PropertyService extends BaseService
 
         return $result;
     }
+
 
 }

@@ -125,12 +125,15 @@
                 console.log(this.form);
                 axios.post('/api/realtor/register/submit', this.form)
                     .then((response) => {
-                        response.data.success === true ? window.location.href = '/realtor/login' : false;
+                        if(response.data.success === true){
+                            window.location.href = '/realtor/login';
+                            this.errors = []
+                        }else{
+                            this.errors = response.data.errors;
+                            console.log(response.data.errors);
+                        }
                         console.log(response.data);
-                        response.data.success === false ? this.errors = response.data.errors : this.errors = [];
-                        console.log(response.data.errors);
                 }).catch((error) => {
-                    // this.errors = error.response.data.errors;
                     console.log(error);
                 });
             },
@@ -144,33 +147,13 @@
 
         },
 
-        created(){
-            // axios.get('/api/property/countries')
-            //     .then((response) => {
-            //         this.countries = response.data;
-            //         console.log(this.countries);
-            //         response.data.forEach((item, index)=>{
-            //             this.countries.push(item);
-            //             console.log(item);
-            //
-            //         })
-            //     }).catch((error) => {
-            //     console.log(error);
-            // }).finally(() => {
-            // });
-        },
         mounted(){
             axios.get('/api/property/countries')
                 .then((response) => {
                     this.countries = response.data;
-                    // response.data.forEach((item, index)=>{
-                    //     this.countries.push(item);
-                    //     console.log(item);
-                    // });
                     console.log(this.countries);
                 }).catch((error) => {
                 console.log(error);
-            }).finally(() => {
             });
         }
 

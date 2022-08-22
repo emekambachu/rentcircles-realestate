@@ -357,26 +357,20 @@
                         <!-- Form Widget -->
                         <div class="widget ltn__form-widget">
                             <h4 class="ltn__widget-title ltn__widget-title-border-2">Contact Realtor</h4>
+                            <p v-if="successAlert !== ''" class="p-2 bg-success text-center text-white">
+                                {{ successAlert }}
+                            </p>
                             <form @submit.prevent="contactRealtor">
                                 <input type="text" v-model="contact.name" placeholder="Your Name/Company*">
                                 <input type="email" v-model="contact.email" placeholder="Your e-Mail*">
                                 <textarea v-model="contact.message" placeholder="Write Message..."></textarea>
-                                <button type="submit" class="btn theme-btn-1">Send</button>
+                                <button type="submit" class="btn theme-btn-1" :disabled="loading">
+                                    <span v-if="loading">Loading.....</span>
+                                    <span v-else>Send</span>
+                                </button>
                             </form>
                         </div>
 
-                        <!-- Social Media Widget -->
-                        <div class="widget ltn__social-media-widget">
-                            <h4 class="ltn__widget-title ltn__widget-title-border-2">Follow us</h4>
-                            <div class="ltn__social-media-2">
-                                <ul>
-                                    <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
-                                    <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
                         <!-- Banner Widget -->
                         <div class="widget ltn__banner-widget d-none">
                             <a href=""><img src="/main-assets/img/banner/2.jpg" alt="#"></a>
@@ -533,17 +527,36 @@
         data(){
             return{
                 contact: {
-                    property_detail_id: this.property.id,
                     realtor_id: this.property.realtor_id,
                     name: '',
                     email: '',
                     message: ''
-                }
+                },
+                loading: false,
+                successAlert: '',
             }
         },
         methods: {
             contactRealtor(){
-
+                console.log(this.contact);
+                this.successAlert = '';
+                let url = '/api/property/'+this.property.id+'/contact-realtor';
+                axios.post(url, this.contact)
+                    .then((response) => {
+                        if(response.data.success === true){
+                            this.loading = false;
+                            this.successAlert = 'Message sent to realtor, We will contact you shortly.';
+                            let self = this; //you need this because *this* will refer to Object.keys below`
+                            //Iterate through each object field, key is name of the object field`
+                            Object.keys(this.contact).forEach(function(value,index) {
+                                self.contact[value] = '';
+                            });
+                        }else{
+                            console.log(response.data.message);
+                        }
+                    }).catch((error) => {
+                        console.log(error);
+                    });
             },
 
             fullDate (value){

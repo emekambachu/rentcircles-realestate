@@ -22839,16 +22839,39 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       contact: {
-        property_detail_id: this.property.id,
         realtor_id: this.property.realtor_id,
         name: '',
         email: '',
         message: ''
-      }
+      },
+      loading: false,
+      successAlert: ''
     };
   },
   methods: {
-    contactRealtor: function contactRealtor() {},
+    contactRealtor: function contactRealtor() {
+      var _this = this;
+
+      console.log(this.contact);
+      this.successAlert = '';
+      var url = '/api/property/' + this.property.id + '/contact-realtor';
+      axios.post(url, this.contact).then(function (response) {
+        if (response.data.success === true) {
+          _this.loading = false;
+          _this.successAlert = 'Message sent to realtor, We will contact you shortly.';
+          var self = _this; //you need this because *this* will refer to Object.keys below`
+          //Iterate through each object field, key is name of the object field`
+
+          Object.keys(_this.contact).forEach(function (value, index) {
+            self.contact[value] = '';
+          });
+        } else {
+          console.log(response.data.message);
+        }
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    },
     fullDate: function fullDate(value) {
       return moment__WEBPACK_IMPORTED_MODULE_0___default()(value).format('MMMM Do YYYY, h:mm:ss a');
     }
@@ -22999,45 +23022,31 @@ __webpack_require__.r(__webpack_exports__);
 
       console.log(this.form);
       axios.post('/api/realtor/register/submit', this.form).then(function (response) {
-        response.data.success === true ? window.location.href = '/realtor/login' : false;
+        if (response.data.success === true) {
+          window.location.href = '/realtor/login';
+          _this.errors = [];
+        } else {
+          _this.errors = response.data.errors;
+          console.log(response.data.errors);
+        }
+
         console.log(response.data);
-        response.data.success === false ? _this.errors = response.data.errors : _this.errors = [];
-        console.log(response.data.errors);
       })["catch"](function (error) {
-        // this.errors = error.response.data.errors;
         console.log(error);
       });
     }
   },
   computed: function computed() {},
   watch: function watch() {},
-  created: function created() {// axios.get('/api/property/countries')
-    //     .then((response) => {
-    //         this.countries = response.data;
-    //         console.log(this.countries);
-    //         response.data.forEach((item, index)=>{
-    //             this.countries.push(item);
-    //             console.log(item);
-    //
-    //         })
-    //     }).catch((error) => {
-    //     console.log(error);
-    // }).finally(() => {
-    // });
-  },
   mounted: function mounted() {
     var _this2 = this;
 
     axios.get('/api/property/countries').then(function (response) {
-      _this2.countries = response.data; // response.data.forEach((item, index)=>{
-      //     this.countries.push(item);
-      //     console.log(item);
-      // });
-
+      _this2.countries = response.data;
       console.log(_this2.countries);
     })["catch"](function (error) {
       console.log(error);
-    })["finally"](function () {});
+    });
   }
 });
 
@@ -24066,9 +24075,7 @@ var _hoisted_2 = {
 var _hoisted_3 = {
   "class": "product-img"
 };
-var _hoisted_4 = {
-  href: ""
-};
+var _hoisted_4 = ["href"];
 var _hoisted_5 = ["src", "alt"];
 var _hoisted_6 = {
   "class": "product-info"
@@ -24131,28 +24138,21 @@ var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-  href: "",
-  title: "Product Details"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "class": "flaticon-add"
-})])], -1
-/* HOISTED */
-);
-
-var _hoisted_25 = {
+var _hoisted_24 = {
   "class": "product-info-bottom"
 };
-var _hoisted_26 = {
+var _hoisted_25 = {
   "class": "product-price"
 };
 
-var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "/Month", -1
+var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "/Month", -1
 /* HOISTED */
 );
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" ltn__product-item "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_4, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.property.property_photos.slice(0, 1), function (photo, index) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" ltn__product-item "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    href: '/property/' + $props.property.id + '/detail'
+  }, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.property.property_photos.slice(0, 1), function (photo, index) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", {
       key: photo.id,
       "class": "center-cropped",
@@ -24163,7 +24163,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     , _hoisted_5);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.property.property_type.name), 1
+  ))], 8
+  /* PROPS */
+  , _hoisted_4)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.property.property_type.name), 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.property.service), 1
   /* TEXT */
@@ -24184,9 +24186,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     title: "Quick View"
   }, _hoisted_22, 8
   /* PROPS */
-  , _hoisted_20)]), _hoisted_23, _hoisted_24])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("₦" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.addComma($props.property.cost)), 1
+  , _hoisted_20)]), _hoisted_23])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("₦" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.addComma($props.property.cost)), 1
   /* TEXT */
-  ), _hoisted_27])])])])])], 2112
+  ), _hoisted_26])])])])])], 2112
   /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
   );
 }
@@ -24420,16 +24422,19 @@ var _hoisted_55 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_56 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  type: "submit",
-  "class": "btn theme-btn-1"
-}, "Send", -1
-/* HOISTED */
-);
+var _hoisted_56 = {
+  key: 0,
+  "class": "p-2 bg-success text-center text-white"
+};
+var _hoisted_57 = ["disabled"];
+var _hoisted_58 = {
+  key: 0
+};
+var _hoisted_59 = {
+  key: 1
+};
 
-var _hoisted_57 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"widget ltn__social-media-widget\"><h4 class=\"ltn__widget-title ltn__widget-title-border-2\">Follow us</h4><div class=\"ltn__social-media-2\"><ul><li><a href=\"#\" title=\"Facebook\"><i class=\"fab fa-facebook-f\"></i></a></li><li><a href=\"#\" title=\"Twitter\"><i class=\"fab fa-twitter\"></i></a></li><li><a href=\"#\" title=\"Linkedin\"><i class=\"fab fa-linkedin\"></i></a></li><li><a href=\"#\" title=\"Instagram\"><i class=\"fab fa-instagram\"></i></a></li></ul></div></div>", 1);
-
-var _hoisted_58 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_60 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "widget ltn__banner-widget d-none"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
   href: ""
@@ -24503,7 +24508,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* PROPS */
   , _hoisted_53)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.property.realtor.name), 1
   /* TEXT */
-  )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Form Widget "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_54, [_hoisted_55, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+  )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Form Widget "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_54, [_hoisted_55, $data.successAlert !== '' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_56, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.successAlert), 1
+  /* TEXT */
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     onSubmit: _cache[3] || (_cache[3] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $options.contactRealtor && $options.contactRealtor.apply($options, arguments);
     }, ["prevent"]))
@@ -24530,9 +24537,15 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     placeholder: "Write Message..."
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.contact.message]]), _hoisted_56], 32
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.contact.message]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    type: "submit",
+    "class": "btn theme-btn-1",
+    disabled: $data.loading
+  }, [$data.loading ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("span", _hoisted_58, "Loading.....")) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("span", _hoisted_59, "Send"))], 8
+  /* PROPS */
+  , _hoisted_57)], 32
   /* HYDRATE_EVENTS */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Social Media Widget "), _hoisted_57, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Banner Widget "), _hoisted_58])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" SHOP DETAILS AREA END "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" PRODUCT SLIDER AREA START "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("    <div class=\"ltn__product-slider-area ltn__product-gutter pb-70 d-none\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        <div class=\"container\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            <div class=\"row\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                <div class=\"col-lg-12\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <div class=\"section-title-area ltn__section-title-2-&#45;&#45; text-center-&#45;&#45;\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        <h1 class=\"section-title\">Related Properties</h1>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            <div class=\"row ltn__related-product-slider-two-active slick-arrow-1\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                &lt;!&ndash; ltn__product-item &ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                <div class=\"col-xl-6 col-sm-6 col-12\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <div class=\"ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center-&#45;&#45;\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        <div class=\"product-img\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <a href=\"\"><img src=\"/main-assets/img/product-3/1.jpg\" alt=\"#\"></a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <div class=\"real-estate-agent\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <div class=\"agent-img\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <a href=\"\"><img src=\"/main-assets/img/blog/author.jpg\" alt=\"#\"></a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        <div class=\"product-info\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <div class=\"product-badge\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <li class=\"sale-badg\">For Rent</li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                </ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <h2 class=\"product-title\"><a href=\"\">New Apartment Nice View</a></h2>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <div class=\"product-img-location\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <a href=\"\"><i class=\"flaticon-pin\"></i> Belmont Gardens, Chicago</a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                </ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <ul class=\"ltn__list-item-2-&#45;&#45; ltn__list-item-2-before-&#45;&#45; ltn__plot-brief\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <li><span>3 </span>Bed</li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <li><span>2 </span>Bath</li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <li><span>3450 </span>Square Ft</li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <div class=\"product-hover-action\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <a href=\"#\" title=\"Quick View\" data-bs-toggle=\"modal\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                           data-bs-target=\"#quick_view_modal\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <i class=\"flaticon-expand\"></i>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        </a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <a href=\"#\" title=\"Wishlist\" data-bs-toggle=\"modal\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                           data-bs-target=\"#liton_wishlist_modal\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <i class=\"flaticon-heart-1\"></i></a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <a href=\"\" title=\"Compare\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <i class=\"flaticon-add\"></i>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        </a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                </ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        <div class=\"product-info-bottom\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <div class=\"product-price\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <span>$349,00<label>/Month</label></span>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                &lt;!&ndash; ltn__product-item &ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                <div class=\"col-xl-6 col-sm-6 col-12\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <div class=\"ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center-&#45;&#45;\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        <div class=\"product-img\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <a href=\"\"><img src=\"/main-assets/img/product-3/2.jpg\" alt=\"#\"></a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <div class=\"real-estate-agent\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <div class=\"agent-img\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <a href=\"\"><img src=\"/main-assets/img/blog/author.jpg\" alt=\"#\"></a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        <div class=\"product-info\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <div class=\"product-badge\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <li class=\"sale-badg\">For Sale</li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                </ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <h2 class=\"product-title\"><a href=\"\">New Apartment Nice View</a></h2>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <div class=\"product-img-location\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <a href=\"\"><i class=\"flaticon-pin\"></i> Belmont Gardens, Chicago</a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                </ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <ul class=\"ltn__list-item-2-&#45;&#45; ltn__list-item-2-before-&#45;&#45; ltn__plot-brief\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <li><span>3 </span>Bed</li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <li><span>2 </span>Bath</li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <li><span>3450 </span>Square Ft</li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <div class=\"product-hover-action\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <a href=\"#\" title=\"Quick View\" data-bs-toggle=\"modal\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                           data-bs-target=\"#quick_view_modal\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <i class=\"flaticon-expand\"></i>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        </a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <a href=\"#\" title=\"Wishlist\" data-bs-toggle=\"modal\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                           data-bs-target=\"#liton_wishlist_modal\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <i class=\"flaticon-heart-1\"></i></a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <a href=\"\" title=\"Compare\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <i class=\"flaticon-add\"></i>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        </a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                </ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        <div class=\"product-info-bottom\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <div class=\"product-price\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <span>$349,00<label>/Month</label></span>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                &lt;!&ndash;  &ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" PRODUCT SLIDER AREA END ")], 64
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Banner Widget "), _hoisted_60])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" SHOP DETAILS AREA END "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" PRODUCT SLIDER AREA START "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("    <div class=\"ltn__product-slider-area ltn__product-gutter pb-70 d-none\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        <div class=\"container\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            <div class=\"row\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                <div class=\"col-lg-12\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <div class=\"section-title-area ltn__section-title-2-&#45;&#45; text-center-&#45;&#45;\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        <h1 class=\"section-title\">Related Properties</h1>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            <div class=\"row ltn__related-product-slider-two-active slick-arrow-1\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                &lt;!&ndash; ltn__product-item &ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                <div class=\"col-xl-6 col-sm-6 col-12\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <div class=\"ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center-&#45;&#45;\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        <div class=\"product-img\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <a href=\"\"><img src=\"/main-assets/img/product-3/1.jpg\" alt=\"#\"></a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <div class=\"real-estate-agent\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <div class=\"agent-img\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <a href=\"\"><img src=\"/main-assets/img/blog/author.jpg\" alt=\"#\"></a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        <div class=\"product-info\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <div class=\"product-badge\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <li class=\"sale-badg\">For Rent</li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                </ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <h2 class=\"product-title\"><a href=\"\">New Apartment Nice View</a></h2>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <div class=\"product-img-location\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <a href=\"\"><i class=\"flaticon-pin\"></i> Belmont Gardens, Chicago</a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                </ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <ul class=\"ltn__list-item-2-&#45;&#45; ltn__list-item-2-before-&#45;&#45; ltn__plot-brief\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <li><span>3 </span>Bed</li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <li><span>2 </span>Bath</li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <li><span>3450 </span>Square Ft</li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <div class=\"product-hover-action\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <a href=\"#\" title=\"Quick View\" data-bs-toggle=\"modal\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                           data-bs-target=\"#quick_view_modal\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <i class=\"flaticon-expand\"></i>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        </a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <a href=\"#\" title=\"Wishlist\" data-bs-toggle=\"modal\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                           data-bs-target=\"#liton_wishlist_modal\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <i class=\"flaticon-heart-1\"></i></a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <a href=\"\" title=\"Compare\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <i class=\"flaticon-add\"></i>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        </a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                </ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        <div class=\"product-info-bottom\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <div class=\"product-price\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <span>$349,00<label>/Month</label></span>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                &lt;!&ndash; ltn__product-item &ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                <div class=\"col-xl-6 col-sm-6 col-12\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <div class=\"ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center-&#45;&#45;\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        <div class=\"product-img\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <a href=\"\"><img src=\"/main-assets/img/product-3/2.jpg\" alt=\"#\"></a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <div class=\"real-estate-agent\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <div class=\"agent-img\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <a href=\"\"><img src=\"/main-assets/img/blog/author.jpg\" alt=\"#\"></a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        <div class=\"product-info\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <div class=\"product-badge\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <li class=\"sale-badg\">For Sale</li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                </ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <h2 class=\"product-title\"><a href=\"\">New Apartment Nice View</a></h2>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <div class=\"product-img-location\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <a href=\"\"><i class=\"flaticon-pin\"></i> Belmont Gardens, Chicago</a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                </ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <ul class=\"ltn__list-item-2-&#45;&#45; ltn__list-item-2-before-&#45;&#45; ltn__plot-brief\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <li><span>3 </span>Bed</li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <li><span>2 </span>Bath</li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <li><span>3450 </span>Square Ft</li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <div class=\"product-hover-action\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <a href=\"#\" title=\"Quick View\" data-bs-toggle=\"modal\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                           data-bs-target=\"#quick_view_modal\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <i class=\"flaticon-expand\"></i>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        </a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <a href=\"#\" title=\"Wishlist\" data-bs-toggle=\"modal\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                           data-bs-target=\"#liton_wishlist_modal\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <i class=\"flaticon-heart-1\"></i></a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <a href=\"\" title=\"Compare\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <i class=\"flaticon-add\"></i>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        </a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                </ul>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        <div class=\"product-info-bottom\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <div class=\"product-price\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <span>$349,00<label>/Month</label></span>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                &lt;!&ndash;  &ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" PRODUCT SLIDER AREA END ")], 64
   /* STABLE_FRAGMENT */
   );
 }
@@ -32730,7 +32743,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.fade-enter-active[data-v-3ed20758],\n    .fade-leave-active[data-v-3ed20758] {\n        transition: opacity 0.5s ease;\n}\n.fade-enter-from[data-v-3ed20758],\n    .fade-leave-to[data-v-3ed20758] {\n        opacity: 0;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.fade-enter-active[data-v-3ed20758],\r\n    .fade-leave-active[data-v-3ed20758] {\r\n        transition: opacity 0.5s ease;\n}\n.fade-enter-from[data-v-3ed20758],\r\n    .fade-leave-to[data-v-3ed20758] {\r\n        opacity: 0;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
