@@ -62,8 +62,8 @@
                             </ul>
                         </div>
 
-                        <h4 class="title-2 mb-10">Amenities</h4>
-                        <div class="property-details-amenities mb-60">
+                        <div v-if="property.features" class="property-details-amenities mb-60">
+                            <h4 class="title-2 mb-10">Amenities</h4>
                             <div class="row">
                                 <div class="col-lg-4 col-md-6">
                                     <div class="ltn__menu-widget">
