@@ -14130,6 +14130,8 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
        object-position: center; /* Center the image within the element */
     height: 400px;
     width: 700px;
+    -o-object-fit: none;
+       object-fit: none;
 }
 
 .success-alert{
